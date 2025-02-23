@@ -65,27 +65,97 @@ public class SirGluten : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.E) && hoveredWeaponItem != null) {
             Equip();
-
+        }
+        if (Input.GetKeyDown(KeyCode.F)) {
+            Swap();
+        }
+        if (Input.GetKeyDown(KeyCode.Q) && mainSlot != null) {
+            Drop();
         }
 
         MovePlayer();
+
+        
+
     }
     void FixedUpdate()
     {
         //MovePlayer();
     }
 
+    void UpdateInventory() {
+        if (mainSlot != null) {
+            mainSlotImage.sprite = mainSlot.InventorySprite;
+            mainSlotImage.color = Color.white;
+        } else {
+            mainSlotImage.sprite = null;
+            mainSlotImage.color = new Color(1f,1f,1f,0f);
+        }
+        if (subSlot != null) {
+            subSlotImage.sprite = subSlot.InventorySprite;
+            subSlotImage.color = Color.white;
+        } 
+        else {
+            subSlotImage.sprite = null;
+            subSlotImage.color = new Color(1f,1f,1f,0f);
+        }
+    }
+
     void Equip() {
+        if (mainSlot != null && subSlot == null) {
+            subSlot = mainSlot;
+            subSlotImage.sprite = mainSlot.InventorySprite;
+        }
+
         mainSlot = hoveredWeaponItem;
-        mainSlotImage.sprite = hoveredWeaponItem.InventorySprite;
 
         GameObject hoveredWeaponDropped = hoveredWeapon.transform.GetChild(0).gameObject;
-        Debug.Log(hoveredWeaponDropped);
         hoveredWeaponDropped.SetActive(false);
 
-        hoveredWeapon.transform.SetParent(transform);
+        hoveredWeapon.transform.SetParent(transform);     
+        UpdateInventory();
+    }
+
+    void Swap() {
+        if (subSlot == null) return;
+
+        Item tempSlot = subSlot;
+        subSlot = mainSlot;
+        mainSlot = tempSlot;
+
+        UpdateInventory();
+    }
+
+    void Drop() {
+        if (mainSlot == null) return;
+
+        GameObject items = GameObject.Find("Items");
+        GameObject itemDropped = hoveredWeapon.transform.GetChild(0).gameObject;
+
+        if (items != null && itemDropped != null) {
+            RectTransform mainSlotRect = mainSlot.GetComponent<RectTransform>();
+
+            if (mainSlotRect != null) {
+                mainSlot.transform.SetParent(items.transform);
+                mainSlotRect.rotation = Quaternion.identity;
+                mainSlotRect.anchoredPosition = body.position;
+            }
+            itemDropped = mainSlot.transform.GetChild(0).gameObject;
+            
+            itemDropped.gameObject.SetActive(true);
+
+            mainSlot = null;
+        } else {
+            return;
+        }
+
+        if (subSlot != null) {
+            mainSlot = subSlot;
+            subSlot = null;
+            
+        }
         
-        
+        UpdateInventory();
     }
 
     void MovePlayer(){
@@ -102,16 +172,18 @@ public class SirGluten : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D collider) {
         if (collider.gameObject.tag == "Item") {
+            if (hoveredWeaponItem != null) hoveredWeaponItem.HoverTextOff();
+            hoveredWeaponItem = null;
             hoveredWeapon = collider.gameObject.transform.parent.gameObject;
             hoveredWeaponItem = hoveredWeapon.GetComponent<Item>();
             hoveredWeaponItem.HoverTextOn(hoveredWeaponItem.WeaponName);
-            Debug.Log(hoveredWeaponItem.WeaponName);
+            //Debug.Log(hoveredWeaponItem.WeaponName);
         }
     }
 
     void OnTriggerExit2D(Collider2D collider) {
         if (collider.gameObject.tag == "Item") {
-            hoveredWeaponItem.HoverTextOff();
+            if (hoveredWeaponItem != null) hoveredWeaponItem.HoverTextOff();
             hoveredWeaponItem = null;
             
         }
