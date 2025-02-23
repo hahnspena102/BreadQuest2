@@ -17,7 +17,8 @@ public class Item : MonoBehaviour
     public Sprite InventorySprite { get => inventorySprite; set => inventorySprite = value; }
 
     void Start(){
-        inventorySprite = GetComponent<Sprite>();
+        inventorySprite = GetComponentInChildren<SpriteRenderer>().sprite;
+        Debug.Log(inventorySprite);
     }
 
     public void HoverTextOn(string itemName) {

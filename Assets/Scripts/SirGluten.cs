@@ -19,7 +19,11 @@ public class SirGluten : MonoBehaviour
     private TMPro.TextMeshProUGUI healthText, glucoseText, yeastText;
 
     // INVENTORY
-    private Item hoveredWeapon;
+    private GameObject hoveredWeapon;
+    private Item hoveredWeaponItem;
+    private Item mainSlot,subSlot;
+
+    [SerializeField]private Image mainSlotImage, subSlotImage;
     
     void Start()
     {
@@ -59,11 +63,29 @@ public class SirGluten : MonoBehaviour
         verticalInput = Input.GetAxisRaw("Vertical");
         horizontalInput = Input.GetAxisRaw("Horizontal");
 
+        if (Input.GetKeyDown(KeyCode.E) && hoveredWeaponItem != null) {
+            Equip();
+
+        }
+
         MovePlayer();
     }
     void FixedUpdate()
     {
         //MovePlayer();
+    }
+
+    void Equip() {
+        mainSlot = hoveredWeaponItem;
+        mainSlotImage.sprite = hoveredWeaponItem.InventorySprite;
+
+        GameObject hoveredWeaponDropped = hoveredWeapon.transform.GetChild(0).gameObject;
+        Debug.Log(hoveredWeaponDropped);
+        hoveredWeaponDropped.SetActive(false);
+
+        hoveredWeapon.transform.SetParent(transform);
+        
+        
     }
 
     void MovePlayer(){
@@ -80,16 +102,17 @@ public class SirGluten : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D collider) {
         if (collider.gameObject.tag == "Item") {
-            hoveredWeapon = collider.gameObject.transform.parent.GetComponent<Item>();
-            hoveredWeapon.HoverTextOn(hoveredWeapon.WeaponName);
-            Debug.Log(hoveredWeapon.WeaponName);
+            hoveredWeapon = collider.gameObject.transform.parent.gameObject;
+            hoveredWeaponItem = hoveredWeapon.GetComponent<Item>();
+            hoveredWeaponItem.HoverTextOn(hoveredWeaponItem.WeaponName);
+            Debug.Log(hoveredWeaponItem.WeaponName);
         }
     }
 
     void OnTriggerExit2D(Collider2D collider) {
         if (collider.gameObject.tag == "Item") {
-            hoveredWeapon.HoverTextOff();
-            hoveredWeapon = null;
+            hoveredWeaponItem.HoverTextOff();
+            hoveredWeaponItem = null;
             
         }
     }
