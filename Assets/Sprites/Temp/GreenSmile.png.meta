@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 429dfb6f445bb0e41995f65b1a99dfa0
+guid: e83d3c43e7b7e4a51b6070d6b2d7e3ce
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 7627683275842373084
-    second: Null_0
+      213: -6641907667776630934
+    second: GreenSmile_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -37,7 +37,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -51,7 +51,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 32
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -113,7 +113,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Null_0
+      name: GreenSmile_0
       rect:
         serializedVersion: 2
         x: 0
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: cd5c5c3b689fad960800000000000000
-      internalID: 7627683275842373084
+      spriteID: a6f0b3f9a2433d3a0800000000000000
+      internalID: -6641907667776630934
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Null_0: 7627683275842373084
+      GreenSmile_0: -6641907667776630934
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

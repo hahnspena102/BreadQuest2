@@ -6,9 +6,12 @@ using UnityEngine.SceneManagement;
 
 public class SirGluten : MonoBehaviour
 {
+    private Vector2 screenSize = new Vector2(Screen.width/2, Screen.height/2);
     private Rigidbody2D body;
+    private Vector2 mousePosition;
     private float verticalInput, horizontalInput;
     private float speed = 4f;
+    
 
     // STATS
     private int health, glucose, yeast, yeastLevel;
@@ -17,6 +20,9 @@ public class SirGluten : MonoBehaviour
     [SerializeField] private GameObject healthBar, glucoseBar, yeastBar;
     private Slider healthSlider, glucoseSlider, yeastSlider;
     private TMPro.TextMeshProUGUI healthText, glucoseText, yeastText;
+
+    // BOOLS
+    private bool isAttacking = false;
 
     // INVENTORY
     private GameObject hoveredWeapon;
@@ -59,6 +65,11 @@ public class SirGluten : MonoBehaviour
     }
 
     void Update() {
+        // Stats
+        healthSlider.value = health;
+        healthSlider.maxValue = maxHealth;
+        healthText.text = $"{health}/{maxHealth}";
+
         // Movement
         verticalInput = Input.GetAxisRaw("Vertical");
         horizontalInput = Input.GetAxisRaw("Horizontal");
@@ -75,12 +86,38 @@ public class SirGluten : MonoBehaviour
 
         MovePlayer();
 
+        MeleeDirection();
+        if (Input.GetMouseButtonDown(0) && mainSlot != null && !isAttacking) {
+            StartCoroutine(MeleeAttack());
+        }
         
-
+        
+        
     }
-    void FixedUpdate()
-    {
-        //MovePlayer();
+
+    private void MeleeDirection() {
+        if (!isAttacking) {
+            mousePosition = (Vector2)Input.mousePosition - screenSize;
+        }
+        if (mainSlot != null) {
+            if ((mousePosition.y != 0 || mousePosition.x != 0)) {
+                Rigidbody2D attackRB = mainSlot.transform.GetChild(1).gameObject.GetComponent<Rigidbody2D>();
+                if (Mathf.Abs(mousePosition.x) > Mathf.Abs(mousePosition.y)) {
+                    attackRB.position = body.position + new Vector2(mousePosition.x, 0).normalized;
+                } else {
+                    attackRB.position = body.position + new Vector2(0, mousePosition.y).normalized;
+                }
+                
+            }
+        }
+    }
+
+    IEnumerator MeleeAttack() {
+        isAttacking = true;
+        mainSlot.transform.GetChild(1).gameObject.SetActive(true);
+        yield return new WaitForSeconds(0.4f);
+        mainSlot.transform.GetChild(1).gameObject.SetActive(false);
+        isAttacking = false;
     }
 
     void UpdateInventory() {
@@ -161,12 +198,25 @@ public class SirGluten : MonoBehaviour
     void MovePlayer(){
         body.linearVelocity = new Vector2(horizontalInput,verticalInput).normalized * speed;
         
-        if (horizontalInput < 0) {
+        if (!isAttacking) {
+            if (horizontalInput < 0) {
             Vector2 rotator = new Vector3(transform.rotation.x, 180f);
             transform.rotation = Quaternion.Euler(rotator);
-        } else if (horizontalInput > 0) {
-            Vector2 rotator = new Vector3(transform.rotation.x, 0f);
-            transform.rotation = Quaternion.Euler(rotator);
+            } else if (horizontalInput > 0) {
+                Vector2 rotator = new Vector3(transform.rotation.x, 0f);
+                transform.rotation = Quaternion.Euler(rotator);
+            }
+        }  
+    }
+
+    void OnCollisionEnter2D(Collision2D collision) {
+        
+        if (collision.gameObject.tag == "Enemy") {
+            Enemy enemy = collision.gameObject.GetComponent<Enemy>();
+//            Debug.Log("You take damage: " + enemy.Damage + "Current damage: " + health);
+        
+            health -= enemy.Damage;
+            
         }
     }
 

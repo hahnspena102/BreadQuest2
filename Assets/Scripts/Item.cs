@@ -18,7 +18,6 @@ public class Item : MonoBehaviour
 
     void Start(){
         inventorySprite = GetComponentInChildren<SpriteRenderer>().sprite;
-        Debug.Log(inventorySprite);
     }
 
     public void HoverTextOn(string itemName) {
