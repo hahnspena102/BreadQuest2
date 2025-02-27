@@ -30,6 +30,9 @@ public class SirGluten : MonoBehaviour
     private Item mainSlot,subSlot;
 
     [SerializeField]private Image mainSlotImage, subSlotImage;
+
+    // STATICS
+    public static Vector2 playerPosition;
     
     void Start()
     {
@@ -65,6 +68,9 @@ public class SirGluten : MonoBehaviour
     }
 
     void Update() {
+        // Statics
+        playerPosition = body.position;
+        
         // Stats
         healthSlider.value = health;
         healthSlider.maxValue = maxHealth;
@@ -116,8 +122,9 @@ public class SirGluten : MonoBehaviour
         isAttacking = true;
         mainSlot.transform.GetChild(1).gameObject.SetActive(true);
         yield return new WaitForSeconds(0.4f);
-        mainSlot.transform.GetChild(1).gameObject.SetActive(false);
         isAttacking = false;
+        mainSlot.transform.GetChild(1).gameObject.SetActive(false);
+        
     }
 
     void UpdateInventory() {
