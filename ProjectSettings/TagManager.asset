@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 3
   tags:
   - Item
+  - PlayerAttack
+  - Enemy
+  - EnemyAttack
   layers:
   - Default
   - TransparentFX
@@ -14,9 +17,9 @@ TagManager:
   - UI
   - Item
   - Player
-  - 
-  - 
-  - 
+  - PlayerAttack
+  - Enemy
+  - EnemyAttack
   - 
   - 
   - 

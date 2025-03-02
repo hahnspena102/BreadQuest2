@@ -7,8 +7,11 @@ using UnityEngine.SceneManagement;
 public class SirGluten : MonoBehaviour
 {
     private Rigidbody2D body;
+    private SpriteRenderer spriteRenderer;
+
     private float verticalInput, horizontalInput;
     private float speed = 4f;
+    
 
     // STATS
     private int health, glucose, yeast, yeastLevel;
@@ -18,16 +21,28 @@ public class SirGluten : MonoBehaviour
     private Slider healthSlider, glucoseSlider, yeastSlider;
     private TMPro.TextMeshProUGUI healthText, glucoseText, yeastText;
 
+    // BOOLS
+    private bool isAttacking, isHurting, isLocked;
+
     // INVENTORY
     private GameObject hoveredWeapon;
     private Item hoveredWeaponItem;
     private Item mainSlot,subSlot;
 
     [SerializeField]private Image mainSlotImage, subSlotImage;
-    
+
+    // STATICS
+    public static Vector2 playerPosition;
+
+    public global::System.Boolean IsAttacking { get => isAttacking; set => isAttacking = value; }
+    public global::System.Boolean IsHurting { get => isHurting; set => isHurting = value; }
+    public Item MainSlot { get => mainSlot; set => mainSlot = value; }
+    public Item SubSlot { get => subSlot; set => subSlot = value; }
+
     void Start()
     {
         body = GetComponent<Rigidbody2D>();
+        spriteRenderer = GetComponent<SpriteRenderer>();
         InitStats();
         UpdateStats();
     }
@@ -59,6 +74,14 @@ public class SirGluten : MonoBehaviour
     }
 
     void Update() {
+        // Statics
+        playerPosition = body.position;
+
+        // Stats
+        healthSlider.value = health;
+        healthSlider.maxValue = maxHealth;
+        healthText.text = $"{health}/{maxHealth}";
+
         // Movement
         verticalInput = Input.GetAxisRaw("Vertical");
         horizontalInput = Input.GetAxisRaw("Horizontal");
@@ -73,14 +96,7 @@ public class SirGluten : MonoBehaviour
             Drop();
         }
 
-        MovePlayer();
-
-        
-
-    }
-    void FixedUpdate()
-    {
-        //MovePlayer();
+        if (!isLocked) MovePlayer();    
     }
 
     void UpdateInventory() {
@@ -158,15 +174,64 @@ public class SirGluten : MonoBehaviour
         UpdateInventory();
     }
 
+    IEnumerator Hurt(int damage){
+        if (isHurting) yield break;
+        isHurting = true;
+
+        health -= damage;
+
+        Color ogColor = spriteRenderer.color;
+        spriteRenderer.color = Color.red;
+
+        float duration = 0.4f;
+        float elapsedTime = 0f;
+
+        while (elapsedTime < duration)
+        {
+            elapsedTime += Time.deltaTime;
+            spriteRenderer.color = Color.Lerp(Color.red, Color.white, elapsedTime / duration);
+            yield return null;
+        }
+
+        spriteRenderer.color = ogColor;
+        isHurting = false;
+        isLocked = false;
+    }
+
     void MovePlayer(){
         body.linearVelocity = new Vector2(horizontalInput,verticalInput).normalized * speed;
         
-        if (horizontalInput < 0) {
+        if (!isAttacking) {
+            if (horizontalInput < 0) {
             Vector2 rotator = new Vector3(transform.rotation.x, 180f);
             transform.rotation = Quaternion.Euler(rotator);
-        } else if (horizontalInput > 0) {
-            Vector2 rotator = new Vector3(transform.rotation.x, 0f);
-            transform.rotation = Quaternion.Euler(rotator);
+            } else if (horizontalInput > 0) {
+                Vector2 rotator = new Vector3(transform.rotation.x, 0f);
+                transform.rotation = Quaternion.Euler(rotator);
+            }
+        }  
+    }
+
+    void OnCollisionEnter2D(Collision2D collision) {
+        
+        if (collision.gameObject.tag == "Enemy") {
+            Enemy enemy = collision.gameObject.GetComponent<Enemy>();
+//            Debug.Log("You take damage: " + enemy.Damage + "Current damage: " + health);
+            Vector2 collisionPoint = collision.transform.position;
+                Vector2 direction;
+
+            if (collisionPoint.x > transform.position.x) {
+                direction = new Vector2(-1f, 1f); 
+            } else {
+                direction = new Vector2(1f, 1f);
+            }
+
+            isLocked = true;
+            body.AddForce(direction * 1.2f, ForceMode2D.Impulse);
+            StartCoroutine(Hurt(enemy.Damage));
+        } else if (collision.gameObject.tag == "EnemyAttack") {
+            EnemyAttack enemyAttack = collision.gameObject.GetComponent<EnemyAttack>();
+            StartCoroutine(Hurt(enemyAttack.Damage));
         }
     }
 
