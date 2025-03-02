@@ -9,6 +9,8 @@ public class Item : MonoBehaviour
     [SerializeField]private string id;
     [SerializeField]private string weaponName;
     [SerializeField]private string description;
+    [SerializeField]private string itemType;
+    [SerializeField]private string rarity;
     private Sprite inventorySprite;
 
     public global::System.String Id { get => id; set => id = value; }

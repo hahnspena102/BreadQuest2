@@ -12,9 +12,8 @@ GameObject:
   - component: {fileID: 825278433556598927}
   - component: {fileID: 2299012369510282454}
   - component: {fileID: 6257214900476092273}
-  - component: {fileID: -2116794449275848880}
   m_Layer: 10
-  m_Name: MarshSpear
+  m_Name: FrostlingProj
   m_TagString: EnemyAttack
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -79,7 +78,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 8821592759950498335, guid: 7a78ed623deed4e8cb731bf60810cb48, type: 3}
+  m_Sprite: {fileID: 7794132276402649836, guid: adbb29e162997483c8453b77c3a7f9b6, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -151,29 +150,15 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: -0.011377037, y: -0.5414072}
+  m_Offset: {x: -0.003760457, y: -0.0007433146}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.50594956, y: 0.94423157}
-    oldSize: {x: 0.40625, y: 1.21875}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.1875, y: 0.1875}
     newSize: {x: 0.40625, y: 1.21875}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 0.17328894, y: 1.21875}
+  m_Size: {x: 0.1448245, y: 0.15721896}
   m_EdgeRadius: 0
---- !u!114 &-2116794449275848880
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8748053951306997152}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: eb73abac20fbc4ef883fa36f56143309, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  damage: 15
-  speed: 4

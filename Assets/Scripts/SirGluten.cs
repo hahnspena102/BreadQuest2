@@ -6,9 +6,9 @@ using UnityEngine.SceneManagement;
 
 public class SirGluten : MonoBehaviour
 {
-    private Vector2 screenSize = new Vector2(Screen.width/2, Screen.height/2);
     private Rigidbody2D body;
-    private Vector2 mousePosition;
+    private SpriteRenderer spriteRenderer;
+
     private float verticalInput, horizontalInput;
     private float speed = 4f;
     
@@ -22,7 +22,7 @@ public class SirGluten : MonoBehaviour
     private TMPro.TextMeshProUGUI healthText, glucoseText, yeastText;
 
     // BOOLS
-    private bool isAttacking = false;
+    private bool isAttacking, isHurting;
 
     // INVENTORY
     private GameObject hoveredWeapon;
@@ -33,10 +33,16 @@ public class SirGluten : MonoBehaviour
 
     // STATICS
     public static Vector2 playerPosition;
-    
+
+    public global::System.Boolean IsAttacking { get => isAttacking; set => isAttacking = value; }
+    public global::System.Boolean IsHurting { get => isHurting; set => isHurting = value; }
+    public Item MainSlot { get => mainSlot; set => mainSlot = value; }
+    public Item SubSlot { get => subSlot; set => subSlot = value; }
+
     void Start()
     {
         body = GetComponent<Rigidbody2D>();
+        spriteRenderer = GetComponent<SpriteRenderer>();
         InitStats();
         UpdateStats();
     }
@@ -70,7 +76,7 @@ public class SirGluten : MonoBehaviour
     void Update() {
         // Statics
         playerPosition = body.position;
-        
+
         // Stats
         healthSlider.value = health;
         healthSlider.maxValue = maxHealth;
@@ -90,41 +96,7 @@ public class SirGluten : MonoBehaviour
             Drop();
         }
 
-        MovePlayer();
-
-        MeleeDirection();
-        if (Input.GetMouseButtonDown(0) && mainSlot != null && !isAttacking) {
-            StartCoroutine(MeleeAttack());
-        }
-        
-        
-        
-    }
-
-    private void MeleeDirection() {
-        if (!isAttacking) {
-            mousePosition = (Vector2)Input.mousePosition - screenSize;
-        }
-        if (mainSlot != null) {
-            if ((mousePosition.y != 0 || mousePosition.x != 0)) {
-                Rigidbody2D attackRB = mainSlot.transform.GetChild(1).gameObject.GetComponent<Rigidbody2D>();
-                if (Mathf.Abs(mousePosition.x) > Mathf.Abs(mousePosition.y)) {
-                    attackRB.position = body.position + new Vector2(mousePosition.x, 0).normalized;
-                } else {
-                    attackRB.position = body.position + new Vector2(0, mousePosition.y).normalized;
-                }
-                
-            }
-        }
-    }
-
-    IEnumerator MeleeAttack() {
-        isAttacking = true;
-        mainSlot.transform.GetChild(1).gameObject.SetActive(true);
-        yield return new WaitForSeconds(0.4f);
-        isAttacking = false;
-        mainSlot.transform.GetChild(1).gameObject.SetActive(false);
-        
+        MovePlayer();    
     }
 
     void UpdateInventory() {
@@ -202,6 +174,29 @@ public class SirGluten : MonoBehaviour
         UpdateInventory();
     }
 
+    IEnumerator Hurt(int damage){
+        if (isHurting) yield break;
+        isHurting = true;
+
+        health -= damage;
+
+        Color ogColor = spriteRenderer.color;
+        spriteRenderer.color = Color.red;
+
+        float duration = 0.4f;
+        float elapsedTime = 0f;
+
+        while (elapsedTime < duration)
+        {
+            elapsedTime += Time.deltaTime;
+            spriteRenderer.color = Color.Lerp(Color.red, Color.white, elapsedTime / duration);
+            yield return null;
+        }
+
+        spriteRenderer.color = ogColor;
+        isHurting = false;
+    }
+
     void MovePlayer(){
         body.linearVelocity = new Vector2(horizontalInput,verticalInput).normalized * speed;
         
@@ -223,7 +218,9 @@ public class SirGluten : MonoBehaviour
 //            Debug.Log("You take damage: " + enemy.Damage + "Current damage: " + health);
         
             health -= enemy.Damage;
-            
+        } else if (collision.gameObject.tag == "EnemyAttack") {
+            EnemyAttack enemyAttack = collision.gameObject.GetComponent<EnemyAttack>();
+            StartCoroutine(Hurt(enemyAttack.Damage));
         }
     }
 
