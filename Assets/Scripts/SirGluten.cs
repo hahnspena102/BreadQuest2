@@ -22,7 +22,7 @@ public class SirGluten : MonoBehaviour
     private TMPro.TextMeshProUGUI healthText, glucoseText, yeastText;
 
     // BOOLS
-    private bool isAttacking, isHurting;
+    private bool isAttacking, isHurting, isLocked;
 
     // INVENTORY
     private GameObject hoveredWeapon;
@@ -96,7 +96,7 @@ public class SirGluten : MonoBehaviour
             Drop();
         }
 
-        MovePlayer();    
+        if (!isLocked) MovePlayer();    
     }
 
     void UpdateInventory() {
@@ -195,6 +195,7 @@ public class SirGluten : MonoBehaviour
 
         spriteRenderer.color = ogColor;
         isHurting = false;
+        isLocked = false;
     }
 
     void MovePlayer(){
@@ -216,8 +217,18 @@ public class SirGluten : MonoBehaviour
         if (collision.gameObject.tag == "Enemy") {
             Enemy enemy = collision.gameObject.GetComponent<Enemy>();
 //            Debug.Log("You take damage: " + enemy.Damage + "Current damage: " + health);
-        
-            health -= enemy.Damage;
+            Vector2 collisionPoint = collision.transform.position;
+                Vector2 direction;
+
+            if (collisionPoint.x > transform.position.x) {
+                direction = new Vector2(-1f, 1f); 
+            } else {
+                direction = new Vector2(1f, 1f);
+            }
+
+            isLocked = true;
+            body.AddForce(direction * 1.2f, ForceMode2D.Impulse);
+            StartCoroutine(Hurt(enemy.Damage));
         } else if (collision.gameObject.tag == "EnemyAttack") {
             EnemyAttack enemyAttack = collision.gameObject.GetComponent<EnemyAttack>();
             StartCoroutine(Hurt(enemyAttack.Damage));
