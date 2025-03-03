@@ -23,7 +23,7 @@ public class SirGluten : MonoBehaviour
     private TMPro.TextMeshProUGUI healthText, glucoseText, yeastText;
 
     // BOOLS
-    private bool isAttacking, isHurting, isLocked;
+    private bool isAttacking, isHurting, isLocked, isAnimationLocked;
 
     // INVENTORY
     private GameObject hoveredWeapon;
@@ -37,8 +37,10 @@ public class SirGluten : MonoBehaviour
 
     public global::System.Boolean IsAttacking { get => isAttacking; set => isAttacking = value; }
     public global::System.Boolean IsHurting { get => isHurting; set => isHurting = value; }
+    public global::System.Boolean IsAnimationLocked { get => isAnimationLocked; set => isAnimationLocked = value; }
     public Item MainSlot { get => mainSlot; set => mainSlot = value; }
     public Item SubSlot { get => subSlot; set => subSlot = value; }
+    
 
     void Start()
     {
@@ -84,6 +86,10 @@ public class SirGluten : MonoBehaviour
         healthSlider.maxValue = maxHealth;
         healthText.text = $"{health}/{maxHealth}";
 
+        if (health <= 0) { 
+            SceneManager.LoadScene(1);
+        }
+
         // Movement
         verticalInput = Input.GetAxisRaw("Vertical");
         horizontalInput = Input.GetAxisRaw("Horizontal");
@@ -101,9 +107,11 @@ public class SirGluten : MonoBehaviour
         if (!isLocked) MovePlayer();    
 
         // ANimations
-        animator.SetFloat("horizontal", Mathf.Abs(body.linearVelocity.x));
-        animator.SetFloat("vertical", body.linearVelocity.y);
-        animator.SetBool("isMoving", body.linearVelocity.x != 0 || body.linearVelocity.y != 0);
+        if (!isAnimationLocked) {
+            animator.SetFloat("horizontal", Mathf.Abs(body.linearVelocity.x));
+            animator.SetFloat("vertical", body.linearVelocity.y);
+            animator.SetBool("isMoving", body.linearVelocity.x != 0 || body.linearVelocity.y != 0);
+        }
     }
 
     void UpdateInventory() {
@@ -133,9 +141,17 @@ public class SirGluten : MonoBehaviour
         mainSlot = hoveredWeaponItem;
 
         GameObject hoveredWeaponDropped = hoveredWeapon.transform.GetChild(0).gameObject;
+        
+    
         hoveredWeaponDropped.SetActive(false);
+        hoveredWeapon.transform.SetParent(transform);   
 
-        hoveredWeapon.transform.SetParent(transform);     
+        // Set the local rotation of the mainSlot to (0, 0, 0)
+        mainSlot.transform.position = body.position;
+        mainSlot.transform.localRotation = Quaternion.identity; // Reset local rotation
+
+        Debug.Log(mainSlot.transform.rotation);  // This will show the global rotation
+
         UpdateInventory();
     }
 
@@ -210,12 +226,17 @@ public class SirGluten : MonoBehaviour
         
         if (!isAttacking) {
             if (horizontalInput < 0) {
-            Vector2 rotator = new Vector3(transform.rotation.x, 180f);
-            transform.rotation = Quaternion.Euler(rotator);
+                Vector2 rotator = new Vector3(transform.rotation.x, 180f);
+                transform.rotation = Quaternion.Euler(rotator);
             } else if (horizontalInput > 0) {
                 Vector2 rotator = new Vector3(transform.rotation.x, 0f);
                 transform.rotation = Quaternion.Euler(rotator);
             }
+            if (verticalInput != 0 && horizontalInput == 0) {
+                Vector2 rotator = new Vector3(transform.rotation.x, 0f);
+                transform.rotation = Quaternion.Euler(rotator);
+            }
+        
         }  
     }
 

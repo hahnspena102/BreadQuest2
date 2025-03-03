@@ -1,28 +1,22 @@
 fileFormatVersion: 2
-guid: 8a1e9e7c905f66949a2bc52c2cb3a60c
+guid: 79d78da0d4caf4644b1e05ccd8d42d2a
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 4880119718801479540
-    second: SwingLR_0
+      213: 6689621957169358987
+    second: MeleeF_0
   - first:
-      213: 7698671107010989869
-    second: SwingLR_1
+      213: -3816858710179729744
+    second: MeleeF_1
   - first:
-      213: 6273665430717272474
-    second: SwingLR_2
+      213: 5188214838575563456
+    second: MeleeF_2
   - first:
-      213: -2892585613540257325
-    second: SwingLR_3
+      213: -2158831462674801691
+    second: MeleeF_3
   - first:
-      213: -3819449717954965333
-    second: SwingLR_4
-  - first:
-      213: 399296043547345658
-    second: SwingLR_5
-  - first:
-      213: -494253490175688106
-    second: SwingLR_6
+      213: 7499783548572031916
+    second: MeleeF_4
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -131,155 +125,111 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: SwingLR_0
+      name: KnightSwordF_0
       rect:
         serializedVersion: 2
-        x: 0
+        x: 64
         y: 0
-        width: 96
-        height: 32
+        width: 32
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 4779a8c370ba9b340800000000000000
-      internalID: 4880119718801479540
+      spriteID: 53bd06f65c97c1547ab9e08d6f1a339c
+      internalID: -1067715951
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SwingLR_1
+      name: KnightSwordF_1
       rect:
         serializedVersion: 2
         x: 96
         y: 0
-        width: 96
-        height: 32
+        width: 32
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: d2f04ff159c27da60800000000000000
-      internalID: 7698671107010989869
+      spriteID: b3bf7a563b557374f8b6bfb72f952fe9
+      internalID: -453782843
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SwingLR_2
+      name: KnightSwordF_2
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 0
+        width: 32
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7bd10a2c0bdfb504088605f4fe2ec63d
+      internalID: 780321372
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KnightSwordF_3
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 0
+        width: 32
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 94441b45bd7317f4081cb732868b9335
+      internalID: 1434338038
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KnightSwordF_4
       rect:
         serializedVersion: 2
         x: 192
         y: 0
-        width: 96
-        height: 32
+        width: 32
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: a911d8d4879801750800000000000000
-      internalID: 6273665430717272474
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SwingLR_3
-      rect:
-        serializedVersion: 2
-        x: 288
-        y: 0
-        width: 96
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 3d11786c5b87bd7d0800000000000000
-      internalID: -2892585613540257325
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SwingLR_4
-      rect:
-        serializedVersion: 2
-        x: 384
-        y: 0
-        width: 96
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: ba014d3c7b69efac0800000000000000
-      internalID: -3819449717954965333
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SwingLR_5
-      rect:
-        serializedVersion: 2
-        x: 480
-        y: 0
-        width: 96
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: af2cbd3d2a59a8500800000000000000
-      internalID: 399296043547345658
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SwingLR_6
-      rect:
-        serializedVersion: 2
-        x: 576
-        y: 0
-        width: 96
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 652c411c11f0429f0800000000000000
-      internalID: -494253490175688106
+      spriteID: f1f3fc482ba6e7b41ad8942763bd629a
+      internalID: 1842397866
       vertices: []
       indices: 
       edges: []
@@ -288,7 +238,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: f9a9bea6006eac148b2eb2394bc3a230
+    spriteID: 5b217fce2a9ba41409df748abd425348
     internalID: 0
     vertices: []
     indices: 
@@ -298,13 +248,11 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      SwingLR_0: 4880119718801479540
-      SwingLR_1: 7698671107010989869
-      SwingLR_2: 6273665430717272474
-      SwingLR_3: -2892585613540257325
-      SwingLR_4: -3819449717954965333
-      SwingLR_5: 399296043547345658
-      SwingLR_6: -494253490175688106
+      KnightSwordF_0: -1067715951
+      KnightSwordF_1: -453782843
+      KnightSwordF_2: 780321372
+      KnightSwordF_3: 1434338038
+      KnightSwordF_4: 1842397866
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
