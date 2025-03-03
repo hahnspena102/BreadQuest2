@@ -14,8 +14,10 @@ public class Melee : MonoBehaviour
     private Vector2 mousePosition;
     private Animator playerAnimator;
     private Vector2 attackPosition;
+    private string animationDirection;
 
     public global::System.Int32 AttackDamage { get => attackDamage; set => attackDamage = value; }
+    public global::System.String AnimationDirection { get => animationDirection; set => animationDirection = value; }
 
     void Start() {
         player = GameObject.Find("SirGluten").gameObject;
@@ -60,15 +62,18 @@ public class Melee : MonoBehaviour
         sirGluten.IsAttacking = true;
         playerAnimator.SetTrigger("meleeAttack");
         
-
         sirGluten.MainSlot.transform.GetChild(2).gameObject.SetActive(true);
-        Animator itemAnimator = sirGluten.MainSlot.transform.GetChild(2).gameObject.GetComponentInChildren<Animator>();
 
         playerAnimator.SetFloat("vertical",attackPosition.y);
-        itemAnimator.SetFloat("vertical",attackPosition.y);
         playerAnimator.SetFloat("horizontal",Mathf.Abs(attackPosition.x));
-        itemAnimator.SetFloat("horizontal",Mathf.Abs(attackPosition.x));
 
+        if (attackPosition.y > 0) {
+            animationDirection = "B";
+        } else if (attackPosition.y < 0) {
+            animationDirection = "F";
+        } else {
+            animationDirection = "LR";
+        }
         if (attackPosition.x < 0) {
             Vector2 rotator = new Vector3(transform.rotation.x, 180f);
             sirGluten.transform.rotation = Quaternion.Euler(rotator);
@@ -88,7 +93,6 @@ public class Melee : MonoBehaviour
 
         // Animation End
         sirGluten.MainSlot.transform.GetChild(2).gameObject.transform.position = body.position;
-
         
         sirGluten.MainSlot.transform.GetChild(1).gameObject.SetActive(false);
         sirGluten.MainSlot.transform.GetChild(2).gameObject.SetActive(false);

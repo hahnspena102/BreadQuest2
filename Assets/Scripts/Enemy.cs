@@ -3,18 +3,25 @@ using UnityEngine.UI;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 public class Enemy : MonoBehaviour
 {
     [SerializeField] private int health;   
     [SerializeField] private int damage;
     [SerializeField] private string flavoring;
+    [SerializeField] private GameObject damagePopup;
     private SpriteRenderer spriteRenderer;
+    private GameObject popupStore;
+    private Color ogColor;
 
     public global::System.Int32 Damage { get => damage; set => damage = value; }
 
     void Start(){
         spriteRenderer = GetComponent<SpriteRenderer>();
+        ogColor = spriteRenderer.color;
+
+        popupStore = GameObject.Find("Popups");
     }
     void Update() {
         if (health <= 0) {
@@ -25,8 +32,8 @@ public class Enemy : MonoBehaviour
 
     IEnumerator Hurt(int damage) {
         health -= damage;
+        CreatePopup(damage);
 
-        Color ogColor = spriteRenderer.color;
         spriteRenderer.color = Color.red;
 
         float duration = 0.4f;
@@ -35,12 +42,18 @@ public class Enemy : MonoBehaviour
         while (elapsedTime < duration)
         {
             elapsedTime += Time.deltaTime;
-            spriteRenderer.color = Color.Lerp(Color.red, Color.white, elapsedTime / duration);
+            spriteRenderer.color = Color.Lerp(Color.red, ogColor, elapsedTime / duration);
             yield return null;
         }
 
         spriteRenderer.color = ogColor;
 
+    }
+
+    void CreatePopup(int damage){
+        GameObject newPopup = Instantiate(damagePopup, transform.position, Quaternion.identity);
+        DamagePopup dp = newPopup.GetComponent<DamagePopup>();
+        dp.DamageNumber = damage;
     }
 
     void OnTriggerEnter2D(Collider2D collider) {
@@ -52,4 +65,5 @@ public class Enemy : MonoBehaviour
             StartCoroutine(Hurt(melee.AttackDamage));
         }
     }
+    
 }

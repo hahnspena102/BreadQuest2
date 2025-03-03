@@ -2,12 +2,13 @@ using UnityEngine;
 
 public class SimpleMovement : MonoBehaviour  
 {
-    [SerializeField] private float detectionRadius = 2f;
-    [SerializeField] private float moveSpeed = 30f;
+    [SerializeField] private float detectionRadius = 20f;
+    [SerializeField] private float stopRadius = 0f;
+    [SerializeField] private float moveSpeed = 5f;
     private Rigidbody2D body;
     private Animator animator;
 
-    private bool isMoving;
+    //private bool isMoving;
 
     void Start()
     {
@@ -29,15 +30,17 @@ public class SimpleMovement : MonoBehaviour
     void MoveTowardsPlayer()
     {
         bool detected = Vector2.Distance(body.position, SirGluten.playerPosition) <= detectionRadius;    
-        if (detected)
+        bool stop = Vector2.Distance(body.position, SirGluten.playerPosition) >= stopRadius;
+        if (detected && stop)
         {
             Vector2 direction = (SirGluten.playerPosition - body.position).normalized;
             body.linearVelocity = direction * moveSpeed;
-            isMoving = true;
+            //isMoving = true;
         }
         else
         {
-            isMoving = false;
+            body.linearVelocity = Vector2.zero;
+           // isMoving = false;
         }    
     }
 

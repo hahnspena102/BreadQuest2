@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1001 &4620231889431350968
+--- !u!1001 &8699775215270177205
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -90,23 +90,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3895412442333527214, guid: 05ae02d672e3e004592094af1d17e489, type: 3}
       propertyPath: m_Name
-      value: ParentJellySlime Variant 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5278550575122219636, guid: 05ae02d672e3e004592094af1d17e489, type: 3}
-      propertyPath: flavoring
-      value: spicy
+      value: VanillaJellySlime
       objectReference: {fileID: 0}
     - target: {fileID: 8741519050768510647, guid: 05ae02d672e3e004592094af1d17e489, type: 3}
       propertyPath: m_Color.b
-      value: 0.495283
+      value: 0.7971698
       objectReference: {fileID: 0}
     - target: {fileID: 8741519050768510647, guid: 05ae02d672e3e004592094af1d17e489, type: 3}
       propertyPath: m_Color.g
-      value: 0.74237597
-      objectReference: {fileID: 0}
-    - target: {fileID: 8741519050768510647, guid: 05ae02d672e3e004592094af1d17e489, type: 3}
-      propertyPath: m_Color.r
-      value: 1
+      value: 0.96179485
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
