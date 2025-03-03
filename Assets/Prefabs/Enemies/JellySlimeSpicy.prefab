@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1001 &533990558334096445
+--- !u!1001 &3720696240586408871
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -90,19 +90,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3895412442333527214, guid: 05ae02d672e3e004592094af1d17e489, type: 3}
       propertyPath: m_Name
-      value: FruityJellySlime
-      objectReference: {fileID: 0}
-    - target: {fileID: 5278550575122219636, guid: 05ae02d672e3e004592094af1d17e489, type: 3}
-      propertyPath: flavoring
-      value: fruity
+      value: SpicyJellySlime
       objectReference: {fileID: 0}
     - target: {fileID: 8741519050768510647, guid: 05ae02d672e3e004592094af1d17e489, type: 3}
       propertyPath: m_Color.b
-      value: 0.8505448
+      value: 0.495283
       objectReference: {fileID: 0}
     - target: {fileID: 8741519050768510647, guid: 05ae02d672e3e004592094af1d17e489, type: 3}
       propertyPath: m_Color.g
-      value: 0.6273585
+      value: 0.74237597
       objectReference: {fileID: 0}
     - target: {fileID: 8741519050768510647, guid: 05ae02d672e3e004592094af1d17e489, type: 3}
       propertyPath: m_Color.r

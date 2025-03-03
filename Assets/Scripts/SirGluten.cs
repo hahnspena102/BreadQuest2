@@ -35,12 +35,16 @@ public class SirGluten : MonoBehaviour
     // STATICS
     public static Vector2 playerPosition;
 
+    private int weaponAnimationFrame = 0;
+
+    //GETTERS
+
     public global::System.Boolean IsAttacking { get => isAttacking; set => isAttacking = value; }
     public global::System.Boolean IsHurting { get => isHurting; set => isHurting = value; }
     public global::System.Boolean IsAnimationLocked { get => isAnimationLocked; set => isAnimationLocked = value; }
     public Item MainSlot { get => mainSlot; set => mainSlot = value; }
     public Item SubSlot { get => subSlot; set => subSlot = value; }
-    
+    public global::System.Int32 WeaponAnimationFrame { get => weaponAnimationFrame; set => weaponAnimationFrame = value; }
 
     void Start()
     {
@@ -146,11 +150,9 @@ public class SirGluten : MonoBehaviour
         hoveredWeaponDropped.SetActive(false);
         hoveredWeapon.transform.SetParent(transform);   
 
-        // Set the local rotation of the mainSlot to (0, 0, 0)
         mainSlot.transform.position = body.position;
-        mainSlot.transform.localRotation = Quaternion.identity; // Reset local rotation
+        mainSlot.transform.localRotation = Quaternion.identity;
 
-        Debug.Log(mainSlot.transform.rotation);  // This will show the global rotation
 
         UpdateInventory();
     }
@@ -280,5 +282,10 @@ public class SirGluten : MonoBehaviour
             hoveredWeaponItem = null;
             
         }
+    }
+
+    void SetAnimationFrame(int index) {
+        //Debug.Log(index);
+        weaponAnimationFrame = index;
     }
 }

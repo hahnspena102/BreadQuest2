@@ -116,19 +116,19 @@ TextureImporter:
       name: FrostlingProj_0
       rect:
         serializedVersion: 2
-        x: 5
-        y: 5
-        width: 6
-        height: 6
+        x: 0
+        y: 0
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: ceaf263a2025a2c60800000000000000
+      spriteID: 4d004a0aeb33a4cd095ace2cfe6e0c9f
       internalID: 7794132276402649836
       vertices: []
       indices: 
@@ -138,7 +138,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: f4731ba55d8304bc2896671f22b05bd9
     internalID: 0
     vertices: []
     indices: 
