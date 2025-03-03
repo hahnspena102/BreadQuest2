@@ -1,25 +1,31 @@
 fileFormatVersion: 2
-guid: 126b698f88446fb46b1d77ce1b0b823b
+guid: 1becf2b25c5e0234f88174aec1b0be5e
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -3332030576119438067
-    second: FIdle_0
+      213: -6894967668466440986
+    second: WalkF_0
   - first:
-      213: 4413075575318815298
-    second: FIdle_1
+      213: 9005318866623818452
+    second: WalkF_1
   - first:
-      213: 9108324702574523238
-    second: FIdle_2
+      213: -6121126850672546991
+    second: WalkF_2
   - first:
-      213: 6517771139923086932
-    second: FIdle_3
+      213: 2228284815164448730
+    second: WalkF_3
   - first:
-      213: 7437031240979420788
-    second: FIdle_4
+      213: 741352979902068280
+    second: WalkF_4
   - first:
-      213: 6191318618280076056
-    second: FIdle_5
+      213: -16275235995757141
+    second: WalkF_5
+  - first:
+      213: -6484164580116844085
+    second: WalkF_6
+  - first:
+      213: 6194195962334297578
+    second: WalkF_7
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -128,7 +134,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: FIdle_0
+      name: WalkF_0
       rect:
         serializedVersion: 2
         x: 0
@@ -143,14 +149,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: d0529a948df32c1d0800000000000000
-      internalID: -3332030576119438067
+      spriteID: 6e42147cf672050a0800000000000000
+      internalID: -6894967668466440986
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: FIdle_1
+      name: WalkF_1
       rect:
         serializedVersion: 2
         x: 32
@@ -165,14 +171,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 242a4d1bad46e3d30800000000000000
-      internalID: 4413075575318815298
+      spriteID: 4da6c360cc159fc70800000000000000
+      internalID: 9005318866623818452
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: FIdle_2
+      name: WalkF_2
       rect:
         serializedVersion: 2
         x: 64
@@ -187,14 +193,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 663bedb1f05476e70800000000000000
-      internalID: 9108324702574523238
+      spriteID: 15bae887f836d0ba0800000000000000
+      internalID: -6121126850672546991
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: FIdle_3
+      name: WalkF_3
       rect:
         serializedVersion: 2
         x: 96
@@ -209,14 +215,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 45e8862b156c37a50800000000000000
-      internalID: 6517771139923086932
+      spriteID: adf1642cb357cee10800000000000000
+      internalID: 2228284815164448730
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: FIdle_4
+      name: WalkF_4
       rect:
         serializedVersion: 2
         x: 128
@@ -231,14 +237,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 4769f06b284a53760800000000000000
-      internalID: 7437031240979420788
+      spriteID: 8367d3c7b90d94a00800000000000000
+      internalID: 741352979902068280
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: FIdle_5
+      name: WalkF_5
       rect:
         serializedVersion: 2
         x: 160
@@ -253,8 +259,52 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 813a8d5fa7bfbe550800000000000000
-      internalID: 6191318618280076056
+      spriteID: ba556d352cd26cff0800000000000000
+      internalID: -16275235995757141
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WalkF_6
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bc137f04bae9306a0800000000000000
+      internalID: -6484164580116844085
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WalkF_7
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aed3814d86436f550800000000000000
+      internalID: 6194195962334297578
       vertices: []
       indices: 
       edges: []
@@ -263,7 +313,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: e5db3a44d5153fb4aa2beeeac06bb608
+    spriteID: fd74b5922ea4cc74985348b1c0070e67
     internalID: 0
     vertices: []
     indices: 
@@ -273,12 +323,14 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      FIdle_0: -3332030576119438067
-      FIdle_1: 4413075575318815298
-      FIdle_2: 9108324702574523238
-      FIdle_3: 6517771139923086932
-      FIdle_4: 7437031240979420788
-      FIdle_5: 6191318618280076056
+      WalkF_0: -6894967668466440986
+      WalkF_1: 9005318866623818452
+      WalkF_2: -6121126850672546991
+      WalkF_3: 2228284815164448730
+      WalkF_4: 741352979902068280
+      WalkF_5: -16275235995757141
+      WalkF_6: -6484164580116844085
+      WalkF_7: 6194195962334297578
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -1,25 +1,28 @@
 fileFormatVersion: 2
-guid: 126b698f88446fb46b1d77ce1b0b823b
+guid: 183ee6992c8633a4a8fffada1a697c38
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -3332030576119438067
-    second: FIdle_0
+      213: -1687159027756924161
+    second: SwingB_0
   - first:
-      213: 4413075575318815298
-    second: FIdle_1
+      213: -2999357116392541524
+    second: SwingB_1
   - first:
-      213: 9108324702574523238
-    second: FIdle_2
+      213: 279492465495102058
+    second: SwingB_2
   - first:
-      213: 6517771139923086932
-    second: FIdle_3
+      213: -3230342919853049516
+    second: SwingB_3
   - first:
-      213: 7437031240979420788
-    second: FIdle_4
+      213: -5422658034591958363
+    second: SwingB_4
   - first:
-      213: 6191318618280076056
-    second: FIdle_5
+      213: -4087140701869025850
+    second: SwingB_5
+  - first:
+      213: -7088581393614728495
+    second: SwingB_6
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -128,13 +131,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: FIdle_0
+      name: SwingB_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 32
-        height: 32
+        x: 5
+        y: 9
+        width: 24
+        height: 27
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -143,20 +146,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: d0529a948df32c1d0800000000000000
-      internalID: -3332030576119438067
+      spriteID: ff284fe9dc10698e0800000000000000
+      internalID: -1687159027756924161
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: FIdle_1
+      name: SwingB_1
       rect:
         serializedVersion: 2
-        x: 32
-        y: 0
-        width: 32
-        height: 32
+        x: 37
+        y: 8
+        width: 26
+        height: 26
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -165,20 +168,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 242a4d1bad46e3d30800000000000000
-      internalID: 4413075575318815298
+      spriteID: ca2f1ea08942066d0800000000000000
+      internalID: -2999357116392541524
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: FIdle_2
+      name: SwingB_2
       rect:
         serializedVersion: 2
-        x: 64
-        y: 0
-        width: 32
-        height: 32
+        x: 68
+        y: 9
+        width: 26
+        height: 29
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -187,20 +190,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 663bedb1f05476e70800000000000000
-      internalID: 9108324702574523238
+      spriteID: a62db33aae4f0e300800000000000000
+      internalID: 279492465495102058
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: FIdle_3
+      name: SwingB_3
       rect:
         serializedVersion: 2
-        x: 96
-        y: 0
-        width: 32
-        height: 32
+        x: 100
+        y: 9
+        width: 27
+        height: 30
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -209,20 +212,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 45e8862b156c37a50800000000000000
-      internalID: 6517771139923086932
+      spriteID: 459f57fba348b23d0800000000000000
+      internalID: -3230342919853049516
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: FIdle_4
+      name: SwingB_4
       rect:
         serializedVersion: 2
-        x: 128
-        y: 0
-        width: 32
-        height: 32
+        x: 132
+        y: 9
+        width: 26
+        height: 29
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -231,20 +234,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 4769f06b284a53760800000000000000
-      internalID: 7437031240979420788
+      spriteID: 5aa7abd7f39deb4b0800000000000000
+      internalID: -5422658034591958363
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: FIdle_5
+      name: SwingB_5
       rect:
         serializedVersion: 2
-        x: 160
-        y: 0
-        width: 32
-        height: 32
+        x: 164
+        y: 9
+        width: 26
+        height: 29
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -253,8 +256,30 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 813a8d5fa7bfbe550800000000000000
-      internalID: 6191318618280076056
+      spriteID: 6c55e0eaf2f8747c0800000000000000
+      internalID: -4087140701869025850
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SwingB_6
+      rect:
+        serializedVersion: 2
+        x: 196
+        y: 9
+        width: 26
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1d2962887cc40ad90800000000000000
+      internalID: -7088581393614728495
       vertices: []
       indices: 
       edges: []
@@ -263,7 +288,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: e5db3a44d5153fb4aa2beeeac06bb608
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -273,12 +298,13 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      FIdle_0: -3332030576119438067
-      FIdle_1: 4413075575318815298
-      FIdle_2: 9108324702574523238
-      FIdle_3: 6517771139923086932
-      FIdle_4: 7437031240979420788
-      FIdle_5: 6191318618280076056
+      SwingB_0: -1687159027756924161
+      SwingB_1: -2999357116392541524
+      SwingB_2: 279492465495102058
+      SwingB_3: -3230342919853049516
+      SwingB_4: -5422658034591958363
+      SwingB_5: -4087140701869025850
+      SwingB_6: -7088581393614728495
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

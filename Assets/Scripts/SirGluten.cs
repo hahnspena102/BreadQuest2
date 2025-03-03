@@ -8,6 +8,7 @@ public class SirGluten : MonoBehaviour
 {
     private Rigidbody2D body;
     private SpriteRenderer spriteRenderer;
+    private Animator animator;
 
     private float verticalInput, horizontalInput;
     private float speed = 4f;
@@ -43,6 +44,7 @@ public class SirGluten : MonoBehaviour
     {
         body = GetComponent<Rigidbody2D>();
         spriteRenderer = GetComponent<SpriteRenderer>();
+        animator = GetComponent<Animator>();
         InitStats();
         UpdateStats();
     }
@@ -97,6 +99,11 @@ public class SirGluten : MonoBehaviour
         }
 
         if (!isLocked) MovePlayer();    
+
+        // ANimations
+        animator.SetFloat("horizontal", Mathf.Abs(body.linearVelocity.x));
+        animator.SetFloat("vertical", body.linearVelocity.y);
+        animator.SetBool("isMoving", body.linearVelocity.x != 0 || body.linearVelocity.y != 0);
     }
 
     void UpdateInventory() {
