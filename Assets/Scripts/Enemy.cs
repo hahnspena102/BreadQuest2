@@ -17,7 +17,7 @@ public class Enemy : MonoBehaviour
         spriteRenderer = GetComponent<SpriteRenderer>();
     }
     void Update() {
-        if (health == 0) {
+        if (health <= 0) {
             
             Destroy(gameObject, 0.2f);
         }

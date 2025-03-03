@@ -1,25 +1,25 @@
 fileFormatVersion: 2
-guid: 126b698f88446fb46b1d77ce1b0b823b
+guid: b0c89f350808fc34d87a1471936a29d4
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -3332030576119438067
-    second: FIdle_0
+      213: 5710547782880293738
+    second: IdleLR_0
   - first:
-      213: 4413075575318815298
-    second: FIdle_1
+      213: 1026251697901373755
+    second: IdleLR_1
   - first:
-      213: 9108324702574523238
-    second: FIdle_2
+      213: -9115496772115220256
+    second: IdleLR_2
   - first:
-      213: 6517771139923086932
-    second: FIdle_3
+      213: -3414487683946041397
+    second: IdleLR_3
   - first:
-      213: 7437031240979420788
-    second: FIdle_4
+      213: 2161301214075719406
+    second: IdleLR_4
   - first:
-      213: 6191318618280076056
-    second: FIdle_5
+      213: -58491106758847721
+    second: IdleLR_5
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -128,7 +128,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: FIdle_0
+      name: IdleLR_0
       rect:
         serializedVersion: 2
         x: 0
@@ -143,14 +143,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: d0529a948df32c1d0800000000000000
-      internalID: -3332030576119438067
+      spriteID: a637977e3f0ff3f40800000000000000
+      internalID: 5710547782880293738
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: FIdle_1
+      name: IdleLR_1
       rect:
         serializedVersion: 2
         x: 32
@@ -165,14 +165,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 242a4d1bad46e3d30800000000000000
-      internalID: 4413075575318815298
+      spriteID: b398d8f5b7afd3e00800000000000000
+      internalID: 1026251697901373755
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: FIdle_2
+      name: IdleLR_2
       rect:
         serializedVersion: 2
         x: 64
@@ -187,14 +187,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 663bedb1f05476e70800000000000000
-      internalID: 9108324702574523238
+      spriteID: 0e83ad25bff3f7180800000000000000
+      internalID: -9115496772115220256
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: FIdle_3
+      name: IdleLR_3
       rect:
         serializedVersion: 2
         x: 96
@@ -209,14 +209,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 45e8862b156c37a50800000000000000
-      internalID: 6517771139923086932
+      spriteID: bcf237cca8d4d90d0800000000000000
+      internalID: -3414487683946041397
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: FIdle_4
+      name: IdleLR_4
       rect:
         serializedVersion: 2
         x: 128
@@ -231,14 +231,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 4769f06b284a53760800000000000000
-      internalID: 7437031240979420788
+      spriteID: eee8a9dc00c7efd10800000000000000
+      internalID: 2161301214075719406
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: FIdle_5
+      name: IdleLR_5
       rect:
         serializedVersion: 2
         x: 160
@@ -253,8 +253,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 813a8d5fa7bfbe550800000000000000
-      internalID: 6191318618280076056
+      spriteID: 7139e17f5a2303ff0800000000000000
+      internalID: -58491106758847721
       vertices: []
       indices: 
       edges: []
@@ -263,7 +263,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: e5db3a44d5153fb4aa2beeeac06bb608
+    spriteID: f57ff04732b45ae4db9aa35f12a8557d
     internalID: 0
     vertices: []
     indices: 
@@ -273,12 +273,12 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      FIdle_0: -3332030576119438067
-      FIdle_1: 4413075575318815298
-      FIdle_2: 9108324702574523238
-      FIdle_3: 6517771139923086932
-      FIdle_4: 7437031240979420788
-      FIdle_5: 6191318618280076056
+      IdleLR_0: 5710547782880293738
+      IdleLR_1: 1026251697901373755
+      IdleLR_2: -9115496772115220256
+      IdleLR_3: -3414487683946041397
+      IdleLR_4: 2161301214075719406
+      IdleLR_5: -58491106758847721
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -1,25 +1,22 @@
 fileFormatVersion: 2
-guid: 126b698f88446fb46b1d77ce1b0b823b
+guid: 6e05ebf02f860714ea1e7ac2a6baf7bb
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -3332030576119438067
-    second: FIdle_0
+      213: 1583898419757939861
+    second: MagicB_0
   - first:
-      213: 4413075575318815298
-    second: FIdle_1
+      213: -1636697391828181863
+    second: MagicB_1
   - first:
-      213: 9108324702574523238
-    second: FIdle_2
+      213: 2057008702297350678
+    second: MagicB_2
   - first:
-      213: 6517771139923086932
-    second: FIdle_3
+      213: 5688589542089014052
+    second: MagicB_3
   - first:
-      213: 7437031240979420788
-    second: FIdle_4
-  - first:
-      213: 6191318618280076056
-    second: FIdle_5
+      213: 4752610212262612785
+    second: MagicB_4
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -128,13 +125,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: FIdle_0
+      name: MagicB_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 32
-        height: 32
+        x: 4
+        y: 1
+        width: 28
+        height: 28
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -143,20 +140,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: d0529a948df32c1d0800000000000000
-      internalID: -3332030576119438067
+      spriteID: 59c79fd88332bf510800000000000000
+      internalID: 1583898419757939861
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: FIdle_1
+      name: MagicB_1
       rect:
         serializedVersion: 2
-        x: 32
-        y: 0
-        width: 32
-        height: 32
+        x: 34
+        y: 1
+        width: 28
+        height: 25
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -165,20 +162,42 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 242a4d1bad46e3d30800000000000000
-      internalID: 4413075575318815298
+      spriteID: 99cd54bc4684949e0800000000000000
+      internalID: -1636697391828181863
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: FIdle_2
+      name: MagicB_2
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 25
+        width: 13
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 61222582486fb8c10800000000000000
+      internalID: 2057008702297350678
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MagicB_3
       rect:
         serializedVersion: 2
         x: 64
-        y: 0
+        y: 1
         width: 32
-        height: 32
+        height: 31
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -187,20 +206,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 663bedb1f05476e70800000000000000
-      internalID: 9108324702574523238
+      spriteID: 42bb7319c0ee1fe40800000000000000
+      internalID: 5688589542089014052
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: FIdle_3
+      name: MagicB_4
       rect:
         serializedVersion: 2
-        x: 96
-        y: 0
-        width: 32
-        height: 32
+        x: 95
+        y: 1
+        width: 289
+        height: 31
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -209,52 +228,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 45e8862b156c37a50800000000000000
-      internalID: 6517771139923086932
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: FIdle_4
-      rect:
-        serializedVersion: 2
-        x: 128
-        y: 0
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 4769f06b284a53760800000000000000
-      internalID: 7437031240979420788
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: FIdle_5
-      rect:
-        serializedVersion: 2
-        x: 160
-        y: 0
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 813a8d5fa7bfbe550800000000000000
-      internalID: 6191318618280076056
+      spriteID: 13f8ec1cec9a4f140800000000000000
+      internalID: 4752610212262612785
       vertices: []
       indices: 
       edges: []
@@ -263,7 +238,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: e5db3a44d5153fb4aa2beeeac06bb608
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -273,12 +248,11 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      FIdle_0: -3332030576119438067
-      FIdle_1: 4413075575318815298
-      FIdle_2: 9108324702574523238
-      FIdle_3: 6517771139923086932
-      FIdle_4: 7437031240979420788
-      FIdle_5: 6191318618280076056
+      MagicB_0: 1583898419757939861
+      MagicB_1: -1636697391828181863
+      MagicB_2: 2057008702297350678
+      MagicB_3: 5688589542089014052
+      MagicB_4: 4752610212262612785
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
