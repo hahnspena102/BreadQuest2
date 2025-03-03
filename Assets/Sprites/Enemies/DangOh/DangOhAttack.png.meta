@@ -347,7 +347,16 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      DangOhAttack_0: 3522364989235651827
+      DangOhAttack_1: 1695502459425701188
+      DangOhAttack_2: 7548448748559452164
+      DangOhAttack_3: 8716616490231419104
+      DangOhAttack_4: -1426028310733445050
+      DangOhAttack_5: -4001617975674265817
+      DangOhAttack_6: -2219534693723444171
+      DangOhAttack_7: 4406242701146643510
+      DangOhAttack_8: 2943291829500181503
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
