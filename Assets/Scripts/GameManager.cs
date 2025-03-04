@@ -16,8 +16,23 @@ public class GameManager : MonoBehaviour
         { "spicy", new Color(1f, 0.7417727f, 0.495283f) }
     };
 
+    //attacking -> defending
+    private static Dictionary<string, string> EffectivenessMap = new Dictionary<string, string>()
+    {
+        { "vanilla", "cacao"},
+        { "cacao", "grain"},
+        {"grain", "fruity"},
+        {"fruity", "spicy"},
+        {"spicy", "vanilla"}
+    };
+
     void Start() {
         PopupStore = GameObject.Find("PopupStore");
         ProjectileStore = GameObject.Find("ProjectileStore");
+    }
+
+    public static bool IsEffective(string attacking, string defending) {
+        if (!EffectivenessMap.ContainsKey(attacking)) return false;
+        return EffectivenessMap[attacking] == defending;
     }
 }

@@ -10,13 +10,24 @@ public class DamagePopup : MonoBehaviour
     private Color originalColor;
     private int damageNumber;
     private Color outlineColor = Color.black;
+    private bool isCritical, isPlayerHurt;
 
     public global::System.Int32 DamageNumber { get => damageNumber; set => damageNumber = value; }
     public Color OutlineColor { get => outlineColor; set => outlineColor = value; }
+    public global::System.Boolean IsCritical { get => isCritical; set => isCritical = value; }
+    public global::System.Boolean IsPlayerHurt { get => isPlayerHurt; set => isPlayerHurt = value; }
 
     void Start()
     {
         textMesh = GetComponent<TextMeshPro>();
+        if (isCritical) {
+            textMesh.color = Color.yellow;
+            textMesh.fontSize = 6;
+        }
+        if (IsPlayerHurt) {
+            textMesh.color = new Color(255/255f, 110/255f,110/255f);
+        }
+        
         originalColor = textMesh.color;
         StartCoroutine(FadeOutAndMoveUp());
         textMesh.text = $"{damageNumber}";
