@@ -16,7 +16,7 @@ public class SirGluten : MonoBehaviour
 
     // STATS
     private int health, glucose, yeast, yeastLevel;
-    private int maxHealth=100, maxGlucose=10, maxYeast, maxYeastLevel;
+    private int maxHealth=100, maxGlucose=30, maxYeast, maxYeastLevel = 10;
 
     [SerializeField] private GameObject healthBar, glucoseBar, yeastBar;
     private Slider healthSlider, glucoseSlider, yeastSlider;
@@ -38,6 +38,7 @@ public class SirGluten : MonoBehaviour
     public static Vector2 playerPosition;
 
     private int weaponAnimationFrame = 0;
+    public static int staticYeast = 0;
 
     //GETTERS
 
@@ -74,13 +75,37 @@ public class SirGluten : MonoBehaviour
     }
 
     void UpdateStats(){
+        maxYeast = (int)Mathf.Round((Mathf.Pow(1.3f,yeastLevel)) * 100);
+        //Debug.Log(maxYeast);
+        yeast = Mathf.Max(yeast, staticYeast);
+        if (yeast >= maxYeast && yeastLevel < maxYeastLevel) {
+            yeast = 0;
+            staticYeast = 0;
+            yeastLevel += 1;
+            maxHealth = 100 + (yeastLevel * 20);
+            maxGlucose = 30 + (yeastLevel * 2);
+            health = maxHealth;
+            glucose = maxGlucose;
+        }
+        
+
         healthSlider.value = health;
+        healthSlider.maxValue = maxHealth;
         glucoseSlider.value = glucose;
+        glucoseSlider.maxValue = maxGlucose;
         yeastSlider.value = yeast;
+        yeastSlider.maxValue = maxYeast;
+
 
         healthText.text = health + "/" + maxHealth;
         glucoseText.text = glucose + "/" + maxGlucose;
-        yeastText.text = "Level: " + yeastLevel;
+        if (yeastLevel >= maxYeastLevel) {
+            yeast = maxYeast;
+            yeastText.text = "Level: MAX";
+        } else {
+            yeastText.text = "Level: " + yeastLevel;
+        }
+        
     }
 
     void Update() {
@@ -88,9 +113,7 @@ public class SirGluten : MonoBehaviour
         playerPosition = body.position;
 
         // Stats
-        healthSlider.value = health;
-        healthSlider.maxValue = maxHealth;
-        healthText.text = $"{health}/{maxHealth}";
+        UpdateStats();
 
         if (health <= 0) { 
             SceneManager.LoadScene(1);
@@ -99,6 +122,8 @@ public class SirGluten : MonoBehaviour
         // Movement
         verticalInput = Input.GetAxisRaw("Vertical");
         horizontalInput = Input.GetAxisRaw("Horizontal");
+
+        //if (Input.GetKeyDown(KeyCode.P)) yeast += 50;
 
         if (Input.GetKeyDown(KeyCode.E) && hoveredWeaponItem != null && !isAttacking) {
             Equip();

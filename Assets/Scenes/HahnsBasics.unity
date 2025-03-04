@@ -1649,7 +1649,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &261882407
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1668,7 +1668,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 375, y: 90}
+  m_AnchoredPosition: {x: 375, y: 80}
   m_SizeDelta: {x: 128, y: 128}
   m_Pivot: {x: 0, y: 0}
 --- !u!114 &261882408
@@ -4062,6 +4062,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1432033776}
     m_Modifications:
+    - target: {fileID: 3115063101852461660, guid: ab2fbaaf0a7ae5248986ed7f2d797114, type: 3}
+      propertyPath: description
+      value: An stick posessing pure aroma.
+      objectReference: {fileID: 0}
     - target: {fileID: 4361398459963370707, guid: ab2fbaaf0a7ae5248986ed7f2d797114, type: 3}
       propertyPath: m_Name
       value: Cinnastick
@@ -4128,11 +4132,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7115735482364628443, guid: ab2fbaaf0a7ae5248986ed7f2d797114, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -0.25
+      value: 0.95
       objectReference: {fileID: 0}
     - target: {fileID: 7115735482364628443, guid: ab2fbaaf0a7ae5248986ed7f2d797114, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 1.81
+      value: 1.08
       objectReference: {fileID: 0}
     - target: {fileID: 7115735482364628443, guid: ab2fbaaf0a7ae5248986ed7f2d797114, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -4298,7 +4302,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 247, y: 90}
+  m_AnchoredPosition: {x: 247, y: 80}
   m_SizeDelta: {x: 128, y: 128}
   m_Pivot: {x: 0, y: 0}
 --- !u!114 &1788720521

@@ -11,9 +11,11 @@ public class Enemy : MonoBehaviour
     [SerializeField] private int damage;
     [SerializeField] private string flavoring;
     [SerializeField] private GameObject damagePopup;
+    [SerializeField] private float xpMultiplier = 1f;
     private SpriteRenderer spriteRenderer;
     private GameObject popupStore;
     private Color ogColor;
+    private bool isDying;
 
     public global::System.Int32 Damage { get => damage; set => damage = value; }
 
@@ -24,10 +26,16 @@ public class Enemy : MonoBehaviour
         
     }
     void Update() {
-        if (health <= 0) {
-            
-            Destroy(gameObject, 0.2f);
+        if (health <= 0 && !isDying) {
+            Death();
         }
+    }
+
+    void Death(){
+        isDying = true;
+        SirGluten.staticYeast += (int)Mathf.Round(Random.Range(1,20) * xpMultiplier);
+        Destroy(gameObject, 0.2f);
+        health--;
     }
 
     IEnumerator Hurt(int damage, string flavor) {

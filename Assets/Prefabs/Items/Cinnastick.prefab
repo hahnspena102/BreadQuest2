@@ -186,7 +186,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8501036405661133926, guid: ddb193a141508b545a8982885ad48e35, type: 3}
       propertyPath: description
-      value: 
+      value: A stick posessing pure autumn aroma.
       objectReference: {fileID: 0}
     - target: {fileID: 8630761061912810607, guid: ddb193a141508b545a8982885ad48e35, type: 3}
       propertyPath: m_OverridePixelPerfect
