@@ -16,11 +16,13 @@ public class SirGluten : MonoBehaviour
 
     // STATS
     private int health, glucose, yeast, yeastLevel;
-    private int maxHealth=100, maxGlucose=100, maxYeast, maxYeastLevel;
+    private int maxHealth=100, maxGlucose=30, maxYeast, maxYeastLevel = 10;
 
     [SerializeField] private GameObject healthBar, glucoseBar, yeastBar;
     private Slider healthSlider, glucoseSlider, yeastSlider;
     private TMPro.TextMeshProUGUI healthText, glucoseText, yeastText;
+
+    [SerializeField] private GameObject damagePopup;
 
     // BOOLS
     private bool isAttacking, isHurting, isLocked, isAnimationLocked;
@@ -36,6 +38,7 @@ public class SirGluten : MonoBehaviour
     public static Vector2 playerPosition;
 
     private int weaponAnimationFrame = 0;
+    public static int staticYeast = 0;
 
     //GETTERS
 
@@ -72,13 +75,37 @@ public class SirGluten : MonoBehaviour
     }
 
     void UpdateStats(){
+        maxYeast = (int)Mathf.Round((Mathf.Pow(1.3f,yeastLevel)) * 100);
+        //Debug.Log(maxYeast);
+        yeast = Mathf.Max(yeast, staticYeast);
+        if (yeast >= maxYeast && yeastLevel < maxYeastLevel) {
+            yeast = 0;
+            staticYeast = 0;
+            yeastLevel += 1;
+            maxHealth = 100 + (yeastLevel * 20);
+            maxGlucose = 30 + (yeastLevel * 2);
+            health = maxHealth;
+            glucose = maxGlucose;
+        }
+        
+
         healthSlider.value = health;
+        healthSlider.maxValue = maxHealth;
         glucoseSlider.value = glucose;
+        glucoseSlider.maxValue = maxGlucose;
         yeastSlider.value = yeast;
+        yeastSlider.maxValue = maxYeast;
+
 
         healthText.text = health + "/" + maxHealth;
         glucoseText.text = glucose + "/" + maxGlucose;
-        yeastText.text = "Level: " + yeastLevel;
+        if (yeastLevel >= maxYeastLevel) {
+            yeast = maxYeast;
+            yeastText.text = "Level: MAX";
+        } else {
+            yeastText.text = "Level: " + yeastLevel;
+        }
+        
     }
 
     void Update() {
@@ -86,9 +113,7 @@ public class SirGluten : MonoBehaviour
         playerPosition = body.position;
 
         // Stats
-        healthSlider.value = health;
-        healthSlider.maxValue = maxHealth;
-        healthText.text = $"{health}/{maxHealth}";
+        UpdateStats();
 
         if (health <= 0) { 
             SceneManager.LoadScene(1);
@@ -98,13 +123,15 @@ public class SirGluten : MonoBehaviour
         verticalInput = Input.GetAxisRaw("Vertical");
         horizontalInput = Input.GetAxisRaw("Horizontal");
 
-        if (Input.GetKeyDown(KeyCode.E) && hoveredWeaponItem != null) {
+        //if (Input.GetKeyDown(KeyCode.P)) yeast += 50;
+
+        if (Input.GetKeyDown(KeyCode.E) && hoveredWeaponItem != null && !isAttacking) {
             Equip();
         }
-        if (Input.GetKeyDown(KeyCode.F)) {
+        if (Input.GetKeyDown(KeyCode.F) && !isAttacking) {
             Swap();
         }
-        if (Input.GetKeyDown(KeyCode.Q) && mainSlot != null) {
+        if (Input.GetKeyDown(KeyCode.Q) && mainSlot != null && !isAttacking) {
             Drop();
         }
 
@@ -139,10 +166,13 @@ public class SirGluten : MonoBehaviour
     void Equip() {
         if (mainSlot != null && subSlot == null) {
             subSlot = mainSlot;
+            subSlot.IsEquipped = false;
             subSlotImage.sprite = mainSlot.InventorySprite;
         }
 
         mainSlot = hoveredWeaponItem;
+        mainSlot.IsEquipped = true;
+
 
         GameObject hoveredWeaponDropped = hoveredWeapon.transform.GetChild(0).gameObject;
         
@@ -163,6 +193,8 @@ public class SirGluten : MonoBehaviour
         Item tempSlot = subSlot;
         subSlot = mainSlot;
         mainSlot = tempSlot;
+        mainSlot.IsEquipped = true;
+        subSlot.IsEquipped = false;
 
         UpdateInventory();
     }
@@ -170,10 +202,11 @@ public class SirGluten : MonoBehaviour
     void Drop() {
         if (mainSlot == null) return;
 
-        GameObject items = GameObject.Find("Items");
+        GameObject items = GameObject.Find("ItemStore");
         GameObject itemDropped = hoveredWeapon.transform.GetChild(0).gameObject;
 
         if (items != null && itemDropped != null) {
+            mainSlot.IsEquipped = false;
             RectTransform mainSlotRect = mainSlot.GetComponent<RectTransform>();
 
             if (mainSlotRect != null) {
@@ -192,6 +225,7 @@ public class SirGluten : MonoBehaviour
 
         if (subSlot != null) {
             mainSlot = subSlot;
+            mainSlot.IsEquipped = true;
             subSlot = null;
             
         }
@@ -204,6 +238,7 @@ public class SirGluten : MonoBehaviour
         isHurting = true;
 
         health -= damage;
+        CreatePopup(damage);
 
         Color ogColor = spriteRenderer.color;
         spriteRenderer.color = Color.red;
@@ -221,6 +256,14 @@ public class SirGluten : MonoBehaviour
         spriteRenderer.color = ogColor;
         isHurting = false;
         isLocked = false;
+    }
+
+    void CreatePopup(int damage){
+        GameObject newPopup = Instantiate(damagePopup, transform.position, Quaternion.identity);
+        DamagePopup dp = newPopup.GetComponent<DamagePopup>();
+        dp.DamageNumber = damage;
+        dp.OutlineColor = Color.red;
+        dp.transform.SetParent(GameManager.PopupStore.transform);
     }
 
     void MovePlayer(){

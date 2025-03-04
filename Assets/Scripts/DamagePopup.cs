@@ -9,8 +9,10 @@ public class DamagePopup : MonoBehaviour
     private TextMeshPro textMesh;
     private Color originalColor;
     private int damageNumber;
+    private Color outlineColor = Color.black;
 
     public global::System.Int32 DamageNumber { get => damageNumber; set => damageNumber = value; }
+    public Color OutlineColor { get => outlineColor; set => outlineColor = value; }
 
     void Start()
     {
@@ -18,6 +20,9 @@ public class DamagePopup : MonoBehaviour
         originalColor = textMesh.color;
         StartCoroutine(FadeOutAndMoveUp());
         textMesh.text = $"{damageNumber}";
+
+        textMesh.fontMaterial.SetColor("_OutlineColor", outlineColor);
+        //textMesh.fontMaterial.SetFloat("_OutlineWidth", 1f);
     }
 
     private IEnumerator FadeOutAndMoveUp()

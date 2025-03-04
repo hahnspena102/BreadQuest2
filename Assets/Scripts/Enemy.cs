@@ -11,9 +11,11 @@ public class Enemy : MonoBehaviour
     [SerializeField] private int damage;
     [SerializeField] private string flavoring;
     [SerializeField] private GameObject damagePopup;
+    [SerializeField] private float xpMultiplier = 1f;
     private SpriteRenderer spriteRenderer;
     private GameObject popupStore;
     private Color ogColor;
+    private bool isDying;
 
     public global::System.Int32 Damage { get => damage; set => damage = value; }
 
@@ -24,15 +26,21 @@ public class Enemy : MonoBehaviour
         
     }
     void Update() {
-        if (health <= 0) {
-            
-            Destroy(gameObject, 0.2f);
+        if (health <= 0 && !isDying) {
+            Death();
         }
     }
 
-    IEnumerator Hurt(int damage) {
+    void Death(){
+        isDying = true;
+        SirGluten.staticYeast += (int)Mathf.Round(Random.Range(1,20) * xpMultiplier);
+        Destroy(gameObject, 0.2f);
+        health--;
+    }
+
+    IEnumerator Hurt(int damage, string flavor) {
         health -= damage;
-        CreatePopup(damage);
+        CreatePopup(damage, flavor);
 
         spriteRenderer.color = Color.red;
 
@@ -50,11 +58,13 @@ public class Enemy : MonoBehaviour
 
     }
 
-    void CreatePopup(int damage){
+    void CreatePopup(int damage, string flavor){
         GameObject newPopup = Instantiate(damagePopup, transform.position, Quaternion.identity);
         DamagePopup dp = newPopup.GetComponent<DamagePopup>();
         dp.DamageNumber = damage;
+        dp.OutlineColor = GameManager.FlavorColorMap[flavor];
         dp.transform.SetParent(GameManager.PopupStore.transform);
+
     }
 
     void OnTriggerEnter2D(Collider2D collider) {
@@ -63,7 +73,7 @@ public class Enemy : MonoBehaviour
 
             Melee melee = item.GetComponent<Melee>();
 
-            StartCoroutine(Hurt(melee.AttackDamage));
+            StartCoroutine(Hurt(melee.AttackDamage, melee.Flavor));
         }
     }
     

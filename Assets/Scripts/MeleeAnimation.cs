@@ -30,10 +30,19 @@ public class MeleeAnimation : MonoBehaviour
             spriteRenderer.sprite = null;
         } else {
             if (melee.AnimationDirection == "LR") {
+                if (leftRightSwing.Count < index) {
+                    index = leftRightSwing.Count;
+                } 
                 spriteRenderer.sprite = leftRightSwing[index-1];
             } else if (melee.AnimationDirection == "F") {
+                if (forwardSwing.Count < index) {
+                    index = forwardSwing.Count;
+                } 
                 spriteRenderer.sprite = forwardSwing[index-1];
             } else {
+                if (backwardSwing.Count < index) {
+                    index = backwardSwing.Count;
+                } 
                 spriteRenderer.sprite = backwardSwing[index-1];
             }
         }

@@ -12,11 +12,13 @@ public class Item : MonoBehaviour
     [SerializeField]private string itemType;
     [SerializeField]private string rarity;
     private Sprite inventorySprite;
+    private bool isEquipped;
 
     public global::System.String Id { get => id; set => id = value; }
     public global::System.String WeaponName { get => weaponName; set => weaponName = value; }
     public global::System.String Description { get => description; set => description = value; }
     public Sprite InventorySprite { get => inventorySprite; set => inventorySprite = value; }
+    public global::System.Boolean IsEquipped { get => isEquipped; set => isEquipped = value; }
 
     void Start(){
         inventorySprite = GetComponentInChildren<SpriteRenderer>().sprite;

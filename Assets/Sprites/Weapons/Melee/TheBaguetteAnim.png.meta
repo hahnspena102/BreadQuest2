@@ -1,10 +1,34 @@
 fileFormatVersion: 2
-guid: 55ac46129884fc64f8cd46fd02ec0ba0
+guid: db9203a90eb20734da7d4e17424ceb53
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 1231884190431480216
-    second: MeleeB_0
+      213: 3093084659387666519
+    second: TheBaguetteAnim_0
+  - first:
+      213: -3769652436725689536
+    second: TheBaguetteAnim_1
+  - first:
+      213: 9041049226964437087
+    second: TheBaguetteAnim_2
+  - first:
+      213: -3719508736209185353
+    second: TheBaguetteAnim_3
+  - first:
+      213: -8360502922876624060
+    second: TheBaguetteAnim_4
+  - first:
+      213: -4870440855266635595
+    second: TheBaguetteAnim_5
+  - first:
+      213: -3586947255362384402
+    second: TheBaguetteAnim_6
+  - first:
+      213: -197408414117896761
+    second: TheBaguetteAnim_7
+  - first:
+      213: 5272309124350846142
+    second: TheBaguetteAnim_8
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,111 +137,199 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: KnightSwordB_0
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 0
-        width: 32
-        height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b61b1cf66180246439fbbf093187032c
-      internalID: 842367277
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: KnightSwordB_1
+      name: TheBaguetteAnim_0
       rect:
         serializedVersion: 2
         x: 96
         y: 0
-        width: 32
-        height: 48
+        width: 96
+        height: 96
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 0f83aaea4e5148840a8a7339b2d4e59b
-      internalID: -164630209
+      spriteID: 750130f1c18dcea20800000000000000
+      internalID: 3093084659387666519
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: KnightSwordB_2
-      rect:
-        serializedVersion: 2
-        x: 128
-        y: 0
-        width: 32
-        height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b4202eded95782345842e1c1c4703cb2
-      internalID: -655462481
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: KnightSwordB_3
-      rect:
-        serializedVersion: 2
-        x: 160
-        y: 0
-        width: 32
-        height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e60212cf212721846aa3e4ba0c83729d
-      internalID: -351528662
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: KnightSwordB_4
+      name: TheBaguetteAnim_1
       rect:
         serializedVersion: 2
         x: 192
         y: 0
-        width: 32
-        height: 48
+        width: 96
+        height: 96
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: b2e56c85e59da4641b0057d31e68c156
-      internalID: -854525315
+      spriteID: 043974ec4118fabc0800000000000000
+      internalID: -3769652436725689536
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TheBaguetteAnim_2
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 0
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f580902de52487d70800000000000000
+      internalID: 9041049226964437087
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TheBaguetteAnim_3
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 0
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7b51a4fd286a16cc0800000000000000
+      internalID: -3719508736209185353
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TheBaguetteAnim_4
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 0
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 443e25233e689fb80800000000000000
+      internalID: -8360502922876624060
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TheBaguetteAnim_5
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 0
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5b0584ac8d7b86cb0800000000000000
+      internalID: -4870440855266635595
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TheBaguetteAnim_6
+      rect:
+        serializedVersion: 2
+        x: 672
+        y: 0
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eed0018c97a983ec0800000000000000
+      internalID: -3586947255362384402
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TheBaguetteAnim_7
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 0
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7cd54d0e71aa24df0800000000000000
+      internalID: -197408414117896761
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TheBaguetteAnim_8
+      rect:
+        serializedVersion: 2
+        x: 864
+        y: 0
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eb4abf6f6310b2940800000000000000
+      internalID: 5272309124350846142
       vertices: []
       indices: 
       edges: []
@@ -226,7 +338,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: c3c53e79824730042a5d42daeef514db
+    spriteID: 527a45658b50be34d9cca490aa0c2d23
     internalID: 0
     vertices: []
     indices: 
@@ -236,11 +348,15 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      KnightSwordB_0: 842367277
-      KnightSwordB_1: -164630209
-      KnightSwordB_2: -655462481
-      KnightSwordB_3: -351528662
-      KnightSwordB_4: -854525315
+      TheBaguetteAnim_0: 3093084659387666519
+      TheBaguetteAnim_1: -3769652436725689536
+      TheBaguetteAnim_2: 9041049226964437087
+      TheBaguetteAnim_3: -3719508736209185353
+      TheBaguetteAnim_4: -8360502922876624060
+      TheBaguetteAnim_5: -4870440855266635595
+      TheBaguetteAnim_6: -3586947255362384402
+      TheBaguetteAnim_7: -197408414117896761
+      TheBaguetteAnim_8: 5272309124350846142
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

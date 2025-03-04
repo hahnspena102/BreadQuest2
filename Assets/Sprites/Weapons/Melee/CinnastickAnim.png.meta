@@ -1,22 +1,34 @@
 fileFormatVersion: 2
-guid: ef661c66275b9324f900dbcb584ec84e
+guid: 691979141930a73428d61bbcdf41f33e
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 3314928121665062252
-    second: MeleeLR_0
+      213: -1145209023832732530
+    second: CinnastickAnim_0
   - first:
-      213: -1193591759212752835
-    second: MeleeLR_1
+      213: 5892741160931815754
+    second: CinnastickAnim_1
   - first:
-      213: 3411826030246712115
-    second: MeleeLR_2
+      213: -6388003275786699236
+    second: CinnastickAnim_2
   - first:
-      213: 5081867165046706093
-    second: MeleeLR_3
+      213: -2679518618347363446
+    second: CinnastickAnim_3
   - first:
-      213: -7376778918946712799
-    second: MeleeLR_4
+      213: -2878180904677427637
+    second: CinnastickAnim_4
+  - first:
+      213: -1299796466119587085
+    second: CinnastickAnim_5
+  - first:
+      213: 1606790907820210070
+    second: CinnastickAnim_6
+  - first:
+      213: 7913114490217938216
+    second: CinnastickAnim_7
+  - first:
+      213: 182929867792597173
+    second: CinnastickAnim_8
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -125,111 +137,199 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: KnightSwordLR_0
+      name: CinnastickAnim_0
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 0
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e8cc0ecd5766b10f0800000000000000
+      internalID: -1145209023832732530
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CinnastickAnim_1
       rect:
         serializedVersion: 2
         x: 192
         y: 0
         width: 96
-        height: 32
+        height: 96
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 6846b81848e9c7443a4c596ee475f26f
-      internalID: -1667232221
+      spriteID: a41f9a26dd837c150800000000000000
+      internalID: 5892741160931815754
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: KnightSwordLR_1
+      name: CinnastickAnim_2
       rect:
         serializedVersion: 2
         x: 288
         y: 0
         width: 96
-        height: 32
+        height: 96
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: d51311db6518c314a915b6f6a6a01b6e
-      internalID: 639363471
+      spriteID: c1eb3b2add04957a0800000000000000
+      internalID: -6388003275786699236
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: KnightSwordLR_2
+      name: CinnastickAnim_3
       rect:
         serializedVersion: 2
         x: 384
         y: 0
         width: 96
-        height: 32
+        height: 96
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 54ae0ede1c1646e44b1d97159780e48d
-      internalID: -1334124643
+      spriteID: a832c58630070dad0800000000000000
+      internalID: -2679518618347363446
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: KnightSwordLR_3
+      name: CinnastickAnim_4
       rect:
         serializedVersion: 2
         x: 480
         y: 0
         width: 96
-        height: 32
+        height: 96
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 0c75cdae7d92796489a6151d12f2322f
-      internalID: 1200816694
+      spriteID: b46b36967b5ae08d0800000000000000
+      internalID: -2878180904677427637
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: KnightSwordLR_4
+      name: CinnastickAnim_5
       rect:
         serializedVersion: 2
         x: 576
         y: 0
         width: 96
-        height: 32
+        height: 96
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 2b83b6fb9a2831546acd2e6f392e3ef7
-      internalID: -1130598658
+      spriteID: 3fa42ac200236fde0800000000000000
+      internalID: -1299796466119587085
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CinnastickAnim_6
+      rect:
+        serializedVersion: 2
+        x: 672
+        y: 0
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 69773f841d77c4610800000000000000
+      internalID: 1606790907820210070
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CinnastickAnim_7
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 0
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 82dbf6014b701dd60800000000000000
+      internalID: 7913114490217938216
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CinnastickAnim_8
+      rect:
+        serializedVersion: 2
+        x: 864
+        y: 0
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5b0469cdeb5e98200800000000000000
+      internalID: 182929867792597173
       vertices: []
       indices: 
       edges: []
@@ -238,7 +338,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 555bd8cf72e29f040a0203c28c24c8e1
+    spriteID: 77f6a44a7708fb741b16460216beda41
     internalID: 0
     vertices: []
     indices: 
@@ -248,11 +348,15 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      KnightSwordLR_0: -1667232221
-      KnightSwordLR_1: 639363471
-      KnightSwordLR_2: -1334124643
-      KnightSwordLR_3: 1200816694
-      KnightSwordLR_4: -1130598658
+      CinnastickAnim_0: -1145209023832732530
+      CinnastickAnim_1: 5892741160931815754
+      CinnastickAnim_2: -6388003275786699236
+      CinnastickAnim_3: -2679518618347363446
+      CinnastickAnim_4: -2878180904677427637
+      CinnastickAnim_5: -1299796466119587085
+      CinnastickAnim_6: 1606790907820210070
+      CinnastickAnim_7: 7913114490217938216
+      CinnastickAnim_8: 182929867792597173
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
