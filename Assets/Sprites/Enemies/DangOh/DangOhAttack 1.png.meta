@@ -1,34 +1,25 @@
 fileFormatVersion: 2
-guid: 413b096bd987cde4fa0aef6f26f802bc
+guid: 20decfd4c0c7f4869815b36c69a3335a
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 3522364989235651827
-    second: DangOhAttack_0
+      213: 3791279071261958985
+    second: DangOhAttack 1_0
   - first:
-      213: 1695502459425701188
-    second: DangOhAttack_1
+      213: 1918087031903135749
+    second: DangOhAttack 1_1
   - first:
-      213: 7548448748559452164
-    second: DangOhAttack_2
+      213: -1278981993822967070
+    second: DangOhAttack 1_2
   - first:
-      213: 8716616490231419104
-    second: DangOhAttack_3
+      213: 2680628542893417518
+    second: DangOhAttack 1_3
   - first:
-      213: -1426028310733445050
-    second: DangOhAttack_4
+      213: 1149730827358735951
+    second: DangOhAttack 1_4
   - first:
-      213: -4001617975674265817
-    second: DangOhAttack_5
-  - first:
-      213: -2219534693723444171
-    second: DangOhAttack_6
-  - first:
-      213: 4406242701146643510
-    second: DangOhAttack_7
-  - first:
-      213: 2943291829500181503
-    second: DangOhAttack_8
+      213: -3859557003823305717
+    second: DangOhAttack 1_5
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -120,24 +111,11 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: DangOhAttack_0
+      name: DangOhAttack 1_0
       rect:
         serializedVersion: 2
         x: 18
@@ -152,19 +130,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 3f4e9a0ab44f1e030800000000000000
-      internalID: 3522364989235651827
+      spriteID: 94321fe6a345d9430800000000000000
+      internalID: 3791279071261958985
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: DangOhAttack_1
+      name: DangOhAttack 1_1
       rect:
         serializedVersion: 2
-        x: 77
+        x: 78
         y: 12
-        width: 24
+        width: 22
         height: 44
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -174,19 +152,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 44dbed1f082a78710800000000000000
-      internalID: 1695502459425701188
+      spriteID: 508aed83ef96e9a10800000000000000
+      internalID: 1918087031903135749
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: DangOhAttack_2
+      name: DangOhAttack 1_2
       rect:
         serializedVersion: 2
-        x: 136
+        x: 138
         y: 12
-        width: 26
+        width: 22
         height: 44
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -196,19 +174,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 408c027b42a71c860800000000000000
-      internalID: 7548448748559452164
+      spriteID: 2eaaf0827a4204ee0800000000000000
+      internalID: -1278981993822967070
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: DangOhAttack_3
+      name: DangOhAttack 1_3
       rect:
         serializedVersion: 2
-        x: 195
+        x: 198
         y: 12
-        width: 29
+        width: 22
         height: 44
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -218,19 +196,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 0e05e87e384a7f870800000000000000
-      internalID: 8716616490231419104
+      spriteID: e246fe90571833520800000000000000
+      internalID: 2680628542893417518
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: DangOhAttack_4
+      name: DangOhAttack 1_4
       rect:
         serializedVersion: 2
-        x: 253
+        x: 258
         y: 12
-        width: 32
+        width: 22
         height: 44
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -240,19 +218,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 648251b8ecab53ce0800000000000000
-      internalID: -1426028310733445050
+      spriteID: f4e8800981aa4ff00800000000000000
+      internalID: 1149730827358735951
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: DangOhAttack_5
+      name: DangOhAttack 1_5
       rect:
         serializedVersion: 2
-        x: 312
+        x: 318
         y: 12
-        width: 33
+        width: 22
         height: 44
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -262,74 +240,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 72f1e1117a56778c0800000000000000
-      internalID: -4001617975674265817
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DangOhAttack_6
-      rect:
-        serializedVersion: 2
-        x: 371
-        y: 12
-        width: 35
-        height: 44
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 53c65f5a4f0a231e0800000000000000
-      internalID: -2219534693723444171
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DangOhAttack_7
-      rect:
-        serializedVersion: 2
-        x: 431
-        y: 12
-        width: 36
-        height: 44
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 63cd004346e162d30800000000000000
-      internalID: 4406242701146643510
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DangOhAttack_8
-      rect:
-        serializedVersion: 2
-        x: 491
-        y: 12
-        width: 36
-        height: 44
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: ffbfaaf135ca8d820800000000000000
-      internalID: 2943291829500181503
+      spriteID: b0cadb49a59107ac0800000000000000
+      internalID: -3859557003823305717
       vertices: []
       indices: 
       edges: []
@@ -348,15 +260,12 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      DangOhAttack_0: 3522364989235651827
-      DangOhAttack_1: 1695502459425701188
-      DangOhAttack_2: 7548448748559452164
-      DangOhAttack_3: 8716616490231419104
-      DangOhAttack_4: -1426028310733445050
-      DangOhAttack_5: -4001617975674265817
-      DangOhAttack_6: -2219534693723444171
-      DangOhAttack_7: 4406242701146643510
-      DangOhAttack_8: 2943291829500181503
+      DangOhAttack 1_0: 3791279071261958985
+      DangOhAttack 1_1: 1918087031903135749
+      DangOhAttack 1_2: -1278981993822967070
+      DangOhAttack 1_3: 2680628542893417518
+      DangOhAttack 1_4: 1149730827358735951
+      DangOhAttack 1_5: -3859557003823305717
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

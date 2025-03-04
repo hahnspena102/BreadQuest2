@@ -5746,6 +5746,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: DangOh
       objectReference: {fileID: 0}
+    - target: {fileID: 927242638396505276, guid: 101eb6026cd00fb45bab4df81a58f2a2, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 37c886b5891a14b6388103d436e9f1b2, type: 2}
     - target: {fileID: 1173719324865208261, guid: 101eb6026cd00fb45bab4df81a58f2a2, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
