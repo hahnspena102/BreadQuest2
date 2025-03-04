@@ -209,7 +209,11 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      dangoidleback_0: 966596986713979565
+      dangoidleback_1: 8970807467115549365
+      dangoidleback_2: 2429639709171957358
+      dangoidleback_3: 7682756255628536857
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
