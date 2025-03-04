@@ -1,28 +1,34 @@
 fileFormatVersion: 2
-guid: 8a1e9e7c905f66949a2bc52c2cb3a60c
+guid: 65ab6541af3b95240a9bd230b7412b13
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 4880119718801479540
-    second: SwingLR_0
+      213: -7968067151558468314
+    second: KnightsSwordAnim_0
   - first:
-      213: 7698671107010989869
-    second: SwingLR_1
+      213: 1170735066690857242
+    second: KnightsSwordAnim_1
   - first:
-      213: 6273665430717272474
-    second: SwingLR_2
+      213: 2562508023878600730
+    second: KnightsSwordAnim_2
   - first:
-      213: -2892585613540257325
-    second: SwingLR_3
+      213: 7321876154284709626
+    second: KnightsSwordAnim_3
   - first:
-      213: -3819449717954965333
-    second: SwingLR_4
+      213: 9185744533955771172
+    second: KnightsSwordAnim_4
   - first:
-      213: 399296043547345658
-    second: SwingLR_5
+      213: -8138505488828828450
+    second: KnightsSwordAnim_5
   - first:
-      213: -494253490175688106
-    second: SwingLR_6
+      213: 7864045243654256512
+    second: KnightsSwordAnim_6
+  - first:
+      213: 8916587951469395088
+    second: KnightsSwordAnim_7
+  - first:
+      213: 5438938300896661727
+    second: KnightsSwordAnim_8
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -131,155 +137,199 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: SwingLR_0
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 0
-        width: 96
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 4779a8c370ba9b340800000000000000
-      internalID: 4880119718801479540
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SwingLR_1
+      name: KnightsSwordAnim_0
       rect:
         serializedVersion: 2
         x: 96
         y: 0
         width: 96
-        height: 32
+        height: 96
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: d2f04ff159c27da60800000000000000
-      internalID: 7698671107010989869
+      spriteID: cf9fb4262cb62f646a5c8c8a65cfa901
+      internalID: 876549254
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SwingLR_2
+      name: KnightsSwordAnim_1
       rect:
         serializedVersion: 2
         x: 192
         y: 0
         width: 96
-        height: 32
+        height: 96
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: a911d8d4879801750800000000000000
-      internalID: 6273665430717272474
+      spriteID: 0bbf5556e04fa5742ae84e3c7cab8681
+      internalID: -906424909
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SwingLR_3
+      name: KnightsSwordAnim_2
       rect:
         serializedVersion: 2
         x: 288
         y: 0
         width: 96
-        height: 32
+        height: 96
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 3d11786c5b87bd7d0800000000000000
-      internalID: -2892585613540257325
+      spriteID: 48a2c40eda6633f46a105d46183f2209
+      internalID: 1270951686
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SwingLR_4
+      name: KnightsSwordAnim_3
       rect:
         serializedVersion: 2
         x: 384
         y: 0
         width: 96
-        height: 32
+        height: 96
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: ba014d3c7b69efac0800000000000000
-      internalID: -3819449717954965333
+      spriteID: 8d509729006cfcf41886cde83af46c2a
+      internalID: -368832410
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SwingLR_5
+      name: KnightsSwordAnim_4
       rect:
         serializedVersion: 2
         x: 480
         y: 0
         width: 96
-        height: 32
+        height: 96
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: af2cbd3d2a59a8500800000000000000
-      internalID: 399296043547345658
+      spriteID: 5acd3f2180b86584ca24b92644ca9f9f
+      internalID: -2055537311
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SwingLR_6
+      name: KnightsSwordAnim_5
       rect:
         serializedVersion: 2
         x: 576
         y: 0
         width: 96
-        height: 32
+        height: 96
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 652c411c11f0429f0800000000000000
-      internalID: -494253490175688106
+      spriteID: 94e3d5e4551f4b44fa74b24bdbb41314
+      internalID: -1147408322
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KnightsSwordAnim_6
+      rect:
+        serializedVersion: 2
+        x: 672
+        y: 0
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8dcd34620a501784b83abaf4f61ec2c7
+      internalID: 1660850616
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KnightsSwordAnim_7
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 0
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 05f96d49d57d46749ac3eccd19ede703
+      internalID: 1306869329
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KnightsSwordAnim_8
+      rect:
+        serializedVersion: 2
+        x: 864
+        y: 0
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2936b32f9fa94dc4bbe84a9095a3d607
+      internalID: 1261577093
       vertices: []
       indices: 
       edges: []
@@ -288,7 +338,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: f9a9bea6006eac148b2eb2394bc3a230
+    spriteID: 7de2474bc8e43714ea4b180643835809
     internalID: 0
     vertices: []
     indices: 
@@ -298,13 +348,15 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      SwingLR_0: 4880119718801479540
-      SwingLR_1: 7698671107010989869
-      SwingLR_2: 6273665430717272474
-      SwingLR_3: -2892585613540257325
-      SwingLR_4: -3819449717954965333
-      SwingLR_5: 399296043547345658
-      SwingLR_6: -494253490175688106
+      KnightsSwordAnim_0: 876549254
+      KnightsSwordAnim_1: -906424909
+      KnightsSwordAnim_2: 1270951686
+      KnightsSwordAnim_3: -368832410
+      KnightsSwordAnim_4: -2055537311
+      KnightsSwordAnim_5: -1147408322
+      KnightsSwordAnim_6: 1660850616
+      KnightsSwordAnim_7: 1306869329
+      KnightsSwordAnim_8: 1261577093
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

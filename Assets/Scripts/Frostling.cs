@@ -45,7 +45,7 @@ public class Frostling : MonoBehaviour
     }
 
     IEnumerator Attack(){
-        currentAngle = (currentAngle + 20f) % 360;
+        currentAngle = (currentAngle + 30f) % 360;
         Quaternion newRotation = Quaternion.Euler(0, 0, currentAngle);
 
         while (phase == 1) yield return null;
@@ -62,7 +62,7 @@ public class Frostling : MonoBehaviour
         Rigidbody2D rb = newProjectile.GetComponent<Rigidbody2D>();
         rb.angularVelocity = -360f * 2;
 
-        yield return new WaitForSeconds(0.15f);
+        yield return new WaitForSeconds(0.2f);
         StartCoroutine(Attack());
     }
 }

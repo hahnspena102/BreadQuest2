@@ -1,22 +1,10 @@
 fileFormatVersion: 2
-guid: 79d78da0d4caf4644b1e05ccd8d42d2a
+guid: 88c76f20af9e5994f9ddc56b47f69775
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 6689621957169358987
-    second: MeleeF_0
-  - first:
-      213: -3816858710179729744
-    second: MeleeF_1
-  - first:
-      213: 5188214838575563456
-    second: MeleeF_2
-  - first:
-      213: -2158831462674801691
-    second: MeleeF_3
-  - first:
-      213: 7499783548572031916
-    second: MeleeF_4
+      213: -5560997628221282433
+    second: TheBaguette_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -125,111 +113,23 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: KnightSwordF_0
+      name: TheBaguette_0
       rect:
         serializedVersion: 2
-        x: 64
-        y: 0
-        width: 32
-        height: 64
+        x: 2
+        y: 2
+        width: 29
+        height: 29
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 53bd06f65c97c1547ab9e08d6f1a339c
-      internalID: -1067715951
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: KnightSwordF_1
-      rect:
-        serializedVersion: 2
-        x: 96
-        y: 0
-        width: 32
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b3bf7a563b557374f8b6bfb72f952fe9
-      internalID: -453782843
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: KnightSwordF_2
-      rect:
-        serializedVersion: 2
-        x: 128
-        y: 0
-        width: 32
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7bd10a2c0bdfb504088605f4fe2ec63d
-      internalID: 780321372
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: KnightSwordF_3
-      rect:
-        serializedVersion: 2
-        x: 160
-        y: 0
-        width: 32
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 94441b45bd7317f4081cb732868b9335
-      internalID: 1434338038
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: KnightSwordF_4
-      rect:
-        serializedVersion: 2
-        x: 192
-        y: 0
-        width: 32
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f1f3fc482ba6e7b41ad8942763bd629a
-      internalID: 1842397866
+      spriteID: f77a41dde1e53d2b0800000000000000
+      internalID: -5560997628221282433
       vertices: []
       indices: 
       edges: []
@@ -238,7 +138,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 5b217fce2a9ba41409df748abd425348
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -248,11 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      KnightSwordF_0: -1067715951
-      KnightSwordF_1: -453782843
-      KnightSwordF_2: 780321372
-      KnightSwordF_3: 1434338038
-      KnightSwordF_4: 1842397866
+      TheBaguette_0: -5560997628221282433
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

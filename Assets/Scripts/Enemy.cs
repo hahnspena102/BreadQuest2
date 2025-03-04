@@ -30,9 +30,9 @@ public class Enemy : MonoBehaviour
         }
     }
 
-    IEnumerator Hurt(int damage) {
+    IEnumerator Hurt(int damage, string flavor) {
         health -= damage;
-        CreatePopup(damage);
+        CreatePopup(damage, flavor);
 
         spriteRenderer.color = Color.red;
 
@@ -50,11 +50,13 @@ public class Enemy : MonoBehaviour
 
     }
 
-    void CreatePopup(int damage){
+    void CreatePopup(int damage, string flavor){
         GameObject newPopup = Instantiate(damagePopup, transform.position, Quaternion.identity);
         DamagePopup dp = newPopup.GetComponent<DamagePopup>();
         dp.DamageNumber = damage;
+        dp.OutlineColor = GameManager.FlavorColorMap[flavor];
         dp.transform.SetParent(GameManager.PopupStore.transform);
+
     }
 
     void OnTriggerEnter2D(Collider2D collider) {
@@ -63,7 +65,7 @@ public class Enemy : MonoBehaviour
 
             Melee melee = item.GetComponent<Melee>();
 
-            StartCoroutine(Hurt(melee.AttackDamage));
+            StartCoroutine(Hurt(melee.AttackDamage, melee.Flavor));
         }
     }
     
