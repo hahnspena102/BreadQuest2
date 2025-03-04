@@ -15,7 +15,6 @@ public class Frostling : MonoBehaviour
     
     void Start()
     {
-    
         body = GetComponent<Rigidbody2D>();
         currentColor = GetComponent<SpriteRenderer>().color;
 
@@ -55,7 +54,7 @@ public class Frostling : MonoBehaviour
         Vector2 directionToPlayer = (new Vector2(SirGluten.playerPosition.x, SirGluten.playerPosition.y) - (Vector2)transform.position).normalized;
 
         GameObject newProjectile = Instantiate(projectile, spawnPosition, newRotation);
-        newProjectile.transform.parent = transform;
+        newProjectile.transform.parent = GameManager.PopupStore.transform;
 
         SpriteRenderer newProjSprite = newProjectile.GetComponent<SpriteRenderer>();
         newProjSprite.color = currentColor;

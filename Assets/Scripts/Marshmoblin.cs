@@ -10,7 +10,6 @@ public class Marshmoblin : MonoBehaviour
     
     void Start()
     {
-    
         body = GetComponent<Rigidbody2D>();
 
         StartCoroutine(StartAttack());
@@ -23,17 +22,12 @@ public class Marshmoblin : MonoBehaviour
     }
 
     IEnumerator Attack(){
-        /*while (Vector2.Distance(SirGluten.playerPosition.position, player.position) > 16f) {
-            yield return null;
-        } 
-        */
-        
         yield return new WaitForSeconds(0.6f);
         Vector2 spawnPosition = new Vector2(body.position.x, body.position.y);
         Vector2 directionToPlayer = (new Vector2(SirGluten.playerPosition.x, SirGluten.playerPosition.y) - (Vector2)transform.position).normalized;
         Quaternion rotation = Quaternion.FromToRotation(Vector2.up, directionToPlayer);
         GameObject newSpear = Instantiate(spear, spawnPosition, rotation);
-        newSpear.transform.parent = transform;
+        newSpear.transform.parent = GameManager.PopupStore.transform;
         yield return new WaitForSeconds(cooldown);
         StartCoroutine(Attack());
     }

@@ -21,7 +21,7 @@ public class Enemy : MonoBehaviour
         spriteRenderer = GetComponent<SpriteRenderer>();
         ogColor = spriteRenderer.color;
 
-        popupStore = GameObject.Find("Popups");
+        
     }
     void Update() {
         if (health <= 0) {
@@ -54,6 +54,7 @@ public class Enemy : MonoBehaviour
         GameObject newPopup = Instantiate(damagePopup, transform.position, Quaternion.identity);
         DamagePopup dp = newPopup.GetComponent<DamagePopup>();
         dp.DamageNumber = damage;
+        dp.transform.SetParent(GameManager.PopupStore.transform);
     }
 
     void OnTriggerEnter2D(Collider2D collider) {

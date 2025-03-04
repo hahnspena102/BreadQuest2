@@ -19,6 +19,14 @@ public class SimpleMovement : MonoBehaviour
     void Update() {
         animator.SetFloat("horizontal", body.linearVelocity.x);
         animator.SetFloat("vertical", body.linearVelocity.y);
+
+        if (body.linearVelocity.x < 0) {
+                Vector2 rotator = new Vector3(transform.rotation.x, 180f);
+                transform.rotation = Quaternion.Euler(rotator);
+        } else if (body.linearVelocity.x > 0) {
+                Vector2 rotator = new Vector3(transform.rotation.x, 0f);
+                transform.rotation = Quaternion.Euler(rotator);
+        }
     }
 
     void FixedUpdate()
