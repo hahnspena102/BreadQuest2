@@ -39,8 +39,14 @@ public class Enemy : MonoBehaviour
     }
 
     IEnumerator Hurt(int damage, string flavor) {
-        health -= damage;
-        CreatePopup(damage, flavor);
+        int newDamage = damage;
+        bool attackEffective = GameManager.IsEffective(flavor, flavoring);
+        if (attackEffective) {
+            newDamage = (int)Mathf.Ceil(newDamage * 1.5f);
+        }
+        
+        health -= newDamage;
+        CreatePopup(newDamage, flavor, attackEffective);
 
         spriteRenderer.color = Color.red;
 
@@ -58,11 +64,12 @@ public class Enemy : MonoBehaviour
 
     }
 
-    void CreatePopup(int damage, string flavor){
+    void CreatePopup(int damage, string flavor, bool attackEffective){
         GameObject newPopup = Instantiate(damagePopup, transform.position, Quaternion.identity);
         DamagePopup dp = newPopup.GetComponent<DamagePopup>();
         dp.DamageNumber = damage;
         dp.OutlineColor = GameManager.FlavorColorMap[flavor];
+        dp.IsCritical = attackEffective;
         dp.transform.SetParent(GameManager.PopupStore.transform);
 
     }

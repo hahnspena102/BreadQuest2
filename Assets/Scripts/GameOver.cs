@@ -20,10 +20,10 @@ public class GameOver : MonoBehaviour
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Return)) {
-            SceneManager.LoadScene(0);
+            SceneManager.LoadScene(2);
         }
         if (Input.GetKeyDown(KeyCode.Escape)) {
-            //SceneManager.LoadScene(0);
+            SceneManager.LoadScene(0);
         }
     }
 

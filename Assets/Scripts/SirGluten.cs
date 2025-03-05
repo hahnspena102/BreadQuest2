@@ -166,13 +166,10 @@ public class SirGluten : MonoBehaviour
     void Equip() {
         if (mainSlot != null && subSlot == null) {
             subSlot = mainSlot;
-            subSlot.IsEquipped = false;
             subSlotImage.sprite = mainSlot.InventorySprite;
         }
 
         mainSlot = hoveredWeaponItem;
-        mainSlot.IsEquipped = true;
-
 
         GameObject hoveredWeaponDropped = hoveredWeapon.transform.GetChild(0).gameObject;
         
@@ -193,8 +190,6 @@ public class SirGluten : MonoBehaviour
         Item tempSlot = subSlot;
         subSlot = mainSlot;
         mainSlot = tempSlot;
-        mainSlot.IsEquipped = true;
-        subSlot.IsEquipped = false;
 
         UpdateInventory();
     }
@@ -206,7 +201,6 @@ public class SirGluten : MonoBehaviour
         GameObject itemDropped = hoveredWeapon.transform.GetChild(0).gameObject;
 
         if (items != null && itemDropped != null) {
-            mainSlot.IsEquipped = false;
             RectTransform mainSlotRect = mainSlot.GetComponent<RectTransform>();
 
             if (mainSlotRect != null) {
@@ -225,7 +219,6 @@ public class SirGluten : MonoBehaviour
 
         if (subSlot != null) {
             mainSlot = subSlot;
-            mainSlot.IsEquipped = true;
             subSlot = null;
             
         }
@@ -263,6 +256,7 @@ public class SirGluten : MonoBehaviour
         DamagePopup dp = newPopup.GetComponent<DamagePopup>();
         dp.DamageNumber = damage;
         dp.OutlineColor = Color.red;
+        dp.IsPlayerHurt = true;
         dp.transform.SetParent(GameManager.PopupStore.transform);
     }
 
