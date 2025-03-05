@@ -34,7 +34,7 @@ public class Melee : MonoBehaviour
     void Update()
     {
         if (sirGluten.IsAttacking) MeleeDirection();
-        if (Input.GetMouseButtonDown(0) && sirGluten.MainSlot.gameObject == gameObject && !sirGluten.IsAttacking) {
+        if (Input.GetMouseButtonDown(0) && sirGluten.MainSlot != null && sirGluten.MainSlot.gameObject == gameObject && !sirGluten.IsAttacking) {
             MeleeDirection();
             StartCoroutine(MeleeAttack());
         }
@@ -44,7 +44,7 @@ public class Melee : MonoBehaviour
         if (!sirGluten.IsAttacking) {
             mousePosition = (Vector2)Input.mousePosition - screenSize;
         }
-        if (sirGluten.MainSlot.gameObject == gameObject) {
+        if (sirGluten.MainSlot != null && sirGluten.MainSlot.gameObject == gameObject) {
             if ((mousePosition.y != 0 || mousePosition.x != 0)) {
                 Rigidbody2D attackRB = sirGluten.MainSlot.transform.GetChild(1).gameObject.GetComponent<Rigidbody2D>();
                 if (Mathf.Abs(mousePosition.x) > Mathf.Abs(mousePosition.y)) {

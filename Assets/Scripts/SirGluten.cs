@@ -164,6 +164,7 @@ public class SirGluten : MonoBehaviour
     }
 
     void Equip() {
+        if (mainSlot != null && subSlot != null) Drop();
         if (mainSlot != null && subSlot == null) {
             subSlot = mainSlot;
             subSlotImage.sprite = mainSlot.InventorySprite;

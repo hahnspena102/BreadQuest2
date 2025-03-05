@@ -5,6 +5,7 @@ public class GameManager : MonoBehaviour
 {
     public static GameObject PopupStore;
     public static GameObject ProjectileStore;
+    public static GameObject ItemStore;
 
     public static Dictionary<string, Color> FlavorColorMap = new Dictionary<string, Color>()
     {
@@ -26,9 +27,25 @@ public class GameManager : MonoBehaviour
         {"spicy", "vanilla"}
     };
 
+    public static Dictionary<string, int> RarityMap = new Dictionary<string, int>() {
+        {"common", 50},
+        {"rare", 30},
+        {"epic", 15},
+        {"legendary", 5}
+    };
+
+    [SerializeField]private List<GameObject> itemsTier1 = new List<GameObject>(){};
+    [SerializeField]private List<GameObject> itemsTier2 = new List<GameObject>(){};
+    [SerializeField]private List<GameObject> itemsTier3 = new List<GameObject>(){};
+
+    public List<GameObject> ItemsTier1 { get => itemsTier1; set => itemsTier1 = value; }
+    public List<GameObject> ItemsTier2 { get => itemsTier2; set => itemsTier2 = value; }
+    public List<GameObject> ItemsTier3 { get => itemsTier3; set => itemsTier3 = value; }
+
     void Start() {
         PopupStore = GameObject.Find("PopupStore");
         ProjectileStore = GameObject.Find("ProjectileStore");
+        ItemStore = GameObject.Find("ItemStore");
     }
 
     public static bool IsEffective(string attacking, string defending) {
