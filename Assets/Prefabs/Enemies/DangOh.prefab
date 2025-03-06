@@ -120,9 +120,13 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: -6050473969829582647, guid: bb206b2f72949437dbc021dadfe3468f, type: 3}
+    - target: {fileID: 6502332883788317713, guid: 8adb11242ebd0054292835c38ebb0d7a, type: 3}
+      propertyPath: m_Constraints
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 7208707049854281217, guid: 8adb11242ebd0054292835c38ebb0d7a, type: 3}
       propertyPath: health
-      value: 10
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 7208707049854281217, guid: 8adb11242ebd0054292835c38ebb0d7a, type: 3}
       propertyPath: flavoring
@@ -154,5 +158,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   projectile: {fileID: 598052180299241604, guid: 8d5d282f79aad7242b0eada116bffba0, type: 3}
-  attackOffset: 0
-  cooldown: 2
+  attackCooldown: 1
+  spreadAngle: 15
+  detectionRadius: 30
+  animationLength: 3
