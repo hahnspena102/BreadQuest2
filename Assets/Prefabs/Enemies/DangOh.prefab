@@ -90,7 +90,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1964728200879544539, guid: 8adb11242ebd0054292835c38ebb0d7a, type: 3}
       propertyPath: m_Name
-      value: DangOh Variant
+      value: DangOh
       objectReference: {fileID: 0}
     - target: {fileID: 2481504245390930839, guid: 8adb11242ebd0054292835c38ebb0d7a, type: 3}
       propertyPath: m_Size.x
@@ -132,6 +132,14 @@ PrefabInstance:
       propertyPath: flavoring
       value: grain
       objectReference: {fileID: 0}
+    - target: {fileID: 7208707049854281217, guid: 8adb11242ebd0054292835c38ebb0d7a, type: 3}
+      propertyPath: hurtSFX.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7208707049854281217, guid: 8adb11242ebd0054292835c38ebb0d7a, type: 3}
+      propertyPath: 'hurtSFX.Array.data[0]'
+      value: 
+      objectReference: {fileID: 8300000, guid: c2e2c0f3107947f4d8bea60fc200795c, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -160,5 +168,7 @@ MonoBehaviour:
   projectile: {fileID: 598052180299241604, guid: 8d5d282f79aad7242b0eada116bffba0, type: 3}
   attackCooldown: 1
   spreadAngle: 15
-  detectionRadius: 30
+  detectionRadius: 10
   animationLength: 3
+  attackSFX:
+  - {fileID: 8300000, guid: 41eb754adb7c2484abddf8a1e0cddbb9, type: 3}

@@ -43,7 +43,6 @@ public class Chest : MonoBehaviour
 
     void CreateItem() {
         List<GameObject> combinedList = new List<GameObject>();
-        Debug.Log(tier);
         combinedList.AddRange(itemsByTier[0]);
         if (tier >= 2) {
             combinedList.AddRange(itemsByTier[1]);

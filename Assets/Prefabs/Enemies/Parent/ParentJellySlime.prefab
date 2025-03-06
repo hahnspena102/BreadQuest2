@@ -161,5 +161,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 122fcb4c19a9c4443a7de006db010017, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  detectionRadius: 30
+  detectionRadius: 10
+  stopRadius: 0
   moveSpeed: 1.5
