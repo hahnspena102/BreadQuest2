@@ -220,12 +220,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 3689380121290302851}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 61ea41f8c2c1246cb8d1a1430217fa63, type: 3}
+  m_Script: {fileID: 11500000, guid: 091dfc1155a90024d8dcd48cda6c9754, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  forwardSwing: []
-  backwardSwing: []
-  leftRightSwing: []
+  forwardAttack: []
+  backwardAttack: []
+  leftRightAttack: []
 --- !u!1001 &138588313509018578
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -331,10 +331,10 @@ PrefabInstance:
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 4462825472812314675, guid: c211bfd11b7417640b9c1e772879be7f, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 6745127538194327359}
+      addedObject: {fileID: 1897158935656593363}
     - targetCorrespondingSourceObject: {fileID: 4462825472812314675, guid: c211bfd11b7417640b9c1e772879be7f, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1897158935656593363}
+      addedObject: {fileID: 6745127538194327359}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 7181485956396683579, guid: c211bfd11b7417640b9c1e772879be7f, type: 3}
       insertIndex: -1

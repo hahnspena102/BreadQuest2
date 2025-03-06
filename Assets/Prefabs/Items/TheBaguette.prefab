@@ -145,6 +145,14 @@ PrefabInstance:
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8105893015995445619, guid: ddb193a141508b545a8982885ad48e35, type: 3}
+      propertyPath: forwardAttack.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8105893015995445619, guid: ddb193a141508b545a8982885ad48e35, type: 3}
+      propertyPath: backwardAttack.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8105893015995445619, guid: ddb193a141508b545a8982885ad48e35, type: 3}
       propertyPath: leftRightSwing.Array.size
       value: 3
       objectReference: {fileID: 0}
@@ -161,6 +169,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 9041049226964437087, guid: db9203a90eb20734da7d4e17424ceb53, type: 3}
     - target: {fileID: 8105893015995445619, guid: ddb193a141508b545a8982885ad48e35, type: 3}
+      propertyPath: leftRightAttack.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8105893015995445619, guid: ddb193a141508b545a8982885ad48e35, type: 3}
       propertyPath: 'backwardSwing.Array.data[0]'
       value: 
       objectReference: {fileID: -3719508736209185353, guid: db9203a90eb20734da7d4e17424ceb53, type: 3}
@@ -173,6 +185,30 @@ PrefabInstance:
       value: 
       objectReference: {fileID: -4870440855266635595, guid: db9203a90eb20734da7d4e17424ceb53, type: 3}
     - target: {fileID: 8105893015995445619, guid: ddb193a141508b545a8982885ad48e35, type: 3}
+      propertyPath: 'forwardAttack.Array.data[0]'
+      value: 
+      objectReference: {fileID: 3093084659387666519, guid: db9203a90eb20734da7d4e17424ceb53, type: 3}
+    - target: {fileID: 8105893015995445619, guid: ddb193a141508b545a8982885ad48e35, type: 3}
+      propertyPath: 'forwardAttack.Array.data[1]'
+      value: 
+      objectReference: {fileID: -3769652436725689536, guid: db9203a90eb20734da7d4e17424ceb53, type: 3}
+    - target: {fileID: 8105893015995445619, guid: ddb193a141508b545a8982885ad48e35, type: 3}
+      propertyPath: 'forwardAttack.Array.data[2]'
+      value: 
+      objectReference: {fileID: 9041049226964437087, guid: db9203a90eb20734da7d4e17424ceb53, type: 3}
+    - target: {fileID: 8105893015995445619, guid: ddb193a141508b545a8982885ad48e35, type: 3}
+      propertyPath: 'backwardAttack.Array.data[0]'
+      value: 
+      objectReference: {fileID: -3719508736209185353, guid: db9203a90eb20734da7d4e17424ceb53, type: 3}
+    - target: {fileID: 8105893015995445619, guid: ddb193a141508b545a8982885ad48e35, type: 3}
+      propertyPath: 'backwardAttack.Array.data[1]'
+      value: 
+      objectReference: {fileID: -8360502922876624060, guid: db9203a90eb20734da7d4e17424ceb53, type: 3}
+    - target: {fileID: 8105893015995445619, guid: ddb193a141508b545a8982885ad48e35, type: 3}
+      propertyPath: 'backwardAttack.Array.data[2]'
+      value: 
+      objectReference: {fileID: -4870440855266635595, guid: db9203a90eb20734da7d4e17424ceb53, type: 3}
+    - target: {fileID: 8105893015995445619, guid: ddb193a141508b545a8982885ad48e35, type: 3}
       propertyPath: 'leftRightSwing.Array.data[0]'
       value: 
       objectReference: {fileID: -3586947255362384402, guid: db9203a90eb20734da7d4e17424ceb53, type: 3}
@@ -182,6 +218,18 @@ PrefabInstance:
       objectReference: {fileID: -197408414117896761, guid: db9203a90eb20734da7d4e17424ceb53, type: 3}
     - target: {fileID: 8105893015995445619, guid: ddb193a141508b545a8982885ad48e35, type: 3}
       propertyPath: 'leftRightSwing.Array.data[2]'
+      value: 
+      objectReference: {fileID: 5272309124350846142, guid: db9203a90eb20734da7d4e17424ceb53, type: 3}
+    - target: {fileID: 8105893015995445619, guid: ddb193a141508b545a8982885ad48e35, type: 3}
+      propertyPath: 'leftRightAttack.Array.data[0]'
+      value: 
+      objectReference: {fileID: -3586947255362384402, guid: db9203a90eb20734da7d4e17424ceb53, type: 3}
+    - target: {fileID: 8105893015995445619, guid: ddb193a141508b545a8982885ad48e35, type: 3}
+      propertyPath: 'leftRightAttack.Array.data[1]'
+      value: 
+      objectReference: {fileID: -197408414117896761, guid: db9203a90eb20734da7d4e17424ceb53, type: 3}
+    - target: {fileID: 8105893015995445619, guid: ddb193a141508b545a8982885ad48e35, type: 3}
+      propertyPath: 'leftRightAttack.Array.data[2]'
       value: 
       objectReference: {fileID: 5272309124350846142, guid: db9203a90eb20734da7d4e17424ceb53, type: 3}
     - target: {fileID: 8501036405661133926, guid: ddb193a141508b545a8982885ad48e35, type: 3}

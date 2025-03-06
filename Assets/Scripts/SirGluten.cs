@@ -65,7 +65,6 @@ public class SirGluten : MonoBehaviour
         infoText["mainDesc"] = infoUI.transform.GetChild(1).gameObject.GetComponent<TextMeshProUGUI>();
         infoText["subName"] = infoUI.transform.GetChild(2).gameObject.GetComponent<TextMeshProUGUI>();
         infoText["subDesc"] = infoUI.transform.GetChild(3).gameObject.GetComponent<TextMeshProUGUI>();
-        Debug.Log(infoUI.transform.GetChild(0).gameObject.GetComponent<TextMeshProUGUI>());
         
     }
 
@@ -313,18 +312,14 @@ public class SirGluten : MonoBehaviour
         
         if (!isAttacking) {
             if (horizontalInput < 0) {
-                Vector2 rotator = new Vector3(transform.rotation.x, 180f);
-                transform.rotation = Quaternion.Euler(rotator);
+                transform.rotation = Quaternion.Euler(0f, 180f, 0f);
             } else if (horizontalInput > 0) {
-                Vector2 rotator = new Vector3(transform.rotation.x, 0f);
-                transform.rotation = Quaternion.Euler(rotator);
+                transform.rotation = Quaternion.Euler(0f, 0f, 0f);
             }
             if (verticalInput != 0 && horizontalInput == 0) {
-                Vector2 rotator = new Vector3(transform.rotation.x, 0f);
-                transform.rotation = Quaternion.Euler(rotator);
+                transform.rotation = Quaternion.Euler(0f, 0f, 0f);
             }
-        
-        }  
+        }
     }
 
     void OnCollisionEnter2D(Collision2D collision) {
@@ -375,6 +370,6 @@ public class SirGluten : MonoBehaviour
     }
 
     void TurnOffAnimation() {
-        mainSlot.transform.GetChild(2).gameObject.SetActive(false);
+        mainSlot.transform.GetChild(1).gameObject.SetActive(false);
     }
 }

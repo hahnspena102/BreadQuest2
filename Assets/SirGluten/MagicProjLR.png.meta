@@ -1,22 +1,55 @@
 fileFormatVersion: 2
-guid: 6e05ebf02f860714ea1e7ac2a6baf7bb
+guid: 82c348da81d845b4db5efc673030070a
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 1583898419757939861
-    second: MagicB_0
+      213: -1696520071921716971
+    second: MagicProjLR_0
   - first:
-      213: -1636697391828181863
-    second: MagicB_1
+      213: -4862387054523912640
+    second: MagicProjLR_1
   - first:
-      213: 2057008702297350678
-    second: MagicB_2
+      213: -6659442731272071027
+    second: MagicProjLR_2
   - first:
-      213: 5688589542089014052
-    second: MagicB_3
+      213: 49516266577137602
+    second: MagicProjLR_3
   - first:
-      213: 4752610212262612785
-    second: MagicB_4
+      213: -6479161989589118850
+    second: MagicProjLR_4
+  - first:
+      213: -2454395705073650803
+    second: MagicProjLR_5
+  - first:
+      213: 3521184740830652009
+    second: MagicProjLR_6
+  - first:
+      213: -2691987857437802495
+    second: MagicProjLR_7
+  - first:
+      213: 7285753578699400677
+    second: MagicProjLR_8
+  - first:
+      213: 4833610656655169897
+    second: MagicProjLR_9
+  - first:
+      213: 6304055689276550972
+    second: MagicProjLR_10
+  - first:
+      213: -5967253858952336360
+    second: MagicProjLR_11
+  - first:
+      213: 7245366741463351498
+    second: MagicProjLR_12
+  - first:
+      213: -41663917097242208
+    second: MagicProjLR_13
+  - first:
+      213: 7560345695123823644
+    second: MagicProjLR_14
+  - first:
+      213: -8194653056041315581
+    second: MagicProjLR_15
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -125,7 +158,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: MagicB_0
+      name: MagicProjLR_0
       rect:
         serializedVersion: 2
         x: 0
@@ -138,16 +171,16 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 59c79fd88332bf510800000000000000
-      internalID: 1583898419757939861
+      spriteID: 4713ef0a6c919f94da688d38d9f727bf
+      internalID: -1726457546
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MagicB_1
+      name: MagicProjLR_1
       rect:
         serializedVersion: 2
         x: 32
@@ -160,16 +193,16 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 99cd54bc4684949e0800000000000000
-      internalID: -1636697391828181863
+      spriteID: 631225e69eff0a64e87a9b6ed1ebfd13
+      internalID: 1133272252
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MagicB_2
+      name: MagicProjLR_2
       rect:
         serializedVersion: 2
         x: 64
@@ -182,16 +215,16 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 61222582486fb8c10800000000000000
-      internalID: 2057008702297350678
+      spriteID: 8d68a610cc7b4e947ba516436bed9b41
+      internalID: -1854693183
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MagicB_3
+      name: MagicProjLR_3
       rect:
         serializedVersion: 2
         x: 96
@@ -204,16 +237,16 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 42bb7319c0ee1fe40800000000000000
-      internalID: 5688589542089014052
+      spriteID: 12757bcddb5a1aa48b1ed8f5ea158d61
+      internalID: 111102822
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MagicB_4
+      name: MagicProjLR_4
       rect:
         serializedVersion: 2
         x: 128
@@ -226,16 +259,16 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 13f8ec1cec9a4f140800000000000000
-      internalID: 4752610212262612785
+      spriteID: 9cbbb3f652507174cb3a655300b1058e
+      internalID: -1850530308
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MagicB_5
+      name: MagicProjLR_5
       rect:
         serializedVersion: 2
         x: 160
@@ -250,14 +283,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2814cb5c22054c7479a7a7870f42c406
-      internalID: -1965163789
+      spriteID: a632d23fb8a372f459dfa468013c00e0
+      internalID: -934663216
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MagicB_6
+      name: MagicProjLR_6
       rect:
         serializedVersion: 2
         x: 192
@@ -272,14 +305,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 07259f6fd9833d8469cc10e70b03f613
-      internalID: -1419028509
+      spriteID: fd85fc63c01a90d44939e74892515daa
+      internalID: 602953010
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MagicB_7
+      name: MagicProjLR_7
       rect:
         serializedVersion: 2
         x: 224
@@ -294,14 +327,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d1425a9eea6ff264292c71ce85cd0f83
-      internalID: -619571715
+      spriteID: 2a0f801964ba044448db1161cbe9f98e
+      internalID: 1136202132
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MagicB_8
+      name: MagicProjLR_8
       rect:
         serializedVersion: 2
         x: 256
@@ -316,14 +349,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b6262961e0d315b4eac8f5de6e65428f
-      internalID: -1140789503
+      spriteID: 11dc2a39d9906ca4a8f7d2d264cd9591
+      internalID: -957224316
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MagicB_9
+      name: MagicProjLR_9
       rect:
         serializedVersion: 2
         x: 288
@@ -338,14 +371,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e1f6ad61a4e5f1c4c94a4fe9565a73e6
-      internalID: -1033474651
+      spriteID: c3ba0f07e338d3a4bacaef17b0628f90
+      internalID: -1728702170
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MagicB_10
+      name: MagicProjLR_10
       rect:
         serializedVersion: 2
         x: 320
@@ -360,14 +393,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9636465d83c16554ea0fba1816253edd
-      internalID: -1168171494
+      spriteID: 2632a79f593239e4b983494c6bf71c0d
+      internalID: -1916089874
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MagicB_11
+      name: MagicProjLR_11
       rect:
         serializedVersion: 2
         x: 352
@@ -382,8 +415,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3dddb8d3de4f3474b8fdf21fd8bb790b
-      internalID: -2003535416
+      spriteID: e5c103936fb801647b84f772a8efe7e4
+      internalID: -1810314735
       vertices: []
       indices: 
       edges: []
@@ -392,7 +425,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: a5d606fea9678f2499e2cd0dc5220214
+    spriteID: c189b663ea59e574ebddb91bbf47e150
     internalID: 0
     vertices: []
     indices: 
@@ -402,18 +435,18 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      MagicB_0: 1583898419757939861
-      MagicB_1: -1636697391828181863
-      MagicB_10: -1168171494
-      MagicB_11: -2003535416
-      MagicB_2: 2057008702297350678
-      MagicB_3: 5688589542089014052
-      MagicB_4: 4752610212262612785
-      MagicB_5: -1965163789
-      MagicB_6: -1419028509
-      MagicB_7: -619571715
-      MagicB_8: -1140789503
-      MagicB_9: -1033474651
+      MagicProjLR_0: -1726457546
+      MagicProjLR_1: 1133272252
+      MagicProjLR_10: -1916089874
+      MagicProjLR_11: -1810314735
+      MagicProjLR_2: -1854693183
+      MagicProjLR_3: 111102822
+      MagicProjLR_4: -1850530308
+      MagicProjLR_5: -934663216
+      MagicProjLR_6: 602953010
+      MagicProjLR_7: 1136202132
+      MagicProjLR_8: -957224316
+      MagicProjLR_9: -1728702170
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
