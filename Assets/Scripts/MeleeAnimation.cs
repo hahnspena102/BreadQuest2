@@ -49,4 +49,8 @@ public class MeleeAnimation : MonoBehaviour
     
         
     }
+
+    void Awake(){
+        if (sirGluten != null) sirGluten.WeaponAnimationFrame = 0;
+    }
 }

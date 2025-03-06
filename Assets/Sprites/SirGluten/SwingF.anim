@@ -89,7 +89,7 @@ AnimationClip:
   m_HasMotionFloatCurves: 0
   m_Events:
   - time: 0
-    functionName: SetAnimationFrame
+    functionName: TurnOffAnimation
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
@@ -124,13 +124,13 @@ AnimationClip:
     intParameter: 4
     messageOptions: 0
   - time: 0.5
-    functionName: SetAnimationFrame
+    functionName: TurnOffAnimation
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
-    intParameter: 5
+    intParameter: 0
     messageOptions: 0
-  - time: 0.51666665
+  - time: 0.5
     functionName: set_WeaponAnimationFrame
     data: 
     objectReferenceParameter: {fileID: 0}

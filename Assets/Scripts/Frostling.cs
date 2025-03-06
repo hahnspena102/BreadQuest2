@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 public class Frostling : MonoBehaviour
 {
@@ -7,6 +8,8 @@ public class Frostling : MonoBehaviour
     [SerializeField] GameObject projectile;
     [SerializeField] private float attackOffset = 0f;
     [SerializeField] private float cooldown = 0.5f;
+    [SerializeField] private List<AudioClip> attackSFX;
+    private AudioSource audioSource;
 
     private float currentAngle = 0f;
     private float phase = 0f;
@@ -17,6 +20,7 @@ public class Frostling : MonoBehaviour
     {
         body = GetComponent<Rigidbody2D>();
         currentColor = GetComponent<SpriteRenderer>().color;
+        audioSource = GetComponent<AudioSource>();
 
         StartCoroutine(StartAttack());
 
@@ -40,6 +44,11 @@ public class Frostling : MonoBehaviour
         yield return new WaitForSeconds(3f);
         phase = 1;
         yield return new WaitForSeconds(cooldown);
+        if (attackSFX.Count > 0) {
+            audioSource.clip = attackSFX[Random.Range(0, attackSFX.Count)];
+            audioSource.Play();
+        }
+        
         phase = 0;
         StartCoroutine(PhaseLoop());
     }
@@ -54,7 +63,7 @@ public class Frostling : MonoBehaviour
         Vector2 directionToPlayer = (new Vector2(SirGluten.playerPosition.x, SirGluten.playerPosition.y) - (Vector2)transform.position).normalized;
 
         GameObject newProjectile = Instantiate(projectile, spawnPosition, newRotation);
-        newProjectile.transform.parent = GameManager.PopupStore.transform;
+        newProjectile.transform.parent = GameManager.EffectStore.transform;
 
         SpriteRenderer newProjSprite = newProjectile.GetComponent<SpriteRenderer>();
         newProjSprite.color = currentColor;

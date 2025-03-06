@@ -1,11 +1,13 @@
 using UnityEngine;
+using System.Collections;
 using System.Collections.Generic;
 
 public class Chest : MonoBehaviour
 {
     private GameObject hoverText;
-    private bool isOpenable;
+    private bool isOpenable, isOpened;
     private GameManager gameManager;
+    private Animator animator;
     private List<List<GameObject>> itemsByTier = new List<List<GameObject>>();
 
     [SerializeField]private int tier = 1;
@@ -15,6 +17,7 @@ public class Chest : MonoBehaviour
     {
         hoverText = transform.GetChild(0).gameObject;
         gameManager = GameObject.Find("Game").gameObject.GetComponent<GameManager>();
+        animator = GetComponent<Animator>();
 
         itemsByTier.Add(gameManager.ItemsTier1);
         itemsByTier.Add(gameManager.ItemsTier2);
@@ -24,14 +27,23 @@ public class Chest : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (isOpenable && Input.GetKeyDown(KeyCode.E)) {
-            Debug.Log("OPEN");
-            CreateItem(tier);
+        if (isOpenable && Input.GetKeyDown(KeyCode.E) && !isOpened) {
+            StartCoroutine(OpenChest());
+            //CreateItem(tier);
         }
     }
 
-    void CreateItem(int tier) {
+    IEnumerator OpenChest(){
+        animator.SetTrigger("unlock");
+        isOpened = true;
+        yield return new WaitForSeconds(1f);
+        CreateItem();
+        Destroy(gameObject);
+    }
+
+    void CreateItem() {
         List<GameObject> combinedList = new List<GameObject>();
+        Debug.Log(tier);
         combinedList.AddRange(itemsByTier[0]);
         if (tier >= 2) {
             combinedList.AddRange(itemsByTier[1]);
@@ -57,11 +69,10 @@ public class Chest : MonoBehaviour
 
         GameObject newItem = Instantiate(randomizerMap[randomNumber], transform.position, Quaternion.identity);
         newItem.transform.parent = GameManager.ItemStore.transform;
-        Destroy(gameObject);
     }
 
     void OnCollisionEnter2D(Collision2D collision) {
-        if (collision.transform.tag == "Player") {
+        if (collision.transform.tag == "Player" && !isOpened) {
             hoverText.SetActive(true);
             isOpenable = true;
         }
