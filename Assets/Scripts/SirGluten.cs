@@ -3,13 +3,13 @@ using UnityEngine.UI;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 public class SirGluten : MonoBehaviour
 {
     private Rigidbody2D body;
     private SpriteRenderer spriteRenderer;
     private Animator animator;
-
     private float verticalInput, horizontalInput;
     private float speed = 4f;
     
@@ -25,6 +25,7 @@ public class SirGluten : MonoBehaviour
     [SerializeField] private GameObject damagePopup;
 
     [SerializeField] private GameObject infoUI;
+    private Dictionary<string,TextMeshProUGUI> infoText = new Dictionary<string, TextMeshProUGUI>();
 
     // BOOLS
     private bool isAttacking, isHurting, isLocked, isAnimationLocked;
@@ -56,8 +57,16 @@ public class SirGluten : MonoBehaviour
         body = GetComponent<Rigidbody2D>();
         spriteRenderer = GetComponent<SpriteRenderer>();
         animator = GetComponent<Animator>();
+        
         InitStats();
         UpdateStats();
+
+        infoText["mainName"] = infoUI.transform.GetChild(0).gameObject.GetComponent<TextMeshProUGUI>();
+        infoText["mainDesc"] = infoUI.transform.GetChild(1).gameObject.GetComponent<TextMeshProUGUI>();
+        infoText["subName"] = infoUI.transform.GetChild(2).gameObject.GetComponent<TextMeshProUGUI>();
+        infoText["subDesc"] = infoUI.transform.GetChild(3).gameObject.GetComponent<TextMeshProUGUI>();
+        Debug.Log(infoUI.transform.GetChild(0).gameObject.GetComponent<TextMeshProUGUI>());
+        
     }
 
     // Initializes the Stat Values and Slider/Text variables.
@@ -148,10 +157,40 @@ public class SirGluten : MonoBehaviour
 
         if (Input.GetKey(KeyCode.Tab)) {
             infoUI.gameObject.SetActive(true);
+            UpdateUI();
         } else {
             infoUI.gameObject.SetActive(false);
         }
     }
+
+    void UpdateUI() {
+        if (mainSlot != null) {
+            Item mainItem = mainSlot.GetComponent<Item>();
+            infoText["mainName"].text = mainItem.WeaponName;
+            string description = $"{mainItem.Description}";
+            Melee mainWeapon = mainSlot.GetComponent<Melee>();
+            if (mainWeapon != null) {
+                description += $"\nAtk: {mainWeapon.AttackDamage} - Flavor: {mainWeapon.Flavor}";
+            }
+            infoText["mainDesc"].text = description;
+        } else {
+            infoText["mainName"].text = "<empty>";
+            infoText["mainDesc"].text = "";
+        }
+        if (subSlot != null) {
+            Item subItem = subSlot.GetComponent<Item>();
+            infoText["subName"].text = subItem.WeaponName;
+            string description = "";
+            Melee subWeapon = subSlot.GetComponent<Melee>();
+            if (subWeapon != null) {
+                description += $"\nAtk: {subWeapon.AttackDamage} - Flavor: {subWeapon.Flavor}";
+            }
+            infoText["subDesc"].text = description;
+        } else {
+            infoText["subName"].text = "<empty>";
+            infoText["subDesc"].text = "";
+        }
+    } 
 
     void UpdateInventory() {
         if (mainSlot != null) {

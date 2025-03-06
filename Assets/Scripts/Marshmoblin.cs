@@ -10,12 +10,14 @@ public class Marshmoblin : MonoBehaviour
     [SerializeField] private float cooldown = 2f;
     [SerializeField] private List<AudioClip> attackSFX;
     private AudioSource audioSource;
+    private Animator animator;
     
     
     void Start()
     {
         body = GetComponent<Rigidbody2D>();
         audioSource = GetComponent<AudioSource>();
+        animator = GetComponent<Animator>();
         StartCoroutine(StartAttack());
 
     }
@@ -25,18 +27,29 @@ public class Marshmoblin : MonoBehaviour
         StartCoroutine(Attack());
     }
 
+    void Update(){
+        if (SirGluten.playerPosition.x > transform.position.x) {
+            Vector2 rotator = new Vector3(transform.rotation.x, 180f);
+            transform.rotation = Quaternion.Euler(rotator);
+        } else {
+            Vector2 rotator = new Vector3(transform.rotation.x, 0f);
+            transform.rotation = Quaternion.Euler(rotator);
+        }
+    }
+
     IEnumerator Attack(){
         yield return new WaitForSeconds(0.6f);
-        if (attackSFX.Count > 0) {
-            audioSource.clip = attackSFX[Random.Range(0, attackSFX.Count)];
-            audioSource.Play();
-        }
-        Vector2 spawnPosition = new Vector2(body.position.x, body.position.y);
+        animator.SetTrigger("attack");
+        
+        yield return new WaitForSeconds(cooldown);
+        StartCoroutine(Attack());
+    }
+
+    void CreateSpear(){
+        Vector2 spawnPosition = new Vector2(body.position.x + 0.6f, body.position.y + 0.3f);
         Vector2 directionToPlayer = (new Vector2(SirGluten.playerPosition.x, SirGluten.playerPosition.y) - (Vector2)transform.position).normalized;
         Quaternion rotation = Quaternion.FromToRotation(Vector2.up, directionToPlayer);
         GameObject newSpear = Instantiate(spear, spawnPosition, rotation);
         newSpear.transform.parent = GameManager.EffectStore.transform;
-        yield return new WaitForSeconds(cooldown);
-        StartCoroutine(Attack());
     }
 }
