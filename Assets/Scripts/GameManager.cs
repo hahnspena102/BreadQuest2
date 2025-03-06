@@ -1,12 +1,16 @@
 using UnityEngine;
+using UnityEngine.UI;
+using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
-    public static GameObject PopupStore;
     public static GameObject ProjectileStore;
     public static GameObject ItemStore;
-
+    public static GameObject EffectStore;
+    public static GameObject SoundPrefab;
+    public GameObject inspectorSoundPrefab;
     public static Dictionary<string, Color> FlavorColorMap = new Dictionary<string, Color>()
     {
         { "flavorless", new Color(0.680506f, 0.5850837f,0.7169812f)},
@@ -43,13 +47,29 @@ public class GameManager : MonoBehaviour
     public List<GameObject> ItemsTier3 { get => itemsTier3; set => itemsTier3 = value; }
 
     void Start() {
-        PopupStore = GameObject.Find("PopupStore");
         ProjectileStore = GameObject.Find("ProjectileStore");
         ItemStore = GameObject.Find("ItemStore");
+        EffectStore = GameObject.Find("EffectStore");
+        SoundPrefab = inspectorSoundPrefab;
     }
 
     public static bool IsEffective(string attacking, string defending) {
         if (!EffectivenessMap.ContainsKey(attacking)) return false;
         return EffectivenessMap[attacking] == defending;
+    }
+    
+    public static void PlayParticle(GameObject gameObject, Vector2 position) {
+        GameObject particle = Instantiate(gameObject, position, Quaternion.identity);
+        particle.transform.SetParent(EffectStore.transform);
+        Destroy(particle, 5f);
+    }
+
+    public static void PlaySound(AudioClip audioClip, Vector2 position) {
+        GameObject sound = Instantiate(SoundPrefab, position, Quaternion.identity);
+        AudioSource audioSource = sound.GetComponent<AudioSource>();
+        audioSource.clip = audioClip;
+        audioSource.Play();
+        sound.transform.SetParent(EffectStore.transform);
+        Destroy(sound, 5f);
     }
 }

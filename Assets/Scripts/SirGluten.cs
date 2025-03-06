@@ -24,6 +24,8 @@ public class SirGluten : MonoBehaviour
 
     [SerializeField] private GameObject damagePopup;
 
+    [SerializeField] private GameObject infoUI;
+
     // BOOLS
     private bool isAttacking, isHurting, isLocked, isAnimationLocked;
 
@@ -143,6 +145,12 @@ public class SirGluten : MonoBehaviour
             animator.SetFloat("vertical", body.linearVelocity.y);
             animator.SetBool("isMoving", body.linearVelocity.x != 0 || body.linearVelocity.y != 0);
         }
+
+        if (Input.GetKey(KeyCode.Tab)) {
+            infoUI.gameObject.SetActive(true);
+        } else {
+            infoUI.gameObject.SetActive(false);
+        }
     }
 
     void UpdateInventory() {
@@ -258,7 +266,7 @@ public class SirGluten : MonoBehaviour
         dp.DamageNumber = damage;
         dp.OutlineColor = Color.red;
         dp.IsPlayerHurt = true;
-        dp.transform.SetParent(GameManager.PopupStore.transform);
+        dp.transform.SetParent(GameManager.EffectStore.transform);
     }
 
     void MovePlayer(){
@@ -325,5 +333,9 @@ public class SirGluten : MonoBehaviour
     void SetAnimationFrame(int index) {
         //Debug.Log(index);
         weaponAnimationFrame = index;
+    }
+
+    void TurnOffAnimation() {
+        mainSlot.transform.GetChild(2).gameObject.SetActive(false);
     }
 }

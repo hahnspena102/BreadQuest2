@@ -8,10 +8,13 @@ public class Melee : MonoBehaviour
 {
     [SerializeField] private int attackDamage;
     [SerializeField] private string flavor;
+    [SerializeField] private List<AudioClip> swingSFX;
+
     private SirGluten sirGluten;
     private Item item;
     private GameObject player;
     private Rigidbody2D body;
+    private AudioSource audioSource;
     private Vector2 screenSize = new Vector2(Screen.width/2, Screen.height/2);
     private Vector2 mousePosition;
     private Animator playerAnimator;
@@ -28,6 +31,7 @@ public class Melee : MonoBehaviour
         playerAnimator = player.GetComponent<Animator>();
         body = player.GetComponent<Rigidbody2D>();
         sirGluten = player.GetComponent<SirGluten>();
+        audioSource = player.GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -64,15 +68,23 @@ public class Melee : MonoBehaviour
 
         sirGluten.IsAnimationLocked = true;
         sirGluten.IsAttacking = true;
+        sirGluten.WeaponAnimationFrame = 0;
+
+        audioSource.clip = swingSFX[Random.Range(0, swingSFX.Count)];
+        audioSource.Play();
+        playerAnimator.SetFloat("horizontal",Mathf.Abs(attackPosition.x));
+        playerAnimator.SetFloat("vertical",attackPosition.y);
         playerAnimator.SetTrigger("meleeAttack");
         
+        yield return new WaitForSeconds(0.1f);
         sirGluten.MainSlot.transform.GetChild(2).gameObject.SetActive(true);
 
-        playerAnimator.SetFloat("vertical",attackPosition.y);
-        playerAnimator.SetFloat("horizontal",Mathf.Abs(attackPosition.x));
+       
+        
 
         if (attackPosition.y > 0) {
             animationDirection = "B";
+            
         } else if (attackPosition.y < 0) {
             animationDirection = "F";
         } else {
@@ -97,6 +109,7 @@ public class Melee : MonoBehaviour
 
         // Animation End
         sirGluten.MainSlot.transform.GetChild(2).gameObject.transform.position = body.position;
+        sirGluten.WeaponAnimationFrame = 0;
         
         sirGluten.MainSlot.transform.GetChild(1).gameObject.SetActive(false);
         sirGluten.MainSlot.transform.GetChild(2).gameObject.SetActive(false);

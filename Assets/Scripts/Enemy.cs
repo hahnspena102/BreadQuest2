@@ -11,9 +11,11 @@ public class Enemy : MonoBehaviour
     [SerializeField] private int damage;
     [SerializeField] private string flavoring;
     [SerializeField] private GameObject damagePopup;
+    [SerializeField] private GameObject deathParticle;
     [SerializeField] private float xpMultiplier = 1f;
+    [SerializeField] private List<AudioClip> hurtSFX;
+    private AudioSource audioSource;
     private SpriteRenderer spriteRenderer;
-    private GameObject popupStore;
     private Color ogColor;
     private bool isDying;
 
@@ -21,12 +23,14 @@ public class Enemy : MonoBehaviour
 
     void Start(){
         spriteRenderer = GetComponent<SpriteRenderer>();
+        audioSource = GetComponent<AudioSource>();
         ogColor = spriteRenderer.color;
 
         
     }
     void Update() {
         if (health <= 0 && !isDying) {
+            GameManager.PlayParticle(deathParticle,transform.position);
             Death();
         }
     }
@@ -34,6 +38,7 @@ public class Enemy : MonoBehaviour
     void Death(){
         isDying = true;
         SirGluten.staticYeast += (int)Mathf.Round(Random.Range(1,20) * xpMultiplier);
+
         Destroy(gameObject, 0.2f);
         health--;
     }
@@ -47,6 +52,11 @@ public class Enemy : MonoBehaviour
         
         health -= newDamage;
         CreatePopup(newDamage, flavor, attackEffective);
+
+        if (hurtSFX.Count > 0) {
+            audioSource.clip = hurtSFX[Random.Range(0,hurtSFX.Count)];
+            audioSource.Play();
+        }
 
         spriteRenderer.color = Color.red;
 
@@ -70,7 +80,7 @@ public class Enemy : MonoBehaviour
         dp.DamageNumber = damage;
         dp.OutlineColor = GameManager.FlavorColorMap[flavor];
         dp.IsCritical = attackEffective;
-        dp.transform.SetParent(GameManager.PopupStore.transform);
+        dp.transform.SetParent(GameManager.EffectStore.transform);
 
     }
 
