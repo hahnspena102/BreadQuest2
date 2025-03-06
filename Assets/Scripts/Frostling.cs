@@ -9,6 +9,7 @@ public class Frostling : MonoBehaviour
     [SerializeField] private float attackOffset = 0f;
     [SerializeField] private float cooldown = 0.5f;
     [SerializeField] private List<AudioClip> attackSFX;
+    [SerializeField] private float range =  8f;
     private AudioSource audioSource;
 
     private float currentAngle = 0f;
@@ -43,7 +44,9 @@ public class Frostling : MonoBehaviour
     IEnumerator PhaseLoop(){
         yield return new WaitForSeconds(3f);
         phase = 1;
+        
         yield return new WaitForSeconds(cooldown);
+        while (Vector2.Distance(transform.position, SirGluten.playerPosition) > range) yield return null;
         if (attackSFX.Count > 0) {
             audioSource.clip = attackSFX[Random.Range(0, attackSFX.Count)];
             audioSource.Play();

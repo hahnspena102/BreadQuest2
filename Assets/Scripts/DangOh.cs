@@ -1,6 +1,6 @@
 using UnityEngine;
 using System.Collections;
-using System;
+using System.Collections.Generic;
 
 public class DangOh : MonoBehaviour
 {
@@ -13,10 +13,14 @@ public class DangOh : MonoBehaviour
     [SerializeField] private float detectionRadius = 0.1f; // Player detection range
     [SerializeField] private float animationLength = 3f; // Adjust this based on your attack animation length
 
+    [SerializeField] private List<AudioClip> attackSFX;
+    private AudioSource audioSource;
+
     void Start()
     {
         body = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>(); // Get Animator component
+        audioSource = GetComponent<AudioSource>();
         StartCoroutine(AttackLoop());
     }
 
@@ -44,6 +48,11 @@ public class DangOh : MonoBehaviour
 
     private void FireProjectiles()
     {
+        if (attackSFX.Count > 0) {
+            audioSource.clip = attackSFX[Random.Range(0, attackSFX.Count)];
+            audioSource.Play();
+        }
+
         Vector2 spawnPosition = body.position;
         Vector2 directionToPlayer = (SirGluten.playerPosition - (Vector2)transform.position).normalized;
         Quaternion baseRotation = Quaternion.FromToRotation(Vector2.up, directionToPlayer);

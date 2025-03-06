@@ -197,6 +197,7 @@ MonoBehaviour:
   cooldown: 3
   attackSFX:
   - {fileID: 8300000, guid: b977e1f3708900848b27915fac26a62b, type: 3}
+  range: 10
 --- !u!114 &8807701846311709780
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -209,6 +210,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 122fcb4c19a9c4443a7de006db010017, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  detectionRadius: 20
+  detectionRadius: 10
   stopRadius: 2
   moveSpeed: 0.5

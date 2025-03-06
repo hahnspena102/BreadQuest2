@@ -110,15 +110,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2481504245390930839, guid: 8adb11242ebd0054292835c38ebb0d7a, type: 3}
       propertyPath: m_Offset.y
-      value: -0.16648766
+      value: -0.45
       objectReference: {fileID: 0}
     - target: {fileID: 2481504245390930839, guid: 8adb11242ebd0054292835c38ebb0d7a, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.x
-      value: 1.09375
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 2481504245390930839, guid: 8adb11242ebd0054292835c38ebb0d7a, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.y
-      value: 1.40625
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 6060517278048242370, guid: 8adb11242ebd0054292835c38ebb0d7a, type: 3}
       propertyPath: m_Sprite
@@ -168,5 +168,6 @@ MonoBehaviour:
   spear: {fileID: 7815776597487610491, guid: d36611f081f50c143a50830b3e14d54c, type: 3}
   attackOffset: 0
   cooldown: 2
+  range: 10
   attackSFX:
   - {fileID: 8300000, guid: dd8f6fa426f3c654f97f83648a752fef, type: 3}

@@ -8,7 +8,9 @@ public class Marshmoblin : MonoBehaviour
     [SerializeField] GameObject spear;
     [SerializeField] private float attackOffset = 0f;
     [SerializeField] private float cooldown = 2f;
+    [SerializeField] private float range;
     [SerializeField] private List<AudioClip> attackSFX;
+    
     private AudioSource audioSource;
     private Animator animator;
     
@@ -38,6 +40,8 @@ public class Marshmoblin : MonoBehaviour
     }
 
     IEnumerator Attack(){
+        while (Vector2.Distance(transform.position, SirGluten.playerPosition) > range) yield return null;
+
         yield return new WaitForSeconds(0.6f);
         animator.SetTrigger("attack");
         
@@ -46,6 +50,10 @@ public class Marshmoblin : MonoBehaviour
     }
 
     void CreateSpear(){
+        if (attackSFX.Count > 0) {
+            audioSource.clip = attackSFX[Random.Range(0, attackSFX.Count)];
+            audioSource.Play();
+        }
         Vector2 spawnPosition = new Vector2(body.position.x + 0.6f, body.position.y + 0.3f);
         Vector2 directionToPlayer = (new Vector2(SirGluten.playerPosition.x, SirGluten.playerPosition.y) - (Vector2)transform.position).normalized;
         Quaternion rotation = Quaternion.FromToRotation(Vector2.up, directionToPlayer);

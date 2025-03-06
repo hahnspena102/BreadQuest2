@@ -90,7 +90,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3895412442333527214, guid: 05ae02d672e3e004592094af1d17e489, type: 3}
       propertyPath: m_Name
-      value: ChocoJellySlime
+      value: JellySlimeCacao
       objectReference: {fileID: 0}
     - target: {fileID: 8741519050768510647, guid: 05ae02d672e3e004592094af1d17e489, type: 3}
       propertyPath: m_Color.b
