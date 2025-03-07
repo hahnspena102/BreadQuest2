@@ -32,8 +32,8 @@ public class SirGluten : MonoBehaviour
 
     // INVENTORY
     private GameObject hoveredWeapon;
-    private Item hoveredWeaponItem;
-    private Item mainSlot,subSlot;
+    private Weapon hoveredWeaponItem;
+    private Weapon mainSlot,subSlot;
 
     [SerializeField]private Image mainSlotImage, subSlotImage;
 
@@ -48,8 +48,8 @@ public class SirGluten : MonoBehaviour
     public global::System.Boolean IsAttacking { get => isAttacking; set => isAttacking = value; }
     public global::System.Boolean IsHurting { get => isHurting; set => isHurting = value; }
     public global::System.Boolean IsAnimationLocked { get => isAnimationLocked; set => isAnimationLocked = value; }
-    public Item MainSlot { get => mainSlot; set => mainSlot = value; }
-    public Item SubSlot { get => subSlot; set => subSlot = value; }
+    public Weapon MainSlot { get => mainSlot; set => mainSlot = value; }
+    public Weapon SubSlot { get => subSlot; set => subSlot = value; }
     public global::System.Int32 WeaponAnimationFrame { get => weaponAnimationFrame; set => weaponAnimationFrame = value; }
 
     void Start()
@@ -164,10 +164,9 @@ public class SirGluten : MonoBehaviour
 
     void UpdateUI() {
         if (mainSlot != null) {
-            Item mainItem = mainSlot.GetComponent<Item>();
-            infoText["mainName"].text = mainItem.WeaponName;
-            string description = $"{mainItem.Description}";
-            Melee mainWeapon = mainSlot.GetComponent<Melee>();
+            Weapon mainWeapon = mainSlot.GetComponent<Weapon>();
+            infoText["mainName"].text = mainWeapon.WeaponName;
+            string description = $"{mainWeapon.Description}";
             if (mainWeapon != null) {
                 description += $"\nAtk: {mainWeapon.AttackDamage} - Flavor: {mainWeapon.Flavor}";
             }
@@ -177,10 +176,9 @@ public class SirGluten : MonoBehaviour
             infoText["mainDesc"].text = "";
         }
         if (subSlot != null) {
-            Item subItem = subSlot.GetComponent<Item>();
-            infoText["subName"].text = subItem.WeaponName;
+            Weapon subWeapon = subSlot.GetComponent<Weapon>();
+            infoText["subName"].text = subWeapon.WeaponName;
             string description = "";
-            Melee subWeapon = subSlot.GetComponent<Melee>();
             if (subWeapon != null) {
                 description += $"\nAtk: {subWeapon.AttackDamage} - Flavor: {subWeapon.Flavor}";
             }
@@ -234,7 +232,7 @@ public class SirGluten : MonoBehaviour
     void Swap() {
         if (subSlot == null) return;
 
-        Item tempSlot = subSlot;
+        Weapon tempSlot = subSlot;
         subSlot = mainSlot;
         mainSlot = tempSlot;
 
@@ -350,7 +348,7 @@ public class SirGluten : MonoBehaviour
             if (hoveredWeaponItem != null) hoveredWeaponItem.HoverTextOff();
             hoveredWeaponItem = null;
             hoveredWeapon = collider.gameObject.transform.parent.gameObject;
-            hoveredWeaponItem = hoveredWeapon.GetComponent<Item>();
+            hoveredWeaponItem = hoveredWeapon.GetComponent<Weapon>();
             hoveredWeaponItem.HoverTextOn(hoveredWeaponItem.WeaponName);
             //Debug.Log(hoveredWeaponItem.WeaponName);
         }

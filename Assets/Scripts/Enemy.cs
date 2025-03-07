@@ -88,9 +88,9 @@ public class Enemy : MonoBehaviour
         if (collider.gameObject.tag == "PlayerAttack") {
             GameObject item = collider.gameObject.transform.parent.gameObject;
 
-            Melee melee = item.GetComponent<Melee>();
+            Weapon weapon = item.GetComponent<Weapon>();
 
-            StartCoroutine(Hurt(melee.AttackDamage, melee.Flavor));
+            StartCoroutine(Hurt(weapon.AttackDamage, weapon.Flavor));
         }
     }
     

@@ -11,8 +11,7 @@ public class AttackAnimation : MonoBehaviour
     [SerializeField]private List<Sprite> leftRightAttack = new List<Sprite>();
     private SirGluten sirGluten;
     private SpriteRenderer spriteRenderer;
-    private Melee melee;
-    private Magic magic;
+    private Weapon weapon;
     private string weaponType;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -20,8 +19,7 @@ public class AttackAnimation : MonoBehaviour
     {
         GameObject player = GameObject.Find("SirGluten").gameObject;
         sirGluten = player.GetComponent<SirGluten>();
-        melee = transform.parent.GetComponent<Melee>();
-        magic = transform.parent.GetComponent<Magic>();
+        weapon = transform.parent.GetComponent<Weapon>();
         spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
@@ -32,21 +30,12 @@ public class AttackAnimation : MonoBehaviour
         if (index == 0) {
             spriteRenderer.sprite = null;
         } else {
-            string direction;
-            if (melee != null) {
-                direction = melee.AnimationDirection;
-            } else if (magic != null) {
-                direction = magic.AnimationDirection;
-            } else {
-                direction = "";
-            }
-        
-            if (direction == "LR") {
+            if (weapon.AnimationDirection == "LR") {
                 if (leftRightAttack.Count < index) {
                     index = leftRightAttack.Count;
                 } 
                 spriteRenderer.sprite = leftRightAttack[index-1];
-            } else if (direction == "F") {
+            } else if (weapon.AnimationDirection == "F") {
                 if (forwardAttack.Count < index) {
                     index = forwardAttack.Count;
                 } 

@@ -6,28 +6,21 @@ using UnityEngine.SceneManagement;
 
 public class Magic : MonoBehaviour
 {
-    [SerializeField] private int attackDamage;
-    [SerializeField] private string flavor;
-    [SerializeField] private List<AudioClip> swingSFX;
-
     private SirGluten sirGluten;
-    private Item item;
+    private Weapon item;
     private GameObject player;
     private Rigidbody2D body;
     private AudioSource audioSource;
     private Vector2 screenSize = new Vector2(Screen.width/2, Screen.height/2);
     private Vector2 mousePosition;
     private Animator playerAnimator;
-    private Vector2 attackDirection;
-    private string animationDirection;
+    private Vector2 attackDirection;  
 
-    public global::System.Int32 AttackDamage { get => attackDamage; set => attackDamage = value; }
-    public global::System.String AnimationDirection { get => animationDirection; set => animationDirection = value; }
-    public global::System.String Flavor { get => flavor; set => flavor = value; }
+    [SerializeField] private GameObject magicProjectile;  
 
     void Start() {
         player = GameObject.Find("SirGluten").gameObject;
-        item = gameObject.GetComponent<Item>();
+        item = gameObject.GetComponent<Weapon>();
         playerAnimator = player.GetComponent<Animator>();
         body = player.GetComponent<Rigidbody2D>();
         sirGluten = player.GetComponent<SirGluten>();
@@ -90,6 +83,10 @@ public class Magic : MonoBehaviour
     }
     
     void CastMagic(){
-        Debug.Log("hi");
+        Vector2 spawnPosition = new Vector2(body.position.x, body.position.y);
+        Vector2 direction = (SirGluten.playerPosition - (Vector2)transform.position).normalized;
+        Quaternion rotation = Quaternion.FromToRotation(Vector2.up, direction);
+        GameObject newProjectile = Instantiate(magicProjectile, spawnPosition, rotation);
+        newProjectile.transform.parent = GameManager.EffectStore.transform;
     }
 }
