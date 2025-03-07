@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 public class Magic : MonoBehaviour
 {
     private SirGluten sirGluten;
-    private Weapon item;
+    private Weapon weapon;
     private GameObject player;
     private Rigidbody2D body;
     private AudioSource audioSource;
@@ -17,10 +17,13 @@ public class Magic : MonoBehaviour
     private Vector2 attackDirection;  
 
     [SerializeField] private GameObject magicProjectile;  
+    [SerializeField] private int glucoseCost;
+
+    public global::System.Int32 GlucoseCost { get => glucoseCost; set => glucoseCost = value; }
 
     void Start() {
         player = GameObject.Find("SirGluten").gameObject;
-        item = gameObject.GetComponent<Weapon>();
+        weapon = gameObject.GetComponent<Weapon>();
         playerAnimator = player.GetComponent<Animator>();
         body = player.GetComponent<Rigidbody2D>();
         sirGluten = player.GetComponent<SirGluten>();
@@ -34,7 +37,7 @@ public class Magic : MonoBehaviour
             MagicDirection();
             sirGluten.MainSlot.transform.GetChild(1).gameObject.transform.position = body.position;
         }
-        if (Input.GetMouseButtonDown(0) && sirGluten.MainSlot != null && sirGluten.MainSlot.gameObject == gameObject && !sirGluten.IsAttacking) {
+        if (Input.GetMouseButtonDown(0) && sirGluten.MainSlot != null && sirGluten.MainSlot.gameObject == gameObject && !sirGluten.IsAttacking && sirGluten.Glucose >= glucoseCost) {
             MagicDirection();
             StartCoroutine(MagicAttack());
         }
@@ -50,6 +53,8 @@ public class Magic : MonoBehaviour
     }
 
     IEnumerator MagicAttack() {
+        sirGluten.Glucose -= glucoseCost;
+
         sirGluten.IsAnimationLocked = true;
         sirGluten.IsAttacking = true;
 
@@ -84,9 +89,16 @@ public class Magic : MonoBehaviour
     
     void CastMagic(){
         Vector2 spawnPosition = new Vector2(body.position.x, body.position.y);
-        Vector2 direction = (SirGluten.playerPosition - (Vector2)transform.position).normalized;
-        Quaternion rotation = Quaternion.FromToRotation(Vector2.up, direction);
+        Vector2 toMouse = ((Vector2)transform.position - SirGluten.playerPosition).normalized;
+        Quaternion rotation = Quaternion.FromToRotation(Vector2.up, toMouse);
         GameObject newProjectile = Instantiate(magicProjectile, spawnPosition, rotation);
         newProjectile.transform.parent = GameManager.EffectStore.transform;
+        
+        Rigidbody2D rb = newProjectile.GetComponent<Rigidbody2D>();
+        rb.linearVelocity = attackDirection;
+
+        MagicProj mp = newProjectile.GetComponent<MagicProj>();
+        mp.AttackDamage = weapon.AttackDamage;
+        mp.Flavor = weapon.Flavor;
     }
 }

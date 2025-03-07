@@ -51,6 +51,7 @@ public class SirGluten : MonoBehaviour
     public Weapon MainSlot { get => mainSlot; set => mainSlot = value; }
     public Weapon SubSlot { get => subSlot; set => subSlot = value; }
     public global::System.Int32 WeaponAnimationFrame { get => weaponAnimationFrame; set => weaponAnimationFrame = value; }
+    public global::System.Int32 Glucose { get => glucose; set => glucose = value; }
 
     void Start()
     {
@@ -60,6 +61,7 @@ public class SirGluten : MonoBehaviour
         
         InitStats();
         UpdateStats();
+        StartCoroutine(RegenerateGlucose());
 
         infoText["mainName"] = infoUI.transform.GetChild(0).gameObject.GetComponent<TextMeshProUGUI>();
         infoText["mainDesc"] = infoUI.transform.GetChild(1).gameObject.GetComponent<TextMeshProUGUI>();
@@ -84,6 +86,17 @@ public class SirGluten : MonoBehaviour
         yeastText = yeastBar.GetComponentInChildren<TMPro.TextMeshProUGUI>();
     }
 
+    private IEnumerator RegenerateGlucose()
+    {
+        while (true) {
+            yield return new WaitForSeconds(1f);
+            if (glucose < maxGlucose)
+            {
+                glucose += 1;
+            }
+        }
+    }
+    
     void UpdateStats(){
         maxYeast = (int)Mathf.Round((Mathf.Pow(1.3f,yeastLevel)) * 100);
         //Debug.Log(maxYeast);
@@ -97,6 +110,8 @@ public class SirGluten : MonoBehaviour
             health = maxHealth;
             glucose = maxGlucose;
         }
+
+
         
 
         healthSlider.value = health;
@@ -170,6 +185,8 @@ public class SirGluten : MonoBehaviour
             if (mainWeapon != null) {
                 description += $"\nAtk: {mainWeapon.AttackDamage} - Flavor: {mainWeapon.Flavor}";
             }
+            Magic magic = mainWeapon.GetComponent<Magic>();
+            if (magic != null) description += $" - Glucose: {magic.GlucoseCost}";
             infoText["mainDesc"].text = description;
         } else {
             infoText["mainName"].text = "<empty>";
@@ -182,6 +199,8 @@ public class SirGluten : MonoBehaviour
             if (subWeapon != null) {
                 description += $"\nAtk: {subWeapon.AttackDamage} - Flavor: {subWeapon.Flavor}";
             }
+            Magic magic = subWeapon.GetComponent<Magic>();
+            if (magic != null) description += $" - Glucose: {magic.GlucoseCost}";
             infoText["subDesc"].text = description;
         } else {
             infoText["subName"].text = "<empty>";
@@ -254,6 +273,7 @@ public class SirGluten : MonoBehaviour
                 mainSlotRect.anchoredPosition = body.position;
             }
             itemDropped = mainSlot.transform.GetChild(0).gameObject;
+            itemDropped.transform.position = transform.position;
             
             itemDropped.gameObject.SetActive(true);
 

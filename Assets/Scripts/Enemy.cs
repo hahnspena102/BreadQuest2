@@ -93,5 +93,15 @@ public class Enemy : MonoBehaviour
             StartCoroutine(Hurt(weapon.AttackDamage, weapon.Flavor));
         }
     }
+
+    void OnCollisionEnter2D(Collision2D collision) {
+       if (collision.gameObject.tag == "MagicProj") {
+
+
+            MagicProj mp = collision.gameObject.GetComponent<MagicProj>();
+
+            StartCoroutine(Hurt(mp.AttackDamage, mp.Flavor));
+        } 
+    }
     
 }

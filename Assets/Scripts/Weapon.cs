@@ -9,7 +9,7 @@ public class Weapon : MonoBehaviour
     [SerializeField]private string id;
     [SerializeField]private string weaponName;
     [SerializeField]private string description;
-    [SerializeField]private string itemType;
+    [SerializeField]private string weaponType;
     [SerializeField]private string rarity;
     [SerializeField] private int attackDamage;
     [SerializeField] private string flavor;
@@ -26,6 +26,7 @@ public class Weapon : MonoBehaviour
     public List<AudioClip> AttackSFX { get => attackSFX; set => attackSFX = value; }
     private string animationDirection;
     public global::System.String AnimationDirection { get => animationDirection; set => animationDirection = value; }
+    public global::System.String WeaponType { get => weaponType; set => weaponType = value; }
 
     void Start(){
         inventorySprite = GetComponentInChildren<SpriteRenderer>().sprite;
