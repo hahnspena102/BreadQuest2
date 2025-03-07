@@ -9,6 +9,7 @@ TagManager:
   - Enemy
   - EnemyAttack
   - Walls
+  - MagicProj
   layers:
   - Default
   - TransparentFX
@@ -21,8 +22,8 @@ TagManager:
   - PlayerAttack
   - Enemy
   - EnemyAttack
-  - 
-  - 
+  - MagicProj
+  - Walls
   - 
   - 
   - 
