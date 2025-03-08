@@ -7,26 +7,34 @@ using TMPro;
 
 public class Enemy : MonoBehaviour
 {
-    [SerializeField] private int health;   
-    [SerializeField] private int damage;
-    [SerializeField] private string flavoring;
+    [SerializeField]private EnemyData enemyData;
+    private int health;   
+    private int damage;
+    private string flavoring;
     [SerializeField] private GameObject damagePopup;
     [SerializeField] private GameObject deathParticle;
-    [SerializeField] private float xpMultiplier = 1f;
+    private float xpMultiplier = 1f;
     [SerializeField] private List<AudioClip> hurtSFX;
     private AudioSource audioSource;
     private SpriteRenderer spriteRenderer;
     private Color ogColor;
     private bool isDying;
+    private float detectionRadius = 10f;
 
     public global::System.Int32 Damage { get => damage; set => damage = value; }
+    public global::System.Single DetectionRadius { get => detectionRadius; set => detectionRadius = value; }
+    public EnemyData EnemyData { get => enemyData; set => enemyData = value; }
 
     void Start(){
         spriteRenderer = GetComponent<SpriteRenderer>();
         audioSource = GetComponent<AudioSource>();
         ogColor = spriteRenderer.color;
 
-        
+        health = enemyData.Health;
+        damage = enemyData.Damage;
+        flavoring = enemyData.Flavoring;
+        xpMultiplier = enemyData.XpMultiplier;
+        detectionRadius = enemyData.DetectionRadius;
     }
     void Update() {
         if (health <= 0 && !isDying) {

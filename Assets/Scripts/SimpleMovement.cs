@@ -2,11 +2,11 @@ using UnityEngine;
 
 public class SimpleMovement : MonoBehaviour  
 {
-    [SerializeField] private float detectionRadius = 20f;
     [SerializeField] private float stopRadius = 0f;
     [SerializeField] private float moveSpeed = 5f;
     private Rigidbody2D body;
     private Animator animator;
+    private float detectionRadius;
 
     //private bool isMoving;
 
@@ -14,6 +14,8 @@ public class SimpleMovement : MonoBehaviour
     {
         body = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
+
+        detectionRadius = GetComponent<Enemy>().DetectionRadius;
     }
 
     void Update() {

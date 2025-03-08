@@ -92,6 +92,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: JellySlimeCacao
       objectReference: {fileID: 0}
+    - target: {fileID: 5278550575122219636, guid: 05ae02d672e3e004592094af1d17e489, type: 3}
+      propertyPath: enemyData
+      value: 
+      objectReference: {fileID: 11400000, guid: a9d0a2712347fb64bbf53afbe37a0a3f, type: 2}
     - target: {fileID: 8741519050768510647, guid: 05ae02d672e3e004592094af1d17e489, type: 3}
       propertyPath: m_Color.b
       value: 0.38033998
