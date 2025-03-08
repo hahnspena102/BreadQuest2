@@ -203,6 +203,10 @@ PrefabInstance:
       propertyPath: itemType
       value: magic
       objectReference: {fileID: 0}
+    - target: {fileID: 8364841215201499060, guid: c211bfd11b7417640b9c1e772879be7f, type: 3}
+      propertyPath: weaponType
+      value: magic
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
@@ -236,3 +240,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: febccb92a7e68c94ea58e2bbc2efb154, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  magicProjectile: {fileID: 0}
+  glucoseCost: 0
+  projectileType: singleshot
+  angleRange: 0
+  numProj: 0

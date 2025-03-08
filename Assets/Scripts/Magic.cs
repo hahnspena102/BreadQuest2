@@ -18,6 +18,9 @@ public class Magic : MonoBehaviour
 
     [SerializeField] private GameObject magicProjectile;  
     [SerializeField] private int glucoseCost;
+    [SerializeField] private string projectileType = "singleshot";
+    [SerializeField] private float angleRange = 0f;
+    [SerializeField] private int numProj = 1;
 
     public global::System.Int32 GlucoseCost { get => glucoseCost; set => glucoseCost = value; }
 
@@ -76,7 +79,7 @@ public class Magic : MonoBehaviour
         
         sirGluten.MainSlot.transform.GetChild(1).gameObject.SetActive(true);
 
-        CastMagic();
+        CastMagic(projectileType);
         yield return new WaitForSeconds(0.6f);
 
         sirGluten.MainSlot.transform.GetChild(1).gameObject.transform.position = body.position;
@@ -87,18 +90,44 @@ public class Magic : MonoBehaviour
         sirGluten.IsAttacking = false;
     }
     
-    void CastMagic(){
+    void CastMagic(string type){
+        if (type == "multishot") {
+            if (numProj == 1) {
+            CreateProj(0);
+            return;
+            }
+
+            float angleGap = angleRange / (numProj - 1);
+            float startAngle = -angleRange / 2;
+
+            for (int i = 0; i < numProj; i++) {
+                float curAngle = startAngle + (i * angleGap);
+                CreateProj(curAngle);
+            }
+            
+        } else {
+            CreateProj(0);
+        }
+    }
+
+    GameObject CreateProj(float angleOffset) {
         Vector2 spawnPosition = new Vector2(body.position.x, body.position.y);
         Vector2 toMouse = ((Vector2)mousePosition - SirGluten.playerPosition).normalized;
-        Quaternion rotation = Quaternion.FromToRotation(Vector2.up, toMouse);
+
+        Quaternion rotation = Quaternion.FromToRotation(Vector2.up, toMouse) * Quaternion.Euler(0, 0, angleOffset);
+
         GameObject newProjectile = Instantiate(magicProjectile, spawnPosition, rotation);
         newProjectile.transform.parent = GameManager.EffectStore.transform;
-        
+
         Rigidbody2D rb = newProjectile.GetComponent<Rigidbody2D>();
-        rb.linearVelocity = attackDirection;
+
+        Vector2 attackDirectionRotated = Quaternion.Euler(0, 0, angleOffset) * toMouse;
+        rb.linearVelocity = attackDirectionRotated; 
 
         MagicProj mp = newProjectile.GetComponent<MagicProj>();
         mp.AttackDamage = weapon.AttackDamage;
         mp.Flavor = weapon.Flavor;
+
+        return newProjectile;
     }
 }

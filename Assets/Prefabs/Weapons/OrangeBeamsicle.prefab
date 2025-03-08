@@ -9,17 +9,33 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: -3714554652511672818, guid: 8f49e4d77b89a784497c267292f8d5fb, type: 3}
+      propertyPath: numProj
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -3714554652511672818, guid: 8f49e4d77b89a784497c267292f8d5fb, type: 3}
+      propertyPath: angleRange
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -3714554652511672818, guid: 8f49e4d77b89a784497c267292f8d5fb, type: 3}
       propertyPath: glucoseCost
-      value: 3
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: -3714554652511672818, guid: 8f49e4d77b89a784497c267292f8d5fb, type: 3}
+      propertyPath: projectileType
+      value: singleshot
       objectReference: {fileID: 0}
     - target: {fileID: -3714554652511672818, guid: 8f49e4d77b89a784497c267292f8d5fb, type: 3}
       propertyPath: magicProjectile
       value: 
-      objectReference: {fileID: 3008986627719570525, guid: 0c5779dac5a764bf9a7877c5f92d73f7, type: 3}
+      objectReference: {fileID: 3008986627719570525, guid: a8e3ce1ccc5cc6a4a95ff2a75c9e4f34, type: 3}
     - target: {fileID: 2555982464447483995, guid: 8f49e4d77b89a784497c267292f8d5fb, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: -1381539162234565720, guid: 79c59840f32ae8d4eb565805a8436a8a, type: 3}
+      objectReference: {fileID: 4577311707800459560, guid: 2a392333538fbbb419e243aaab95833e, type: 3}
+    - target: {fileID: 2555982464447483995, guid: 8f49e4d77b89a784497c267292f8d5fb, type: 3}
+      propertyPath: m_SortingLayer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3610859613947776775, guid: 8f49e4d77b89a784497c267292f8d5fb, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -258,15 +274,15 @@ PrefabInstance:
       objectReference: {fileID: -1810314735, guid: 82c348da81d845b4db5efc673030070a, type: 3}
     - target: {fileID: 6481836035841760489, guid: 8f49e4d77b89a784497c267292f8d5fb, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.x
-      value: 0.90625
+      value: 0.96875
       objectReference: {fileID: 0}
     - target: {fileID: 6481836035841760489, guid: 8f49e4d77b89a784497c267292f8d5fb, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.y
-      value: 0.78125
+      value: 0.8125
       objectReference: {fileID: 0}
     - target: {fileID: 7807762647802752527, guid: 8f49e4d77b89a784497c267292f8d5fb, type: 3}
       propertyPath: m_Name
-      value: HotCocoaShot
+      value: OrangeBeamsicle
       objectReference: {fileID: 0}
     - target: {fileID: 8227513997897164223, guid: 8f49e4d77b89a784497c267292f8d5fb, type: 3}
       propertyPath: m_Color.b
@@ -282,27 +298,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8927998594896783488, guid: 8f49e4d77b89a784497c267292f8d5fb, type: 3}
       propertyPath: id
-      value: hot_cocoa_shot
+      value: orange_beamsicle
       objectReference: {fileID: 0}
     - target: {fileID: 8927998594896783488, guid: 8f49e4d77b89a784497c267292f8d5fb, type: 3}
       propertyPath: flavor
-      value: cacao
+      value: fruity
       objectReference: {fileID: 0}
     - target: {fileID: 8927998594896783488, guid: 8f49e4d77b89a784497c267292f8d5fb, type: 3}
       propertyPath: rarity
-      value: common
+      value: rare
       objectReference: {fileID: 0}
     - target: {fileID: 8927998594896783488, guid: 8f49e4d77b89a784497c267292f8d5fb, type: 3}
       propertyPath: weaponName
-      value: Hot Cocoa Shot
+      value: Orange Beamsicle
       objectReference: {fileID: 0}
     - target: {fileID: 8927998594896783488, guid: 8f49e4d77b89a784497c267292f8d5fb, type: 3}
       propertyPath: description
-      value: Right click to shoot a ball of hot chocolate.
+      value: Right click to shoot a beam of orange creamsicle.
       objectReference: {fileID: 0}
     - target: {fileID: 8927998594896783488, guid: 8f49e4d77b89a784497c267292f8d5fb, type: 3}
       propertyPath: attackDamage
-      value: 3
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

@@ -327,6 +327,10 @@ PrefabInstance:
       value: melee
       objectReference: {fileID: 0}
     - target: {fileID: 8364841215201499060, guid: c211bfd11b7417640b9c1e772879be7f, type: 3}
+      propertyPath: weaponType
+      value: melee
+      objectReference: {fileID: 0}
+    - target: {fileID: 8364841215201499060, guid: c211bfd11b7417640b9c1e772879be7f, type: 3}
       propertyPath: attackSFX.Array.size
       value: 1
       objectReference: {fileID: 0}
