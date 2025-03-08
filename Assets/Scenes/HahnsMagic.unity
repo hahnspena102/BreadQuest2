@@ -8664,7 +8664,7 @@ PrefabInstance:
     - target: {fileID: -3714554652511672818, guid: 8f49e4d77b89a784497c267292f8d5fb, type: 3}
       propertyPath: magicProjectile
       value: 
-      objectReference: {fileID: 8748053951306997152, guid: 3665731059b1445439d0db8d88b12423, type: 3}
+      objectReference: {fileID: 3008986627719570525, guid: 0c5779dac5a764bf9a7877c5f92d73f7, type: 3}
     - target: {fileID: 2555982464447483995, guid: 8f49e4d77b89a784497c267292f8d5fb, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -9281,7 +9281,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 0.75, y: 0.875}
+  m_Size: {x: 0.55647486, y: 0.6468712}
   m_EdgeRadius: 0
 --- !u!95 &1931371204
 Animator:

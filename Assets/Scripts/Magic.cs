@@ -89,7 +89,7 @@ public class Magic : MonoBehaviour
     
     void CastMagic(){
         Vector2 spawnPosition = new Vector2(body.position.x, body.position.y);
-        Vector2 toMouse = ((Vector2)transform.position - SirGluten.playerPosition).normalized;
+        Vector2 toMouse = ((Vector2)mousePosition - SirGluten.playerPosition).normalized;
         Quaternion rotation = Quaternion.FromToRotation(Vector2.up, toMouse);
         GameObject newProjectile = Instantiate(magicProjectile, spawnPosition, rotation);
         newProjectile.transform.parent = GameManager.EffectStore.transform;
