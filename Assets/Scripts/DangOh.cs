@@ -41,7 +41,7 @@ public class DangOh : MonoBehaviour
 
     private IEnumerator Attack()
     {
-        animator.SetTrigger("AttackTrigger"); // Play attack animation
+        //animator.SetTrigger("AttackTrigger"); // Play attack animation
         yield return new WaitForSeconds(animationLength); // Wait for animation to finish
         FireProjectiles(); // Fire projectiles only after animation ends
     }

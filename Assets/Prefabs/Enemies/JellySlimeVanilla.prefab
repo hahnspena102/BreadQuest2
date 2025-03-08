@@ -90,8 +90,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3895412442333527214, guid: 05ae02d672e3e004592094af1d17e489, type: 3}
       propertyPath: m_Name
-      value: VanillaJellySlime
+      value: JellySlimeVanilla
       objectReference: {fileID: 0}
+    - target: {fileID: 5278550575122219636, guid: 05ae02d672e3e004592094af1d17e489, type: 3}
+      propertyPath: enemyData
+      value: 
+      objectReference: {fileID: 11400000, guid: 6dfee2624e4a23643b1ba8314026393e, type: 2}
     - target: {fileID: 8741519050768510647, guid: 05ae02d672e3e004592094af1d17e489, type: 3}
       propertyPath: m_Color.b
       value: 0.7971698

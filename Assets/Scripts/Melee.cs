@@ -6,12 +6,8 @@ using UnityEngine.SceneManagement;
 
 public class Melee : MonoBehaviour
 {
-    [SerializeField] private int attackDamage;
-    [SerializeField] private string flavor;
-    [SerializeField] private List<AudioClip> swingSFX;
-
     private SirGluten sirGluten;
-    private Item item;
+    private Weapon weapon;
     private GameObject player;
     private Rigidbody2D body;
     private AudioSource audioSource;
@@ -19,15 +15,10 @@ public class Melee : MonoBehaviour
     private Vector2 mousePosition;
     private Animator playerAnimator;
     private Vector2 attackPosition;
-    private string animationDirection;
-
-    public global::System.Int32 AttackDamage { get => attackDamage; set => attackDamage = value; }
-    public global::System.String AnimationDirection { get => animationDirection; set => animationDirection = value; }
-    public global::System.String Flavor { get => flavor; set => flavor = value; }
 
     void Start() {
         player = GameObject.Find("SirGluten").gameObject;
-        item = gameObject.GetComponent<Item>();
+        weapon = gameObject.GetComponent<Weapon>();
         playerAnimator = player.GetComponent<Animator>();
         body = player.GetComponent<Rigidbody2D>();
         sirGluten = player.GetComponent<SirGluten>();
@@ -50,7 +41,7 @@ public class Melee : MonoBehaviour
         }
         if (sirGluten.MainSlot != null && sirGluten.MainSlot.gameObject == gameObject) {
             if ((mousePosition.y != 0 || mousePosition.x != 0)) {
-                Rigidbody2D attackRB = sirGluten.MainSlot.transform.GetChild(1).gameObject.GetComponent<Rigidbody2D>();
+                Rigidbody2D attackRB = sirGluten.MainSlot.transform.GetChild(2).gameObject.GetComponent<Rigidbody2D>();
                 if (Mathf.Abs(mousePosition.x) > Mathf.Abs(mousePosition.y)) {
                     attackRB.position = body.position + new Vector2(mousePosition.x, 0).normalized;
                     attackPosition = new Vector2(mousePosition.x, 0).normalized;
@@ -70,25 +61,25 @@ public class Melee : MonoBehaviour
         sirGluten.IsAttacking = true;
         sirGluten.WeaponAnimationFrame = 0;
 
-        audioSource.clip = swingSFX[Random.Range(0, swingSFX.Count)];
-        audioSource.Play();
+        if (weapon.AttackSFX.Count > 0) {
+            audioSource.clip = weapon.AttackSFX[Random.Range(0, weapon.AttackSFX.Count)];
+            audioSource.Play();
+        }
+        
         playerAnimator.SetFloat("horizontal",Mathf.Abs(attackPosition.x));
         playerAnimator.SetFloat("vertical",attackPosition.y);
         playerAnimator.SetTrigger("meleeAttack");
         
         yield return new WaitForSeconds(0.1f);
-        sirGluten.MainSlot.transform.GetChild(2).gameObject.SetActive(true);
-
-       
-        
+        sirGluten.MainSlot.transform.GetChild(1).gameObject.SetActive(true);
 
         if (attackPosition.y > 0) {
-            animationDirection = "B";
+            weapon.AnimationDirection = "B";
             
         } else if (attackPosition.y < 0) {
-            animationDirection = "F";
+            weapon.AnimationDirection = "F";
         } else {
-            animationDirection = "LR";
+            weapon.AnimationDirection = "LR";
         }
         if (attackPosition.x < 0) {
             Vector2 rotator = new Vector3(transform.rotation.x, 180f);
@@ -104,15 +95,15 @@ public class Melee : MonoBehaviour
         // Attack
         yield return new WaitForSeconds(0.2f);
 
-        sirGluten.MainSlot.transform.GetChild(1).gameObject.SetActive(true);
+        sirGluten.MainSlot.transform.GetChild(2).gameObject.SetActive(true);
         yield return new WaitForSeconds(0.2f);
 
         // Animation End
         sirGluten.MainSlot.transform.GetChild(2).gameObject.transform.position = body.position;
         sirGluten.WeaponAnimationFrame = 0;
         
-        sirGluten.MainSlot.transform.GetChild(1).gameObject.SetActive(false);
         sirGluten.MainSlot.transform.GetChild(2).gameObject.SetActive(false);
+        sirGluten.MainSlot.transform.GetChild(1).gameObject.SetActive(false);
         yield return new WaitForSeconds(0.2f);
         sirGluten.IsAnimationLocked = false;
         sirGluten.IsAttacking = false;

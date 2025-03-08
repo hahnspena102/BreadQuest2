@@ -55,9 +55,9 @@ public class Chest : MonoBehaviour
         int curNum = 0;
         Dictionary<int, GameObject> randomizerMap = new Dictionary<int, GameObject>();
         foreach (GameObject gameObj in combinedList) {
-            Item item = gameObj.GetComponent<Item>();
+            Weapon weapon = gameObj.GetComponent<Weapon>();
             randomizerMap[curNum] = gameObj;
-            curNum += GameManager.RarityMap[item.Rarity];
+            curNum += GameManager.RarityMap[weapon.Rarity];
             //Debug.Log(item.Rarity);
         }
 
@@ -66,8 +66,8 @@ public class Chest : MonoBehaviour
             randomNumber--;
         }
 
-        GameObject newItem = Instantiate(randomizerMap[randomNumber], transform.position, Quaternion.identity);
-        newItem.transform.parent = GameManager.ItemStore.transform;
+        GameObject newWeapon = Instantiate(randomizerMap[randomNumber], transform.position, Quaternion.identity);
+        newWeapon.transform.SetParent(GameManager.ItemStore.transform);
     }
 
     void OnCollisionEnter2D(Collision2D collision) {

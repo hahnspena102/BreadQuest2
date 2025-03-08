@@ -10,38 +10,22 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1274005357380162982, guid: ddb193a141508b545a8982885ad48e35, type: 3}
       propertyPath: flavor
-      value: grain
+      value: flavorless
       objectReference: {fileID: 0}
     - target: {fileID: 1274005357380162982, guid: ddb193a141508b545a8982885ad48e35, type: 3}
       propertyPath: attackDamage
-      value: 5
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 3271738115149993149, guid: ddb193a141508b545a8982885ad48e35, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: -5560997628221282433, guid: 88c76f20af9e5994f9ddc56b47f69775, type: 3}
+      objectReference: {fileID: 6448972388924427744, guid: 965933b476426f743ad3e211861fed2b, type: 3}
     - target: {fileID: 3271738115149993149, guid: ddb193a141508b545a8982885ad48e35, type: 3}
       propertyPath: m_SortingLayer
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3720981650840172434, guid: ddb193a141508b545a8982885ad48e35, type: 3}
-      propertyPath: m_Size.x
-      value: 0.90625
-      objectReference: {fileID: 0}
-    - target: {fileID: 3720981650840172434, guid: ddb193a141508b545a8982885ad48e35, type: 3}
-      propertyPath: m_Size.y
-      value: 0.90625
-      objectReference: {fileID: 0}
-    - target: {fileID: 3720981650840172434, guid: ddb193a141508b545a8982885ad48e35, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 3720981650840172434, guid: ddb193a141508b545a8982885ad48e35, type: 3}
       propertyPath: m_SortingLayer
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3720981650840172434, guid: ddb193a141508b545a8982885ad48e35, type: 3}
-      propertyPath: m_WasSpriteAssigned
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4324433423343242209, guid: ddb193a141508b545a8982885ad48e35, type: 3}
@@ -126,15 +110,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6335222657926469647, guid: ddb193a141508b545a8982885ad48e35, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.x
-      value: 0.90625
+      value: 0.875
       objectReference: {fileID: 0}
     - target: {fileID: 6335222657926469647, guid: ddb193a141508b545a8982885ad48e35, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.y
-      value: 0.90625
+      value: 0.875
       objectReference: {fileID: 0}
     - target: {fileID: 7081239968080898793, guid: ddb193a141508b545a8982885ad48e35, type: 3}
       propertyPath: m_Name
-      value: TheBaguette
+      value: KnightsSword
       objectReference: {fileID: 0}
     - target: {fileID: 8105893015995445619, guid: ddb193a141508b545a8982885ad48e35, type: 3}
       propertyPath: forwardSwing.Array.size
@@ -145,64 +129,116 @@ PrefabInstance:
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8105893015995445619, guid: ddb193a141508b545a8982885ad48e35, type: 3}
+      propertyPath: forwardAttack.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8105893015995445619, guid: ddb193a141508b545a8982885ad48e35, type: 3}
+      propertyPath: backwardAttack.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8105893015995445619, guid: ddb193a141508b545a8982885ad48e35, type: 3}
       propertyPath: leftRightSwing.Array.size
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8105893015995445619, guid: ddb193a141508b545a8982885ad48e35, type: 3}
       propertyPath: 'forwardSwing.Array.data[0]'
       value: 
-      objectReference: {fileID: 3093084659387666519, guid: db9203a90eb20734da7d4e17424ceb53, type: 3}
+      objectReference: {fileID: 876549254, guid: 65ab6541af3b95240a9bd230b7412b13, type: 3}
     - target: {fileID: 8105893015995445619, guid: ddb193a141508b545a8982885ad48e35, type: 3}
       propertyPath: 'forwardSwing.Array.data[1]'
       value: 
-      objectReference: {fileID: -3769652436725689536, guid: db9203a90eb20734da7d4e17424ceb53, type: 3}
+      objectReference: {fileID: -906424909, guid: 65ab6541af3b95240a9bd230b7412b13, type: 3}
     - target: {fileID: 8105893015995445619, guid: ddb193a141508b545a8982885ad48e35, type: 3}
       propertyPath: 'forwardSwing.Array.data[2]'
       value: 
-      objectReference: {fileID: 9041049226964437087, guid: db9203a90eb20734da7d4e17424ceb53, type: 3}
+      objectReference: {fileID: 1270951686, guid: 65ab6541af3b95240a9bd230b7412b13, type: 3}
+    - target: {fileID: 8105893015995445619, guid: ddb193a141508b545a8982885ad48e35, type: 3}
+      propertyPath: leftRightAttack.Array.size
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 8105893015995445619, guid: ddb193a141508b545a8982885ad48e35, type: 3}
       propertyPath: 'backwardSwing.Array.data[0]'
       value: 
-      objectReference: {fileID: -3719508736209185353, guid: db9203a90eb20734da7d4e17424ceb53, type: 3}
+      objectReference: {fileID: -368832410, guid: 65ab6541af3b95240a9bd230b7412b13, type: 3}
     - target: {fileID: 8105893015995445619, guid: ddb193a141508b545a8982885ad48e35, type: 3}
       propertyPath: 'backwardSwing.Array.data[1]'
       value: 
-      objectReference: {fileID: -8360502922876624060, guid: db9203a90eb20734da7d4e17424ceb53, type: 3}
+      objectReference: {fileID: -2055537311, guid: 65ab6541af3b95240a9bd230b7412b13, type: 3}
     - target: {fileID: 8105893015995445619, guid: ddb193a141508b545a8982885ad48e35, type: 3}
       propertyPath: 'backwardSwing.Array.data[2]'
       value: 
-      objectReference: {fileID: -4870440855266635595, guid: db9203a90eb20734da7d4e17424ceb53, type: 3}
+      objectReference: {fileID: -1147408322, guid: 65ab6541af3b95240a9bd230b7412b13, type: 3}
+    - target: {fileID: 8105893015995445619, guid: ddb193a141508b545a8982885ad48e35, type: 3}
+      propertyPath: 'forwardAttack.Array.data[0]'
+      value: 
+      objectReference: {fileID: 876549254, guid: 65ab6541af3b95240a9bd230b7412b13, type: 3}
+    - target: {fileID: 8105893015995445619, guid: ddb193a141508b545a8982885ad48e35, type: 3}
+      propertyPath: 'forwardAttack.Array.data[1]'
+      value: 
+      objectReference: {fileID: -906424909, guid: 65ab6541af3b95240a9bd230b7412b13, type: 3}
+    - target: {fileID: 8105893015995445619, guid: ddb193a141508b545a8982885ad48e35, type: 3}
+      propertyPath: 'forwardAttack.Array.data[2]'
+      value: 
+      objectReference: {fileID: 1270951686, guid: 65ab6541af3b95240a9bd230b7412b13, type: 3}
+    - target: {fileID: 8105893015995445619, guid: ddb193a141508b545a8982885ad48e35, type: 3}
+      propertyPath: 'backwardAttack.Array.data[0]'
+      value: 
+      objectReference: {fileID: -368832410, guid: 65ab6541af3b95240a9bd230b7412b13, type: 3}
+    - target: {fileID: 8105893015995445619, guid: ddb193a141508b545a8982885ad48e35, type: 3}
+      propertyPath: 'backwardAttack.Array.data[1]'
+      value: 
+      objectReference: {fileID: -2055537311, guid: 65ab6541af3b95240a9bd230b7412b13, type: 3}
+    - target: {fileID: 8105893015995445619, guid: ddb193a141508b545a8982885ad48e35, type: 3}
+      propertyPath: 'backwardAttack.Array.data[2]'
+      value: 
+      objectReference: {fileID: -1147408322, guid: 65ab6541af3b95240a9bd230b7412b13, type: 3}
     - target: {fileID: 8105893015995445619, guid: ddb193a141508b545a8982885ad48e35, type: 3}
       propertyPath: 'leftRightSwing.Array.data[0]'
       value: 
-      objectReference: {fileID: -3586947255362384402, guid: db9203a90eb20734da7d4e17424ceb53, type: 3}
+      objectReference: {fileID: 1660850616, guid: 65ab6541af3b95240a9bd230b7412b13, type: 3}
     - target: {fileID: 8105893015995445619, guid: ddb193a141508b545a8982885ad48e35, type: 3}
       propertyPath: 'leftRightSwing.Array.data[1]'
       value: 
-      objectReference: {fileID: -197408414117896761, guid: db9203a90eb20734da7d4e17424ceb53, type: 3}
+      objectReference: {fileID: 1306869329, guid: 65ab6541af3b95240a9bd230b7412b13, type: 3}
     - target: {fileID: 8105893015995445619, guid: ddb193a141508b545a8982885ad48e35, type: 3}
       propertyPath: 'leftRightSwing.Array.data[2]'
       value: 
-      objectReference: {fileID: 5272309124350846142, guid: db9203a90eb20734da7d4e17424ceb53, type: 3}
+      objectReference: {fileID: 1261577093, guid: 65ab6541af3b95240a9bd230b7412b13, type: 3}
+    - target: {fileID: 8105893015995445619, guid: ddb193a141508b545a8982885ad48e35, type: 3}
+      propertyPath: 'leftRightAttack.Array.data[0]'
+      value: 
+      objectReference: {fileID: 1660850616, guid: 65ab6541af3b95240a9bd230b7412b13, type: 3}
+    - target: {fileID: 8105893015995445619, guid: ddb193a141508b545a8982885ad48e35, type: 3}
+      propertyPath: 'leftRightAttack.Array.data[1]'
+      value: 
+      objectReference: {fileID: 1306869329, guid: 65ab6541af3b95240a9bd230b7412b13, type: 3}
+    - target: {fileID: 8105893015995445619, guid: ddb193a141508b545a8982885ad48e35, type: 3}
+      propertyPath: 'leftRightAttack.Array.data[2]'
+      value: 
+      objectReference: {fileID: 1261577093, guid: 65ab6541af3b95240a9bd230b7412b13, type: 3}
     - target: {fileID: 8501036405661133926, guid: ddb193a141508b545a8982885ad48e35, type: 3}
       propertyPath: id
-      value: the_baguette
+      value: knights_sword
+      objectReference: {fileID: 0}
+    - target: {fileID: 8501036405661133926, guid: ddb193a141508b545a8982885ad48e35, type: 3}
+      propertyPath: flavor
+      value: flavorless
       objectReference: {fileID: 0}
     - target: {fileID: 8501036405661133926, guid: ddb193a141508b545a8982885ad48e35, type: 3}
       propertyPath: rarity
-      value: common
-      objectReference: {fileID: 0}
-    - target: {fileID: 8501036405661133926, guid: ddb193a141508b545a8982885ad48e35, type: 3}
-      propertyPath: itemType
-      value: melee
+      value: rare
       objectReference: {fileID: 0}
     - target: {fileID: 8501036405661133926, guid: ddb193a141508b545a8982885ad48e35, type: 3}
       propertyPath: weaponName
-      value: The Baguette
+      value: Knight's Sword
       objectReference: {fileID: 0}
     - target: {fileID: 8501036405661133926, guid: ddb193a141508b545a8982885ad48e35, type: 3}
       propertyPath: description
-      value: A blunt loaf of bread, perfect for thwacking and garlic bread.
+      value: The sword of the one and only Bread Knight.
+      objectReference: {fileID: 0}
+    - target: {fileID: 8501036405661133926, guid: ddb193a141508b545a8982885ad48e35, type: 3}
+      propertyPath: attackDamage
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8630761061912810607, guid: ddb193a141508b545a8982885ad48e35, type: 3}
       propertyPath: m_OverridePixelPerfect

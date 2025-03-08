@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5961343830b40814e8d1fdca4c078598, type: 3}
+  m_Name: Marshmoblin
+  m_EditorClassIdentifier: 
+  enemyName: Marshmoblin
+  description: Loyal henchman...
+  health: 20
+  damage: 10
+  flavoring: vanilla
+  xpMultiplier: 1.5
+  sprite: {fileID: 1802537128826739424, guid: d50c04a96d58a43b5ab7518986ce7e52, type: 3}
+  color: {r: 1, g: 1, b: 1, a: 1}
+  isDiscovered: 0
+  detectionRadius: 10

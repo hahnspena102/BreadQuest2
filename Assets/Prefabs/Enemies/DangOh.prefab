@@ -129,6 +129,10 @@ PrefabInstance:
       value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 7208707049854281217, guid: 8adb11242ebd0054292835c38ebb0d7a, type: 3}
+      propertyPath: enemyData
+      value: 
+      objectReference: {fileID: 11400000, guid: bed54acef3ede7f4d82ca7625c6ce55a, type: 2}
+    - target: {fileID: 7208707049854281217, guid: 8adb11242ebd0054292835c38ebb0d7a, type: 3}
       propertyPath: flavoring
       value: grain
       objectReference: {fileID: 0}

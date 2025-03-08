@@ -8,7 +8,7 @@ public class Marshmoblin : MonoBehaviour
     [SerializeField] GameObject spear;
     [SerializeField] private float attackOffset = 0f;
     [SerializeField] private float cooldown = 2f;
-    [SerializeField] private float range;
+    private EnemyData enemyData;
     [SerializeField] private List<AudioClip> attackSFX;
     
     private AudioSource audioSource;
@@ -22,6 +22,7 @@ public class Marshmoblin : MonoBehaviour
         animator = GetComponent<Animator>();
         StartCoroutine(StartAttack());
 
+        enemyData = GetComponent<Enemy>().EnemyData;
     }
 
     IEnumerator StartAttack(){
@@ -40,7 +41,7 @@ public class Marshmoblin : MonoBehaviour
     }
 
     IEnumerator Attack(){
-        while (Vector2.Distance(transform.position, SirGluten.playerPosition) > range) yield return null;
+        while (Vector2.Distance(transform.position, SirGluten.playerPosition) > enemyData.DetectionRadius) yield return null;
 
         yield return new WaitForSeconds(0.6f);
         animator.SetTrigger("attack");

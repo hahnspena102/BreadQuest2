@@ -32,8 +32,8 @@ public class SirGluten : MonoBehaviour
 
     // INVENTORY
     private GameObject hoveredWeapon;
-    private Item hoveredWeaponItem;
-    private Item mainSlot,subSlot;
+    private Weapon hoveredWeaponItem;
+    private Weapon mainSlot,subSlot;
 
     [SerializeField]private Image mainSlotImage, subSlotImage;
 
@@ -48,9 +48,10 @@ public class SirGluten : MonoBehaviour
     public global::System.Boolean IsAttacking { get => isAttacking; set => isAttacking = value; }
     public global::System.Boolean IsHurting { get => isHurting; set => isHurting = value; }
     public global::System.Boolean IsAnimationLocked { get => isAnimationLocked; set => isAnimationLocked = value; }
-    public Item MainSlot { get => mainSlot; set => mainSlot = value; }
-    public Item SubSlot { get => subSlot; set => subSlot = value; }
+    public Weapon MainSlot { get => mainSlot; set => mainSlot = value; }
+    public Weapon SubSlot { get => subSlot; set => subSlot = value; }
     public global::System.Int32 WeaponAnimationFrame { get => weaponAnimationFrame; set => weaponAnimationFrame = value; }
+    public global::System.Int32 Glucose { get => glucose; set => glucose = value; }
 
     void Start()
     {
@@ -60,12 +61,12 @@ public class SirGluten : MonoBehaviour
         
         InitStats();
         UpdateStats();
+        StartCoroutine(RegenerateGlucose());
 
         infoText["mainName"] = infoUI.transform.GetChild(0).gameObject.GetComponent<TextMeshProUGUI>();
         infoText["mainDesc"] = infoUI.transform.GetChild(1).gameObject.GetComponent<TextMeshProUGUI>();
         infoText["subName"] = infoUI.transform.GetChild(2).gameObject.GetComponent<TextMeshProUGUI>();
         infoText["subDesc"] = infoUI.transform.GetChild(3).gameObject.GetComponent<TextMeshProUGUI>();
-        Debug.Log(infoUI.transform.GetChild(0).gameObject.GetComponent<TextMeshProUGUI>());
         
     }
 
@@ -85,6 +86,17 @@ public class SirGluten : MonoBehaviour
         yeastText = yeastBar.GetComponentInChildren<TMPro.TextMeshProUGUI>();
     }
 
+    private IEnumerator RegenerateGlucose()
+    {
+        while (true) {
+            yield return new WaitForSeconds(1f);
+            if (glucose < maxGlucose)
+            {
+                glucose += 1;
+            }
+        }
+    }
+    
     void UpdateStats(){
         maxYeast = (int)Mathf.Round((Mathf.Pow(1.3f,yeastLevel)) * 100);
         //Debug.Log(maxYeast);
@@ -98,6 +110,8 @@ public class SirGluten : MonoBehaviour
             health = maxHealth;
             glucose = maxGlucose;
         }
+
+
         
 
         healthSlider.value = health;
@@ -165,26 +179,28 @@ public class SirGluten : MonoBehaviour
 
     void UpdateUI() {
         if (mainSlot != null) {
-            Item mainItem = mainSlot.GetComponent<Item>();
-            infoText["mainName"].text = mainItem.WeaponName;
-            string description = $"{mainItem.Description}";
-            Melee mainWeapon = mainSlot.GetComponent<Melee>();
+            Weapon mainWeapon = mainSlot.GetComponent<Weapon>();
+            infoText["mainName"].text = mainWeapon.WeaponName;
+            string description = $"{mainWeapon.Description}";
             if (mainWeapon != null) {
                 description += $"\nAtk: {mainWeapon.AttackDamage} - Flavor: {mainWeapon.Flavor}";
             }
+            Magic magic = mainWeapon.GetComponent<Magic>();
+            if (magic != null) description += $" - Glucose: {magic.GlucoseCost}";
             infoText["mainDesc"].text = description;
         } else {
             infoText["mainName"].text = "<empty>";
             infoText["mainDesc"].text = "";
         }
         if (subSlot != null) {
-            Item subItem = subSlot.GetComponent<Item>();
-            infoText["subName"].text = subItem.WeaponName;
+            Weapon subWeapon = subSlot.GetComponent<Weapon>();
+            infoText["subName"].text = subWeapon.WeaponName;
             string description = "";
-            Melee subWeapon = subSlot.GetComponent<Melee>();
             if (subWeapon != null) {
                 description += $"\nAtk: {subWeapon.AttackDamage} - Flavor: {subWeapon.Flavor}";
             }
+            Magic magic = subWeapon.GetComponent<Magic>();
+            if (magic != null) description += $" - Glucose: {magic.GlucoseCost}";
             infoText["subDesc"].text = description;
         } else {
             infoText["subName"].text = "<empty>";
@@ -235,7 +251,7 @@ public class SirGluten : MonoBehaviour
     void Swap() {
         if (subSlot == null) return;
 
-        Item tempSlot = subSlot;
+        Weapon tempSlot = subSlot;
         subSlot = mainSlot;
         mainSlot = tempSlot;
 
@@ -257,6 +273,7 @@ public class SirGluten : MonoBehaviour
                 mainSlotRect.anchoredPosition = body.position;
             }
             itemDropped = mainSlot.transform.GetChild(0).gameObject;
+            itemDropped.transform.position = transform.position;
             
             itemDropped.gameObject.SetActive(true);
 
@@ -313,18 +330,14 @@ public class SirGluten : MonoBehaviour
         
         if (!isAttacking) {
             if (horizontalInput < 0) {
-                Vector2 rotator = new Vector3(transform.rotation.x, 180f);
-                transform.rotation = Quaternion.Euler(rotator);
+                transform.rotation = Quaternion.Euler(0f, 180f, 0f);
             } else if (horizontalInput > 0) {
-                Vector2 rotator = new Vector3(transform.rotation.x, 0f);
-                transform.rotation = Quaternion.Euler(rotator);
+                transform.rotation = Quaternion.Euler(0f, 0f, 0f);
             }
             if (verticalInput != 0 && horizontalInput == 0) {
-                Vector2 rotator = new Vector3(transform.rotation.x, 0f);
-                transform.rotation = Quaternion.Euler(rotator);
+                transform.rotation = Quaternion.Euler(0f, 0f, 0f);
             }
-        
-        }  
+        }
     }
 
     void OnCollisionEnter2D(Collision2D collision) {
@@ -355,7 +368,7 @@ public class SirGluten : MonoBehaviour
             if (hoveredWeaponItem != null) hoveredWeaponItem.HoverTextOff();
             hoveredWeaponItem = null;
             hoveredWeapon = collider.gameObject.transform.parent.gameObject;
-            hoveredWeaponItem = hoveredWeapon.GetComponent<Item>();
+            hoveredWeaponItem = hoveredWeapon.GetComponent<Weapon>();
             hoveredWeaponItem.HoverTextOn(hoveredWeaponItem.WeaponName);
             //Debug.Log(hoveredWeaponItem.WeaponName);
         }
@@ -375,6 +388,6 @@ public class SirGluten : MonoBehaviour
     }
 
     void TurnOffAnimation() {
-        mainSlot.transform.GetChild(2).gameObject.SetActive(false);
+        mainSlot.transform.GetChild(1).gameObject.SetActive(false);
     }
 }

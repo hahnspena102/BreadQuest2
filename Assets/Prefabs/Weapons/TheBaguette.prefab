@@ -10,22 +10,38 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1274005357380162982, guid: ddb193a141508b545a8982885ad48e35, type: 3}
       propertyPath: flavor
-      value: spicy
+      value: grain
       objectReference: {fileID: 0}
     - target: {fileID: 1274005357380162982, guid: ddb193a141508b545a8982885ad48e35, type: 3}
       propertyPath: attackDamage
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 3271738115149993149, guid: ddb193a141508b545a8982885ad48e35, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: -8697677245849625565, guid: 4370a7058b77b0146935dfb8a324cf9d, type: 3}
+      objectReference: {fileID: -5560997628221282433, guid: 88c76f20af9e5994f9ddc56b47f69775, type: 3}
     - target: {fileID: 3271738115149993149, guid: ddb193a141508b545a8982885ad48e35, type: 3}
       propertyPath: m_SortingLayer
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3720981650840172434, guid: ddb193a141508b545a8982885ad48e35, type: 3}
+      propertyPath: m_Size.x
+      value: 0.90625
+      objectReference: {fileID: 0}
+    - target: {fileID: 3720981650840172434, guid: ddb193a141508b545a8982885ad48e35, type: 3}
+      propertyPath: m_Size.y
+      value: 0.90625
+      objectReference: {fileID: 0}
+    - target: {fileID: 3720981650840172434, guid: ddb193a141508b545a8982885ad48e35, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3720981650840172434, guid: ddb193a141508b545a8982885ad48e35, type: 3}
       propertyPath: m_SortingLayer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3720981650840172434, guid: ddb193a141508b545a8982885ad48e35, type: 3}
+      propertyPath: m_WasSpriteAssigned
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4324433423343242209, guid: ddb193a141508b545a8982885ad48e35, type: 3}
@@ -110,15 +126,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6335222657926469647, guid: ddb193a141508b545a8982885ad48e35, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.x
-      value: 0.875
+      value: 0.90625
       objectReference: {fileID: 0}
     - target: {fileID: 6335222657926469647, guid: ddb193a141508b545a8982885ad48e35, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.y
-      value: 0.875
+      value: 0.90625
       objectReference: {fileID: 0}
     - target: {fileID: 7081239968080898793, guid: ddb193a141508b545a8982885ad48e35, type: 3}
       propertyPath: m_Name
-      value: Cinnastick
+      value: TheBaguette
       objectReference: {fileID: 0}
     - target: {fileID: 8105893015995445619, guid: ddb193a141508b545a8982885ad48e35, type: 3}
       propertyPath: forwardSwing.Array.size
@@ -129,48 +145,100 @@ PrefabInstance:
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8105893015995445619, guid: ddb193a141508b545a8982885ad48e35, type: 3}
+      propertyPath: forwardAttack.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8105893015995445619, guid: ddb193a141508b545a8982885ad48e35, type: 3}
+      propertyPath: backwardAttack.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8105893015995445619, guid: ddb193a141508b545a8982885ad48e35, type: 3}
       propertyPath: leftRightSwing.Array.size
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8105893015995445619, guid: ddb193a141508b545a8982885ad48e35, type: 3}
       propertyPath: 'forwardSwing.Array.data[0]'
       value: 
-      objectReference: {fileID: -1145209023832732530, guid: 691979141930a73428d61bbcdf41f33e, type: 3}
+      objectReference: {fileID: 3093084659387666519, guid: db9203a90eb20734da7d4e17424ceb53, type: 3}
     - target: {fileID: 8105893015995445619, guid: ddb193a141508b545a8982885ad48e35, type: 3}
       propertyPath: 'forwardSwing.Array.data[1]'
       value: 
-      objectReference: {fileID: 5892741160931815754, guid: 691979141930a73428d61bbcdf41f33e, type: 3}
+      objectReference: {fileID: -3769652436725689536, guid: db9203a90eb20734da7d4e17424ceb53, type: 3}
     - target: {fileID: 8105893015995445619, guid: ddb193a141508b545a8982885ad48e35, type: 3}
       propertyPath: 'forwardSwing.Array.data[2]'
       value: 
-      objectReference: {fileID: -6388003275786699236, guid: 691979141930a73428d61bbcdf41f33e, type: 3}
+      objectReference: {fileID: 9041049226964437087, guid: db9203a90eb20734da7d4e17424ceb53, type: 3}
+    - target: {fileID: 8105893015995445619, guid: ddb193a141508b545a8982885ad48e35, type: 3}
+      propertyPath: leftRightAttack.Array.size
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 8105893015995445619, guid: ddb193a141508b545a8982885ad48e35, type: 3}
       propertyPath: 'backwardSwing.Array.data[0]'
       value: 
-      objectReference: {fileID: -2679518618347363446, guid: 691979141930a73428d61bbcdf41f33e, type: 3}
+      objectReference: {fileID: -3719508736209185353, guid: db9203a90eb20734da7d4e17424ceb53, type: 3}
     - target: {fileID: 8105893015995445619, guid: ddb193a141508b545a8982885ad48e35, type: 3}
       propertyPath: 'backwardSwing.Array.data[1]'
       value: 
-      objectReference: {fileID: -2878180904677427637, guid: 691979141930a73428d61bbcdf41f33e, type: 3}
+      objectReference: {fileID: -8360502922876624060, guid: db9203a90eb20734da7d4e17424ceb53, type: 3}
     - target: {fileID: 8105893015995445619, guid: ddb193a141508b545a8982885ad48e35, type: 3}
       propertyPath: 'backwardSwing.Array.data[2]'
       value: 
-      objectReference: {fileID: -1299796466119587085, guid: 691979141930a73428d61bbcdf41f33e, type: 3}
+      objectReference: {fileID: -4870440855266635595, guid: db9203a90eb20734da7d4e17424ceb53, type: 3}
+    - target: {fileID: 8105893015995445619, guid: ddb193a141508b545a8982885ad48e35, type: 3}
+      propertyPath: 'forwardAttack.Array.data[0]'
+      value: 
+      objectReference: {fileID: 3093084659387666519, guid: db9203a90eb20734da7d4e17424ceb53, type: 3}
+    - target: {fileID: 8105893015995445619, guid: ddb193a141508b545a8982885ad48e35, type: 3}
+      propertyPath: 'forwardAttack.Array.data[1]'
+      value: 
+      objectReference: {fileID: -3769652436725689536, guid: db9203a90eb20734da7d4e17424ceb53, type: 3}
+    - target: {fileID: 8105893015995445619, guid: ddb193a141508b545a8982885ad48e35, type: 3}
+      propertyPath: 'forwardAttack.Array.data[2]'
+      value: 
+      objectReference: {fileID: 9041049226964437087, guid: db9203a90eb20734da7d4e17424ceb53, type: 3}
+    - target: {fileID: 8105893015995445619, guid: ddb193a141508b545a8982885ad48e35, type: 3}
+      propertyPath: 'backwardAttack.Array.data[0]'
+      value: 
+      objectReference: {fileID: -3719508736209185353, guid: db9203a90eb20734da7d4e17424ceb53, type: 3}
+    - target: {fileID: 8105893015995445619, guid: ddb193a141508b545a8982885ad48e35, type: 3}
+      propertyPath: 'backwardAttack.Array.data[1]'
+      value: 
+      objectReference: {fileID: -8360502922876624060, guid: db9203a90eb20734da7d4e17424ceb53, type: 3}
+    - target: {fileID: 8105893015995445619, guid: ddb193a141508b545a8982885ad48e35, type: 3}
+      propertyPath: 'backwardAttack.Array.data[2]'
+      value: 
+      objectReference: {fileID: -4870440855266635595, guid: db9203a90eb20734da7d4e17424ceb53, type: 3}
     - target: {fileID: 8105893015995445619, guid: ddb193a141508b545a8982885ad48e35, type: 3}
       propertyPath: 'leftRightSwing.Array.data[0]'
       value: 
-      objectReference: {fileID: 1606790907820210070, guid: 691979141930a73428d61bbcdf41f33e, type: 3}
+      objectReference: {fileID: -3586947255362384402, guid: db9203a90eb20734da7d4e17424ceb53, type: 3}
     - target: {fileID: 8105893015995445619, guid: ddb193a141508b545a8982885ad48e35, type: 3}
       propertyPath: 'leftRightSwing.Array.data[1]'
       value: 
-      objectReference: {fileID: 7913114490217938216, guid: 691979141930a73428d61bbcdf41f33e, type: 3}
+      objectReference: {fileID: -197408414117896761, guid: db9203a90eb20734da7d4e17424ceb53, type: 3}
     - target: {fileID: 8105893015995445619, guid: ddb193a141508b545a8982885ad48e35, type: 3}
       propertyPath: 'leftRightSwing.Array.data[2]'
       value: 
-      objectReference: {fileID: 182929867792597173, guid: 691979141930a73428d61bbcdf41f33e, type: 3}
+      objectReference: {fileID: 5272309124350846142, guid: db9203a90eb20734da7d4e17424ceb53, type: 3}
+    - target: {fileID: 8105893015995445619, guid: ddb193a141508b545a8982885ad48e35, type: 3}
+      propertyPath: 'leftRightAttack.Array.data[0]'
+      value: 
+      objectReference: {fileID: -3586947255362384402, guid: db9203a90eb20734da7d4e17424ceb53, type: 3}
+    - target: {fileID: 8105893015995445619, guid: ddb193a141508b545a8982885ad48e35, type: 3}
+      propertyPath: 'leftRightAttack.Array.data[1]'
+      value: 
+      objectReference: {fileID: -197408414117896761, guid: db9203a90eb20734da7d4e17424ceb53, type: 3}
+    - target: {fileID: 8105893015995445619, guid: ddb193a141508b545a8982885ad48e35, type: 3}
+      propertyPath: 'leftRightAttack.Array.data[2]'
+      value: 
+      objectReference: {fileID: 5272309124350846142, guid: db9203a90eb20734da7d4e17424ceb53, type: 3}
     - target: {fileID: 8501036405661133926, guid: ddb193a141508b545a8982885ad48e35, type: 3}
       propertyPath: id
-      value: cinnastick
+      value: the_baguette
+      objectReference: {fileID: 0}
+    - target: {fileID: 8501036405661133926, guid: ddb193a141508b545a8982885ad48e35, type: 3}
+      propertyPath: flavor
+      value: grain
       objectReference: {fileID: 0}
     - target: {fileID: 8501036405661133926, guid: ddb193a141508b545a8982885ad48e35, type: 3}
       propertyPath: rarity
@@ -182,11 +250,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8501036405661133926, guid: ddb193a141508b545a8982885ad48e35, type: 3}
       propertyPath: weaponName
-      value: Cinnastick
+      value: The Baguette
       objectReference: {fileID: 0}
     - target: {fileID: 8501036405661133926, guid: ddb193a141508b545a8982885ad48e35, type: 3}
       propertyPath: description
-      value: A stick posessing pure autumn aroma.
+      value: A blunt loaf of bread, perfect for thwacking and garlic bread.
+      objectReference: {fileID: 0}
+    - target: {fileID: 8501036405661133926, guid: ddb193a141508b545a8982885ad48e35, type: 3}
+      propertyPath: attackDamage
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 8630761061912810607, guid: ddb193a141508b545a8982885ad48e35, type: 3}
       propertyPath: m_OverridePixelPerfect
