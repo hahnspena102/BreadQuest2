@@ -34,6 +34,8 @@ public class SirGluten : MonoBehaviour
     private GameObject hoveredWeapon;
     private Weapon hoveredWeaponItem;
     private Weapon mainSlot,subSlot;
+    private int healthPotions = 3, glucosePotions = 0;
+    private int hPotTimer, hPotCooldown, gPotTimer, gPotCooldown;
 
     [SerializeField]private Image mainSlotImage, subSlotImage;
 
@@ -52,6 +54,12 @@ public class SirGluten : MonoBehaviour
     public Weapon SubSlot { get => subSlot; set => subSlot = value; }
     public global::System.Int32 WeaponAnimationFrame { get => weaponAnimationFrame; set => weaponAnimationFrame = value; }
     public global::System.Int32 Glucose { get => glucose; set => glucose = value; }
+    public global::System.Int32 HealthPotions { get => healthPotions; set => healthPotions = value; }
+    public global::System.Int32 GlucosePotions { get => glucosePotions; set => glucosePotions = value; }
+    public global::System.Int32 HPotTimer { get => hPotTimer; set => hPotTimer = value; }
+    public global::System.Int32 HPotCooldown { get => hPotCooldown; set => hPotCooldown = value; }
+    public global::System.Int32 GPotTimer { get => gPotTimer; set => gPotTimer = value; }
+    public global::System.Int32 GPotCooldown { get => gPotCooldown; set => gPotCooldown = value; }
 
     void Start()
     {

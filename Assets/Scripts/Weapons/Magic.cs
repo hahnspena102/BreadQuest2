@@ -122,7 +122,7 @@ public class Magic : MonoBehaviour
         Rigidbody2D rb = newProjectile.GetComponent<Rigidbody2D>();
 
         Vector2 attackDirectionRotated = Quaternion.Euler(0, 0, angleOffset) * toMouse;
-        rb.linearVelocity = attackDirectionRotated; 
+        if (rb.bodyType != RigidbodyType2D.Static) rb.linearVelocity = attackDirectionRotated; 
 
         MagicProj mp = newProjectile.GetComponent<MagicProj>();
         mp.AttackDamage = weapon.AttackDamage;

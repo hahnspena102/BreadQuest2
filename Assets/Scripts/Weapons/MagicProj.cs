@@ -21,7 +21,7 @@ public class MagicProj : MonoBehaviour
     void Start(){
         Rigidbody2D rb= GetComponent<Rigidbody2D>();
         spriteRenderer = GetComponent<SpriteRenderer>();
-        if (rb != null) {
+        if (rb != null && rb.bodyType != RigidbodyType2D.Static) {
             rb.linearVelocity = rb.linearVelocity * speed; 
         }
 
