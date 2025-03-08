@@ -9,17 +9,33 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: -3714554652511672818, guid: 8f49e4d77b89a784497c267292f8d5fb, type: 3}
-      propertyPath: glucoseCost
+      propertyPath: numProj
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: -3714554652511672818, guid: 8f49e4d77b89a784497c267292f8d5fb, type: 3}
+      propertyPath: angleRange
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: -3714554652511672818, guid: 8f49e4d77b89a784497c267292f8d5fb, type: 3}
+      propertyPath: glucoseCost
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: -3714554652511672818, guid: 8f49e4d77b89a784497c267292f8d5fb, type: 3}
+      propertyPath: projectileType
+      value: multishot
       objectReference: {fileID: 0}
     - target: {fileID: -3714554652511672818, guid: 8f49e4d77b89a784497c267292f8d5fb, type: 3}
       propertyPath: magicProjectile
       value: 
-      objectReference: {fileID: 3008986627719570525, guid: 0c5779dac5a764bf9a7877c5f92d73f7, type: 3}
+      objectReference: {fileID: 3008986627719570525, guid: a3200168e67cec847a78c753fbf439a9, type: 3}
     - target: {fileID: 2555982464447483995, guid: 8f49e4d77b89a784497c267292f8d5fb, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: -1381539162234565720, guid: 79c59840f32ae8d4eb565805a8436a8a, type: 3}
+      objectReference: {fileID: 7680053381261851907, guid: 37f13123c75608b49a1a6b14fb7b075e, type: 3}
+    - target: {fileID: 2555982464447483995, guid: 8f49e4d77b89a784497c267292f8d5fb, type: 3}
+      propertyPath: m_SortingLayer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3610859613947776775, guid: 8f49e4d77b89a784497c267292f8d5fb, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -262,11 +278,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6481836035841760489, guid: 8f49e4d77b89a784497c267292f8d5fb, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.y
-      value: 0.78125
+      value: 0.8125
       objectReference: {fileID: 0}
     - target: {fileID: 7807762647802752527, guid: 8f49e4d77b89a784497c267292f8d5fb, type: 3}
       propertyPath: m_Name
-      value: HotCocoaShot
+      value: TresLeches
       objectReference: {fileID: 0}
     - target: {fileID: 8227513997897164223, guid: 8f49e4d77b89a784497c267292f8d5fb, type: 3}
       propertyPath: m_Color.b
@@ -282,27 +298,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8927998594896783488, guid: 8f49e4d77b89a784497c267292f8d5fb, type: 3}
       propertyPath: id
-      value: hot_cocoa_shot
+      value: tres_leches
       objectReference: {fileID: 0}
     - target: {fileID: 8927998594896783488, guid: 8f49e4d77b89a784497c267292f8d5fb, type: 3}
       propertyPath: flavor
-      value: cacao
+      value: vanilla
       objectReference: {fileID: 0}
     - target: {fileID: 8927998594896783488, guid: 8f49e4d77b89a784497c267292f8d5fb, type: 3}
       propertyPath: rarity
-      value: common
+      value: rare
       objectReference: {fileID: 0}
     - target: {fileID: 8927998594896783488, guid: 8f49e4d77b89a784497c267292f8d5fb, type: 3}
       propertyPath: weaponName
-      value: Hot Cocoa Shot
+      value: Tres Leches
       objectReference: {fileID: 0}
     - target: {fileID: 8927998594896783488, guid: 8f49e4d77b89a784497c267292f8d5fb, type: 3}
       propertyPath: description
-      value: Right click to shoot a ball of hot chocolate.
+      value: Right click to shoot tres leches cakes.
       objectReference: {fileID: 0}
     - target: {fileID: 8927998594896783488, guid: 8f49e4d77b89a784497c267292f8d5fb, type: 3}
       propertyPath: attackDamage
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
