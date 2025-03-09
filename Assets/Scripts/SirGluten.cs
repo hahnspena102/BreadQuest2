@@ -21,7 +21,7 @@ public class SirGluten : MonoBehaviour
     [SerializeField] private GameObject damagePopup;
 
     // BOOLS
-    private bool isAttacking, isHurting, isLocked, isAnimationLocked;
+    private bool isAttacking, isHurting, isLocked, isAnimationLocked, isShopping;
 
     // INVENTORY
     private GameObject hoveredWeapon;
@@ -35,6 +35,7 @@ public class SirGluten : MonoBehaviour
 
     // UI
     [SerializeField]private GameObject infoUI;
+    [SerializeField] private GameObject shopUI;
 
     // STATICS
     public static Vector2 playerPosition;
@@ -65,8 +66,12 @@ public class SirGluten : MonoBehaviour
     {
         while (true) {
             yield return new WaitForSeconds(1f);
-            if (health < maxHealth && passiveSlot != null) health += passiveSlot.HealthRegeneration;
-            if (glucose < maxGlucose) glucose += 1;
+            if (passiveSlot != null) {
+                if (health < maxHealth && passiveSlot != null) health += passiveSlot.HealthRegeneration;
+                if (glucose < maxGlucose && passiveSlot != null) glucose += 1 + passiveSlot.GlucoseRegeneration;
+            } else {
+                glucose += 1;
+            }
             if (hPotTimer > 0) hPotTimer--;
             if (gPotTimer > 0) gPotTimer--;
 
@@ -107,6 +112,9 @@ public class SirGluten : MonoBehaviour
         horizontalInput = Input.GetAxisRaw("Horizontal");
 
         //if (Input.GetKeyDown(KeyCode.P)) yeast += 50;
+
+        // BOOLS
+        isShopping = shopUI.active;
 
         if (Input.GetKeyDown(KeyCode.E) && hoveredWeaponItem != null && !isAttacking) {
             Equip();
@@ -338,4 +346,5 @@ public class SirGluten : MonoBehaviour
     public Weapon MainSlot1 { get => mainSlot; set => mainSlot = value; }
     public Weapon SubSlot1 { get => subSlot; set => subSlot = value; }
     public Passive PassiveSlot { get => passiveSlot; set => passiveSlot = value; }
+    public global::System.Boolean IsShopping { get => isShopping; set => isShopping = value; }
 }

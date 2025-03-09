@@ -40,7 +40,9 @@ public class Magic : MonoBehaviour
             MagicDirection();
             sirGluten.MainSlot.transform.GetChild(1).gameObject.transform.position = body.position;
         }
-        if (Input.GetMouseButtonDown(0) && sirGluten.MainSlot != null && sirGluten.MainSlot.gameObject == gameObject && !sirGluten.IsAttacking && sirGluten.Glucose >= glucoseCost) {
+        if (Input.GetMouseButtonDown(0) && sirGluten.MainSlot != null 
+        && sirGluten.MainSlot.gameObject == gameObject && !sirGluten.IsAttacking 
+        && sirGluten.Glucose >= glucoseCost && !sirGluten.IsShopping) {
             MagicDirection();
             StartCoroutine(MagicAttack());
         }
