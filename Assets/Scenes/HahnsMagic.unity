@@ -2485,7 +2485,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 352240757}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 35773883}
+        m_TargetAssemblyTypeName: ShopUI, Assembly-CSharp
+        m_MethodName: BuyGPot
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &352240757
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11967,7 +11979,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1571623665}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 35773883}
+        m_TargetAssemblyTypeName: ShopUI, Assembly-CSharp
+        m_MethodName: BuyHPot
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1571623665
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13801,6 +13825,7 @@ MonoBehaviour:
   mainSlotImage: {fileID: 1629016393}
   subSlotImage: {fileID: 1162570261}
   infoUI: {fileID: 243053863}
+  shopUI: {fileID: 35773881}
 --- !u!61 &1931371203
 BoxCollider2D:
   m_ObjectHideFlags: 0
