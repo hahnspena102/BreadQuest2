@@ -9,17 +9,23 @@ public class TopLeftUI : MonoBehaviour
 {
     private SirGluten sirGluten;
 
-    [SerializeField] private TextMeshProUGUI hPotCount, hPotCooldown;
-    [SerializeField] private TextMeshProUGUI gPotCount, gPotCooldown;
+    [SerializeField] private Slider healthSlider;
+    [SerializeField] private TextMeshProUGUI healthText;
+    [SerializeField] private Slider glucoseSlider;
+    [SerializeField] private TextMeshProUGUI glucoseText;
 
     void Start(){
         sirGluten = GameObject.Find("SirGluten").GetComponent<SirGluten>();
     }
 
     void Update(){
-        hPotCount.text = $"{sirGluten.HealthPotions}";
-        hPotCooldown.text = $"{sirGluten.HPotTimer}";
-        gPotCount.text = $"{sirGluten.GlucosePotions}";
-        gPotCooldown.text = $"{sirGluten.GPotTimer}";
+        healthSlider.value = sirGluten.Health;
+        healthSlider.maxValue = sirGluten.MaxHealth;
+        glucoseSlider.value = sirGluten.Glucose;
+        glucoseSlider.maxValue = sirGluten.MaxGlucose;
+
+
+        healthText.text = sirGluten.Health + "/" + sirGluten.MaxHealth;
+        glucoseText.text = sirGluten.Glucose + "/" + sirGluten.MaxGlucose;
     }
 }
