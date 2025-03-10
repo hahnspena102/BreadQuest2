@@ -32,6 +32,8 @@ public class SirGluten : MonoBehaviour
     private int hPotTimer, hPotCooldown = 30, gPotTimer, gPotCooldown = 30;
     private int gold = 100;
 
+    
+
     [SerializeField]private Image mainSlotImage, subSlotImage;
 
     // UI
@@ -333,7 +335,6 @@ public class SirGluten : MonoBehaviour
     }
 
     //GETTERS
-
     public global::System.Boolean IsAttacking { get => isAttacking; set => isAttacking = value; }
     public global::System.Boolean IsHurting { get => isHurting; set => isHurting = value; }
     public global::System.Boolean IsAnimationLocked { get => isAnimationLocked; set => isAnimationLocked = value; }
@@ -360,4 +361,5 @@ public class SirGluten : MonoBehaviour
     public Passive PassiveSlot { get => passiveSlot; set => passiveSlot = value; }
     public global::System.Int32 Gold { get => gold; set => gold = value; }
     public global::System.Boolean IsNavigatingUI { get => isNavigatingUI; set => isNavigatingUI = value; }
+    
 }

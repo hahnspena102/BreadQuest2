@@ -12,6 +12,7 @@ public class Weapon : MonoBehaviour
     [SerializeField]private string weaponType;
     [SerializeField]private string rarity;
     [SerializeField] private int attackDamage;
+    [SerializeField] private float attackCooldown = 0.4f; // Don't go too low...
     [SerializeField] private string flavor;
     [SerializeField] private List<AudioClip> attackSFX;
     private Sprite inventorySprite;
@@ -27,6 +28,7 @@ public class Weapon : MonoBehaviour
     private string animationDirection;
     public global::System.String AnimationDirection { get => animationDirection; set => animationDirection = value; }
     public global::System.String WeaponType { get => weaponType; set => weaponType = value; }
+    public global::System.Single AttackCooldown { get => attackCooldown; set => attackCooldown = value; }
 
     void Start(){
         inventorySprite = GetComponentInChildren<SpriteRenderer>().sprite;

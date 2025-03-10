@@ -15,6 +15,10 @@ public class Melee : MonoBehaviour
     private Vector2 mousePosition;
     private Animator playerAnimator;
     private Vector2 attackPosition;
+    float xScale; 
+    float yScale;
+    Rigidbody2D attackRB;
+    Coroutine attackCoroutine;
 
     void Start() {
         player = GameObject.Find("SirGluten").gameObject;
@@ -23,6 +27,11 @@ public class Melee : MonoBehaviour
         body = player.GetComponent<Rigidbody2D>();
         sirGluten = player.GetComponent<SirGluten>();
         audioSource = player.GetComponent<AudioSource>();
+
+        attackRB = transform.GetChild(2).gameObject.GetComponent<Rigidbody2D>();
+        xScale = attackRB.transform.localScale.x; 
+        yScale = attackRB.transform.localScale.y;
+        Debug.Log(xScale+  " "+ yScale);
     }
 
     // Update is called once per frame
@@ -32,31 +41,48 @@ public class Melee : MonoBehaviour
         if (Input.GetMouseButtonDown(0) && sirGluten.MainSlot != null && sirGluten.MainSlot.gameObject == gameObject 
             && !sirGluten.IsAttacking && !sirGluten.IsNavigatingUI) {
             MeleeDirection();
-            StartCoroutine(MeleeAttack());
+            if (attackCoroutine != null) StopCoroutine(attackCoroutine);
+            attackCoroutine = StartCoroutine(MeleeAttack());
         }
+
+        
     }
 
     private void MeleeDirection() {
         if (!sirGluten.IsAttacking) {
             mousePosition = (Vector2)Input.mousePosition - screenSize;
         }
+
         if (sirGluten.MainSlot != null && sirGluten.MainSlot.gameObject == gameObject) {
             if ((mousePosition.y != 0 || mousePosition.x != 0)) {
-                Rigidbody2D attackRB = sirGluten.MainSlot.transform.GetChild(2).gameObject.GetComponent<Rigidbody2D>();
                 if (Mathf.Abs(mousePosition.x) > Mathf.Abs(mousePosition.y)) {
-                    attackRB.position = body.position + new Vector2(mousePosition.x, 0).normalized;
+                    attackRB.position = body.position + new Vector2(mousePosition.x, 0).normalized * ((xScale+1)/2);
                     attackPosition = new Vector2(mousePosition.x, 0).normalized;
+
+                    attackRB.transform.localScale = new Vector3(xScale, yScale, 1f); 
                 } else {
-                    attackRB.position = body.position + new Vector2(0, mousePosition.y).normalized;
+                    attackRB.position = body.position + new Vector2(0, mousePosition.y).normalized * ((yScale+1)/2);
                     attackPosition = new Vector2(0, mousePosition.y).normalized;
+
+                    attackRB.transform.localScale = new Vector3(yScale, xScale, 1f);
                 }
-                
             }
+
+            
+            if (sirGluten.WeaponAnimationFrame >= 1 && sirGluten.WeaponAnimationFrame <= 4) {
+                attackRB.gameObject.SetActive(true);
+            } else {
+                attackRB.gameObject.SetActive(false);
+            }
+        } else {
+            attackRB.gameObject.SetActive(false);
         }
     }
 
+
     IEnumerator MeleeAttack() {
         // Animation Start
+        
 
         sirGluten.IsAnimationLocked = true;
         sirGluten.IsAttacking = true;
@@ -92,20 +118,11 @@ public class Melee : MonoBehaviour
             transform.rotation = Quaternion.Euler(rotator);
         }
         
-
-        // Attack
-        yield return new WaitForSeconds(0.2f);
-
-        sirGluten.MainSlot.transform.GetChild(2).gameObject.SetActive(true);
-        yield return new WaitForSeconds(0.2f);
-
         // Animation End
-        sirGluten.MainSlot.transform.GetChild(2).gameObject.transform.position = body.position;
+        yield return new WaitForSeconds(weapon.AttackCooldown);
         sirGluten.WeaponAnimationFrame = 0;
-        
-        sirGluten.MainSlot.transform.GetChild(2).gameObject.SetActive(false);
+
         sirGluten.MainSlot.transform.GetChild(1).gameObject.SetActive(false);
-        yield return new WaitForSeconds(0.2f);
         sirGluten.IsAnimationLocked = false;
         sirGluten.IsAttacking = false;
     }

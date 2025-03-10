@@ -82,7 +82,7 @@ public class Magic : MonoBehaviour
         sirGluten.MainSlot.transform.GetChild(1).gameObject.SetActive(true);
 
         CastMagic(projectileType);
-        yield return new WaitForSeconds(0.6f);
+        yield return new WaitForSeconds(weapon.AttackCooldown);
 
         sirGluten.MainSlot.transform.GetChild(1).gameObject.transform.position = body.position;
         sirGluten.WeaponAnimationFrame = 0;
