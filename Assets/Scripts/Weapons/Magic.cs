@@ -40,7 +40,9 @@ public class Magic : MonoBehaviour
             MagicDirection();
             sirGluten.MainSlot.transform.GetChild(1).gameObject.transform.position = body.position;
         }
-        if (Input.GetMouseButtonDown(0) && sirGluten.MainSlot != null && sirGluten.MainSlot.gameObject == gameObject && !sirGluten.IsAttacking && sirGluten.Glucose >= glucoseCost) {
+        if (Input.GetMouseButtonDown(0) && sirGluten.MainSlot != null 
+        && sirGluten.MainSlot.gameObject == gameObject && !sirGluten.IsAttacking 
+        && sirGluten.Glucose >= glucoseCost && !sirGluten.IsShopping) {
             MagicDirection();
             StartCoroutine(MagicAttack());
         }
@@ -122,7 +124,7 @@ public class Magic : MonoBehaviour
         Rigidbody2D rb = newProjectile.GetComponent<Rigidbody2D>();
 
         Vector2 attackDirectionRotated = Quaternion.Euler(0, 0, angleOffset) * toMouse;
-        rb.linearVelocity = attackDirectionRotated; 
+        if (rb.bodyType != RigidbodyType2D.Static) rb.linearVelocity = attackDirectionRotated; 
 
         MagicProj mp = newProjectile.GetComponent<MagicProj>();
         mp.AttackDamage = weapon.AttackDamage;
