@@ -9,6 +9,7 @@ public class GameManager : MonoBehaviour
     public static GameObject ProjectileStore;
     public static GameObject ItemStore;
     public static GameObject EffectStore;
+    public static GameObject InteractableStore;
     public static GameObject SoundPrefab;
     public GameObject inspectorSoundPrefab;
     public static Dictionary<string, Color> FlavorColorMap = new Dictionary<string, Color>()
@@ -58,6 +59,7 @@ public class GameManager : MonoBehaviour
         ProjectileStore = GameObject.Find("ProjectileStore");
         ItemStore = GameObject.Find("ItemStore");
         EffectStore = GameObject.Find("EffectStore");
+        InteractableStore = GameObject.Find("InteractableStore");
         SoundPrefab = inspectorSoundPrefab;
     }
 
