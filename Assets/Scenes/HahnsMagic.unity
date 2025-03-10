@@ -432,6 +432,8 @@ MonoBehaviour:
   soldOut: {fileID: 572742074}
   hPotText: {fileID: 372457914}
   gPotText: {fileID: 378408965}
+  hPotCostText: {fileID: 1132054444}
+  gPotCostText: {fileID: 1680880191}
   hPotButton: {fileID: 1571623664}
   gPotButton: {fileID: 352240756}
 --- !u!1 &40545162
@@ -13710,7 +13712,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 10
+  m_text: 10 G
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 461cbf7436aa0d048912ca296dedcade, type: 2}
   m_sharedMaterial: {fileID: 2100000, guid: ea2834b5c5829a544aa76eab77c79501, type: 2}
