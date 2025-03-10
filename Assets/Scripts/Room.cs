@@ -58,7 +58,7 @@ public class Room : MonoBehaviour
         chest.SetActive(true);
         chest.transform.SetParent(GameManager.InteractableStore.transform);
         Destroy(barriers);
-        Destroy(gameObject.transform.parent, 5f);
+        Destroy(transform.parent.gameObject, 5f);
 
     }
 
