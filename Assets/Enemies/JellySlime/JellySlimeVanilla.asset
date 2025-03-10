@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: JellySlimeVanilla
   m_EditorClassIdentifier: 
   enemyName: Vanilla Jelly Slime
-  description: A vanilla jelly slime.
+  description: Made out of jelly, this slime chases anyone near it. It is said they
+    smell like vanilla extract.
   health: 5
   damage: 5
   flavoring: vanilla
