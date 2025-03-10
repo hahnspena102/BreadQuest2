@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 003b6f52fe5342941a19687e979392b8, type: 3}
-  m_Name: Extra Sugar I
+  m_Name: HearthyAndWhole3
   m_EditorClassIdentifier: 
-  passiveName: Extra Sugar I
-  description: Slightly increases mana regeneration.
-  sprite: {fileID: -8364637527342790252, guid: c3854a35355598c4db1cb2c7f95478e9, type: 3}
-  goldCost: 90
-  healthRegeneration: 0
-  glucoseRegeneration: 1
+  passiveName: Hearthy and Whole III
+  description: Grants slight health regeneration. (4 hp/sec)
+  sprite: {fileID: -4458019172468558174, guid: e6498902b188bdb44a1db762d0fa3075, type: 3}
+  goldCost: 400
+  healthRegeneration: 4
+  glucoseRegeneration: 0

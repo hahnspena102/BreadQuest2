@@ -9,6 +9,7 @@ public class EnemyData : ScriptableObject
     [SerializeField]private int damage;
     [SerializeField]private string flavoring;
     [SerializeField]private float xpMultiplier = 1f;
+    [SerializeField]private float goldMultiplier = 1f;
     [SerializeField]private Sprite sprite;
     [SerializeField]private Color color = Color.white;
     [SerializeField]private bool isDiscovered;
@@ -24,4 +25,5 @@ public class EnemyData : ScriptableObject
     public global::System.String Description { get => description; set => description = value; }
     public global::System.Boolean IsDiscovered { get => isDiscovered; set => isDiscovered = value; }
     public global::System.Single DetectionRadius { get => detectionRadius; set => detectionRadius = value; }
+    public global::System.Single GoldMultiplier { get => goldMultiplier; set => goldMultiplier = value; }
 }

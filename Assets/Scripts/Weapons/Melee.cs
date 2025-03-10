@@ -29,7 +29,8 @@ public class Melee : MonoBehaviour
     void Update()
     {
         if (sirGluten.IsAttacking) MeleeDirection();
-        if (Input.GetMouseButtonDown(0) && sirGluten.MainSlot != null && sirGluten.MainSlot.gameObject == gameObject && !sirGluten.IsAttacking && !sirGluten.IsShopping) {
+        if (Input.GetMouseButtonDown(0) && sirGluten.MainSlot != null && sirGluten.MainSlot.gameObject == gameObject 
+            && !sirGluten.IsAttacking && !sirGluten.IsShopping) {
             MeleeDirection();
             StartCoroutine(MeleeAttack());
         }

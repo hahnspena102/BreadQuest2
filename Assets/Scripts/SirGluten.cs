@@ -30,6 +30,7 @@ public class SirGluten : MonoBehaviour
     [SerializeField]private Passive passiveSlot;
     private int healthPotions = 1, glucosePotions = 1;
     private int hPotTimer, hPotCooldown = 30, gPotTimer, gPotCooldown = 30;
+    private int gold = 100;
 
     [SerializeField]private Image mainSlotImage, subSlotImage;
 
@@ -41,7 +42,7 @@ public class SirGluten : MonoBehaviour
     public static Vector2 playerPosition;
 
     private int weaponAnimationFrame = 0;
-    public static int staticYeast = 0;
+    public static int staticYeast = 0, staticGold = 0;
 
     void Start()
     {
@@ -94,6 +95,9 @@ public class SirGluten : MonoBehaviour
         if (yeastLevel >= maxYeastLevel) {
             yeast = maxYeast;
         }
+
+        gold = Mathf.Max(gold, staticGold);
+        staticGold = gold;
     }
 
     void Update() {
@@ -114,7 +118,7 @@ public class SirGluten : MonoBehaviour
         //if (Input.GetKeyDown(KeyCode.P)) yeast += 50;
 
         // BOOLS
-        isShopping = shopUI.active;
+        isShopping = shopUI.activeSelf;
 
         if (Input.GetKeyDown(KeyCode.E) && hoveredWeaponItem != null && !isAttacking) {
             Equip();
@@ -347,4 +351,5 @@ public class SirGluten : MonoBehaviour
     public Weapon SubSlot1 { get => subSlot; set => subSlot = value; }
     public Passive PassiveSlot { get => passiveSlot; set => passiveSlot = value; }
     public global::System.Boolean IsShopping { get => isShopping; set => isShopping = value; }
+    public global::System.Int32 Gold { get => gold; set => gold = value; }
 }

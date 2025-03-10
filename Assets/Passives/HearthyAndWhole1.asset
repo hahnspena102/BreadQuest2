@@ -10,10 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 003b6f52fe5342941a19687e979392b8, type: 3}
-  m_Name: Hearthy1
+  m_Name: HearthyAndWhole1
   m_EditorClassIdentifier: 
-  passiveName: Hearthy I
-  description: Grants slight health regeneration.
-  sprite: {fileID: -8786436716669022686, guid: 7b6a4ab16da9d7f409eabcd8184f4c04, type: 3}
-  goldCost: 0
+  passiveName: Hearthy And Whole I
+  description: Grants slight health regeneration. (1 hp/sec)
+  sprite: {fileID: 4854924420975271938, guid: 6309a7e25bb19d5458628e6c3035d035, type: 3}
+  goldCost: 100
   healthRegeneration: 1
+  glucoseRegeneration: 0

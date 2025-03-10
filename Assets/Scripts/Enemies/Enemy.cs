@@ -13,7 +13,7 @@ public class Enemy : MonoBehaviour
     private string flavoring;
     [SerializeField] private GameObject damagePopup;
     [SerializeField] private GameObject deathParticle;
-    private float xpMultiplier = 1f;
+    private float xpMultiplier = 1f, goldMultiplier = 1f;
     [SerializeField] private List<AudioClip> hurtSFX;
     private AudioSource audioSource;
     private SpriteRenderer spriteRenderer;
@@ -34,6 +34,7 @@ public class Enemy : MonoBehaviour
         damage = enemyData.Damage;
         flavoring = enemyData.Flavoring;
         xpMultiplier = enemyData.XpMultiplier;
+        goldMultiplier = enemyData.GoldMultiplier;
         detectionRadius = enemyData.DetectionRadius;
     }
     void Update() {
@@ -45,7 +46,8 @@ public class Enemy : MonoBehaviour
 
     void Death(){
         isDying = true;
-        SirGluten.staticYeast += (int)Mathf.Round(Random.Range(1,20) * xpMultiplier);
+        SirGluten.staticYeast += (int)Mathf.Round(Random.Range(1,25) * xpMultiplier);
+        SirGluten.staticGold += (int)Mathf.Round(Random.Range(1,10) * goldMultiplier);
 
         Destroy(gameObject, 0.2f);
         health--;

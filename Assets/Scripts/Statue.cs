@@ -12,13 +12,19 @@ public class Statue : MonoBehaviour
     private List<Passive> passivesSold = new List<Passive>();
 
     [SerializeField]private int tier = 1;
+    private int hPotStock = 3, gPotStock = 3, potionCost = 25;
+
+    public global::System.Int32 HPotStock { get => hPotStock; set => hPotStock = value; }
+    public global::System.Int32 GPotStock { get => gPotStock; set => gPotStock = value; }
+    public global::System.Int32 PotionCost { get => potionCost; set => potionCost = value; }
+
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         sirGluten = GameObject.Find("SirGluten").gameObject.GetComponent<SirGluten>();
         gameManager = GameObject.Find("Game").gameObject.GetComponent<GameManager>();
-        shopUI = GameObject.Find("ShopUI");
+        shopUI = gameManager.ShopUI;
 
 
         List<Passive> combinedList = new List<Passive>();
@@ -54,19 +60,22 @@ public class Statue : MonoBehaviour
     void Update() {
         if (isOpenable && Input.GetKeyDown(KeyCode.E)) {
             shopUI.SetActive(true);
-        }
-    }
-
-    void OnTriggerStay2D(Collider2D other) {
-        if (other.CompareTag("Player")) {
-            hoverText.SetActive(true);
-            isOpenable = true;
+        
+            shopUI.GetComponent<ShopUI>().CurStatue = gameObject.GetComponent<Statue>();
 
             int i = 0;
             foreach (Passive p in passivesSold) {
                 shopUI.GetComponent<ShopUI>().UpdateOffer(i, p);
                 i++;
             }
+        }
+    }
+
+    void OnTriggerEnter2D(Collider2D other) {
+        if (other.CompareTag("Player")) {
+            hoverText.SetActive(true);
+            isOpenable = true;
+
         }
     }
 
