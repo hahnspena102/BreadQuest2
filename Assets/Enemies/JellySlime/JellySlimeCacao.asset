@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: JellySlimeCacao
   m_EditorClassIdentifier: 
   enemyName: Cacao Jelly Slime
-  description: A cacao jelly slime.
+  description: Made out of jelly, this slime chases anyone near it. It is said they
+    smell like chocolate.
   health: 5
   damage: 5
   flavoring: cacao
