@@ -49,6 +49,7 @@ public class Enemy : MonoBehaviour
         SirGluten.staticYeast += (int)Mathf.Round(Random.Range(1,25) * xpMultiplier);
         SirGluten.staticGold += (int)Mathf.Round(Random.Range(1,10) * goldMultiplier);
 
+        enemyData.IsDiscovered = true;
         Destroy(gameObject, 0.2f);
         health--;
     }

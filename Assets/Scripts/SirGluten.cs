@@ -21,7 +21,7 @@ public class SirGluten : MonoBehaviour
     [SerializeField] private GameObject damagePopup;
 
     // BOOLS
-    private bool isAttacking, isHurting, isLocked, isAnimationLocked, isShopping;
+    private bool isAttacking, isHurting, isLocked, isAnimationLocked, isNavigatingUI;
 
     // INVENTORY
     private GameObject hoveredWeapon;
@@ -37,6 +37,7 @@ public class SirGluten : MonoBehaviour
     // UI
     [SerializeField]private GameObject infoUI;
     [SerializeField] private GameObject shopUI;
+    [SerializeField] private GameObject compendium;
 
     // STATICS
     public static Vector2 playerPosition;
@@ -118,7 +119,7 @@ public class SirGluten : MonoBehaviour
         //if (Input.GetKeyDown(KeyCode.P)) yeast += 50;
 
         // BOOLS
-        isShopping = shopUI.activeSelf;
+        isNavigatingUI = shopUI.activeSelf || compendium.activeSelf;
 
         if (Input.GetKeyDown(KeyCode.E) && hoveredWeaponItem != null && !isAttacking) {
             Equip();
@@ -129,11 +130,18 @@ public class SirGluten : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Q) && mainSlot != null && !isAttacking) {
             Drop();
         }
-        if (Input.GetKeyDown(KeyCode.H) && !isAttacking) {
+        if ((Input.GetKeyDown(KeyCode.H) || Input.GetKeyDown(KeyCode.C)) && !isAttacking) {
             UseHealthPotion();
         }
-        if (Input.GetKeyDown(KeyCode.G) && !isAttacking) {
+        if ((Input.GetKeyDown(KeyCode.G) || Input.GetKeyDown(KeyCode.X)) && !isAttacking) {
             UseGlucosePotion();
+        }
+        if (Input.GetKeyDown(KeyCode.Z) && !isAttacking) {
+            if (compendium.activeSelf) {
+                compendium.SetActive(false);
+            } else {
+                compendium.SetActive(true);
+            }
         }
 
 
@@ -350,6 +358,6 @@ public class SirGluten : MonoBehaviour
     public Weapon MainSlot1 { get => mainSlot; set => mainSlot = value; }
     public Weapon SubSlot1 { get => subSlot; set => subSlot = value; }
     public Passive PassiveSlot { get => passiveSlot; set => passiveSlot = value; }
-    public global::System.Boolean IsShopping { get => isShopping; set => isShopping = value; }
     public global::System.Int32 Gold { get => gold; set => gold = value; }
+    public global::System.Boolean IsNavigatingUI { get => isNavigatingUI; set => isNavigatingUI = value; }
 }
