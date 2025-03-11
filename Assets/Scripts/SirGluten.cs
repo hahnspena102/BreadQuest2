@@ -15,10 +15,12 @@ public class SirGluten : MonoBehaviour
     
 
     // STATS
+    [SerializeField]private SaveData curSaveData;
     private int health, glucose, yeast, yeastLevel;
     private int maxHealth=100, maxGlucose=30, maxYeast, maxYeastLevel = 10;
 
     [SerializeField] private GameObject damagePopup;
+    
 
     // BOOLS
     private bool isAttacking, isHurting, isLocked, isAnimationLocked, isNavigatingUI;
@@ -28,9 +30,9 @@ public class SirGluten : MonoBehaviour
     private Weapon hoveredWeaponItem;
     private Weapon mainSlot,subSlot;
     [SerializeField]private Passive passiveSlot;
-    private int healthPotions = 1, glucosePotions = 1;
+    private int healthPotions, glucosePotions;
     private int hPotTimer, hPotCooldown = 30, gPotTimer, gPotCooldown = 30;
-    private int gold = 100;
+    private int gold;
 
     // STATICS
     public static Vector2 playerPosition;
@@ -47,14 +49,65 @@ public class SirGluten : MonoBehaviour
         InitStats();
         UpdateStats();
         StartCoroutine(OneSecondCoroutine());
+        
+        StartCoroutine(LoadSaveData());
+        
+    }
+
+    IEnumerator LoadSaveData(){
+        yield return new WaitForSeconds(0.01f);
+        yeast = curSaveData.Yeast;
+        yeastLevel = curSaveData.YeastLevel;
+        gold = curSaveData.Gold;
+        
+        passiveSlot = curSaveData.Passive;
+        healthPotions = curSaveData.HealthPotions;
+        glucosePotions = curSaveData.GlucosePotions;
+
+        GameObject foundMainWeapon = GameManager.FindWeapon(curSaveData.MainSlotId);
+        if (foundMainWeapon != null) {
+            GameObject newMainSlot = Instantiate(foundMainWeapon, transform.position, Quaternion.identity);
+            newMainSlot.transform.SetParent(transform);
+            mainSlot = newMainSlot.GetComponent<Weapon>();
+            yield return new WaitForSeconds(0.01f);
+            newMainSlot.transform.GetChild(0).gameObject.SetActive(false);
+        }
+        GameObject foundSubWeapon = GameManager.FindWeapon(curSaveData.SubSlotId);
+        if (foundSubWeapon != null) {
+            GameObject newSubSlot = Instantiate(foundSubWeapon, transform.position, Quaternion.identity);
+            newSubSlot.transform.SetParent(transform);
+            subSlot = newSubSlot.GetComponent<Weapon>();
+            yield return new WaitForSeconds(0.01f);
+            newSubSlot.transform.GetChild(0).gameObject.SetActive(false);
+        }
+    }
+
+    public void SaveData() {
+        curSaveData.Yeast = yeast;
+        curSaveData.YeastLevel = yeastLevel;
+        curSaveData.Gold = gold;
+        if (mainSlot != null) {
+            curSaveData.MainSlotId = mainSlot.GetComponent<Weapon>().Id;
+        } else {
+            curSaveData.MainSlotId = "";
+        }
+        if (subSlot != null) {
+            curSaveData.SubSlotId = subSlot.GetComponent<Weapon>().Id;
+        } else {
+            curSaveData.SubSlotId = "";
+        }
+        
+        curSaveData.Passive = passiveSlot;
+        curSaveData.HealthPotions = healthPotions;
+        curSaveData.GlucosePotions = glucosePotions;
     }
 
     // Initializes the Stat Values and Slider/Text variables.
     void InitStats(){
         health = maxHealth;
         glucose = maxGlucose;
-        yeast = 0;
-        yeastLevel = 1;
+        //yeast = 0;
+       // yeastLevel = 1;
     }
 
     private IEnumerator OneSecondCoroutine()
@@ -65,7 +118,7 @@ public class SirGluten : MonoBehaviour
                 if (health < maxHealth && passiveSlot != null) health += passiveSlot.HealthRegeneration;
                 if (glucose < maxGlucose && passiveSlot != null) glucose += 1 + passiveSlot.GlucoseRegeneration;
             } else {
-                glucose += 1;
+                if (glucose < maxGlucose && passiveSlot != null) glucose += 1;
             }
             if (hPotTimer > 0) hPotTimer--;
             if (gPotTimer > 0) gPotTimer--;
@@ -132,6 +185,12 @@ public class SirGluten : MonoBehaviour
             UseGlucosePotion();
         }
 
+        if (Input.GetKeyDown(KeyCode.Escape)) {
+            SaveData();
+            SceneManager.LoadScene("MainMenu");
+        }
+        
+
 
         if (!isLocked) MovePlayer();    
 
@@ -160,6 +219,7 @@ public class SirGluten : MonoBehaviour
 
     void Equip() {
         if (mainSlot != null && subSlot != null) Drop();
+        if (mainSlot != null && subSlot == null) subSlot = mainSlot;
 
         mainSlot = hoveredWeaponItem;
 
@@ -337,5 +397,5 @@ public class SirGluten : MonoBehaviour
     public Passive PassiveSlot { get => passiveSlot; set => passiveSlot = value; }
     public global::System.Int32 Gold { get => gold; set => gold = value; }
     public global::System.Boolean IsNavigatingUI { get => isNavigatingUI; set => isNavigatingUI = value; }
-    
+    public SaveData CurSaveData { get => curSaveData; set => curSaveData = value; }
 }

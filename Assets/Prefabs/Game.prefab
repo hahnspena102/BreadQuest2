@@ -527,6 +527,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3900190fbb32f564fbb2b77fe16f1cbc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  curSaveData: {fileID: 11400000, guid: bab5df10eeacfaf42b1e069961483546, type: 2}
   damagePopup: {fileID: 4790183856277039928, guid: e44c4970eba364bb8ab606a64f217325, type: 3}
   passiveSlot: {fileID: 0}
 --- !u!50 &2210189207412866662
@@ -886,6 +887,7 @@ MonoBehaviour:
   passivesTier2: []
   passivesTier3: []
   shopUI: {fileID: 0}
+  floor: 0
 --- !u!82 &7854208882196594336
 AudioSource:
   m_ObjectHideFlags: 0

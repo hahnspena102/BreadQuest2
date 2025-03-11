@@ -31,7 +31,6 @@ public class Room : MonoBehaviour
     private void OnTriggerEnter2D(UnityEngine.Collider2D collision)
     {
         if (!waveActive && collision.gameObject.CompareTag("Player")) {
-            Debug.Log("Room Active");
             waveActive = true;
             ActiveBarrier();
             StartCoroutine(StartWaves());
