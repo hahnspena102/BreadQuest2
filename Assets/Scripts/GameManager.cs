@@ -39,6 +39,7 @@ public class GameManager : MonoBehaviour
         {"legendary", 5}
     };
 
+    private static List<GameObject> combinedItemList = new List<GameObject>();
     [SerializeField]private List<GameObject> itemsTier1 = new List<GameObject>(){};
     [SerializeField]private List<GameObject> itemsTier2 = new List<GameObject>(){};
     [SerializeField]private List<GameObject> itemsTier3 = new List<GameObject>(){};
@@ -46,6 +47,7 @@ public class GameManager : MonoBehaviour
     [SerializeField]private List<Passive> passivesTier2 = new List<Passive>(){};
     [SerializeField]private List<Passive> passivesTier3 = new List<Passive>(){};
     [SerializeField] private GameObject shopUI;
+    [SerializeField]private int floor;
 
     public List<GameObject> ItemsTier1 { get => itemsTier1; set => itemsTier1 = value; }
     public List<GameObject> ItemsTier2 { get => itemsTier2; set => itemsTier2 = value; }
@@ -54,6 +56,7 @@ public class GameManager : MonoBehaviour
     public List<Passive> PassivesTier2 { get => passivesTier2; set => passivesTier2 = value; }
     public List<Passive> PassivesTier3 { get => passivesTier3; set => passivesTier3 = value; }
     public GameObject ShopUI { get => shopUI; set => shopUI = value; }
+    public global::System.Int32 Floor { get => floor; set => floor = value; }
 
     void Start() {
         ProjectileStore = GameObject.Find("ProjectileStore");
@@ -61,10 +64,15 @@ public class GameManager : MonoBehaviour
         EffectStore = GameObject.Find("EffectStore");
         InteractableStore = GameObject.Find("InteractableStore");
         SoundPrefab = inspectorSoundPrefab;
+
+        combinedItemList.AddRange(itemsTier1);
+        combinedItemList.AddRange(itemsTier2);
+        combinedItemList.AddRange(itemsTier3);
+        
     }
 
     void Awake() {
-        //SceneManager.LoadSceneAsync("UIScene", LoadSceneMode.Additive);
+        SceneManager.LoadSceneAsync("UIScene", LoadSceneMode.Additive);
     }
 
     public static bool IsEffective(string attacking, string defending) {
@@ -85,5 +93,15 @@ public class GameManager : MonoBehaviour
         audioSource.Play();
         sound.transform.SetParent(EffectStore.transform);
         Destroy(sound, 5f);
+    }
+
+    public static GameObject FindWeapon(string id) {
+        if (id == "" || id == null) return null;
+        Dictionary<string, GameObject> weaponMap = new Dictionary<string, GameObject>();
+        foreach (GameObject obj in combinedItemList) {
+            weaponMap[obj.GetComponent<Weapon>().Id] = obj;
+        }
+
+        return weaponMap[id];
     }
 }
