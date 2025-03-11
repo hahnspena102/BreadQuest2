@@ -32,11 +32,6 @@ public class SirGluten : MonoBehaviour
     private int hPotTimer, hPotCooldown = 30, gPotTimer, gPotCooldown = 30;
     private int gold = 100;
 
-    // UI
-    private GameObject infoUI;
-    [SerializeField]private GameObject shopUI;
-    [SerializeField]private GameObject compendium;
-
     // STATICS
     public static Vector2 playerPosition;
 
@@ -48,8 +43,6 @@ public class SirGluten : MonoBehaviour
         body = GetComponent<Rigidbody2D>();
         spriteRenderer = GetComponent<SpriteRenderer>();
         animator = GetComponent<Animator>();
-
-        infoUI = GameObject.Find("InfoUI");
         
         InitStats();
         UpdateStats();
@@ -119,7 +112,7 @@ public class SirGluten : MonoBehaviour
         //if (Input.GetKeyDown(KeyCode.P)) yeast += 50;
 
         // BOOLS
-        isNavigatingUI = shopUI.activeSelf || compendium.activeSelf;
+        //isNavigatingUI = shopUI.activeSelf || compendium.activeSelf;
 
         if (Input.GetKeyDown(KeyCode.E) && hoveredWeaponItem != null && !isAttacking) {
             Equip();
@@ -136,13 +129,6 @@ public class SirGluten : MonoBehaviour
         if ((Input.GetKeyDown(KeyCode.G) || Input.GetKeyDown(KeyCode.X)) && !isAttacking) {
             UseGlucosePotion();
         }
-        if (Input.GetKeyDown(KeyCode.Z) && !isAttacking) {
-            if (compendium.activeSelf) {
-                compendium.SetActive(false);
-            } else {
-                compendium.SetActive(true);
-            }
-        }
 
 
         if (!isLocked) MovePlayer();    
@@ -152,12 +138,6 @@ public class SirGluten : MonoBehaviour
             animator.SetFloat("horizontal", Mathf.Abs(body.linearVelocity.x));
             animator.SetFloat("vertical", body.linearVelocity.y);
             animator.SetBool("isMoving", body.linearVelocity.x != 0 || body.linearVelocity.y != 0);
-        }
-
-        if (Input.GetKey(KeyCode.Tab)) {
-            infoUI.gameObject.SetActive(true);
-        } else {
-            infoUI.gameObject.SetActive(false);
         }
     }
 

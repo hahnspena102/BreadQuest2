@@ -63,6 +63,10 @@ public class GameManager : MonoBehaviour
         SoundPrefab = inspectorSoundPrefab;
     }
 
+    void Awake() {
+        //SceneManager.LoadSceneAsync("UIScene", LoadSceneMode.Additive);
+    }
+
     public static bool IsEffective(string attacking, string defending) {
         if (!EffectivenessMap.ContainsKey(attacking)) return false;
         return EffectivenessMap[attacking] == defending;
