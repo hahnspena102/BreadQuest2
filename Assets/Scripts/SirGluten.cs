@@ -32,14 +32,10 @@ public class SirGluten : MonoBehaviour
     private int hPotTimer, hPotCooldown = 30, gPotTimer, gPotCooldown = 30;
     private int gold = 100;
 
-    
-
-    [SerializeField]private Image mainSlotImage, subSlotImage;
-
     // UI
-    [SerializeField]private GameObject infoUI;
-    [SerializeField] private GameObject shopUI;
-    [SerializeField] private GameObject compendium;
+    private GameObject infoUI;
+    [SerializeField]private GameObject shopUI;
+    [SerializeField]private GameObject compendium;
 
     // STATICS
     public static Vector2 playerPosition;
@@ -52,6 +48,8 @@ public class SirGluten : MonoBehaviour
         body = GetComponent<Rigidbody2D>();
         spriteRenderer = GetComponent<SpriteRenderer>();
         animator = GetComponent<Animator>();
+
+        infoUI = GameObject.Find("InfoUI");
         
         InitStats();
         UpdateStats();
@@ -180,10 +178,6 @@ public class SirGluten : MonoBehaviour
 
     void Equip() {
         if (mainSlot != null && subSlot != null) Drop();
-        if (mainSlot != null && subSlot == null) {
-            subSlot = mainSlot;
-            subSlotImage.sprite = mainSlot.InventorySprite;
-        }
 
         mainSlot = hoveredWeaponItem;
 

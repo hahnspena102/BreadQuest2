@@ -22,6 +22,8 @@ public class Room : MonoBehaviour
 
     private void Start()
     {
+        barriers.SetActive(false);
+        chest.SetActive(false);
         foreach (Transform wave in wavesParent) {
             waveList.Add(wave);
         }
@@ -59,7 +61,6 @@ public class Room : MonoBehaviour
         chest.transform.SetParent(GameManager.InteractableStore.transform);
         Destroy(barriers);
         Destroy(transform.parent.gameObject, 5f);
-
     }
 
     private void Update()
