@@ -8,7 +8,7 @@ public class Statue : MonoBehaviour
     [SerializeField]private GameObject hoverText;
     private bool isOpenable;
     private GameManager gameManager;
-    private GameObject shopUI;
+    private UIManager uiManager;
     private List<Passive> passivesSold = new List<Passive>();
 
     [SerializeField]private int tier = 1;
@@ -24,7 +24,7 @@ public class Statue : MonoBehaviour
     {
         sirGluten = GameObject.Find("SirGluten").gameObject.GetComponent<SirGluten>();
         gameManager = GameObject.Find("Game").gameObject.GetComponent<GameManager>();
-        shopUI = gameManager.ShopUI;
+        uiManager = GameObject.Find("UI").gameObject.GetComponent<UIManager>();
 
 
         List<Passive> combinedList = new List<Passive>();
@@ -59,15 +59,7 @@ public class Statue : MonoBehaviour
 
     void Update() {
         if (isOpenable && Input.GetKeyDown(KeyCode.E)) {
-            shopUI.SetActive(true);
-        
-            shopUI.GetComponent<ShopUI>().CurStatue = gameObject.GetComponent<Statue>();
-
-            int i = 0;
-            foreach (Passive p in passivesSold) {
-                shopUI.GetComponent<ShopUI>().UpdateOffer(i, p);
-                i++;
-            }
+            uiManager.ActivateShop(gameObject.GetComponent<Statue>(), passivesSold);
         }
     }
 
@@ -82,7 +74,7 @@ public class Statue : MonoBehaviour
     void OnTriggerExit2D(Collider2D other) {
         if (other.CompareTag("Player")) {
             hoverText.SetActive(false);
-            shopUI.SetActive(false);
+            uiManager.DeactivateShop();
             isOpenable = false;
         }
     }

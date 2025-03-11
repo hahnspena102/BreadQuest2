@@ -36,5 +36,19 @@ public class UIManager : MonoBehaviour
         }
         
     }
-    
+
+    public void ActivateShop(Statue statue, List<Passive> passivesSold){
+        shopUI.SetActive(true);
+        shopUI.GetComponent<ShopUI>().CurStatue = statue;
+
+        int i = 0;
+        foreach (Passive p in passivesSold) {
+            shopUI.GetComponent<ShopUI>().UpdateOffer(i, p);
+            i++;
+        }
+    }
+
+    public void DeactivateShop(){
+        shopUI.SetActive(false);
+    }    
 }

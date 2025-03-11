@@ -59,6 +59,7 @@ public class ShopUI : MonoBehaviour
     public void BuyPassive(int index) {
         sirGluten.PassiveSlot = curPassives[index];
         sirGluten.Gold -= curPassives[index].GoldCost;
+        Debug.Log(sirGluten.Gold);
 
         foreach (GameObject offer in passiveOffer) {
             offer.SetActive(false);

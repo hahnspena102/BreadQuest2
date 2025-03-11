@@ -90,8 +90,10 @@ public class SirGluten : MonoBehaviour
             yeast = maxYeast;
         }
 
-        gold = Mathf.Max(gold, staticGold);
-        staticGold = gold;
+        if (staticGold > 0) {
+            gold = gold + staticGold;
+            staticGold = 0;
+        }
     }
 
     void Update() {
@@ -102,7 +104,7 @@ public class SirGluten : MonoBehaviour
         UpdateStats();
 
         if (health <= 0) { 
-            SceneManager.LoadScene(1);
+            SceneManager.LoadScene("GameOver");
         }
 
         // Movement
@@ -262,7 +264,7 @@ public class SirGluten : MonoBehaviour
     }
 
 
-    void OnCollisionEnter2D(Collision2D collision) {
+    void OnCollisionStay2D(Collision2D collision) {
         
         if (collision.gameObject.tag == "Enemy") {
             Enemy enemy = collision.gameObject.GetComponent<Enemy>();
@@ -277,7 +279,7 @@ public class SirGluten : MonoBehaviour
             }
 
             isLocked = true;
-            body.AddForce(direction * 1.2f, ForceMode2D.Impulse);
+            body.AddForce(direction * 0.2f, ForceMode2D.Impulse);
             StartCoroutine(Hurt(enemy.Damage));
         } else if (collision.gameObject.tag == "EnemyAttack") {
             EnemyAttack enemyAttack = collision.gameObject.GetComponent<EnemyAttack>();

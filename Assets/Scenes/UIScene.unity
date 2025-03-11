@@ -5197,6 +5197,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a3da4f61c98ba4b9c9b340431cfb60b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  infoUI: {fileID: 1893830225}
+  shopUI: {fileID: 1348363800}
+  compendium: {fileID: 419079781}
+  fonts: []
 --- !u!1 &1070609571
 GameObject:
   m_ObjectHideFlags: 0
