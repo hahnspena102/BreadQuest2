@@ -199,7 +199,9 @@ public class SirGluten : MonoBehaviour
             animator.SetFloat("horizontal", Mathf.Abs(body.linearVelocity.x));
             animator.SetFloat("vertical", body.linearVelocity.y);
             animator.SetBool("isMoving", body.linearVelocity.x != 0 || body.linearVelocity.y != 0);
+            animator.SetBool("isHurting", isHurting);
         }
+        if (!isHurting) animator.SetBool("isHurting", isHurting);
     }
 
     void MovePlayer(){
@@ -289,7 +291,7 @@ public class SirGluten : MonoBehaviour
         glucose = Mathf.Clamp(glucose, 0, maxGlucose);
         gPotTimer += gPotCooldown;
     }
-    IEnumerator Hurt(int damage){
+    public IEnumerator Hurt(int damage){
         if (isHurting) yield break;
         isHurting = true;
 
@@ -321,30 +323,6 @@ public class SirGluten : MonoBehaviour
         dp.OutlineColor = Color.red;
         dp.IsPlayerHurt = true;
         dp.transform.SetParent(GameManager.EffectStore.transform);
-    }
-
-
-    void OnCollisionStay2D(Collision2D collision) {
-        
-        if (collision.gameObject.tag == "Enemy") {
-            Enemy enemy = collision.gameObject.GetComponent<Enemy>();
-//            Debug.Log("You take damage: " + enemy.Damage + "Current damage: " + health);
-            Vector2 collisionPoint = collision.transform.position;
-                Vector2 direction;
-
-            if (collisionPoint.x > transform.position.x) {
-                direction = new Vector2(-1f, 1f); 
-            } else {
-                direction = new Vector2(1f, 1f);
-            }
-
-            isLocked = true;
-            body.AddForce(direction * 0.2f, ForceMode2D.Impulse);
-            StartCoroutine(Hurt(enemy.Damage));
-        } else if (collision.gameObject.tag == "EnemyAttack") {
-            EnemyAttack enemyAttack = collision.gameObject.GetComponent<EnemyAttack>();
-            StartCoroutine(Hurt(enemyAttack.Damage));
-        }
     }
 
     void OnTriggerEnter2D(Collider2D collider) {
@@ -398,4 +376,5 @@ public class SirGluten : MonoBehaviour
     public global::System.Int32 Gold { get => gold; set => gold = value; }
     public global::System.Boolean IsNavigatingUI { get => isNavigatingUI; set => isNavigatingUI = value; }
     public SaveData CurSaveData { get => curSaveData; set => curSaveData = value; }
+    public global::System.Boolean IsLocked { get => isLocked; set => isLocked = value; }
 }
