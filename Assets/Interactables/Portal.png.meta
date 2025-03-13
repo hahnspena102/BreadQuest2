@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 20a9b34632f294735ae645f55d78fa19
+guid: d06bacb250a2246228e4f403bd904e22
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 3732695439383397635
-    second: Spearmint_0
+      213: 2189510010676529607
+    second: Portal_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Spearmint_0
+      name: Portal_0
       rect:
         serializedVersion: 2
-        x: 1
-        y: 1
-        width: 31
-        height: 31
+        x: 0
+        y: 0
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 3050b27b9b23dc330800000000000000
-      internalID: 3732695439383397635
+      spriteID: 7c9498211c3b26e10800000000000000
+      internalID: 2189510010676529607
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Spearmint_0: 3732695439383397635
+      Portal_0: 2189510010676529607
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
