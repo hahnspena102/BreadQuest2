@@ -243,8 +243,12 @@ MonoBehaviour:
   id: 
   weaponName: 
   description: 
-  itemType: 
+  weaponType: 
   rarity: 
+  attackDamage: 0
+  attackCooldown: 0.4
+  flavor: 
+  attackSFX: []
 --- !u!1 &7385277156903555243
 GameObject:
   m_ObjectHideFlags: 0
@@ -280,7 +284,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0.081, y: 0.024}
-  m_SizeDelta: {x: 16.8928, y: 2.4944}
+  m_SizeDelta: {x: 23.2234, y: 2.4944}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5034529940793057302
 CanvasRenderer:
@@ -312,8 +316,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: '[E] Temp Sword'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: cbcc9a5ff30225342824012d0f51740d, type: 2}
-  m_sharedMaterial: {fileID: -4041168782864200089, guid: cbcc9a5ff30225342824012d0f51740d, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 461cbf7436aa0d048912ca296dedcade, type: 2}
+  m_sharedMaterial: {fileID: -7058460927513855302, guid: 461cbf7436aa0d048912ca296dedcade, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -337,13 +341,13 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 2.05
-  m_fontSizeBase: 36
+  m_fontSize: 3
+  m_fontSizeBase: 3
   m_fontWeight: 400
-  m_enableAutoSizing: 1
+  m_enableAutoSizing: 0
   m_fontSizeMin: 1
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 1
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535

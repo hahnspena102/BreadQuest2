@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 5be337aa6a2a24471b94601dd0602d17
+guid: 979f548ec524d4327bbdc16752fa20c7
 TextureImporter:
   internalIDToNameTable:
   - first:
@@ -79,7 +79,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -93,7 +93,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 32
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -116,7 +116,7 @@ TextureImporter:
     buildTarget: DefaultTexturePlatform
     maxTextureSize: 2048
     resizeAlgorithm: 0
-    textureFormat: -1
+    textureFormat: 4
     textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
@@ -158,42 +158,20 @@ TextureImporter:
       name: DarkChocoGreatswordAnim_0
       rect:
         serializedVersion: 2
-        x: 1506
-        y: 91
-        width: 35
-        height: 54
+        x: 0
+        y: 320
+        width: 160
+        height: 160
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 5dd7a8da3e74249f0800000000000000
-      internalID: -485746766607909419
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DarkChocoGreatswordAnim_1
-      rect:
-        serializedVersion: 2
-        x: 1665
-        y: 95
-        width: 23
-        height: 50
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 3b16db50d5a1e3270800000000000000
-      internalID: 8232046155710423475
+      spriteID: e548b1f2dbd2e4ee9b3fd75fe2aad5fb
+      internalID: 833966176
       vertices: []
       indices: 
       edges: []
@@ -202,20 +180,20 @@ TextureImporter:
       name: DarkChocoGreatswordAnim_2
       rect:
         serializedVersion: 2
-        x: 1826
-        y: 94
-        width: 24
-        height: 51
+        x: 320
+        y: 320
+        width: 160
+        height: 160
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 100677628a18ae9b0800000000000000
-      internalID: -5050081472942743551
+      spriteID: ee555a3048090480c9b9e8cb0673cefe
+      internalID: -2005197026
       vertices: []
       indices: 
       edges: []
@@ -224,20 +202,20 @@ TextureImporter:
       name: DarkChocoGreatswordAnim_3
       rect:
         serializedVersion: 2
-        x: 1986
-        y: 94
-        width: 24
-        height: 51
+        x: 0
+        y: 160
+        width: 160
+        height: 160
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 70604f5b0912fead0800000000000000
-      internalID: -2670879148595739129
+      spriteID: 32b8574b40e464cd7a020f30d5bc7bee
+      internalID: -1869444579
       vertices: []
       indices: 
       edges: []
@@ -246,20 +224,20 @@ TextureImporter:
       name: DarkChocoGreatswordAnim_4
       rect:
         serializedVersion: 2
-        x: 2146
-        y: 94
-        width: 24
-        height: 51
+        x: 160
+        y: 160
+        width: 160
+        height: 160
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: ee44d8bec05e64630800000000000000
-      internalID: 3911065170072126702
+      spriteID: e6ad7585702414037a1fe155c2a92bd5
+      internalID: 399282718
       vertices: []
       indices: 
       edges: []
@@ -268,20 +246,20 @@ TextureImporter:
       name: DarkChocoGreatswordAnim_5
       rect:
         serializedVersion: 2
-        x: 379
-        y: 17
-        width: 35
-        height: 54
+        x: 320
+        y: 160
+        width: 160
+        height: 160
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: d850f9812edb17a70800000000000000
-      internalID: 8823041923768845709
+      spriteID: b0bc7f96ef02c4615a4233ea7a310046
+      internalID: -242118241
       vertices: []
       indices: 
       edges: []
@@ -290,20 +268,20 @@ TextureImporter:
       name: DarkChocoGreatswordAnim_6
       rect:
         serializedVersion: 2
-        x: 2638
-        y: 62
-        width: 72
-        height: 31
+        x: 0
+        y: 0
+        width: 160
+        height: 160
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 06d51f57d90b73d50800000000000000
-      internalID: 6717031559581490528
+      spriteID: 80d5e1e36da7d4d6499a392f7d113aea
+      internalID: -382407587
       vertices: []
       indices: 
       edges: []
@@ -312,20 +290,20 @@ TextureImporter:
       name: DarkChocoGreatswordAnim_7
       rect:
         serializedVersion: 2
-        x: 2820
-        y: 71
-        width: 50
-        height: 23
+        x: 160
+        y: 0
+        width: 160
+        height: 160
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 74dd15523d112cd00800000000000000
-      internalID: 991374466536824135
+      spriteID: c455a4e4ef44c44939851daa9e7ca17d
+      internalID: -1954768260
       vertices: []
       indices: 
       edges: []
@@ -334,152 +312,42 @@ TextureImporter:
       name: DarkChocoGreatswordAnim_8
       rect:
         serializedVersion: 2
-        x: 2979
-        y: 69
-        width: 51
-        height: 24
+        x: 320
+        y: 0
+        width: 160
+        height: 160
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 59b57990da162b640800000000000000
-      internalID: 5094241524327603093
+      spriteID: 2d499ca1f0e854b908373808c7cb16ed
+      internalID: 1526781713
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: DarkChocoGreatswordAnim_9
+      name: DarkChocoGreatswordAnim_1
       rect:
         serializedVersion: 2
-        x: 3139
-        y: 69
-        width: 51
-        height: 24
+        x: 160
+        y: 320
+        width: 160
+        height: 160
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 15bc302e3555ea2c0800000000000000
-      internalID: -4418500365641331887
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DarkChocoGreatswordAnim_10
-      rect:
-        serializedVersion: 2
-        x: 3299
-        y: 69
-        width: 51
-        height: 24
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: c75786cb71c70a7a0800000000000000
-      internalID: -6367953431714826884
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DarkChocoGreatswordAnim_11
-      rect:
-        serializedVersion: 2
-        x: 553
-        y: 19
-        width: 23
-        height: 50
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: cd52a411b97d94c70800000000000000
-      internalID: 8955926395012916700
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DarkChocoGreatswordAnim_12
-      rect:
-        serializedVersion: 2
-        x: 710
-        y: 17
-        width: 24
-        height: 51
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 92770efa9c0a082d0800000000000000
-      internalID: -3278443740626127063
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DarkChocoGreatswordAnim_13
-      rect:
-        serializedVersion: 2
-        x: 870
-        y: 17
-        width: 24
-        height: 51
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 5dd8bc829bd8afc70800000000000000
-      internalID: 9005666231273622997
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DarkChocoGreatswordAnim_14
-      rect:
-        serializedVersion: 2
-        x: 1030
-        y: 17
-        width: 24
-        height: 51
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 5ca6678ef0605dfd0800000000000000
-      internalID: -2317939767817901371
+      spriteID: 3f435583f1038484ca2751b133022b33
+      internalID: -1912126282
       vertices: []
       indices: 
       edges: []
@@ -488,7 +356,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 38dbb775215cc4889bdf31379e6c1bf8
     internalID: 0
     vertices: []
     indices: 
@@ -498,21 +366,15 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      DarkChocoGreatswordAnim_0: -485746766607909419
-      DarkChocoGreatswordAnim_1: 8232046155710423475
-      DarkChocoGreatswordAnim_10: -6367953431714826884
-      DarkChocoGreatswordAnim_11: 8955926395012916700
-      DarkChocoGreatswordAnim_12: -3278443740626127063
-      DarkChocoGreatswordAnim_13: 9005666231273622997
-      DarkChocoGreatswordAnim_14: -2317939767817901371
-      DarkChocoGreatswordAnim_2: -5050081472942743551
-      DarkChocoGreatswordAnim_3: -2670879148595739129
-      DarkChocoGreatswordAnim_4: 3911065170072126702
-      DarkChocoGreatswordAnim_5: 8823041923768845709
-      DarkChocoGreatswordAnim_6: 6717031559581490528
-      DarkChocoGreatswordAnim_7: 991374466536824135
-      DarkChocoGreatswordAnim_8: 5094241524327603093
-      DarkChocoGreatswordAnim_9: -4418500365641331887
+      DarkChocoGreatswordAnim_0: 833966176
+      DarkChocoGreatswordAnim_1: -1912126282
+      DarkChocoGreatswordAnim_2: -2005197026
+      DarkChocoGreatswordAnim_3: -1869444579
+      DarkChocoGreatswordAnim_4: 399282718
+      DarkChocoGreatswordAnim_5: -242118241
+      DarkChocoGreatswordAnim_6: -382407587
+      DarkChocoGreatswordAnim_7: -1954768260
+      DarkChocoGreatswordAnim_8: 1526781713
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

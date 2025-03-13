@@ -8,10 +8,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 185936474300564429, guid: ddb193a141508b545a8982885ad48e35, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 1274005357380162982, guid: ddb193a141508b545a8982885ad48e35, type: 3}
       propertyPath: flavor
       value: flavorless
@@ -23,26 +19,14 @@ PrefabInstance:
     - target: {fileID: 3271738115149993149, guid: ddb193a141508b545a8982885ad48e35, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 6448972388924427744, guid: 965933b476426f743ad3e211861fed2b, type: 3}
+      objectReference: {fileID: 320338463863878224, guid: df7bff9ddd28b47ab8719623ac6c93b8, type: 3}
     - target: {fileID: 3271738115149993149, guid: ddb193a141508b545a8982885ad48e35, type: 3}
       propertyPath: m_SortingLayer
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3319205633913850834, guid: ddb193a141508b545a8982885ad48e35, type: 3}
-      propertyPath: m_Size.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3319205633913850834, guid: ddb193a141508b545a8982885ad48e35, type: 3}
-      propertyPath: m_Size.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3319205633913850834, guid: ddb193a141508b545a8982885ad48e35, type: 3}
-      propertyPath: m_SpriteTilingProperty.newSize.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3319205633913850834, guid: ddb193a141508b545a8982885ad48e35, type: 3}
-      propertyPath: m_SpriteTilingProperty.newSize.y
-      value: 1
+    - target: {fileID: 3689380121290302851, guid: ddb193a141508b545a8982885ad48e35, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3720981650840172434, guid: ddb193a141508b545a8982885ad48e35, type: 3}
       propertyPath: m_SortingLayer
@@ -130,11 +114,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6335222657926469647, guid: ddb193a141508b545a8982885ad48e35, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.x
-      value: 0.875
+      value: 0.90625
       objectReference: {fileID: 0}
     - target: {fileID: 6335222657926469647, guid: ddb193a141508b545a8982885ad48e35, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.y
-      value: 0.875
+      value: 0.90625
       objectReference: {fileID: 0}
     - target: {fileID: 6745127538194327359, guid: ddb193a141508b545a8982885ad48e35, type: 3}
       propertyPath: m_LocalScale.x
@@ -142,11 +126,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6745127538194327359, guid: ddb193a141508b545a8982885ad48e35, type: 3}
       propertyPath: m_LocalScale.y
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7081239968080898793, guid: ddb193a141508b545a8982885ad48e35, type: 3}
       propertyPath: m_Name
-      value: LongSword
+      value: DarkChocoGreatsword
       objectReference: {fileID: 0}
     - target: {fileID: 8105893015995445619, guid: ddb193a141508b545a8982885ad48e35, type: 3}
       propertyPath: forwardSwing.Array.size
@@ -199,27 +183,43 @@ PrefabInstance:
     - target: {fileID: 8105893015995445619, guid: ddb193a141508b545a8982885ad48e35, type: 3}
       propertyPath: 'forwardAttack.Array.data[0]'
       value: 
-      objectReference: {fileID: 876549254, guid: 65ab6541af3b95240a9bd230b7412b13, type: 3}
+      objectReference: {fileID: 833966176, guid: 979f548ec524d4327bbdc16752fa20c7, type: 3}
     - target: {fileID: 8105893015995445619, guid: ddb193a141508b545a8982885ad48e35, type: 3}
       propertyPath: 'forwardAttack.Array.data[1]'
       value: 
-      objectReference: {fileID: -906424909, guid: 65ab6541af3b95240a9bd230b7412b13, type: 3}
+      objectReference: {fileID: -1912126282, guid: 979f548ec524d4327bbdc16752fa20c7, type: 3}
     - target: {fileID: 8105893015995445619, guid: ddb193a141508b545a8982885ad48e35, type: 3}
       propertyPath: 'forwardAttack.Array.data[2]'
       value: 
-      objectReference: {fileID: 1270951686, guid: 65ab6541af3b95240a9bd230b7412b13, type: 3}
+      objectReference: {fileID: -2005197026, guid: 979f548ec524d4327bbdc16752fa20c7, type: 3}
+    - target: {fileID: 8105893015995445619, guid: ddb193a141508b545a8982885ad48e35, type: 3}
+      propertyPath: 'forwardAttack.Array.data[3]'
+      value: 
+      objectReference: {fileID: -1869444579, guid: 979f548ec524d4327bbdc16752fa20c7, type: 3}
+    - target: {fileID: 8105893015995445619, guid: ddb193a141508b545a8982885ad48e35, type: 3}
+      propertyPath: 'forwardAttack.Array.data[4]'
+      value: 
+      objectReference: {fileID: 399282718, guid: 979f548ec524d4327bbdc16752fa20c7, type: 3}
     - target: {fileID: 8105893015995445619, guid: ddb193a141508b545a8982885ad48e35, type: 3}
       propertyPath: 'backwardAttack.Array.data[0]'
       value: 
-      objectReference: {fileID: -368832410, guid: 65ab6541af3b95240a9bd230b7412b13, type: 3}
+      objectReference: {fileID: -1869444579, guid: 979f548ec524d4327bbdc16752fa20c7, type: 3}
     - target: {fileID: 8105893015995445619, guid: ddb193a141508b545a8982885ad48e35, type: 3}
       propertyPath: 'backwardAttack.Array.data[1]'
       value: 
-      objectReference: {fileID: -2055537311, guid: 65ab6541af3b95240a9bd230b7412b13, type: 3}
+      objectReference: {fileID: 399282718, guid: 979f548ec524d4327bbdc16752fa20c7, type: 3}
     - target: {fileID: 8105893015995445619, guid: ddb193a141508b545a8982885ad48e35, type: 3}
       propertyPath: 'backwardAttack.Array.data[2]'
       value: 
-      objectReference: {fileID: -1147408322, guid: 65ab6541af3b95240a9bd230b7412b13, type: 3}
+      objectReference: {fileID: -242118241, guid: 979f548ec524d4327bbdc16752fa20c7, type: 3}
+    - target: {fileID: 8105893015995445619, guid: ddb193a141508b545a8982885ad48e35, type: 3}
+      propertyPath: 'backwardAttack.Array.data[3]'
+      value: 
+      objectReference: {fileID: 1526781713, guid: 979f548ec524d4327bbdc16752fa20c7, type: 3}
+    - target: {fileID: 8105893015995445619, guid: ddb193a141508b545a8982885ad48e35, type: 3}
+      propertyPath: 'backwardAttack.Array.data[4]'
+      value: 
+      objectReference: {fileID: 1005244460, guid: 979f548ec524d4327bbdc16752fa20c7, type: 3}
     - target: {fileID: 8105893015995445619, guid: ddb193a141508b545a8982885ad48e35, type: 3}
       propertyPath: 'leftRightSwing.Array.data[0]'
       value: 
@@ -235,22 +235,30 @@ PrefabInstance:
     - target: {fileID: 8105893015995445619, guid: ddb193a141508b545a8982885ad48e35, type: 3}
       propertyPath: 'leftRightAttack.Array.data[0]'
       value: 
-      objectReference: {fileID: 1660850616, guid: 65ab6541af3b95240a9bd230b7412b13, type: 3}
+      objectReference: {fileID: -382407587, guid: 979f548ec524d4327bbdc16752fa20c7, type: 3}
     - target: {fileID: 8105893015995445619, guid: ddb193a141508b545a8982885ad48e35, type: 3}
       propertyPath: 'leftRightAttack.Array.data[1]'
       value: 
-      objectReference: {fileID: 1306869329, guid: 65ab6541af3b95240a9bd230b7412b13, type: 3}
+      objectReference: {fileID: -1954768260, guid: 979f548ec524d4327bbdc16752fa20c7, type: 3}
     - target: {fileID: 8105893015995445619, guid: ddb193a141508b545a8982885ad48e35, type: 3}
       propertyPath: 'leftRightAttack.Array.data[2]'
       value: 
-      objectReference: {fileID: 1261577093, guid: 65ab6541af3b95240a9bd230b7412b13, type: 3}
+      objectReference: {fileID: 1526781713, guid: 979f548ec524d4327bbdc16752fa20c7, type: 3}
+    - target: {fileID: 8105893015995445619, guid: ddb193a141508b545a8982885ad48e35, type: 3}
+      propertyPath: 'leftRightAttack.Array.data[3]'
+      value: 
+      objectReference: {fileID: -623162326, guid: 979f548ec524d4327bbdc16752fa20c7, type: 3}
+    - target: {fileID: 8105893015995445619, guid: ddb193a141508b545a8982885ad48e35, type: 3}
+      propertyPath: 'leftRightAttack.Array.data[4]'
+      value: 
+      objectReference: {fileID: 884024303, guid: 979f548ec524d4327bbdc16752fa20c7, type: 3}
     - target: {fileID: 8501036405661133926, guid: ddb193a141508b545a8982885ad48e35, type: 3}
       propertyPath: id
-      value: knights_sword
+      value: dark_choco_greatsword
       objectReference: {fileID: 0}
     - target: {fileID: 8501036405661133926, guid: ddb193a141508b545a8982885ad48e35, type: 3}
       propertyPath: flavor
-      value: flavorless
+      value: cacao
       objectReference: {fileID: 0}
     - target: {fileID: 8501036405661133926, guid: ddb193a141508b545a8982885ad48e35, type: 3}
       propertyPath: rarity
@@ -258,15 +266,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8501036405661133926, guid: ddb193a141508b545a8982885ad48e35, type: 3}
       propertyPath: weaponName
-      value: Knight's Sword
+      value: Dark Choco Greatsword
       objectReference: {fileID: 0}
     - target: {fileID: 8501036405661133926, guid: ddb193a141508b545a8982885ad48e35, type: 3}
       propertyPath: description
-      value: The sword of the one and only Bread Knight.
+      value: 'A heavy lethal weapon made of rich cacao. '
       objectReference: {fileID: 0}
     - target: {fileID: 8501036405661133926, guid: ddb193a141508b545a8982885ad48e35, type: 3}
       propertyPath: attackDamage
-      value: 3
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 8501036405661133926, guid: ddb193a141508b545a8982885ad48e35, type: 3}
+      propertyPath: attackCooldown
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8630761061912810607, guid: ddb193a141508b545a8982885ad48e35, type: 3}
       propertyPath: m_OverridePixelPerfect

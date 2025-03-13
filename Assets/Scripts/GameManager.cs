@@ -40,6 +40,7 @@ public class GameManager : MonoBehaviour
     };
 
     private static List<GameObject> combinedItemList = new List<GameObject>();
+    [SerializeField]private List<GameObject> itemsTier0 = new List<GameObject>(){};
     [SerializeField]private List<GameObject> itemsTier1 = new List<GameObject>(){};
     [SerializeField]private List<GameObject> itemsTier2 = new List<GameObject>(){};
     [SerializeField]private List<GameObject> itemsTier3 = new List<GameObject>(){};
@@ -49,6 +50,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private GameObject shopUI;
     [SerializeField]private int floor;
 
+    public List<GameObject> ItemsTier0 { get => itemsTier0; set => itemsTier0 = value; }
     public List<GameObject> ItemsTier1 { get => itemsTier1; set => itemsTier1 = value; }
     public List<GameObject> ItemsTier2 { get => itemsTier2; set => itemsTier2 = value; }
     public List<GameObject> ItemsTier3 { get => itemsTier3; set => itemsTier3 = value; }
@@ -65,6 +67,7 @@ public class GameManager : MonoBehaviour
         InteractableStore = GameObject.Find("InteractableStore");
         SoundPrefab = inspectorSoundPrefab;
 
+        combinedItemList.AddRange(itemsTier0);
         combinedItemList.AddRange(itemsTier1);
         combinedItemList.AddRange(itemsTier2);
         combinedItemList.AddRange(itemsTier3);

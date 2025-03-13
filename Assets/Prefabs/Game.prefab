@@ -1063,7 +1063,7 @@ MonoBehaviour:
   itemsTier3: []
   passivesTier1:
   - {fileID: 11400000, guid: 5f6afb838473c8740b12d1d395a66428, type: 2}
-  - {fileID: 11400000, guid: 34b4e16f7ffa74c4ea18c48bad26d5b0, type: 2}
+  - {fileID: 11400000, guid: 703802faf39494c8ab32b6c9c3b8d58e, type: 2}
   - {fileID: 11400000, guid: e677a79bec39dc145a477ed8e3bca91a, type: 2}
   passivesTier2: []
   passivesTier3: []

@@ -1,25 +1,10 @@
 fileFormatVersion: 2
-guid: 04f318ca5117d4a93bc3853edbc16b31
+guid: d06bacb250a2246228e4f403bd904e22
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 8012602747710438857
-    second: DefensiveTaffy_0
-  - first:
-      213: 4654449042768093307
-    second: DefensiveTaffy_1
-  - first:
-      213: 8199573286511379881
-    second: DefensiveTaffy_2
-  - first:
-      213: -2378154914975660706
-    second: DefensiveTaffy_3
-  - first:
-      213: 7218713363089528867
-    second: DefensiveTaffy_4
-  - first:
-      213: -6570937842858644324
-    second: DefensiveTaffy_5
+      213: 2189510010676529607
+    second: Portal_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -128,7 +113,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: DefensiveTaffy_0
+      name: Portal_0
       rect:
         serializedVersion: 2
         x: 0
@@ -143,52 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 9cd79971fbb723f60800000000000000
-      internalID: 8012602747710438857
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DefensiveTaffy_1
-      rect:
-        serializedVersion: 2
-        x: 32
-        y: 0
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: b70695b7ebce79040800000000000000
-      internalID: 4654449042768093307
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DefensiveTaffy_2
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 0
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 9a50b4cf57cbac170800000000000000
-      internalID: 8199573286511379881
+      spriteID: 7c9498211c3b26e10800000000000000
+      internalID: 2189510010676529607
       vertices: []
       indices: 
       edges: []
@@ -197,7 +138,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 05fec68ff9a6f42d9aa95f0e9453e948
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -207,9 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      DefensiveTaffy_0: 8012602747710438857
-      DefensiveTaffy_1: 4654449042768093307
-      DefensiveTaffy_2: 8199573286511379881
+      Portal_0: 2189510010676529607
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

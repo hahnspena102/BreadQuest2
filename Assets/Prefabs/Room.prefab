@@ -63,7 +63,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 8605817954047804461}
-  - {fileID: 6984552327514335104}
+  - {fileID: 8725342720439550918}
   - {fileID: 4843198152794801895}
   - {fileID: 1050578343343126310}
   m_Father: {fileID: 0}
@@ -131,7 +131,7 @@ Transform:
   m_LocalScale: {x: 1, y: 3, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1621993852276043917}
+  m_Father: {fileID: 8725342720439550918}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &3592020038856588985
 SpriteRenderer:
@@ -234,6 +234,38 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!1 &3725369464324646653
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8725342720439550918}
+  m_Layer: 0
+  m_Name: Barriers
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8725342720439550918
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3725369464324646653}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 6984552327514335104}
+  m_Father: {fileID: 1621993852276043917}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &4864209421384786344
 GameObject:
   m_ObjectHideFlags: 0
@@ -382,7 +414,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   wavesParent: {fileID: 1050578343343126310}
-  barriers: {fileID: 2955099218691733651}
+  barriers: {fileID: 3725369464324646653}
   chest: {fileID: 7351743251781259773}
   spawnParticles: {fileID: 1913445023663260805, guid: 5cc6832359dfb40a8aaebd40daff28c4, type: 3}
 --- !u!1001 &3672545994715970783
