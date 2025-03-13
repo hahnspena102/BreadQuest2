@@ -52,7 +52,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -66,7 +66,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 32
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -89,7 +89,7 @@ TextureImporter:
     buildTarget: DefaultTexturePlatform
     maxTextureSize: 2048
     resizeAlgorithm: 0
-    textureFormat: -1
+    textureFormat: 4
     textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
@@ -131,10 +131,10 @@ TextureImporter:
       name: DefensiveTaffy_0
       rect:
         serializedVersion: 2
-        x: 3
-        y: 6
-        width: 22
-        height: 24
+        x: 0
+        y: 0
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -153,10 +153,10 @@ TextureImporter:
       name: DefensiveTaffy_1
       rect:
         serializedVersion: 2
-        x: 21
-        y: 1
-        width: 7
-        height: 9
+        x: 32
+        y: 0
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -175,10 +175,10 @@ TextureImporter:
       name: DefensiveTaffy_2
       rect:
         serializedVersion: 2
-        x: 35
-        y: 6
-        width: 22
-        height: 24
+        x: 64
+        y: 0
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -193,77 +193,11 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
-    - serializedVersion: 2
-      name: DefensiveTaffy_3
-      rect:
-        serializedVersion: 2
-        x: 52
-        y: 1
-        width: 9
-        height: 9
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: e55c60074b81ffed0800000000000000
-      internalID: -2378154914975660706
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DefensiveTaffy_4
-      rect:
-        serializedVersion: 2
-        x: 67
-        y: 6
-        width: 22
-        height: 24
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 328115eae850e2460800000000000000
-      internalID: 7218713363089528867
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DefensiveTaffy_5
-      rect:
-        serializedVersion: 2
-        x: 83
-        y: 1
-        width: 11
-        height: 9
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: c9c2d33a8d65fc4a0800000000000000
-      internalID: -6570937842858644324
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     outline: []
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 05fec68ff9a6f42d9aa95f0e9453e948
     internalID: 0
     vertices: []
     indices: 
@@ -276,9 +210,6 @@ TextureImporter:
       DefensiveTaffy_0: 8012602747710438857
       DefensiveTaffy_1: 4654449042768093307
       DefensiveTaffy_2: 8199573286511379881
-      DefensiveTaffy_3: -2378154914975660706
-      DefensiveTaffy_4: 7218713363089528867
-      DefensiveTaffy_5: -6570937842858644324
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

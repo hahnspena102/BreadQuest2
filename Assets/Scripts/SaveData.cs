@@ -27,7 +27,7 @@ public class SaveData : ScriptableObject
         yeast = 0;
         yeastLevel = 1;
         gold = 0;
-        mainSlotId = null;
+        mainSlotId = "knights_sword";
         subSlotId = null;
         passive = null;
         healthPotions = 0;

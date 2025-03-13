@@ -148,7 +148,7 @@ public class SirGluten : MonoBehaviour
             staticGold = 0;
         }
     }
-
+    
     void Update() {
         // Statics
         playerPosition = body.position;
@@ -205,7 +205,9 @@ public class SirGluten : MonoBehaviour
     }
 
     void MovePlayer(){
-        body.linearVelocity = new Vector2(horizontalInput,verticalInput).normalized * speed;
+        float newSpeed = speed;
+        if (passiveSlot != null) newSpeed += passiveSlot.MovementBonus;
+        body.linearVelocity = new Vector2(horizontalInput,verticalInput).normalized * newSpeed;
         
         if (!isAttacking) {
             if (horizontalInput < 0) {
@@ -295,8 +297,11 @@ public class SirGluten : MonoBehaviour
         if (isHurting) yield break;
         isHurting = true;
 
-        health -= damage;
-        CreatePopup(damage);
+        int totalDamage = damage;
+        if (passiveSlot != null) totalDamage -= passiveSlot.DefensiveBonus;
+        if (totalDamage < 0) totalDamage = 0;
+        health -= totalDamage;
+        CreatePopup(totalDamage);
 
         Color ogColor = spriteRenderer.color;
         spriteRenderer.color = Color.red;
