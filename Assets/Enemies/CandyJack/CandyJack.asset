@@ -10,15 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5961343830b40814e8d1fdca4c078598, type: 3}
-  m_Name: DangOh
+  m_Name: CandyJack
   m_EditorClassIdentifier: 
-  enemyName: DangOh
-  description: oh danggg!
-  health: 25
+  enemyName: Candy Jack
+  description: 
+  health: 40
   damage: 10
-  flavoring: grain
+  flavoring: 'Spice '
   xpMultiplier: 1.5
-  sprite: {fileID: -6050473969829582647, guid: bb206b2f72949437dbc021dadfe3468f, type: 3}
-  color: {r: 0.64705884, g: 0.64705884, b: 0.64705884, a: 1}
+  sprite: {fileID: 5998390868617335649, guid: 6bafaeead04c643a7b70fb7b931bef7c, type: 3}
+  color: {r: 0.43452328, g: 0.8490566, b: 0.35644355, a: 1}
   isDiscovered: 0
-  detectionRadius: 10
+  detectionRadius: 8
