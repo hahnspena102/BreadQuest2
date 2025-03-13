@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 1783394971490463258}
   - component: {fileID: 7208707049854281217}
   m_Layer: 9
-  m_Name: Enemy 1
+  m_Name: Enemy
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -300,7 +300,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b86fbaf5d28f14243b89aee57d65c825, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyData: {fileID: 0}
+  health: 10
+  damage: 10
+  flavoring: vanilla
   damagePopup: {fileID: 4790183856277039928, guid: e44c4970eba364bb8ab606a64f217325, type: 3}
   deathParticle: {fileID: 1913445023663260805, guid: 9f6f3d13b3cfe8541bb03f9697c7fb1a, type: 3}
+  xpMultiplier: 1
+  attackSFX: []
   hurtSFX: []
+  deathSFX: []
