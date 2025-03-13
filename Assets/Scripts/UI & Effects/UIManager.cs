@@ -13,11 +13,14 @@ public class UIManager : MonoBehaviour
     [SerializeField]private GameObject compendium;
 
     [SerializeField]private List<Font> fonts = new List<Font>();
+    private SirGluten sirGluten;
 
     void Start(){
         foreach (Font f in fonts) {
             f.material.mainTexture.filterMode = FilterMode.Point;
         }
+
+        sirGluten = GameObject.Find("SirGluten").GetComponent<SirGluten>();
     }
 
     void Update(){
@@ -34,6 +37,9 @@ public class UIManager : MonoBehaviour
         } else {
             infoUI.SetActive(false);
         }
+
+        // BOOLS
+        sirGluten.IsNavigatingUI = shopUI.activeSelf || compendium.activeSelf;
         
     }
 

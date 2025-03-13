@@ -31,7 +31,6 @@ public class Melee : MonoBehaviour
         attackRB = transform.GetChild(2).gameObject.GetComponent<Rigidbody2D>();
         xScale = attackRB.transform.localScale.x; 
         yScale = attackRB.transform.localScale.y;
-        Debug.Log(xScale+  " "+ yScale);
     }
 
     // Update is called once per frame
@@ -90,6 +89,7 @@ public class Melee : MonoBehaviour
 
         if (weapon.AttackSFX.Count > 0) {
             audioSource.clip = weapon.AttackSFX[Random.Range(0, weapon.AttackSFX.Count)];
+            audioSource.pitch = (Random.Range(1.00f - 0.05f, 1.00f + 0.05f));
             audioSource.Play();
         }
         

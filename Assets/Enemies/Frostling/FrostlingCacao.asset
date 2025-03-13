@@ -13,12 +13,14 @@ MonoBehaviour:
   m_Name: FrostlingCacao
   m_EditorClassIdentifier: 
   enemyName: Cacao Frostling
-  description: Cacao frostling
+  description: Although cute, these creatures are harmful when provoked. Creates
+    a spiral of chocolate frosting shurikens.
   health: 12
   damage: 10
   flavoring: vanilla
   xpMultiplier: 1
+  goldMultiplier: 1
   sprite: {fileID: 1364999022, guid: 50b78a9e6e6a440be9ccc3a84568578e, type: 3}
-  color: {r: 0.50980395, g: 0.36078432, b: 0.3137255, a: 1}
-  isDiscovered: 0
+  color: {r: 0.6509434, g: 0.42714676, b: 0.31626025, a: 1}
+  isDiscovered: 1
   detectionRadius: 10

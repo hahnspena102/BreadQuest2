@@ -304,6 +304,14 @@ PrefabInstance:
       propertyPath: attackDamage
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 8927998594896783488, guid: 8f49e4d77b89a784497c267292f8d5fb, type: 3}
+      propertyPath: attackSFX.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8927998594896783488, guid: 8f49e4d77b89a784497c267292f8d5fb, type: 3}
+      propertyPath: 'attackSFX.Array.data[0]'
+      value: 
+      objectReference: {fileID: 8300000, guid: 58f0a1284bbef6d4cb7328b6c9e7eb43, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

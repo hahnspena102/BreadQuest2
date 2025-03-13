@@ -16,6 +16,10 @@ PrefabInstance:
       propertyPath: damage
       value: 25
       objectReference: {fileID: 0}
+    - target: {fileID: -2116794449275848880, guid: e6bde12018d35e24685f1a0ad2c694f6, type: 3}
+      propertyPath: timeTilCollision
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 825278433556598927, guid: e6bde12018d35e24685f1a0ad2c694f6, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -62,19 +66,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6257214900476092273, guid: e6bde12018d35e24685f1a0ad2c694f6, type: 3}
       propertyPath: m_Size.x
-      value: 0.11072192
+      value: 0.32248947
       objectReference: {fileID: 0}
     - target: {fileID: 6257214900476092273, guid: e6bde12018d35e24685f1a0ad2c694f6, type: 3}
       propertyPath: m_Size.y
-      value: 1.0646794
+      value: 0.37027872
       objectReference: {fileID: 0}
     - target: {fileID: 6257214900476092273, guid: e6bde12018d35e24685f1a0ad2c694f6, type: 3}
       propertyPath: m_Offset.x
-      value: 0
+      value: -0.0073872358
       objectReference: {fileID: 0}
     - target: {fileID: 6257214900476092273, guid: e6bde12018d35e24685f1a0ad2c694f6, type: 3}
       propertyPath: m_Offset.y
-      value: -0.56271076
+      value: -0.21551043
       objectReference: {fileID: 0}
     - target: {fileID: 6257214900476092273, guid: e6bde12018d35e24685f1a0ad2c694f6, type: 3}
       propertyPath: m_SpriteTilingProperty.pivot.x

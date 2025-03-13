@@ -58,6 +58,12 @@ public class Magic : MonoBehaviour
     }
 
     IEnumerator MagicAttack() {
+          if (weapon.AttackSFX.Count > 0) {
+            audioSource.clip = weapon.AttackSFX[Random.Range(0, weapon.AttackSFX.Count)];
+            audioSource.pitch = (Random.Range(1.00f - 0.10f, 1.00f + 0.10f));
+            audioSource.Play();
+        }
+        
         sirGluten.Glucose -= glucoseCost;
 
         sirGluten.IsAnimationLocked = true;

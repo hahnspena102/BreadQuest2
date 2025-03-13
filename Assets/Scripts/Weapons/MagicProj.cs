@@ -29,11 +29,8 @@ public class MagicProj : MonoBehaviour
     }
     void OnCollisionEnter2D(Collision2D collision) {
         if (isPassable) return;
-        if (collision.gameObject.tag == "Enemy") {
-            Destroy(gameObject);
-        } else if (collision.gameObject.tag == "Walls") {
-            Destroy(gameObject);
-        }
+        Destroy(gameObject);
+
     }
 
     private IEnumerator FadeOutAndDestroy() {

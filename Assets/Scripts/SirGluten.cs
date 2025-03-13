@@ -45,6 +45,7 @@ public class SirGluten : MonoBehaviour
         body = GetComponent<Rigidbody2D>();
         spriteRenderer = GetComponent<SpriteRenderer>();
         animator = GetComponent<Animator>();
+
         
         InitStats();
         UpdateStats();
@@ -118,11 +119,10 @@ public class SirGluten : MonoBehaviour
                 if (health < maxHealth && passiveSlot != null) health += passiveSlot.HealthRegeneration;
                 if (glucose < maxGlucose && passiveSlot != null) glucose += 1 + passiveSlot.GlucoseRegeneration;
             } else {
-                if (glucose < maxGlucose && passiveSlot != null) glucose += 1;
+                if (glucose < maxGlucose) glucose += 1;
             }
             if (hPotTimer > 0) hPotTimer--;
             if (gPotTimer > 0) gPotTimer--;
-
         }
     }
     
@@ -147,6 +147,9 @@ public class SirGluten : MonoBehaviour
             gold = gold + staticGold;
             staticGold = 0;
         }
+
+        health = Mathf.Clamp(health, 0 ,maxHealth);
+        glucose = Mathf.Clamp(glucose, 0 ,maxGlucose);
     }
     
     void Update() {
@@ -166,8 +169,7 @@ public class SirGluten : MonoBehaviour
 
         //if (Input.GetKeyDown(KeyCode.P)) yeast += 50;
 
-        // BOOLS
-        //isNavigatingUI = shopUI.activeSelf || compendium.activeSelf;
+        
 
         if (Input.GetKeyDown(KeyCode.E) && hoveredWeaponItem != null && !isAttacking) {
             Equip();

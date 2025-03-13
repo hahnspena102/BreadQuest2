@@ -11,6 +11,7 @@ public class Enemy : MonoBehaviour
     private int health;   
     private int damage;
     private string flavoring;
+    [SerializeField]private int bonusHealth;
     [SerializeField] private GameObject damagePopup;
     [SerializeField] private GameObject deathParticle;
     private float xpMultiplier = 1f, goldMultiplier = 1f;
@@ -30,7 +31,7 @@ public class Enemy : MonoBehaviour
         audioSource = GetComponent<AudioSource>();
         ogColor = spriteRenderer.color;
 
-        health = enemyData.Health;
+        health = enemyData.Health + bonusHealth;
         damage = enemyData.Damage;
         flavoring = enemyData.Flavoring;
         xpMultiplier = enemyData.XpMultiplier;

@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 003b6f52fe5342941a19687e979392b8, type: 3}
   m_Name: DefensiveTaffy1
   m_EditorClassIdentifier: 
-  passiveName: 
+  passiveName: Defensive Taffy I
   description: Slightly reduces the amount of damage taken. (1 dmg)
   sprite: {fileID: 8012602747710438857, guid: 04f318ca5117d4a93bc3853edbc16b31, type: 3}
   goldCost: 160

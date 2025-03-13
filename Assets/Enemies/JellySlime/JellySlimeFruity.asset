@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: JellySlimeFruity
   m_EditorClassIdentifier: 
   enemyName: Fruity Jelly Slime
-  description: Made out of jelatin, this slime chases anyone near it. It is said
-    they smell like strawberries.
+  description: Made out of jelly, this slime chases anyone near it. It is said they
+    smell like strawberries.
   health: 5
   damage: 5
   flavoring: fruity

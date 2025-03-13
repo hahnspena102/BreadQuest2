@@ -13,11 +13,13 @@ MonoBehaviour:
   m_Name: FrostlingVanilla
   m_EditorClassIdentifier: 
   enemyName: Vanilla Frostling
-  description: Vanilla frostling
+  description: Although cute, these creatures are harmful when provoked. Creates
+    a spiral of vanilla frosting shurikens.
   health: 12
   damage: 10
   flavoring: vanilla
   xpMultiplier: 1
+  goldMultiplier: 1
   sprite: {fileID: 1364999022, guid: 50b78a9e6e6a440be9ccc3a84568578e, type: 3}
   color: {r: 1, g: 1, b: 1, a: 1}
   isDiscovered: 0

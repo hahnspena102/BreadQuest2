@@ -39,7 +39,7 @@ public class SaveData : ScriptableObject
         yeast = 0;
         yeastLevel = 1;
         gold = 100;
-        mainSlotId = null;
+        mainSlotId = "";
         subSlotId = null;
         passive = null;
         healthPotions = 3;

@@ -17,9 +17,9 @@ public class GameManager : MonoBehaviour
         { "flavorless", new Color(0.680506f, 0.5850837f,0.7169812f)},
         { "vanilla", new Color(1f, 0.9617949f, 0.7971698f)},
         { "cacao", new Color(0.509434f,0.362371f,0.3147918f) },
-        { "fruity", new Color(1f, 0.673f, 0.8505448f)},
+        { "fruity", new Color(97f/255f, 142/255f, 255f/255f)},
         { "grain", new Color(1f,0.8153504f,0.4481132f)},
-        { "spicy", new Color(1f, 0.7417727f, 0.495283f) }
+        { "spicy", new Color(1f, 77/255f, 77/255f) }
     };
 
     //attacking -> defending
@@ -38,6 +38,7 @@ public class GameManager : MonoBehaviour
         {"epic", 15},
         {"legendary", 5}
     };
+    [SerializeField]private SirGluten sirGluten;
 
     private static List<GameObject> combinedItemList = new List<GameObject>();
     [SerializeField]private List<GameObject> itemsTier0 = new List<GameObject>(){};
@@ -48,7 +49,7 @@ public class GameManager : MonoBehaviour
     [SerializeField]private List<Passive> passivesTier2 = new List<Passive>(){};
     [SerializeField]private List<Passive> passivesTier3 = new List<Passive>(){};
     [SerializeField] private GameObject shopUI;
-    [SerializeField]private int floor;
+    [SerializeField]private string floor;
 
     public List<GameObject> ItemsTier0 { get => itemsTier0; set => itemsTier0 = value; }
     public List<GameObject> ItemsTier1 { get => itemsTier1; set => itemsTier1 = value; }
@@ -58,7 +59,7 @@ public class GameManager : MonoBehaviour
     public List<Passive> PassivesTier2 { get => passivesTier2; set => passivesTier2 = value; }
     public List<Passive> PassivesTier3 { get => passivesTier3; set => passivesTier3 = value; }
     public GameObject ShopUI { get => shopUI; set => shopUI = value; }
-    public global::System.Int32 Floor { get => floor; set => floor = value; }
+    public global::System.String Floor { get => floor; set => floor = value; }
 
     void Start() {
         ProjectileStore = GameObject.Find("ProjectileStore");
@@ -71,6 +72,8 @@ public class GameManager : MonoBehaviour
         combinedItemList.AddRange(itemsTier1);
         combinedItemList.AddRange(itemsTier2);
         combinedItemList.AddRange(itemsTier3);
+
+        sirGluten.CurSaveData.Floor = floor;
         
     }
 

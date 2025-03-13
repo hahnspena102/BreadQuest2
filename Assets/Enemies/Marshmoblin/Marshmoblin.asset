@@ -13,8 +13,9 @@ MonoBehaviour:
   m_Name: Marshmoblin
   m_EditorClassIdentifier: 
   enemyName: Marshmoblin
-  description: Loyal henchman...
-  health: 20
+  description: Marshmoblins are loyal members of the S'more Goblins. Despite being
+    mostly lower class troops, they stay loyal.
+  health: 12
   damage: 10
   flavoring: vanilla
   xpMultiplier: 1.5

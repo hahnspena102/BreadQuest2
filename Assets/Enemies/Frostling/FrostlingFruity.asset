@@ -13,11 +13,13 @@ MonoBehaviour:
   m_Name: FrostlingFruity
   m_EditorClassIdentifier: 
   enemyName: Fruity Frostling
-  description: Fruity frostling
+  description: Although cute, these creatures are harmful when provoked. Creates
+    a spiral of strawberry frosting shurikens.
   health: 12
   damage: 10
   flavoring: vanilla
   xpMultiplier: 1
+  goldMultiplier: 1
   sprite: {fileID: 1364999022, guid: 50b78a9e6e6a440be9ccc3a84568578e, type: 3}
   color: {r: 1, g: 0.627451, b: 0.8509804, a: 1}
   isDiscovered: 0
