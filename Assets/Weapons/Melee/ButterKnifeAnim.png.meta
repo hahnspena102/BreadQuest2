@@ -1,19 +1,34 @@
 fileFormatVersion: 2
-guid: 9174f2dd099f54093a12982bdb670e0a
+guid: 54331b6326b224f559597d0adcf0381c
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 1426039237274363352
-    second: GummyWormMove_0
+      213: 1069427433654190624
+    second: ButterKnifeAnim_0
   - first:
-      213: -6136127307736463316
-    second: GummyWormMove_1
+      213: 5240650572906013169
+    second: ButterKnifeAnim_1
   - first:
-      213: 7326427048732126010
-    second: GummyWormMove_2
+      213: -7141399982848146179
+    second: ButterKnifeAnim_2
   - first:
-      213: -8496790810623711402
-    second: GummyWormMove_3
+      213: 6112303274152871137
+    second: ButterKnifeAnim_3
+  - first:
+      213: 7661329541893814386
+    second: ButterKnifeAnim_4
+  - first:
+      213: 2105650846303131788
+    second: ButterKnifeAnim_5
+  - first:
+      213: 688984746692428388
+    second: ButterKnifeAnim_6
+  - first:
+      213: -6827686440915229338
+    second: ButterKnifeAnim_7
+  - first:
+      213: -442854391393513594
+    second: ButterKnifeAnim_8
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -122,13 +137,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: GummyWormMove_0
+      name: ButterKnifeAnim_0
       rect:
         serializedVersion: 2
-        x: 6
-        y: 20
-        width: 61
-        height: 18
+        x: 48
+        y: 204
+        width: 10
+        height: 29
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -137,20 +152,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 8d5e18d712f4ac310800000000000000
-      internalID: 1426039237274363352
+      spriteID: 0220408b59e57de00800000000000000
+      internalID: 1069427433654190624
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GummyWormMove_1
+      name: ButterKnifeAnim_1
       rect:
         serializedVersion: 2
-        x: 72
-        y: 20
-        width: 62
-        height: 17
+        x: 145
+        y: 199
+        width: 10
+        height: 29
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -159,20 +174,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: c284bc569b818daa0800000000000000
-      internalID: -6136127307736463316
+      spriteID: 1f1a20e0ee78ab840800000000000000
+      internalID: 5240650572906013169
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GummyWormMove_2
+      name: ButterKnifeAnim_2
       rect:
         serializedVersion: 2
-        x: 141
-        y: 18
-        width: 63
-        height: 16
+        x: 240
+        y: 200
+        width: 10
+        height: 29
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -181,20 +196,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: a3bed707592bca560800000000000000
-      internalID: 7326427048732126010
+      spriteID: df40b576d86a4ec90800000000000000
+      internalID: -7141399982848146179
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GummyWormMove_3
+      name: ButterKnifeAnim_3
       rect:
         serializedVersion: 2
-        x: 212
-        y: 0
-        width: 68
-        height: 37
+        x: 39
+        y: 155
+        width: 10
+        height: 27
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -203,8 +218,118 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 65768f196c5551a80800000000000000
-      internalID: -8496790810623711402
+      spriteID: 1e4c657817343d450800000000000000
+      internalID: 6112303274152871137
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ButterKnifeAnim_4
+      rect:
+        serializedVersion: 2
+        x: 134
+        y: 158
+        width: 10
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 27879cb70a2825a60800000000000000
+      internalID: 7661329541893814386
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ButterKnifeAnim_5
+      rect:
+        serializedVersion: 2
+        x: 231
+        y: 157
+        width: 10
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c8816ead946c83d10800000000000000
+      internalID: 2105650846303131788
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ButterKnifeAnim_6
+      rect:
+        serializedVersion: 2
+        x: 43
+        y: 38
+        width: 42
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 462c34a0af3cf8900800000000000000
+      internalID: 688984746692428388
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ButterKnifeAnim_7
+      rect:
+        serializedVersion: 2
+        x: 167
+        y: 45
+        width: 25
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6652f7b4b5f2f31a0800000000000000
+      internalID: -6827686440915229338
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ButterKnifeAnim_8
+      rect:
+        serializedVersion: 2
+        x: 261
+        y: 44
+        width: 25
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 68f84c1074aaad9f0800000000000000
+      internalID: -442854391393513594
       vertices: []
       indices: 
       edges: []
@@ -222,11 +347,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      GummyWormMove_0: 1426039237274363352
-      GummyWormMove_1: -6136127307736463316
-      GummyWormMove_2: 7326427048732126010
-      GummyWormMove_3: -8496790810623711402
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
