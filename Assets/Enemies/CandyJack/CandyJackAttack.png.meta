@@ -1,0 +1,481 @@
+fileFormatVersion: 2
+guid: 453f6ef63764c4e8580bd23b1af75c77
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 3933889522324365623
+    second: CandyJackAttack_0
+  - first:
+      213: 8905484402476230673
+    second: CandyJackAttack_1
+  - first:
+      213: -2209726000545113050
+    second: CandyJackAttack_2
+  - first:
+      213: 3549889429435849323
+    second: CandyJackAttack_3
+  - first:
+      213: 6898370936000806727
+    second: CandyJackAttack_4
+  - first:
+      213: -3479102616264707915
+    second: CandyJackAttack_5
+  - first:
+      213: -6030599352635773880
+    second: CandyJackAttack_6
+  - first:
+      213: -3289859272934415918
+    second: CandyJackAttack_7
+  - first:
+      213: 102555681871394146
+    second: CandyJackAttack_8
+  - first:
+      213: 8714661195418851322
+    second: CandyJackAttack_9
+  - first:
+      213: 4745197573572760353
+    second: CandyJackAttack_10
+  - first:
+      213: 4333302804403948328
+    second: CandyJackAttack_11
+  - first:
+      213: -9170913323666306455
+    second: CandyJackAttack_12
+  - first:
+      213: 3769755828592117366
+    second: CandyJackAttack_13
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 32
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: CandyJackAttack_0
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 20
+        width: 33
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 73166cb8dabf79630800000000000000
+      internalID: 3933889522324365623
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CandyJackAttack_1
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 20
+        width: 33
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 118a06a71e2a69b70800000000000000
+      internalID: 8905484402476230673
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CandyJackAttack_2
+      rect:
+        serializedVersion: 2
+        x: 124
+        y: 48
+        width: 15
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 62c509ef8e97551e0800000000000000
+      internalID: -2209726000545113050
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CandyJackAttack_3
+      rect:
+        serializedVersion: 2
+        x: 124
+        y: 20
+        width: 40
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b6a1071c0adb34130800000000000000
+      internalID: 3549889429435849323
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CandyJackAttack_4
+      rect:
+        serializedVersion: 2
+        x: 183
+        y: 20
+        width: 41
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 74ff43131dfebbf50800000000000000
+      internalID: 6898370936000806727
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CandyJackAttack_5
+      rect:
+        serializedVersion: 2
+        x: 184
+        y: 48
+        width: 15
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5b0f8648a9eb7bfc0800000000000000
+      internalID: -3479102616264707915
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CandyJackAttack_6
+      rect:
+        serializedVersion: 2
+        x: 241
+        y: 20
+        width: 43
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 84ca17b17d10f4ca0800000000000000
+      internalID: -6030599352635773880
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CandyJackAttack_7
+      rect:
+        serializedVersion: 2
+        x: 245
+        y: 45
+        width: 19
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2d128b3fb621852d0800000000000000
+      internalID: -3289859272934415918
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CandyJackAttack_8
+      rect:
+        serializedVersion: 2
+        x: 299
+        y: 20
+        width: 45
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 26574ab69d95c6100800000000000000
+      internalID: 102555681871394146
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CandyJackAttack_9
+      rect:
+        serializedVersion: 2
+        x: 305
+        y: 45
+        width: 19
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: af752da5f22b0f870800000000000000
+      internalID: 8714661195418851322
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CandyJackAttack_10
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 20
+        width: 44
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 12399d15d045ad140800000000000000
+      internalID: 4745197573572760353
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CandyJackAttack_11
+      rect:
+        serializedVersion: 2
+        x: 121
+        y: 25
+        width: 6
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 82b83b811fbf22c30800000000000000
+      internalID: 4333302804403948328
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CandyJackAttack_12
+      rect:
+        serializedVersion: 2
+        x: 181
+        y: 25
+        width: 6
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 96a09f4fbee5ab080800000000000000
+      internalID: -9170913323666306455
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CandyJackAttack_13
+      rect:
+        serializedVersion: 2
+        x: 364
+        y: 18
+        width: 10
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 676013df3fcd05430800000000000000
+      internalID: 3769755828592117366
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      CandyJackAttack_0: 3933889522324365623
+      CandyJackAttack_1: 8905484402476230673
+      CandyJackAttack_10: 4745197573572760353
+      CandyJackAttack_11: 4333302804403948328
+      CandyJackAttack_12: -9170913323666306455
+      CandyJackAttack_13: 3769755828592117366
+      CandyJackAttack_2: -2209726000545113050
+      CandyJackAttack_3: 3549889429435849323
+      CandyJackAttack_4: 6898370936000806727
+      CandyJackAttack_5: -3479102616264707915
+      CandyJackAttack_6: -6030599352635773880
+      CandyJackAttack_7: -3289859272934415918
+      CandyJackAttack_8: 102555681871394146
+      CandyJackAttack_9: 8714661195418851322
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
