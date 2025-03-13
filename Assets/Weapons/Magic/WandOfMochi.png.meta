@@ -197,7 +197,10 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      WandOfMochi_0: 5125201553696344367
+      WandOfMochi_1: 4706366660648549809
+      WandOfMochi_2: 7296025589157677109
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -647,7 +647,28 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      ButterKnifeAnim_0: 1069427433654190624
+      ButterKnifeAnim_1: 5240650572906013169
+      ButterKnifeAnim_10: -3088234927040791073
+      ButterKnifeAnim_11: -2952524665046863720
+      ButterKnifeAnim_12: -5338012080549185877
+      ButterKnifeAnim_13: -1785955279630107921
+      ButterKnifeAnim_14: -3537844028974236708
+      ButterKnifeAnim_15: 436601024689647193
+      ButterKnifeAnim_16: 8911629666737348380
+      ButterKnifeAnim_17: -3760899926289944947
+      ButterKnifeAnim_18: 5311331012406364552
+      ButterKnifeAnim_19: 7302185609347087111
+      ButterKnifeAnim_2: -7141399982848146179
+      ButterKnifeAnim_20: -7494079144506668158
+      ButterKnifeAnim_3: 6112303274152871137
+      ButterKnifeAnim_4: 7661329541893814386
+      ButterKnifeAnim_5: 2105650846303131788
+      ButterKnifeAnim_6: 688984746692428388
+      ButterKnifeAnim_7: -6827686440915229338
+      ButterKnifeAnim_8: -442854391393513594
+      ButterKnifeAnim_9: -6804027486159728571
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
