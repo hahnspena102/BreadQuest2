@@ -13,12 +13,14 @@ MonoBehaviour:
   m_Name: JellySlimeFruity
   m_EditorClassIdentifier: 
   enemyName: Fruity Jelly Slime
-  description: A fruity jelly slime.
+  description: Made out of jelatin, this slime chases anyone near it. It is said
+    they smell like strawberries.
   health: 5
   damage: 5
   flavoring: fruity
   xpMultiplier: 1
+  goldMultiplier: 1
   sprite: {fileID: -3185840198574943544, guid: d8a7d64c6f2c92949a8c8eb29b7279ba, type: 3}
-  color: {r: 1, g: 0.627451, b: 0.8509804, a: 0}
-  isDiscovered: 0
+  color: {r: 1, g: 0.627451, b: 0.8509804, a: 1}
+  isDiscovered: 1
   detectionRadius: 10

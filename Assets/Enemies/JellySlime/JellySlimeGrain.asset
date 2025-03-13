@@ -12,13 +12,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5961343830b40814e8d1fdca4c078598, type: 3}
   m_Name: JellySlimeGrain
   m_EditorClassIdentifier: 
-  enemyName: Fruity Jelly Slime
-  description: A fruity jelly slime.
+  enemyName: Grain Jelly Slime
+  description: Made out of jelly, this slime chases anyone near it. It is said they
+    smell like vanilla bread.
   health: 5
   damage: 5
   flavoring: fruity
   xpMultiplier: 1
+  goldMultiplier: 1
   sprite: {fileID: -3185840198574943544, guid: d8a7d64c6f2c92949a8c8eb29b7279ba, type: 3}
-  color: {r: 1, g: 0.627451, b: 0.8509804, a: 0}
+  color: {r: 1, g: 0.8235294, b: 0.38039216, a: 1}
   isDiscovered: 0
   detectionRadius: 10

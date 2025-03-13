@@ -18,7 +18,8 @@ MonoBehaviour:
   damage: 10
   flavoring: vanilla
   xpMultiplier: 1.5
-  sprite: {fileID: 1802537128826739424, guid: d50c04a96d58a43b5ab7518986ce7e52, type: 3}
+  goldMultiplier: 1
+  sprite: {fileID: 545619562, guid: ac4381cda45210643951675681f8305d, type: 3}
   color: {r: 1, g: 1, b: 1, a: 1}
-  isDiscovered: 0
+  isDiscovered: 1
   detectionRadius: 10

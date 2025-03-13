@@ -15,43 +15,30 @@ public class SirGluten : MonoBehaviour
     
 
     // STATS
+    [SerializeField]private SaveData curSaveData;
     private int health, glucose, yeast, yeastLevel;
     private int maxHealth=100, maxGlucose=30, maxYeast, maxYeastLevel = 10;
 
-    [SerializeField] private GameObject healthBar, glucoseBar, yeastBar;
-    private Slider healthSlider, glucoseSlider, yeastSlider;
-    private TMPro.TextMeshProUGUI healthText, glucoseText, yeastText;
-
     [SerializeField] private GameObject damagePopup;
-
-    [SerializeField] private GameObject infoUI;
-    private Dictionary<string,TextMeshProUGUI> infoText = new Dictionary<string, TextMeshProUGUI>();
+    
 
     // BOOLS
-    private bool isAttacking, isHurting, isLocked, isAnimationLocked;
+    private bool isAttacking, isHurting, isLocked, isAnimationLocked, isNavigatingUI;
 
     // INVENTORY
     private GameObject hoveredWeapon;
     private Weapon hoveredWeaponItem;
     private Weapon mainSlot,subSlot;
-
-    [SerializeField]private Image mainSlotImage, subSlotImage;
+    [SerializeField]private Passive passiveSlot;
+    private int healthPotions, glucosePotions;
+    private int hPotTimer, hPotCooldown = 30, gPotTimer, gPotCooldown = 30;
+    private int gold;
 
     // STATICS
     public static Vector2 playerPosition;
 
     private int weaponAnimationFrame = 0;
-    public static int staticYeast = 0;
-
-    //GETTERS
-
-    public global::System.Boolean IsAttacking { get => isAttacking; set => isAttacking = value; }
-    public global::System.Boolean IsHurting { get => isHurting; set => isHurting = value; }
-    public global::System.Boolean IsAnimationLocked { get => isAnimationLocked; set => isAnimationLocked = value; }
-    public Weapon MainSlot { get => mainSlot; set => mainSlot = value; }
-    public Weapon SubSlot { get => subSlot; set => subSlot = value; }
-    public global::System.Int32 WeaponAnimationFrame { get => weaponAnimationFrame; set => weaponAnimationFrame = value; }
-    public global::System.Int32 Glucose { get => glucose; set => glucose = value; }
+    public static int staticYeast = 0, staticGold = 0;
 
     void Start()
     {
@@ -61,39 +48,81 @@ public class SirGluten : MonoBehaviour
         
         InitStats();
         UpdateStats();
-        StartCoroutine(RegenerateGlucose());
-
-        infoText["mainName"] = infoUI.transform.GetChild(0).gameObject.GetComponent<TextMeshProUGUI>();
-        infoText["mainDesc"] = infoUI.transform.GetChild(1).gameObject.GetComponent<TextMeshProUGUI>();
-        infoText["subName"] = infoUI.transform.GetChild(2).gameObject.GetComponent<TextMeshProUGUI>();
-        infoText["subDesc"] = infoUI.transform.GetChild(3).gameObject.GetComponent<TextMeshProUGUI>();
+        StartCoroutine(OneSecondCoroutine());
         
+        StartCoroutine(LoadSaveData());
+        
+    }
+
+    IEnumerator LoadSaveData(){
+        yield return new WaitForSeconds(0.01f);
+        yeast = curSaveData.Yeast;
+        yeastLevel = curSaveData.YeastLevel;
+        gold = curSaveData.Gold;
+        
+        passiveSlot = curSaveData.Passive;
+        healthPotions = curSaveData.HealthPotions;
+        glucosePotions = curSaveData.GlucosePotions;
+
+        GameObject foundMainWeapon = GameManager.FindWeapon(curSaveData.MainSlotId);
+        if (foundMainWeapon != null) {
+            GameObject newMainSlot = Instantiate(foundMainWeapon, transform.position, Quaternion.identity);
+            newMainSlot.transform.SetParent(transform);
+            mainSlot = newMainSlot.GetComponent<Weapon>();
+            yield return new WaitForSeconds(0.01f);
+            newMainSlot.transform.GetChild(0).gameObject.SetActive(false);
+        }
+        GameObject foundSubWeapon = GameManager.FindWeapon(curSaveData.SubSlotId);
+        if (foundSubWeapon != null) {
+            GameObject newSubSlot = Instantiate(foundSubWeapon, transform.position, Quaternion.identity);
+            newSubSlot.transform.SetParent(transform);
+            subSlot = newSubSlot.GetComponent<Weapon>();
+            yield return new WaitForSeconds(0.01f);
+            newSubSlot.transform.GetChild(0).gameObject.SetActive(false);
+        }
+    }
+
+    public void SaveData() {
+        curSaveData.Yeast = yeast;
+        curSaveData.YeastLevel = yeastLevel;
+        curSaveData.Gold = gold;
+        if (mainSlot != null) {
+            curSaveData.MainSlotId = mainSlot.GetComponent<Weapon>().Id;
+        } else {
+            curSaveData.MainSlotId = "";
+        }
+        if (subSlot != null) {
+            curSaveData.SubSlotId = subSlot.GetComponent<Weapon>().Id;
+        } else {
+            curSaveData.SubSlotId = "";
+        }
+        
+        curSaveData.Passive = passiveSlot;
+        curSaveData.HealthPotions = healthPotions;
+        curSaveData.GlucosePotions = glucosePotions;
     }
 
     // Initializes the Stat Values and Slider/Text variables.
     void InitStats(){
         health = maxHealth;
         glucose = maxGlucose;
-        yeast = 0;
-        yeastLevel = 1;
-
-        healthSlider = healthBar.GetComponentInChildren<Slider>();
-        glucoseSlider = glucoseBar.GetComponentInChildren<Slider>();
-        yeastSlider = yeastBar.GetComponentInChildren<Slider>();
-
-        healthText = healthBar.GetComponentInChildren<TMPro.TextMeshProUGUI>();
-        glucoseText = glucoseBar.GetComponentInChildren<TMPro.TextMeshProUGUI>();
-        yeastText = yeastBar.GetComponentInChildren<TMPro.TextMeshProUGUI>();
+        //yeast = 0;
+       // yeastLevel = 1;
     }
 
-    private IEnumerator RegenerateGlucose()
+    private IEnumerator OneSecondCoroutine()
     {
         while (true) {
             yield return new WaitForSeconds(1f);
-            if (glucose < maxGlucose)
-            {
-                glucose += 1;
+            if (passiveSlot != null) {
+                if (health < maxHealth && passiveSlot != null) health += passiveSlot.HealthRegeneration;
+                if (glucose < maxGlucose && passiveSlot != null) glucose += 1 + passiveSlot.GlucoseRegeneration;
+            } else {
+                if (glucose < maxGlucose && passiveSlot != null) glucose += 1;
             }
+            if (hPotTimer > 0) hPotTimer--;
+            if (gPotTimer > 0) gPotTimer--;
+
         }
     }
     
@@ -109,28 +138,15 @@ public class SirGluten : MonoBehaviour
             maxGlucose = 30 + (yeastLevel * 2);
             health = maxHealth;
             glucose = maxGlucose;
-        }
-
-
-        
-
-        healthSlider.value = health;
-        healthSlider.maxValue = maxHealth;
-        glucoseSlider.value = glucose;
-        glucoseSlider.maxValue = maxGlucose;
-        yeastSlider.value = yeast;
-        yeastSlider.maxValue = maxYeast;
-
-
-        healthText.text = health + "/" + maxHealth;
-        glucoseText.text = glucose + "/" + maxGlucose;
+        }        
         if (yeastLevel >= maxYeastLevel) {
             yeast = maxYeast;
-            yeastText.text = "Level: MAX";
-        } else {
-            yeastText.text = "Level: " + yeastLevel;
         }
-        
+
+        if (staticGold > 0) {
+            gold = gold + staticGold;
+            staticGold = 0;
+        }
     }
 
     void Update() {
@@ -141,7 +157,7 @@ public class SirGluten : MonoBehaviour
         UpdateStats();
 
         if (health <= 0) { 
-            SceneManager.LoadScene(1);
+            SceneManager.LoadScene("GameOver");
         }
 
         // Movement
@@ -149,6 +165,9 @@ public class SirGluten : MonoBehaviour
         horizontalInput = Input.GetAxisRaw("Horizontal");
 
         //if (Input.GetKeyDown(KeyCode.P)) yeast += 50;
+
+        // BOOLS
+        //isNavigatingUI = shopUI.activeSelf || compendium.activeSelf;
 
         if (Input.GetKeyDown(KeyCode.E) && hoveredWeaponItem != null && !isAttacking) {
             Equip();
@@ -159,6 +178,19 @@ public class SirGluten : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Q) && mainSlot != null && !isAttacking) {
             Drop();
         }
+        if ((Input.GetKeyDown(KeyCode.H) || Input.GetKeyDown(KeyCode.C)) && !isAttacking) {
+            UseHealthPotion();
+        }
+        if ((Input.GetKeyDown(KeyCode.G) || Input.GetKeyDown(KeyCode.X)) && !isAttacking) {
+            UseGlucosePotion();
+        }
+
+        if (Input.GetKeyDown(KeyCode.Escape)) {
+            SaveData();
+            SceneManager.LoadScene("MainMenu");
+        }
+        
+
 
         if (!isLocked) MovePlayer();    
 
@@ -167,71 +199,29 @@ public class SirGluten : MonoBehaviour
             animator.SetFloat("horizontal", Mathf.Abs(body.linearVelocity.x));
             animator.SetFloat("vertical", body.linearVelocity.y);
             animator.SetBool("isMoving", body.linearVelocity.x != 0 || body.linearVelocity.y != 0);
+            animator.SetBool("isHurting", isHurting);
         }
-
-        if (Input.GetKey(KeyCode.Tab)) {
-            infoUI.gameObject.SetActive(true);
-            UpdateUI();
-        } else {
-            infoUI.gameObject.SetActive(false);
-        }
+        if (!isHurting) animator.SetBool("isHurting", isHurting);
     }
 
-    void UpdateUI() {
-        if (mainSlot != null) {
-            Weapon mainWeapon = mainSlot.GetComponent<Weapon>();
-            infoText["mainName"].text = mainWeapon.WeaponName;
-            string description = $"{mainWeapon.Description}";
-            if (mainWeapon != null) {
-                description += $"\nAtk: {mainWeapon.AttackDamage} - Flavor: {mainWeapon.Flavor}";
+    void MovePlayer(){
+        body.linearVelocity = new Vector2(horizontalInput,verticalInput).normalized * speed;
+        
+        if (!isAttacking) {
+            if (horizontalInput < 0) {
+                transform.rotation = Quaternion.Euler(0f, 180f, 0f);
+            } else if (horizontalInput > 0) {
+                transform.rotation = Quaternion.Euler(0f, 0f, 0f);
             }
-            Magic magic = mainWeapon.GetComponent<Magic>();
-            if (magic != null) description += $" - Glucose: {magic.GlucoseCost}";
-            infoText["mainDesc"].text = description;
-        } else {
-            infoText["mainName"].text = "<empty>";
-            infoText["mainDesc"].text = "";
-        }
-        if (subSlot != null) {
-            Weapon subWeapon = subSlot.GetComponent<Weapon>();
-            infoText["subName"].text = subWeapon.WeaponName;
-            string description = "";
-            if (subWeapon != null) {
-                description += $"\nAtk: {subWeapon.AttackDamage} - Flavor: {subWeapon.Flavor}";
+            if (verticalInput != 0 && horizontalInput == 0) {
+                transform.rotation = Quaternion.Euler(0f, 0f, 0f);
             }
-            Magic magic = subWeapon.GetComponent<Magic>();
-            if (magic != null) description += $" - Glucose: {magic.GlucoseCost}";
-            infoText["subDesc"].text = description;
-        } else {
-            infoText["subName"].text = "<empty>";
-            infoText["subDesc"].text = "";
-        }
-    } 
-
-    void UpdateInventory() {
-        if (mainSlot != null) {
-            mainSlotImage.sprite = mainSlot.InventorySprite;
-            mainSlotImage.color = Color.white;
-        } else {
-            mainSlotImage.sprite = null;
-            mainSlotImage.color = new Color(1f,1f,1f,0f);
-        }
-        if (subSlot != null) {
-            subSlotImage.sprite = subSlot.InventorySprite;
-            subSlotImage.color = Color.white;
-        } 
-        else {
-            subSlotImage.sprite = null;
-            subSlotImage.color = new Color(1f,1f,1f,0f);
         }
     }
 
     void Equip() {
         if (mainSlot != null && subSlot != null) Drop();
-        if (mainSlot != null && subSlot == null) {
-            subSlot = mainSlot;
-            subSlotImage.sprite = mainSlot.InventorySprite;
-        }
+        if (mainSlot != null && subSlot == null) subSlot = mainSlot;
 
         mainSlot = hoveredWeaponItem;
 
@@ -243,9 +233,6 @@ public class SirGluten : MonoBehaviour
 
         mainSlot.transform.position = body.position;
         mainSlot.transform.localRotation = Quaternion.identity;
-
-
-        UpdateInventory();
     }
 
     void Swap() {
@@ -254,8 +241,6 @@ public class SirGluten : MonoBehaviour
         Weapon tempSlot = subSlot;
         subSlot = mainSlot;
         mainSlot = tempSlot;
-
-        UpdateInventory();
     }
 
     void Drop() {
@@ -287,11 +272,26 @@ public class SirGluten : MonoBehaviour
             subSlot = null;
             
         }
-        
-        UpdateInventory();
     }
 
-    IEnumerator Hurt(int damage){
+    void UseHealthPotion() {
+        if (healthPotions <= 0 || hPotTimer > 0 || health >= maxHealth) return;
+        healthPotions--;
+
+        health += 50;
+        health = Mathf.Clamp(health, 0, maxHealth);
+        hPotTimer += hPotCooldown;
+    }
+    
+    void UseGlucosePotion() {
+        if (glucosePotions <= 0 || gPotTimer > 0 || glucose >= maxGlucose) return;
+        glucosePotions--;
+
+        glucose += 30;
+        glucose = Mathf.Clamp(glucose, 0, maxGlucose);
+        gPotTimer += gPotCooldown;
+    }
+    public IEnumerator Hurt(int damage){
         if (isHurting) yield break;
         isHurting = true;
 
@@ -325,44 +325,6 @@ public class SirGluten : MonoBehaviour
         dp.transform.SetParent(GameManager.EffectStore.transform);
     }
 
-    void MovePlayer(){
-        body.linearVelocity = new Vector2(horizontalInput,verticalInput).normalized * speed;
-        
-        if (!isAttacking) {
-            if (horizontalInput < 0) {
-                transform.rotation = Quaternion.Euler(0f, 180f, 0f);
-            } else if (horizontalInput > 0) {
-                transform.rotation = Quaternion.Euler(0f, 0f, 0f);
-            }
-            if (verticalInput != 0 && horizontalInput == 0) {
-                transform.rotation = Quaternion.Euler(0f, 0f, 0f);
-            }
-        }
-    }
-
-    void OnCollisionEnter2D(Collision2D collision) {
-        
-        if (collision.gameObject.tag == "Enemy") {
-            Enemy enemy = collision.gameObject.GetComponent<Enemy>();
-//            Debug.Log("You take damage: " + enemy.Damage + "Current damage: " + health);
-            Vector2 collisionPoint = collision.transform.position;
-                Vector2 direction;
-
-            if (collisionPoint.x > transform.position.x) {
-                direction = new Vector2(-1f, 1f); 
-            } else {
-                direction = new Vector2(1f, 1f);
-            }
-
-            isLocked = true;
-            body.AddForce(direction * 1.2f, ForceMode2D.Impulse);
-            StartCoroutine(Hurt(enemy.Damage));
-        } else if (collision.gameObject.tag == "EnemyAttack") {
-            EnemyAttack enemyAttack = collision.gameObject.GetComponent<EnemyAttack>();
-            StartCoroutine(Hurt(enemyAttack.Damage));
-        }
-    }
-
     void OnTriggerEnter2D(Collider2D collider) {
         if (collider.gameObject.tag == "Item") {
             if (hoveredWeaponItem != null) hoveredWeaponItem.HoverTextOff();
@@ -382,12 +344,37 @@ public class SirGluten : MonoBehaviour
         }
     }
 
-    void SetAnimationFrame(int index) {
-        //Debug.Log(index);
-        weaponAnimationFrame = index;
-    }
-
     void TurnOffAnimation() {
         mainSlot.transform.GetChild(1).gameObject.SetActive(false);
     }
+
+    //GETTERS
+    public global::System.Boolean IsAttacking { get => isAttacking; set => isAttacking = value; }
+    public global::System.Boolean IsHurting { get => isHurting; set => isHurting = value; }
+    public global::System.Boolean IsAnimationLocked { get => isAnimationLocked; set => isAnimationLocked = value; }
+    public Weapon MainSlot { get => mainSlot; set => mainSlot = value; }
+    public Weapon SubSlot { get => subSlot; set => subSlot = value; }
+    public global::System.Int32 WeaponAnimationFrame { get => weaponAnimationFrame; set => weaponAnimationFrame = value; }
+    public global::System.Int32 Glucose { get => glucose; set => glucose = value; }
+    public global::System.Int32 HealthPotions { get => healthPotions; set => healthPotions = value; }
+    public global::System.Int32 GlucosePotions { get => glucosePotions; set => glucosePotions = value; }
+    public global::System.Int32 HPotTimer { get => hPotTimer; set => hPotTimer = value; }
+    public global::System.Int32 HPotCooldown { get => hPotCooldown; set => hPotCooldown = value; }
+    public global::System.Int32 GPotTimer { get => gPotTimer; set => gPotTimer = value; }
+    public global::System.Int32 GPotCooldown { get => gPotCooldown; set => gPotCooldown = value; }
+    public global::System.Int32 Health { get => health; set => health = value; }
+    public global::System.Int32 Glucose1 { get => glucose; set => glucose = value; }
+    public global::System.Int32 Yeast { get => yeast; set => yeast = value; }
+    public global::System.Int32 YeastLevel { get => yeastLevel; set => yeastLevel = value; }
+    public global::System.Int32 MaxHealth { get => maxHealth; set => maxHealth = value; }
+    public global::System.Int32 MaxGlucose { get => maxGlucose; set => maxGlucose = value; }
+    public global::System.Int32 MaxYeast { get => maxYeast; set => maxYeast = value; }
+    public global::System.Int32 MaxYeastLevel { get => maxYeastLevel; set => maxYeastLevel = value; }
+    public Weapon MainSlot1 { get => mainSlot; set => mainSlot = value; }
+    public Weapon SubSlot1 { get => subSlot; set => subSlot = value; }
+    public Passive PassiveSlot { get => passiveSlot; set => passiveSlot = value; }
+    public global::System.Int32 Gold { get => gold; set => gold = value; }
+    public global::System.Boolean IsNavigatingUI { get => isNavigatingUI; set => isNavigatingUI = value; }
+    public SaveData CurSaveData { get => curSaveData; set => curSaveData = value; }
+    public global::System.Boolean IsLocked { get => isLocked; set => isLocked = value; }
 }

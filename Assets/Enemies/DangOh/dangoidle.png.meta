@@ -125,10 +125,10 @@ TextureImporter:
       name: dangoidle_0
       rect:
         serializedVersion: 2
-        x: 18
-        y: 12
-        width: 22
-        height: 44
+        x: 0
+        y: 0
+        width: 60
+        height: 60
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -147,10 +147,10 @@ TextureImporter:
       name: dangoidle_1
       rect:
         serializedVersion: 2
-        x: 78
-        y: 12
-        width: 22
-        height: 44
+        x: 60
+        y: 0
+        width: 60
+        height: 60
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -169,10 +169,10 @@ TextureImporter:
       name: dangoidle_2
       rect:
         serializedVersion: 2
-        x: 138
-        y: 12
-        width: 22
-        height: 44
+        x: 120
+        y: 0
+        width: 60
+        height: 60
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -191,10 +191,10 @@ TextureImporter:
       name: dangoidle_3
       rect:
         serializedVersion: 2
-        x: 198
-        y: 12
-        width: 22
-        height: 44
+        x: 180
+        y: 0
+        width: 60
+        height: 60
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -213,7 +213,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 328db4bb642710a4b8da2578489b0d04
     internalID: 0
     vertices: []
     indices: 
