@@ -397,7 +397,18 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      OsaphenaStatue_0: -6976358071088568393
+      OsaphenaStatue_1: 504024110915871238
+      OsaphenaStatue_10: 5986771543432355874
+      OsaphenaStatue_2: 2875997679904223443
+      OsaphenaStatue_3: -118325782586036236
+      OsaphenaStatue_4: 3826742853875437554
+      OsaphenaStatue_5: 6449900142056279274
+      OsaphenaStatue_6: 1743125485190806532
+      OsaphenaStatue_7: 1251668480638033134
+      OsaphenaStatue_8: 6393655756985774322
+      OsaphenaStatue_9: -9034468520768786175
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -497,7 +497,22 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      SpearmintAnim_0: 721319001125740780
+      SpearmintAnim_1: 1597521236835270776
+      SpearmintAnim_10: 3853828579517819024
+      SpearmintAnim_11: 1261382693788650328
+      SpearmintAnim_12: 297763797598771954
+      SpearmintAnim_13: -6289005442711824960
+      SpearmintAnim_14: 624107928860939404
+      SpearmintAnim_2: 4812233969842165068
+      SpearmintAnim_3: 2342907565796322323
+      SpearmintAnim_4: 7756416024059453742
+      SpearmintAnim_5: -1352258487742330934
+      SpearmintAnim_6: 226307115276357810
+      SpearmintAnim_7: -2622989114833771807
+      SpearmintAnim_8: 6705533094430290345
+      SpearmintAnim_9: -2335571300753761833
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -272,7 +272,13 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      DefensiveTaffy_0: 8012602747710438857
+      DefensiveTaffy_1: 4654449042768093307
+      DefensiveTaffy_2: 8199573286511379881
+      DefensiveTaffy_3: -2378154914975660706
+      DefensiveTaffy_4: 7218713363089528867
+      DefensiveTaffy_5: -6570937842858644324
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

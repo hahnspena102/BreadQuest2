@@ -497,7 +497,22 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      DarkChocoGreatswordAnim_0: -485746766607909419
+      DarkChocoGreatswordAnim_1: 8232046155710423475
+      DarkChocoGreatswordAnim_10: -6367953431714826884
+      DarkChocoGreatswordAnim_11: 8955926395012916700
+      DarkChocoGreatswordAnim_12: -3278443740626127063
+      DarkChocoGreatswordAnim_13: 9005666231273622997
+      DarkChocoGreatswordAnim_14: -2317939767817901371
+      DarkChocoGreatswordAnim_2: -5050081472942743551
+      DarkChocoGreatswordAnim_3: -2670879148595739129
+      DarkChocoGreatswordAnim_4: 3911065170072126702
+      DarkChocoGreatswordAnim_5: 8823041923768845709
+      DarkChocoGreatswordAnim_6: 6717031559581490528
+      DarkChocoGreatswordAnim_7: 991374466536824135
+      DarkChocoGreatswordAnim_8: 5094241524327603093
+      DarkChocoGreatswordAnim_9: -4418500365641331887
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

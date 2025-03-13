@@ -347,7 +347,16 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      BalancedBargain_0: -9029183095245611469
+      BalancedBargain_1: 5208416916726638708
+      BalancedBargain_2: 9169285044728474298
+      BalancedBargain_3: 8089326326813852744
+      BalancedBargain_4: -6304431400655165901
+      BalancedBargain_5: 5992217033274698919
+      BalancedBargain_6: 6007462567799717354
+      BalancedBargain_7: 6068189670646537396
+      BalancedBargain_8: -4703080831259207343
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

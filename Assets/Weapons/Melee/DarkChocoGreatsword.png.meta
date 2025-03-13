@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      DarkChocoGreatsword_0: 320338463863878224
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

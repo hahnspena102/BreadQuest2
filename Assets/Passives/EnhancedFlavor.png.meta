@@ -297,7 +297,14 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      EnhancedFlavor_0: 360391160261096351
+      EnhancedFlavor_1: 6109538591869728400
+      EnhancedFlavor_2: -5931512774170675780
+      EnhancedFlavor_3: 3146188812188404040
+      EnhancedFlavor_4: 6049597972877113362
+      EnhancedFlavor_5: -8905274893538203179
+      EnhancedFlavor_6: -7193006722379445560
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

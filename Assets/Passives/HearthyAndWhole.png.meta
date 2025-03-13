@@ -272,7 +272,13 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      HearthyAndWhole_0: -6813600172230540647
+      HearthyAndWhole_1: -6821081513492325824
+      HearthyAndWhole_2: -4126216225859848128
+      HearthyAndWhole_3: 2102202566198691296
+      HearthyAndWhole_4: -7344864494531768543
+      HearthyAndWhole_5: -7085357881744460322
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
