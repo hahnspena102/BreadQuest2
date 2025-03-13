@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyName: Grain Jelly Slime
   description: Made out of jelly, this slime chases anyone near it. It is said they
-    smell like vanilla bread.
+    smell like bread.
   health: 5
   damage: 5
   flavoring: fruity

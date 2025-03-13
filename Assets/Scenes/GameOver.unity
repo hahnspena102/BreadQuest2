@@ -819,6 +819,7 @@ MonoBehaviour:
   textBox: {fileID: 649704315}
   continueGroup: {fileID: 991636764}
   black: {fileID: 230333017}
+  playerData: {fileID: 11400000, guid: bab5df10eeacfaf42b1e069961483546, type: 2}
 --- !u!82 &1768647420
 AudioSource:
   m_ObjectHideFlags: 0

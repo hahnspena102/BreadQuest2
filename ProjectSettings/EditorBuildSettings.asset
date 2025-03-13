@@ -12,17 +12,17 @@ EditorBuildSettings:
     path: Assets/Scenes/GameOver.unity
     guid: 2504dbe632a78bb45b54dbbb446a8461
   - enabled: 1
+    path: Assets/Scenes/Tutorial.unity
+    guid: b0801a89d3cb4fb4996aae13c1300263
+  - enabled: 1
     path: Assets/Scenes/Floor1.unity
     guid: 31bc2d9347d2348f19e65b75b3e2c344
   - enabled: 1
     path: Assets/Scenes/Floor2.unity
-    guid: 1d38bb3eeda2cc3438fa2217ce9246de
+    guid: 64ab14bb15123f64f9e74be45f26f780
   - enabled: 1
     path: Assets/Scenes/UIScene.unity
     guid: 3c4d10948132743868aaa89b6c39c5e2
-  - enabled: 1
-    path: Assets/Scenes/Tutorial.unity
-    guid: b0801a89d3cb4fb4996aae13c1300263
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 3590b91b4603b465dbb4216d601bff33, type: 3}
   m_UseUCBPForAssetBundles: 0

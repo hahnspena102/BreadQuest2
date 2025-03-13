@@ -3,12 +3,14 @@ using UnityEngine.UI;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.SceneManagement;
+using System;
 
 public class GameOver : MonoBehaviour
 {
     [SerializeField]private TMPro.TextMeshProUGUI textBox;
     [SerializeField]private CanvasGroup continueGroup;
     [SerializeField]private CanvasGroup black;
+    [SerializeField]private SaveData playerData;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -20,7 +22,12 @@ public class GameOver : MonoBehaviour
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Return)) {
-            SceneManager.LoadScene("Floor1");
+            try {
+                SceneManager.LoadScene(playerData.Floor);
+            }
+            catch (Exception e) {
+                SceneManager.LoadScene("Floor1");
+            }  
         }
         if (Input.GetKeyDown(KeyCode.Escape)) {
             SceneManager.LoadScene("MainMenu");

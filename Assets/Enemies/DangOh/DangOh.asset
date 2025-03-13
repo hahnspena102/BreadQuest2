@@ -18,6 +18,7 @@ MonoBehaviour:
   damage: 10
   flavoring: grain
   xpMultiplier: 1.5
+  goldMultiplier: 1
   sprite: {fileID: -6050473969829582647, guid: bb206b2f72949437dbc021dadfe3468f, type: 3}
   color: {r: 1, g: 1, b: 1, a: 1}
   isDiscovered: 0

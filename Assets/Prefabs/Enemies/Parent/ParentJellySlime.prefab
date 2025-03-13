@@ -114,11 +114,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2481504245390930839, guid: 8adb11242ebd0054292835c38ebb0d7a, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.x
-      value: 0.78125
+      value: 0.9375
       objectReference: {fileID: 0}
     - target: {fileID: 2481504245390930839, guid: 8adb11242ebd0054292835c38ebb0d7a, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.y
-      value: 0.625
+      value: 0.9375
       objectReference: {fileID: 0}
     - target: {fileID: 6060517278048242370, guid: 8adb11242ebd0054292835c38ebb0d7a, type: 3}
       propertyPath: m_Sprite
@@ -136,6 +136,14 @@ PrefabInstance:
       propertyPath: flavoring
       value: flavorless
       objectReference: {fileID: 0}
+    - target: {fileID: 7208707049854281217, guid: 8adb11242ebd0054292835c38ebb0d7a, type: 3}
+      propertyPath: hurtSFX.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7208707049854281217, guid: 8adb11242ebd0054292835c38ebb0d7a, type: 3}
+      propertyPath: 'hurtSFX.Array.data[0]'
+      value: 
+      objectReference: {fileID: 8300000, guid: 565511e05bf316d4ab92555f0a059125, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -161,6 +169,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 122fcb4c19a9c4443a7de006db010017, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  detectionRadius: 10
   stopRadius: 0
   moveSpeed: 1.5

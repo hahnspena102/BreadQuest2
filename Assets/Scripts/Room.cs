@@ -22,8 +22,8 @@ public class Room : MonoBehaviour
 
     private void Start()
     {
-        barriers.SetActive(false);
-        chest.SetActive(false);
+        if (barriers != null) barriers.SetActive(false);
+        if (chest != null) chest.SetActive(false);
         foreach (Transform wave in wavesParent) {
             waveList.Add(wave);
         }
@@ -38,7 +38,7 @@ public class Room : MonoBehaviour
     }
 
     private void ActiveBarrier(){
-        barriers.SetActive(true);
+        if (barriers != null) barriers.SetActive(true);
     }
 
     private IEnumerator StartWaves()
@@ -56,8 +56,10 @@ public class Room : MonoBehaviour
             waveIndex++;
         }
         waveActive = false;
-        chest.SetActive(true);
-        chest.transform.SetParent(GameManager.InteractableStore.transform);
+        if (chest != null) {
+            chest.SetActive(true);
+            chest.transform.SetParent(GameManager.InteractableStore.transform);
+        }
         Destroy(barriers);
         Destroy(transform.parent.gameObject, 5f);
     }
