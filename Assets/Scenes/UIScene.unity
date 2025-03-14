@@ -942,7 +942,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 353}
-  m_SizeDelta: {x: 673.5407, y: 265.0327}
+  m_SizeDelta: {x: 705.3951, y: 265.0327}
   m_Pivot: {x: 0, y: 0}
 --- !u!114 &190384777
 MonoBehaviour:
@@ -2398,7 +2398,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 661.2499, y: 661.2499}
+  m_SizeDelta: {x: 447.6384, y: 447.6384}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &543651887
 MonoBehaviour:
@@ -9366,7 +9366,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1348363802}
         m_TargetAssemblyTypeName: ShopUI, Assembly-CSharp
-        m_MethodName: BuyHPot
+        m_MethodName: BuyGPot
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

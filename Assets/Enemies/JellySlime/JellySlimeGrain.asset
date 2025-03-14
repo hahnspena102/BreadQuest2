@@ -17,7 +17,7 @@ MonoBehaviour:
     smell like bread.
   health: 5
   damage: 5
-  flavoring: fruity
+  flavoring: grain
   xpMultiplier: 1
   goldMultiplier: 1
   sprite: {fileID: -3185840198574943544, guid: d8a7d64c6f2c92949a8c8eb29b7279ba, type: 3}

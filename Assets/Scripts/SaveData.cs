@@ -3,15 +3,15 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "SaveData", menuName = "Scriptable Objects/SaveData")]
 public class SaveData : ScriptableObject
 {
-    private int yeast;
-    private int yeastLevel;
-    private int gold;
-    private int healthPotions;
-    private int glucosePotions;
-    private string mainSlotId;
-    private string subSlotId;
-    private Passive passive;
-    private string floor;
+    [SerializeField]private int yeast;
+    [SerializeField]private int yeastLevel;
+    [SerializeField]private int gold;
+    [SerializeField]private int healthPotions;
+    [SerializeField]private int glucosePotions;
+    [SerializeField]private string mainSlotId;
+    [SerializeField]private string subSlotId;
+    [SerializeField]private Passive passive;
+    [SerializeField]private string floor;
 
     public global::System.Int32 Yeast { get => yeast; set => yeast = value; }
     public global::System.Int32 YeastLevel { get => yeastLevel; set => yeastLevel = value; }
@@ -27,7 +27,7 @@ public class SaveData : ScriptableObject
         yeast = 0;
         yeastLevel = 1;
         gold = 0;
-        mainSlotId = "knights_sword";
+        mainSlotId = "";
         subSlotId = null;
         passive = null;
         healthPotions = 0;
