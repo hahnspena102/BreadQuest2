@@ -15,14 +15,14 @@ public class SGHitbox : MonoBehaviour
         body = transform.parent.gameObject.GetComponent<Rigidbody2D>();
     }
     
-    void OnCollisionStay2D(Collision2D collision) {
-        if (collision.gameObject.tag == "Enemy") {
-            Enemy enemy = collision.gameObject.GetComponent<Enemy>();
+    void OnTriggerStay2D(Collider2D collider) {
+        if (collider.gameObject.tag == "Enemy") {
+            Enemy enemy = collider.gameObject.GetComponent<Enemy>();
 //            Debug.Log("You take damage: " + enemy.Damage + "Current damage: " + health);
-            Vector2 collisionPoint = collision.transform.position;
+            Vector2 colliderPoint = collider.transform.position;
                 Vector2 direction;
 
-            if (collisionPoint.x > transform.position.x) {
+            if (colliderPoint.x > transform.position.x) {
                 direction = new Vector2(-1f, 1f); 
             } else {
                 direction = new Vector2(1f, 1f);
@@ -31,9 +31,10 @@ public class SGHitbox : MonoBehaviour
             sirGluten.IsLocked = true;
             body.linearVelocity = direction * 2f;
             StartCoroutine(sirGluten.Hurt(enemy.Damage));
-        } else if (collision.gameObject.tag == "EnemyAttack") {
-            EnemyAttack enemyAttack = collision.gameObject.GetComponent<EnemyAttack>();
+        } else if (collider.gameObject.tag == "EnemyAttack") {
+            EnemyAttack enemyAttack = collider.gameObject.GetComponent<EnemyAttack>();
             StartCoroutine(sirGluten.Hurt(enemyAttack.Damage));
+            enemyAttack.DestroyOnCollide();
         }
     }
 }

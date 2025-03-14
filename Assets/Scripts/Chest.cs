@@ -70,7 +70,7 @@ public class Chest : MonoBehaviour
         newWeapon.transform.SetParent(GameManager.ItemStore.transform);
     }
 
-    void OnCollisionEnter2D(Collision2D collision) {
+    void OnCollisionStay2D(Collision2D collision) {
         if (collision.transform.tag == "Player" && !isOpened) {
             hoverText.SetActive(true);
             isOpenable = true;

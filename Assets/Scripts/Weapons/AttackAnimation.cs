@@ -13,10 +13,7 @@ public class AttackAnimation : MonoBehaviour
     private SpriteRenderer spriteRenderer;
     private Weapon weapon;
     private string weaponType;
-
-    [SerializeField]private float timeTilCollision = 0.1f;
-
-    private float elapsedTime;
+    
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()

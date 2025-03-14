@@ -20,7 +20,8 @@ public class Enemy : MonoBehaviour
     private SpriteRenderer spriteRenderer;
     private Color ogColor;
     private bool isDying;
-    private float detectionRadius = 10f;
+    [SerializeField]private float detectionRadius = 10f;
+    private float invincibility;
 
     public global::System.Int32 Damage { get => damage; set => damage = value; }
     public global::System.Single DetectionRadius { get => detectionRadius; set => detectionRadius = value; }
@@ -43,6 +44,8 @@ public class Enemy : MonoBehaviour
             GameManager.PlayParticle(deathParticle,transform.position);
             Death();
         }
+        invincibility -= Time.deltaTime;
+        invincibility = Mathf.Clamp(invincibility, 0f ,1f);
     }
 
     void Death(){
@@ -56,6 +59,8 @@ public class Enemy : MonoBehaviour
     }
 
     IEnumerator Hurt(int damage, string flavor) {
+        invincibility += 0.2f;
+
         int newDamage = damage;
         bool attackEffective = GameManager.IsEffective(flavor, flavoring);
         if (attackEffective) {
@@ -97,7 +102,7 @@ public class Enemy : MonoBehaviour
     }
 
     void OnTriggerEnter2D(Collider2D collider) {
-        if (collider.gameObject.tag == "PlayerAttack") {
+        if (collider.gameObject.tag == "PlayerAttack" && invincibility == 0) {
             GameObject item = collider.gameObject.transform.parent.gameObject;
 
             Weapon weapon = item.GetComponent<Weapon>();

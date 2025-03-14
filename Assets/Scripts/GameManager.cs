@@ -33,10 +33,9 @@ public class GameManager : MonoBehaviour
     };
 
     public static Dictionary<string, int> RarityMap = new Dictionary<string, int>() {
-        {"common", 50},
-        {"rare", 30},
-        {"epic", 15},
-        {"legendary", 5}
+        {"common", 10},
+        {"rare", 8},
+        {"epic", 5},
     };
     [SerializeField]private SirGluten sirGluten;
 
@@ -88,7 +87,7 @@ public class GameManager : MonoBehaviour
     
     public static void PlayParticle(GameObject gameObject, Vector2 position) {
         GameObject particle = Instantiate(gameObject, position, Quaternion.identity);
-        particle.transform.SetParent(EffectStore.transform);
+        if (EffectStore != null) particle.transform.SetParent(EffectStore.transform);
         Destroy(particle, 5f);
     }
 

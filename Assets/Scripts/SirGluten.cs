@@ -16,7 +16,7 @@ public class SirGluten : MonoBehaviour
 
     // STATS
     [SerializeField]private SaveData curSaveData;
-    private int health, glucose, yeast, yeastLevel;
+    private int health, glucose, yeast, yeastLevel = 1;
     private int maxHealth=100, maxGlucose=30, maxYeast, maxYeastLevel = 10;
 
     [SerializeField] private GameObject damagePopup;
@@ -237,6 +237,7 @@ public class SirGluten : MonoBehaviour
 
         mainSlot.transform.position = body.position;
         mainSlot.transform.localRotation = Quaternion.identity;
+        mainSlot.transform.localScale = new Vector3(1f, 1f, 1f);
     }
 
     void Swap() {
@@ -263,6 +264,7 @@ public class SirGluten : MonoBehaviour
             }
             itemDropped = mainSlot.transform.GetChild(0).gameObject;
             itemDropped.transform.position = transform.position;
+            itemDropped.transform.parent.transform.localScale = new Vector3(1f, 1f, 1f);
             
             itemDropped.gameObject.SetActive(true);
 
@@ -332,7 +334,7 @@ public class SirGluten : MonoBehaviour
         dp.transform.SetParent(GameManager.EffectStore.transform);
     }
 
-    void OnTriggerEnter2D(Collider2D collider) {
+    void OnTriggerStay2D(Collider2D collider) {
         if (collider.gameObject.tag == "Item") {
             if (hoveredWeaponItem != null) hoveredWeaponItem.HoverTextOff();
             hoveredWeaponItem = null;

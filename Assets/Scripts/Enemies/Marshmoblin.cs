@@ -56,7 +56,7 @@ public class Marshmoblin : MonoBehaviour
             audioSource.Play();
         }
         Vector2 spawnPosition = new Vector2(body.position.x + 0.6f, body.position.y + 0.3f);
-        Vector2 directionToPlayer = (new Vector2(SirGluten.playerPosition.x, SirGluten.playerPosition.y) - (Vector2)transform.position).normalized;
+        Vector2 directionToPlayer = (new Vector2(SirGluten.playerPosition.x, SirGluten.playerPosition.y) - (Vector2)spawnPosition).normalized;
         Quaternion rotation = Quaternion.FromToRotation(Vector2.up, directionToPlayer);
         GameObject newSpear = Instantiate(spear, spawnPosition, rotation);
         newSpear.transform.parent = GameManager.EffectStore.transform;

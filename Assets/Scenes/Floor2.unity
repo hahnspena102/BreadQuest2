@@ -5297,6 +5297,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Room2
       objectReference: {fileID: 0}
+    - target: {fileID: 4020518772096961980, guid: e13d2b19797364079a21c279c12ba7da, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8605817954047804461, guid: e13d2b19797364079a21c279c12ba7da, type: 3}
       propertyPath: m_LocalScale.x
       value: 3
@@ -6435,6 +6439,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 54892017}
     m_Modifications:
+    - target: {fileID: 6036473814294170260, guid: 70720d31584444146bd95ab473187d38, type: 3}
+      propertyPath: m_Color.b
+      value: 0.495283
+      objectReference: {fileID: 0}
+    - target: {fileID: 6036473814294170260, guid: 70720d31584444146bd95ab473187d38, type: 3}
+      propertyPath: m_Color.g
+      value: 0.97475815
+      objectReference: {fileID: 0}
+    - target: {fileID: 6036473814294170260, guid: 70720d31584444146bd95ab473187d38, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6120711398463384866, guid: 70720d31584444146bd95ab473187d38, type: 3}
       propertyPath: m_Name
       value: Chest

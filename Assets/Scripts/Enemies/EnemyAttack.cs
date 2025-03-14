@@ -9,7 +9,7 @@ public class EnemyAttack : MonoBehaviour
 {
     [SerializeField] private int damage;
     [SerializeField] private float speed;
-    [SerializeField]private float timeTilCollision = 0.1f;
+    [SerializeField]private float timeTilCollision = 0.05f;
 
     private float elapsedTime;
 
@@ -19,16 +19,20 @@ public class EnemyAttack : MonoBehaviour
         if (spearBody != null) {
             spearBody.linearVelocity = transform.up * speed; 
         }
+        Destroy(gameObject,10f);
     }
 
     void Update(){
         elapsedTime += Time.deltaTime;
     }
-    void OnCollisionEnter2D(Collision2D collision) {
-        if (collision.gameObject.tag == "Player") {
-            Destroy(gameObject, 0.05f);
-        } else if (collision.gameObject.tag == "Walls" && elapsedTime > timeTilCollision) {
+
+    void OnCollisionStay2D(Collision2D collision) {
+        if (collision.gameObject.tag == "Walls" && elapsedTime > timeTilCollision) {
             Destroy(gameObject);
         }
+    }
+
+    public void DestroyOnCollide() {
+        Destroy(gameObject);
     }
 }
