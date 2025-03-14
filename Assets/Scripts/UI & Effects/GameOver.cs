@@ -26,6 +26,7 @@ public class GameOver : MonoBehaviour
                 SceneManager.LoadScene(playerData.Floor);
             }
             catch (Exception e) {
+                Debug.Log(e);
                 SceneManager.LoadScene("Floor1");
             }  
         }

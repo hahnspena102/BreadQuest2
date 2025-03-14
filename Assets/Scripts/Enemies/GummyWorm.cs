@@ -7,7 +7,7 @@ public class GummyWorm : MonoBehaviour
     private Rigidbody2D body;
     private Animator animator;
     private float detectionRadius;
-    private bool isAttacking = false;
+    //private bool isAttacking = false;
 
     void Start()
     {
@@ -49,7 +49,7 @@ public class GummyWorm : MonoBehaviour
                 // Play attack animation
         
                 animator.SetTrigger("Attack");
-                isAttacking = true;
+                //isAttacking = true;
                 Vector2 direction = (SirGluten.playerPosition - body.position).normalized;
 
                 body.linearVelocity = direction * moveSpeed;
@@ -62,7 +62,7 @@ public class GummyWorm : MonoBehaviour
                 Vector2 direction = (SirGluten.playerPosition - body.position).normalized;
                 body.linearVelocity = direction * moveSpeed;
                 animator.SetBool("isWalking", true);
-                isAttacking = false; // Ensure isAttacking is reset
+                //isAttacking = false; // Ensure isAttacking is reset
             }
         }
         else
@@ -71,7 +71,7 @@ public class GummyWorm : MonoBehaviour
     
             body.linearVelocity = Vector2.zero;
             animator.SetBool("isWalking", false);
-            isAttacking = false;
+            //isAttacking = false;
         }    
     }
 }

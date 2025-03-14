@@ -17,7 +17,7 @@ MonoBehaviour:
     a spiral of strawberry frosting shurikens.
   health: 12
   damage: 10
-  flavoring: vanilla
+  flavoring: fruity
   xpMultiplier: 1
   goldMultiplier: 1
   sprite: {fileID: 1364999022, guid: 50b78a9e6e6a440be9ccc3a84568578e, type: 3}

@@ -71,10 +71,10 @@ public class Melee : MonoBehaviour
             if (sirGluten.WeaponAnimationFrame >= 1 && sirGluten.WeaponAnimationFrame <= 4) {
                 attackRB.gameObject.SetActive(true);
             } else {
-                attackRB.gameObject.SetActive(false);
+                //attackRB.gameObject.SetActive(false);
             }
         } else {
-            attackRB.gameObject.SetActive(false);
+            //attackRB.gameObject.SetActive(false);
         }
     }
 
@@ -109,13 +109,11 @@ public class Melee : MonoBehaviour
             weapon.AnimationDirection = "LR";
         }
         if (attackPosition.x < 0) {
-            Vector2 rotator = new Vector3(transform.rotation.x, 180f);
-            sirGluten.transform.rotation = Quaternion.Euler(rotator);
-            transform.rotation = Quaternion.Euler(rotator);
+            sirGluten.transform.localScale = new Vector3(-1f, 1f, 1f);
+            //transform.localScale = new Vector3(-1f, 1f, 1f);
         } else {
-            Vector2 rotator = new Vector3(transform.rotation.x, 0f);
-            sirGluten.transform.rotation = Quaternion.Euler(rotator);
-            transform.rotation = Quaternion.Euler(rotator);
+            sirGluten.transform.localScale = new Vector3(1f, 1f, 1f);
+            //transform.localScale = new Vector3(1f, 1f, 1f);
         }
         
         // Animation End

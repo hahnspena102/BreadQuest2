@@ -56,7 +56,7 @@ public class SirGluten : MonoBehaviour
     }
 
     IEnumerator LoadSaveData(){
-        yield return new WaitForSeconds(0.01f);
+        yield return new WaitForSeconds(0.2f);
         yeast = curSaveData.Yeast;
         yeastLevel = curSaveData.YeastLevel;
         gold = curSaveData.Gold;
@@ -70,7 +70,7 @@ public class SirGluten : MonoBehaviour
             GameObject newMainSlot = Instantiate(foundMainWeapon, transform.position, Quaternion.identity);
             newMainSlot.transform.SetParent(transform);
             mainSlot = newMainSlot.GetComponent<Weapon>();
-            yield return new WaitForSeconds(0.01f);
+            yield return new WaitForSeconds(0.1f);
             newMainSlot.transform.GetChild(0).gameObject.SetActive(false);
         }
         GameObject foundSubWeapon = GameManager.FindWeapon(curSaveData.SubSlotId);
@@ -78,7 +78,7 @@ public class SirGluten : MonoBehaviour
             GameObject newSubSlot = Instantiate(foundSubWeapon, transform.position, Quaternion.identity);
             newSubSlot.transform.SetParent(transform);
             subSlot = newSubSlot.GetComponent<Weapon>();
-            yield return new WaitForSeconds(0.01f);
+            yield return new WaitForSeconds(0.1f);
             newSubSlot.transform.GetChild(0).gameObject.SetActive(false);
         }
     }
@@ -127,7 +127,7 @@ public class SirGluten : MonoBehaviour
     }
     
     void UpdateStats(){
-        maxYeast = (int)Mathf.Round((Mathf.Pow(1.3f,yeastLevel)) * 100);
+        maxYeast = (int)Mathf.Round((Mathf.Pow(1.6f,yeastLevel)) * 100);
         //Debug.Log(maxYeast);
         yeast = Mathf.Max(yeast, staticYeast);
         if (yeast >= maxYeast && yeastLevel < maxYeastLevel) {
@@ -213,12 +213,12 @@ public class SirGluten : MonoBehaviour
         
         if (!isAttacking) {
             if (horizontalInput < 0) {
-                transform.rotation = Quaternion.Euler(0f, 180f, 0f);
+                transform.localScale = new Vector3(-1f, 1f, 1f);
             } else if (horizontalInput > 0) {
-                transform.rotation = Quaternion.Euler(0f, 0f, 0f);
+                transform.localScale = new Vector3(1f, 1f, 1f);
             }
             if (verticalInput != 0 && horizontalInput == 0) {
-                transform.rotation = Quaternion.Euler(0f, 0f, 0f);
+                transform.localScale = new Vector3(1f, 1f, 1f);
             }
         }
     }

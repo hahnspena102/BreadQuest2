@@ -13,6 +13,10 @@ public class MagicProj : MonoBehaviour
     [SerializeField] private bool isPassable = false;
     [SerializeField] private float fadeDuration = 1f;
 
+    [SerializeField]private float timeTilCollision = 0.1f;
+
+    private float elapsedTime;
+
     private SpriteRenderer spriteRenderer;
 
     public global::System.Int32 AttackDamage { get => attackDamage; set => attackDamage = value; }
@@ -27,8 +31,13 @@ public class MagicProj : MonoBehaviour
 
         StartCoroutine(FadeOutAndDestroy());
     }
+
+    void Update(){
+        elapsedTime += Time.deltaTime;
+    }
+
     void OnCollisionEnter2D(Collision2D collision) {
-        if (isPassable) return;
+        if (isPassable || elapsedTime <= timeTilCollision) return;
         Destroy(gameObject);
 
     }

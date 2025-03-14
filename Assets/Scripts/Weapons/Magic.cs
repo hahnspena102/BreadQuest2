@@ -75,14 +75,13 @@ public class Magic : MonoBehaviour
         
 
         if (attackDirection.x < 0) {
-            Vector2 rotator = new Vector3(transform.rotation.x, 180f);
-            sirGluten.transform.rotation = Quaternion.Euler(rotator);
-            transform.rotation = Quaternion.Euler(rotator);
+            sirGluten.transform.localScale = new Vector3(-1f, 1f, 1f);
+            transform.localScale = new Vector3(-1f, 1f, 1f);
         } else {
-            Vector2 rotator = new Vector3(transform.rotation.x, 0f);
-            sirGluten.transform.rotation = Quaternion.Euler(rotator);
-            transform.rotation = Quaternion.Euler(rotator);
+            sirGluten.transform.localScale = new Vector3(1f, 1f, 1f);
+            transform.localScale = new Vector3(1f, 1f, 1f);
         }
+        
 
         
         sirGluten.MainSlot.transform.GetChild(1).gameObject.SetActive(true);

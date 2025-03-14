@@ -19,13 +19,15 @@ public class Portal : MonoBehaviour
     void Update()
     {
         if (isInteractable && Input.GetKeyDown(KeyCode.E)) {
-            sirGluten.CurSaveData.Floor = destinationScene;
-            NextFloor();
+            StartCoroutine(NextFloor());
         }
     }
 
-    void NextFloor(){
-        sirGluten.SaveData();
+    IEnumerator NextFloor(){
+        if (destinationScene != "Tutorial") {
+            sirGluten.SaveData();
+        }
+        yield return new WaitForSeconds(0.5f);
         SceneManager.LoadScene(destinationScene);
     }
 
