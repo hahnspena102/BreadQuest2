@@ -11,7 +11,7 @@ PrefabInstance:
     - target: {fileID: 22522772274257005, guid: 829a10fbf2f9aa74b91d8daddff4b89c, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: -1827101700, guid: 42e64221a19e1fc4baffc60196ebd90a, type: 3}
+      objectReference: {fileID: -3035390412557001596, guid: f096d3016285b764ea31d4c29122b79d, type: 3}
     - target: {fileID: 22522772274257005, guid: 829a10fbf2f9aa74b91d8daddff4b89c, type: 3}
       propertyPath: m_SortingLayer
       value: 0
@@ -96,17 +96,50 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2185585111767699139, guid: 829a10fbf2f9aa74b91d8daddff4b89c, type: 3}
+      propertyPath: PlayerProjectile
+      value: 
+      objectReference: {fileID: 100240130476147687, guid: 88a2f002821ce3846a8765b9ed8f2fc8, type: 3}
     - target: {fileID: 5724662364475630137, guid: 829a10fbf2f9aa74b91d8daddff4b89c, type: 3}
       propertyPath: m_Name
       value: CremeBowlee
       objectReference: {fileID: 0}
+    - target: {fileID: 6399113412563231926, guid: 829a10fbf2f9aa74b91d8daddff4b89c, type: 3}
+      propertyPath: id
+      value: creme_bowlee
+      objectReference: {fileID: 0}
+    - target: {fileID: 6399113412563231926, guid: 829a10fbf2f9aa74b91d8daddff4b89c, type: 3}
+      propertyPath: flavor
+      value: vanilla
+      objectReference: {fileID: 0}
+    - target: {fileID: 6399113412563231926, guid: 829a10fbf2f9aa74b91d8daddff4b89c, type: 3}
+      propertyPath: rarity
+      value: common
+      objectReference: {fileID: 0}
+    - target: {fileID: 6399113412563231926, guid: 829a10fbf2f9aa74b91d8daddff4b89c, type: 3}
+      propertyPath: weaponName
+      value: Creme Bowlee
+      objectReference: {fileID: 0}
+    - target: {fileID: 6399113412563231926, guid: 829a10fbf2f9aa74b91d8daddff4b89c, type: 3}
+      propertyPath: weaponType
+      value: ranged
+      objectReference: {fileID: 0}
+    - target: {fileID: 6399113412563231926, guid: 829a10fbf2f9aa74b91d8daddff4b89c, type: 3}
+      propertyPath: description
+      value: Hold left click to aim down and release to shoot. Scorched by fire,
+        this creme is rich.
+      objectReference: {fileID: 0}
+    - target: {fileID: 6399113412563231926, guid: 829a10fbf2f9aa74b91d8daddff4b89c, type: 3}
+      propertyPath: attackDamage
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 8853148181763592415, guid: 829a10fbf2f9aa74b91d8daddff4b89c, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.x
-      value: 2
+      value: 0.90625
       objectReference: {fileID: 0}
     - target: {fileID: 8853148181763592415, guid: 829a10fbf2f9aa74b91d8daddff4b89c, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.y
-      value: 2
+      value: 0.96875
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

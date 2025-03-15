@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 6795698115756416366}
   m_Layer: 11
   m_Name: ParentMagicProjectile
-  m_TagString: MagicProj
+  m_TagString: PlayerProj
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

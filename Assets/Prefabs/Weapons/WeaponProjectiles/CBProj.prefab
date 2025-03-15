@@ -88,6 +88,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CBProj
       objectReference: {fileID: 0}
+    - target: {fileID: 8748053951306997152, guid: 3665731059b1445439d0db8d88b12423, type: 3}
+      propertyPath: m_TagString
+      value: PlayerProj
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
