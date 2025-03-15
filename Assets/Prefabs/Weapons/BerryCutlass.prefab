@@ -102,7 +102,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7081239968080898793, guid: ddb193a141508b545a8982885ad48e35, type: 3}
       propertyPath: m_Name
-      value: BerryCutglass Variant
+      value: BerryCutlass
       objectReference: {fileID: 0}
     - target: {fileID: 8105893015995445619, guid: ddb193a141508b545a8982885ad48e35, type: 3}
       propertyPath: forwardAttack.Array.size
@@ -154,7 +154,7 @@ PrefabInstance:
       objectReference: {fileID: -1373278851112353993, guid: 93c673ba6164e4aad8fd8c4279ec074c, type: 3}
     - target: {fileID: 8501036405661133926, guid: ddb193a141508b545a8982885ad48e35, type: 3}
       propertyPath: id
-      value: berry_cutglass
+      value: berry_cutlass
       objectReference: {fileID: 0}
     - target: {fileID: 8501036405661133926, guid: ddb193a141508b545a8982885ad48e35, type: 3}
       propertyPath: flavor
@@ -166,7 +166,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8501036405661133926, guid: ddb193a141508b545a8982885ad48e35, type: 3}
       propertyPath: weaponName
-      value: Berry Cutglass
+      value: Berry Cutlass
       objectReference: {fileID: 0}
     - target: {fileID: 8501036405661133926, guid: ddb193a141508b545a8982885ad48e35, type: 3}
       propertyPath: description
@@ -174,7 +174,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8501036405661133926, guid: ddb193a141508b545a8982885ad48e35, type: 3}
       propertyPath: attackDamage
-      value: 3
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 8501036405661133926, guid: ddb193a141508b545a8982885ad48e35, type: 3}
       propertyPath: attackCooldown
