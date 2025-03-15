@@ -11,7 +11,7 @@ public class SirGluten : MonoBehaviour
     private SpriteRenderer spriteRenderer;
     private Animator animator;
     private float verticalInput, horizontalInput;
-    private float speed = 4f;
+    private float baseSpeed = 4f, speed;
     
 
     // STATS
@@ -45,7 +45,7 @@ public class SirGluten : MonoBehaviour
         body = GetComponent<Rigidbody2D>();
         spriteRenderer = GetComponent<SpriteRenderer>();
         animator = GetComponent<Animator>();
-
+    
         
         InitStats();
         UpdateStats();
@@ -107,6 +107,8 @@ public class SirGluten : MonoBehaviour
     void InitStats(){
         health = maxHealth;
         glucose = maxGlucose;
+
+        speed = baseSpeed;
         //yeast = 0;
        // yeastLevel = 1;
     }
@@ -386,4 +388,6 @@ public class SirGluten : MonoBehaviour
     public global::System.Boolean IsNavigatingUI { get => isNavigatingUI; set => isNavigatingUI = value; }
     public SaveData CurSaveData { get => curSaveData; set => curSaveData = value; }
     public global::System.Boolean IsLocked { get => isLocked; set => isLocked = value; }
+    public global::System.Single BaseSpeed { get => baseSpeed; set => baseSpeed = value; }
+    public global::System.Single Speed { get => speed; set => speed = value; }
 }

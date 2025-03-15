@@ -22,6 +22,7 @@ public class Enemy : MonoBehaviour
     private bool isDying;
     [SerializeField]private float detectionRadius = 10f;
     private float invincibility;
+    private Collider collider;
 
     public global::System.Int32 Damage { get => damage; set => damage = value; }
     public global::System.Single DetectionRadius { get => detectionRadius; set => detectionRadius = value; }
@@ -112,10 +113,10 @@ public class Enemy : MonoBehaviour
     }
 
     void OnCollisionEnter2D(Collision2D collision) {
-       if (collision.gameObject.tag == "MagicProj") {
+       if (collision.gameObject.tag == "PlayerProj") {
 
 
-            MagicProj mp = collision.gameObject.GetComponent<MagicProj>();
+            PlayerProj mp = collision.gameObject.GetComponent<PlayerProj>();
 
             StartCoroutine(Hurt(mp.AttackDamage, mp.Flavor));
         } 

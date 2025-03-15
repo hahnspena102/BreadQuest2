@@ -9,6 +9,7 @@ TagManager:
   - Enemy
   - EnemyAttack
   - Walls
+  - PlayerProj
   - MagicProj
   layers:
   - Default
@@ -22,9 +23,9 @@ TagManager:
   - PlayerAttack
   - Enemy
   - EnemyAttack
-  - MagicProj
+  - PlayerProj
   - Walls
-  - PassableMagicProj
+  - PassablePlayerProj
   - PlayerHitbox
   - Floor
   - 
