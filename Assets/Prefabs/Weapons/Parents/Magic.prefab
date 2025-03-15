@@ -104,9 +104,45 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 091dfc1155a90024d8dcd48cda6c9754, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  forwardAttack: []
-  backwardAttack: []
-  leftRightAttack: []
+  forwardAttack:
+  - {fileID: 1201939114, guid: c1fcf9d90a79c8e48a14ee793457d737, type: 3}
+  - {fileID: -2072881955, guid: c1fcf9d90a79c8e48a14ee793457d737, type: 3}
+  - {fileID: 1462826429, guid: c1fcf9d90a79c8e48a14ee793457d737, type: 3}
+  - {fileID: 1532767001, guid: c1fcf9d90a79c8e48a14ee793457d737, type: 3}
+  - {fileID: -1674360817, guid: c1fcf9d90a79c8e48a14ee793457d737, type: 3}
+  - {fileID: -970023664, guid: c1fcf9d90a79c8e48a14ee793457d737, type: 3}
+  - {fileID: -1972866467, guid: c1fcf9d90a79c8e48a14ee793457d737, type: 3}
+  - {fileID: -2136328354, guid: c1fcf9d90a79c8e48a14ee793457d737, type: 3}
+  - {fileID: -152490524, guid: c1fcf9d90a79c8e48a14ee793457d737, type: 3}
+  - {fileID: -1276407195, guid: c1fcf9d90a79c8e48a14ee793457d737, type: 3}
+  - {fileID: -1413324652, guid: c1fcf9d90a79c8e48a14ee793457d737, type: 3}
+  - {fileID: -163425451, guid: c1fcf9d90a79c8e48a14ee793457d737, type: 3}
+  backwardAttack:
+  - {fileID: -1605254910, guid: 96ff1c779220b864582839687bf9c8e7, type: 3}
+  - {fileID: 1445395922, guid: 96ff1c779220b864582839687bf9c8e7, type: 3}
+  - {fileID: -206272442, guid: 96ff1c779220b864582839687bf9c8e7, type: 3}
+  - {fileID: 1964151800, guid: 96ff1c779220b864582839687bf9c8e7, type: 3}
+  - {fileID: -1037127674, guid: 96ff1c779220b864582839687bf9c8e7, type: 3}
+  - {fileID: 253934525, guid: 96ff1c779220b864582839687bf9c8e7, type: 3}
+  - {fileID: -402759289, guid: 96ff1c779220b864582839687bf9c8e7, type: 3}
+  - {fileID: -1766047930, guid: 96ff1c779220b864582839687bf9c8e7, type: 3}
+  - {fileID: 1862335913, guid: 96ff1c779220b864582839687bf9c8e7, type: 3}
+  - {fileID: -1590322809, guid: 96ff1c779220b864582839687bf9c8e7, type: 3}
+  - {fileID: 1351399174, guid: 96ff1c779220b864582839687bf9c8e7, type: 3}
+  - {fileID: 1217056772, guid: 96ff1c779220b864582839687bf9c8e7, type: 3}
+  leftRightAttack:
+  - {fileID: -1726457546, guid: 82c348da81d845b4db5efc673030070a, type: 3}
+  - {fileID: 1133272252, guid: 82c348da81d845b4db5efc673030070a, type: 3}
+  - {fileID: -1854693183, guid: 82c348da81d845b4db5efc673030070a, type: 3}
+  - {fileID: 111102822, guid: 82c348da81d845b4db5efc673030070a, type: 3}
+  - {fileID: -1850530308, guid: 82c348da81d845b4db5efc673030070a, type: 3}
+  - {fileID: -934663216, guid: 82c348da81d845b4db5efc673030070a, type: 3}
+  - {fileID: 602953010, guid: 82c348da81d845b4db5efc673030070a, type: 3}
+  - {fileID: 1136202132, guid: 82c348da81d845b4db5efc673030070a, type: 3}
+  - {fileID: -957224316, guid: 82c348da81d845b4db5efc673030070a, type: 3}
+  - {fileID: -1728702170, guid: 82c348da81d845b4db5efc673030070a, type: 3}
+  - {fileID: -1916089874, guid: 82c348da81d845b4db5efc673030070a, type: 3}
+  - {fileID: -1810314735, guid: 82c348da81d845b4db5efc673030070a, type: 3}
 --- !u!1001 &1149400521935929140
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -240,7 +276,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: febccb92a7e68c94ea58e2bbc2efb154, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  magicProjectile: {fileID: 0}
+  PlayerProjectile: {fileID: 0}
   glucoseCost: 0
   projectileType: singleshot
   angleRange: 0

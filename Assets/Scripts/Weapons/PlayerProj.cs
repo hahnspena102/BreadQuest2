@@ -26,7 +26,7 @@ public class PlayerProj : MonoBehaviour
 
         if (rb != null && rb.bodyType != RigidbodyType2D.Static)
         {
-            rb.velocity = rb.velocity.normalized * speed;
+            rb.linearVelocity = rb.linearVelocity.normalized * speed;
         }
 
         if (collider != null)
