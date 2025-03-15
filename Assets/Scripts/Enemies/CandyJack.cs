@@ -6,6 +6,8 @@ public class CandyJack : MonoBehaviour
     [SerializeField] private float detectionRadius = 5f; // Radius within which the player is detected
     [SerializeField] private float chargeSpeed = 5f; // Speed at which CandyJack charges towards the player
     [SerializeField] private float attackCooldown = 5f; // Cooldown period between attacks
+    [SerializeField] private float attackAnimDuration = 1f; // Duration of the attack animation
+    [SerializeField] private float chargeDuration = 1f; // Duration of the charge
 
     private Transform player;
     private Animator animator;
@@ -63,11 +65,8 @@ public class CandyJack : MonoBehaviour
         animator.SetBool("isAttacking", true);
         animator.SetBool("isCharging", false);
 
-        // Wait for the attack animation to finish (assuming 1 second for the animation)
-        yield return new WaitForSeconds(0.5f);
-
-        // Wait for a delay before charging (e.g., 0.5 seconds)
-        yield return new WaitForSeconds(0.5f);
+        // Wait for the attack animation to finish
+        yield return new WaitForSeconds(attackAnimDuration);
 
         // Start charging towards the player
         isCharging = true;
@@ -75,8 +74,8 @@ public class CandyJack : MonoBehaviour
         animator.SetBool("isAttacking", false);
         animator.SetBool("isCharging", true);
 
-        // Wait for the charge duration (e.g., 1 second)
-        yield return new WaitForSeconds(1f);
+        // Wait for the charge duration
+        yield return new WaitForSeconds(chargeDuration);
 
         // Stop charging and go back to idle
         isCharging = false;
@@ -84,5 +83,10 @@ public class CandyJack : MonoBehaviour
         animator.SetBool("isIdle", true);
         animator.SetBool("isAttacking", false);
         animator.SetBool("isCharging", false);
+
+        // reset the attack timer
+        attackTimer = 0f;
+
+
     }
 }
