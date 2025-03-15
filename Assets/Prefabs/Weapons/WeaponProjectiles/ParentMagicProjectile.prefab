@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 6795698115756416366}
   m_Layer: 11
   m_Name: ParentMagicProjectile
-  m_TagString: MagicProj
+  m_TagString: PlayerProj
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -195,9 +195,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 8748053951306997152}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 194f5127cb44fdb4e8683ebb10ba6aab, type: 3}
+  m_Script: {fileID: 11500000, guid: f4935944f49103348977e0fb7d51061a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 6
+  speed: 0
   duration: 5
   isPassable: 0
+  fadeDuration: 1
+  timeTilCollision: 0.1

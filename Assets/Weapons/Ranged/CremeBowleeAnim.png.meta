@@ -1,34 +1,40 @@
 fileFormatVersion: 2
-guid: 54331b6326b224f559597d0adcf0381c
+guid: 42e64221a19e1fc4baffc60196ebd90a
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 1069427433654190624
-    second: ButterKnifeAnim_0
+      213: -7836738659960734809
+    second: CremeBowleeAnim_0
   - first:
-      213: 5240650572906013169
-    second: ButterKnifeAnim_1
+      213: -6564114033591838959
+    second: CremeBowleeAnim_1
   - first:
-      213: -7141399982848146179
-    second: ButterKnifeAnim_2
+      213: 636838610843350541
+    second: CremeBowleeAnim_2
   - first:
-      213: 6112303274152871137
-    second: ButterKnifeAnim_3
+      213: -2112972318468758946
+    second: CremeBowleeAnim_3
   - first:
-      213: 7661329541893814386
-    second: ButterKnifeAnim_4
+      213: 3596959531850171805
+    second: CremeBowleeAnim_4
   - first:
-      213: 2105650846303131788
-    second: ButterKnifeAnim_5
+      213: -2056587497136503317
+    second: CremeBowleeAnim_5
   - first:
-      213: 688984746692428388
-    second: ButterKnifeAnim_6
+      213: -5543798595044400807
+    second: CremeBowleeAnim_6
   - first:
-      213: -6827686440915229338
-    second: ButterKnifeAnim_7
+      213: -3493627630293072990
+    second: CremeBowleeAnim_7
   - first:
-      213: -442854391393513594
-    second: ButterKnifeAnim_8
+      213: 5513794235098395686
+    second: CremeBowleeAnim_8
+  - first:
+      213: 3375227512275436962
+    second: CremeBowleeAnim_9
+  - first:
+      213: -6419977196679932448
+    second: CremeBowleeAnim_10
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -98,7 +104,7 @@ TextureImporter:
     buildTarget: DefaultTexturePlatform
     maxTextureSize: 2048
     resizeAlgorithm: 0
-    textureFormat: -1
+    textureFormat: 4
     textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
@@ -137,199 +143,155 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: ButterKnifeAnim_0
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 192
-        width: 96
-        height: 96
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 0220408b59e57de00800000000000000
-      internalID: 1069427433654190624
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ButterKnifeAnim_1
-      rect:
-        serializedVersion: 2
-        x: 96
-        y: 192
-        width: 96
-        height: 96
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 1f1a20e0ee78ab840800000000000000
-      internalID: 5240650572906013169
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ButterKnifeAnim_2
-      rect:
-        serializedVersion: 2
-        x: 192
-        y: 192
-        width: 96
-        height: 96
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: df40b576d86a4ec90800000000000000
-      internalID: -7141399982848146179
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ButterKnifeAnim_3
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 96
-        width: 96
-        height: 96
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 1e4c657817343d450800000000000000
-      internalID: 6112303274152871137
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ButterKnifeAnim_4
-      rect:
-        serializedVersion: 2
-        x: 96
-        y: 96
-        width: 96
-        height: 96
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 27879cb70a2825a60800000000000000
-      internalID: 7661329541893814386
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ButterKnifeAnim_5
-      rect:
-        serializedVersion: 2
-        x: 192
-        y: 96
-        width: 96
-        height: 96
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: c8816ead946c83d10800000000000000
-      internalID: 2105650846303131788
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ButterKnifeAnim_6
+      name: CremeBowleeAnim_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 96
-        height: 96
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 462c34a0af3cf8900800000000000000
-      internalID: 688984746692428388
+      spriteID: 38604b757bca6a742a1eebb26b71bfd9
+      internalID: -1827101700
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ButterKnifeAnim_7
+      name: CremeBowleeAnim_1
       rect:
         serializedVersion: 2
-        x: 96
+        x: 64
         y: 0
-        width: 96
-        height: 96
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 6652f7b4b5f2f31a0800000000000000
-      internalID: -6827686440915229338
+      spriteID: a5a6714ab9f7d7d4c9d9e9040268993c
+      internalID: -399768843
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ButterKnifeAnim_8
+      name: CremeBowleeAnim_2
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ca7d2780f5b92548a385193e5d3a0ea
+      internalID: -2142892722
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CremeBowleeAnim_3
       rect:
         serializedVersion: 2
         x: 192
         y: 0
-        width: 96
-        height: 96
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 68f84c1074aaad9f0800000000000000
-      internalID: -442854391393513594
+      spriteID: 361264f7c0acc0444adc5886f6f4566b
+      internalID: 380544960
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CremeBowleeAnim_4
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f1facd45b4ed224c81e1dfafc76ed99
+      internalID: -1020096541
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CremeBowleeAnim_5
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b323ae6d20201634a86c444142901da5
+      internalID: -1220314221
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CremeBowleeAnim_6
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f9195b2d418cf964cbecb542b730784b
+      internalID: -22294720
       vertices: []
       indices: 
       edges: []
@@ -338,7 +300,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: cdd9c777902cce44cb5aa6f2dd448a6d
+    spriteID: d158ad09bb2ca2b4b8fc37653037f60a
     internalID: 0
     vertices: []
     indices: 
@@ -348,15 +310,13 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      ButterKnifeAnim_0: 1069427433654190624
-      ButterKnifeAnim_1: 5240650572906013169
-      ButterKnifeAnim_2: -7141399982848146179
-      ButterKnifeAnim_3: 6112303274152871137
-      ButterKnifeAnim_4: 7661329541893814386
-      ButterKnifeAnim_5: 2105650846303131788
-      ButterKnifeAnim_6: 688984746692428388
-      ButterKnifeAnim_7: -6827686440915229338
-      ButterKnifeAnim_8: -442854391393513594
+      CremeBowleeAnim_0: -1827101700
+      CremeBowleeAnim_1: -399768843
+      CremeBowleeAnim_2: -2142892722
+      CremeBowleeAnim_3: 380544960
+      CremeBowleeAnim_4: -1020096541
+      CremeBowleeAnim_5: -1220314221
+      CremeBowleeAnim_6: -22294720
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

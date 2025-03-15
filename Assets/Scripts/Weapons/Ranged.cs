@@ -4,7 +4,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.SceneManagement;
 
-public class Magic : MonoBehaviour
+public class Ranged : MonoBehaviour
 {
     private SirGluten sirGluten;
     private Weapon weapon;
@@ -17,12 +17,13 @@ public class Magic : MonoBehaviour
     private Vector2 attackDirection;  
 
     [SerializeField] private GameObject PlayerProjectile;  
-    [SerializeField] private int glucoseCost;
     [SerializeField] private string projectileType = "singleshot";
     [SerializeField] private float angleRange = 0f;
     [SerializeField] private int numProj = 1;
+    private bool mouseDown;
+    private int drawingPhase = 0;
+    private Coroutine rangedCoroutine = null;
 
-    public global::System.Int32 GlucoseCost { get => glucoseCost; set => glucoseCost = value; }
 
     void Start() {
         player = GameObject.Find("SirGluten").gameObject;
@@ -36,59 +37,110 @@ public class Magic : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (sirGluten.IsAttacking) {
-            MagicDirection();
-            sirGluten.MainSlot.transform.GetChild(1).gameObject.transform.position = body.position;
+        if (sirGluten.MainSlot != null && sirGluten.MainSlot.gameObject == gameObject) {
+            RangedDirection();
+            if (sirGluten.IsAttacking) {
+                sirGluten.MainSlot.transform.GetChild(1).gameObject.transform.position = body.position;
+            }
+            if (Input.GetMouseButtonDown(0) && sirGluten.MainSlot != null 
+            && sirGluten.MainSlot.gameObject == gameObject && !sirGluten.IsAttacking 
+            && !sirGluten.IsNavigatingUI) {
+                rangedCoroutine = StartCoroutine(RangedAttack());
+            }
+            
+            mouseDown = Input.GetMouseButton(0);
+
+            if (!mouseDown && drawingPhase == 1 && rangedCoroutine != null) {
+                playerAnimator.SetBool("rangedAttack",false);
+                StopCoroutine(rangedCoroutine);
+                EndRange();
+            }
+
+            if (drawingPhase >= 1) {
+                sirGluten.Speed = 1f;
+                
+            } else {
+                sirGluten.Speed = sirGluten.BaseSpeed;
+            }
         }
-        if (Input.GetMouseButtonDown(0) && sirGluten.MainSlot != null 
-        && sirGluten.MainSlot.gameObject == gameObject && !sirGluten.IsAttacking 
-        && sirGluten.Glucose >= glucoseCost && !sirGluten.IsNavigatingUI) {
-            MagicDirection();
-            StartCoroutine(MagicAttack());
-        }
+        
     }
 
-    private void MagicDirection() {
-        if (!sirGluten.IsAttacking) {
-            mousePosition = (Vector2)Input.mousePosition - screenSize;
-        }
+    private void RangedDirection() {
+        mousePosition = (Vector2)Input.mousePosition - screenSize;
+        
+        Vector2 direction = (mousePosition - (Vector2)player.transform.position).normalized;
+        
+        float angle = (Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg) - 10;
+
+        weapon.transform.rotation = Quaternion.Euler(0, 0, angle);
+
+        
         if (sirGluten.MainSlot != null && sirGluten.MainSlot.gameObject == gameObject) {
             attackDirection = new Vector2(mousePosition.x, mousePosition.y).normalized;
         }
+
+        if (mousePosition.x < 0) {
+            sirGluten.transform.localScale = new Vector3(-1f, 1f, 1f);
+            transform.localScale = new Vector3(-1f, -1f, 1f);
+        } else {
+            sirGluten.transform.localScale = new Vector3(1f, 1f, 1f);
+            transform.localScale = new Vector3(1f, 1f, 1f);
+        }
+
     }
 
-    IEnumerator MagicAttack() {
+    IEnumerator RangedAttack() {
+        Debug.Log("PEEW");
           if (weapon.AttackSFX.Count > 0) {
             audioSource.clip = weapon.AttackSFX[Random.Range(0, weapon.AttackSFX.Count)];
             audioSource.pitch = (Random.Range(1.00f - 0.10f, 1.00f + 0.10f));
             audioSource.Play();
         }
-        
-        sirGluten.Glucose -= glucoseCost;
+
+
 
         sirGluten.IsAnimationLocked = true;
         sirGluten.IsAttacking = true;
 
         playerAnimator.SetFloat("horizontal",Mathf.Abs(attackDirection.x));
         playerAnimator.SetFloat("vertical",attackDirection.y);
-        playerAnimator.SetTrigger("magicAttack");
-        
+        playerAnimator.SetBool("rangedAttack",true);
 
-        if (attackDirection.x < 0) {
-            sirGluten.transform.localScale = new Vector3(-1f, 1f, 1f);
-            transform.localScale = new Vector3(-1f, 1f, 1f);
-        } else {
-            sirGluten.transform.localScale = new Vector3(1f, 1f, 1f);
-            transform.localScale = new Vector3(1f, 1f, 1f);
-        }
-        
-
+        weapon.AnimationDirection = "LR";
         
         sirGluten.MainSlot.transform.GetChild(1).gameObject.SetActive(true);
 
-        CastMagic(projectileType);
-        yield return new WaitForSeconds(weapon.AttackCooldown);
+        drawingPhase = 1;
+        for (int i = 0; i < 3; i++) {
+            sirGluten.WeaponAnimationFrame = i + 1;
+            yield return new WaitForSeconds(0.3f);
+        }
 
+        drawingPhase = 2;
+        while (mouseDown) {
+            yield return null;
+        }
+        Shoot(projectileType);
+        drawingPhase = 0;
+        playerAnimator.SetBool("rangedAttack",false);
+        
+        for (int i = 3; i < 8; i++) {
+            sirGluten.WeaponAnimationFrame = i + 1;
+            yield return new WaitForSeconds(0.1f);
+        }
+
+
+        
+    
+        EndRange();
+               
+        yield return new WaitForSeconds(weapon.AttackCooldown);
+    }
+
+    void EndRange() {
+        
+        drawingPhase = 0;
         sirGluten.MainSlot.transform.GetChild(1).gameObject.transform.position = body.position;
         sirGluten.WeaponAnimationFrame = 0;
 
@@ -97,7 +149,7 @@ public class Magic : MonoBehaviour
         sirGluten.IsAttacking = false;
     }
     
-    void CastMagic(string type){
+    void Shoot(string type){
         if (type == "multishot") {
             if (numProj == 1) {
             CreateProj(0);
