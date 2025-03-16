@@ -27,7 +27,7 @@ PrefabInstance:
     - target: {fileID: -3714554652511672818, guid: 8f49e4d77b89a784497c267292f8d5fb, type: 3}
       propertyPath: PlayerProjectile
       value: 
-      objectReference: {fileID: 8306689941005278585}
+      objectReference: {fileID: 2237068893191470828, guid: fedd85683e58352439fdb4bdee5ecdea, type: 3}
     - target: {fileID: 2555982464447483995, guid: 8f49e4d77b89a784497c267292f8d5fb, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -126,7 +126,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7807762647802752527, guid: 8f49e4d77b89a784497c267292f8d5fb, type: 3}
       propertyPath: m_Name
-      value: PeppermintDart Variant
+      value: PeppermintDart
       objectReference: {fileID: 0}
     - target: {fileID: 8227513997897164223, guid: 8f49e4d77b89a784497c267292f8d5fb, type: 3}
       propertyPath: m_Color.b
@@ -167,6 +167,10 @@ PrefabInstance:
     - target: {fileID: 8927998594896783488, guid: 8f49e4d77b89a784497c267292f8d5fb, type: 3}
       propertyPath: attackDamage
       value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8927998594896783488, guid: 8f49e4d77b89a784497c267292f8d5fb, type: 3}
+      propertyPath: attackCooldown
+      value: 0.2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

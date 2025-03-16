@@ -10,7 +10,6 @@ TagManager:
   - EnemyAttack
   - Walls
   - PlayerProj
-  - MagicProj
   layers:
   - Default
   - TransparentFX
