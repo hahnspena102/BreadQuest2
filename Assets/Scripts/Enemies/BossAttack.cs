@@ -5,11 +5,10 @@ using System.Collections.Generic;
 using UnityEngine.SceneManagement;
 using Unity.VisualScripting;
 
-public class EnemyAttack : MonoBehaviour
+public class BossAttack : MonoBehaviour
 {
     [SerializeField] private int damage;
-    [SerializeField] private float speed;
-    [SerializeField]private float timeTilCollision = 0.05f, timeTilDeath = 10f;
+    [SerializeField]private float timeTilCollision = 0.05f;
 
     private float elapsedTime = 0;
     private Collider hitbox;
@@ -18,17 +17,10 @@ public class EnemyAttack : MonoBehaviour
     void Start(){
         hitbox = GetComponent<Collider>();
 
-        Rigidbody2D spearBody= GetComponent<Rigidbody2D>();
-        if (spearBody != null) {
-            spearBody.linearVelocity = transform.up * speed; 
-        }
-
         if (hitbox != null)
         {
             hitbox.enabled = false;
         }
-
-        Destroy(gameObject,timeTilDeath);
     }
 
     void Update(){
@@ -40,13 +32,5 @@ public class EnemyAttack : MonoBehaviour
         }
     }
 
-    void OnCollisionStay2D(Collision2D collision) {
-        if (collision.gameObject.tag == "Walls") {
-            Destroy(gameObject);
-        }
-    }
-
-    public void DestroyOnCollide() {
-        Destroy(gameObject);
-    }
+    
 }

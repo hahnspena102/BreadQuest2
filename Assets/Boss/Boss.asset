@@ -14,12 +14,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyName: Boss
   description: boss battle
-  health: 100
+  health: 1000
   damage: 10
   flavoring: flavorless
   xpMultiplier: 1
   goldMultiplier: 1
   sprite: {fileID: 1364999022, guid: 50b78a9e6e6a440be9ccc3a84568578e, type: 3}
   color: {r: 1, g: 1, b: 1, a: 1}
-  isDiscovered: 0
+  isDiscovered: 1
   detectionRadius: 10

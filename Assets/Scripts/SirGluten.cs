@@ -56,7 +56,7 @@ public class SirGluten : MonoBehaviour
     }
 
     IEnumerator LoadSaveData(){
-        yield return new WaitForSeconds(0.2f);
+        yield return new WaitForSeconds(0.5f);
         yeast = curSaveData.Yeast;
         yeastLevel = curSaveData.YeastLevel;
         gold = curSaveData.Gold;
@@ -299,7 +299,7 @@ public class SirGluten : MonoBehaviour
         glucose = Mathf.Clamp(glucose, 0, maxGlucose);
         gPotTimer += gPotCooldown;
     }
-    public IEnumerator Hurt(int damage){
+    public IEnumerator Hurt(int damage, bool isLocking){
         if (isHurting) yield break;
         isHurting = true;
 
@@ -324,7 +324,7 @@ public class SirGluten : MonoBehaviour
 
         spriteRenderer.color = ogColor;
         isHurting = false;
-        isLocked = false;
+        if (!isLocking) isLocked = false;
     }
 
     void CreatePopup(int damage){
@@ -334,6 +334,21 @@ public class SirGluten : MonoBehaviour
         dp.OutlineColor = Color.red;
         dp.IsPlayerHurt = true;
         dp.transform.SetParent(GameManager.EffectStore.transform);
+    }
+
+    void OnCollisionEnter2D(Collision2D collision) {
+        if (collision.gameObject.tag == "BossAttack") {
+            BossAttack bossAttack = collision.gameObject.GetComponent<BossAttack>();
+            isLocked = true;
+            StartCoroutine(Hurt(bossAttack.Damage,true));
+           
+        } 
+    }
+
+    void OnCollisionExit2D(Collision2D collision) {
+        if (collision.gameObject.tag == "BossAttack") {
+            isLocked = false;
+        } 
     }
 
     void OnTriggerStay2D(Collider2D collider) {
@@ -353,6 +368,8 @@ public class SirGluten : MonoBehaviour
             hoveredWeaponItem = null;
             
         }
+
+
     }
 
     void TurnOffAnimation() {
