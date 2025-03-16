@@ -141,6 +141,14 @@ PrefabInstance:
       propertyPath: m_SpriteTilingProperty.oldSize.y
       value: 0.96875
       objectReference: {fileID: 0}
+    - target: {fileID: 8943666101315252761, guid: 829a10fbf2f9aa74b91d8daddff4b89c, type: 3}
+      propertyPath: m_SortingLayer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8943666101315252761, guid: 829a10fbf2f9aa74b91d8daddff4b89c, type: 3}
+      propertyPath: m_SortingOrder
+      value: 4
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

@@ -12,20 +12,20 @@ public class EnemyAttack : MonoBehaviour
     [SerializeField]private float timeTilCollision = 0.05f;
 
     private float elapsedTime = 0;
-    private Collider collider;
+    private Collider hitbox;
 
     public global::System.Int32 Damage { get => damage; set => damage = value; }
     void Start(){
-        collider = GetComponent<Collider>();
+        hitbox = GetComponent<Collider>();
 
         Rigidbody2D spearBody= GetComponent<Rigidbody2D>();
         if (spearBody != null) {
             spearBody.linearVelocity = transform.up * speed; 
         }
 
-        if (collider != null)
+        if (hitbox != null)
         {
-            collider.enabled = false;
+            hitbox.enabled = false;
         }
 
         Destroy(gameObject,10f);
@@ -34,9 +34,9 @@ public class EnemyAttack : MonoBehaviour
     void Update(){
         elapsedTime += Time.deltaTime;
 
-        if (collider != null && elapsedTime >= timeTilCollision)
+        if (hitbox != null && elapsedTime >= timeTilCollision)
         {
-            collider.enabled = true;
+            hitbox.enabled = true;
         }
     }
 

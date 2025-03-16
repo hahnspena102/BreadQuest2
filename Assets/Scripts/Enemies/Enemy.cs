@@ -8,7 +8,7 @@ using TMPro;
 public class Enemy : MonoBehaviour
 {
     [SerializeField]private EnemyData enemyData;
-    private int health;   
+    private int health, maxHealth;   
     private int damage;
     private string flavoring;
     [SerializeField]private int bonusHealth;
@@ -22,18 +22,20 @@ public class Enemy : MonoBehaviour
     private bool isDying;
     [SerializeField]private float detectionRadius = 10f;
     private float invincibility;
-    private Collider collider;
 
     public global::System.Int32 Damage { get => damage; set => damage = value; }
     public global::System.Single DetectionRadius { get => detectionRadius; set => detectionRadius = value; }
     public EnemyData EnemyData { get => enemyData; set => enemyData = value; }
+    public global::System.Int32 Health { get => health; set => health = value; }
+    public global::System.Int32 MaxHealth { get => maxHealth; set => maxHealth = value; }
 
     void Start(){
         spriteRenderer = GetComponent<SpriteRenderer>();
         audioSource = GetComponent<AudioSource>();
         ogColor = spriteRenderer.color;
 
-        health = enemyData.Health + bonusHealth;
+        maxHealth = enemyData.Health + bonusHealth;
+        health = maxHealth;
         damage = enemyData.Damage;
         flavoring = enemyData.Flavoring;
         xpMultiplier = enemyData.XpMultiplier;

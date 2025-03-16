@@ -35,6 +35,6 @@ public class SGHitbox : MonoBehaviour
             EnemyAttack enemyAttack = collider.gameObject.GetComponent<EnemyAttack>();
             StartCoroutine(sirGluten.Hurt(enemyAttack.Damage));
             enemyAttack.DestroyOnCollide();
-        }
+        } 
     }
 }

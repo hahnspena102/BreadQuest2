@@ -13,7 +13,7 @@ public class PlayerProj : MonoBehaviour
 
     private float elapsedTime = 0f;
     private SpriteRenderer spriteRenderer;
-    private Collider2D collider;
+    private Collider2D hitbox;
 
     public int AttackDamage { get => attackDamage; set => attackDamage = value; }
     public string Flavor { get => flavor; set => flavor = value; }
@@ -21,7 +21,7 @@ public class PlayerProj : MonoBehaviour
     void Start()
     {
         Rigidbody2D rb = GetComponent<Rigidbody2D>();
-        collider = GetComponent<Collider2D>();
+        hitbox = GetComponent<Collider2D>();
         spriteRenderer = GetComponent<SpriteRenderer>();
 
         if (rb != null && rb.bodyType != RigidbodyType2D.Static)
@@ -29,9 +29,9 @@ public class PlayerProj : MonoBehaviour
             rb.linearVelocity = rb.linearVelocity.normalized * speed;
         }
 
-        if (collider != null)
+        if (hitbox != null)
         {
-            collider.enabled = false;
+            hitbox.enabled = false;
         }
 
         StartCoroutine(FadeOutAndDestroy());
@@ -41,9 +41,9 @@ public class PlayerProj : MonoBehaviour
     {
         elapsedTime += Time.deltaTime;
 
-        if (collider != null && elapsedTime >= timeTilCollision)
+        if (hitbox != null && elapsedTime >= timeTilCollision)
         {
-            collider.enabled = true;
+            hitbox.enabled = true;
         }
     }
 
