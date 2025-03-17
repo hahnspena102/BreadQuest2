@@ -157,7 +157,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: -0.083810985}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -167,7 +167,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 1, y: 1.167622}
   m_EdgeRadius: 0
 --- !u!95 &1354929969333651492
 Animator:
@@ -300,12 +300,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b86fbaf5d28f14243b89aee57d65c825, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 10
-  damage: 10
-  flavoring: vanilla
+  enemyData: {fileID: 0}
+  bonusHealth: 0
   damagePopup: {fileID: 4790183856277039928, guid: e44c4970eba364bb8ab606a64f217325, type: 3}
   deathParticle: {fileID: 1913445023663260805, guid: 9f6f3d13b3cfe8541bb03f9697c7fb1a, type: 3}
-  xpMultiplier: 1
-  attackSFX: []
   hurtSFX: []
-  deathSFX: []
+  detectionRadius: 10

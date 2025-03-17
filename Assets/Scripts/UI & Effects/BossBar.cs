@@ -23,7 +23,7 @@ public class BossBar : MonoBehaviour
     void Update(){
         if (boss == null) gameObject.SetActive(false);
 
-        if (healthSlider != null) {
+        if (healthSlider != null && enemy != null) {
             healthSlider.value = enemy.Health;
             healthSlider.maxValue = enemy.MaxHealth;
         }

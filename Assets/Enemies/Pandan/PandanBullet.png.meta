@@ -1,19 +1,10 @@
 fileFormatVersion: 2
-guid: fcb772b32e87043f7950ff7dbb0f871c
+guid: f2900edd8f9afc04a8029ddd9fb1dce8
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 2563138978148327036
-    second: CandyJackCharge_0
-  - first:
-      213: 7006188301918731688
-    second: CandyJackCharge_1
-  - first:
-      213: -3629287476804471166
-    second: CandyJackCharge_2
-  - first:
-      213: -8472141740783953614
-    second: CandyJackCharge_3
+      213: 6710668656658550051
+    second: PandanBullet_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -122,89 +113,23 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: CandyJackCharge_0
+      name: PandanBullet_0
       rect:
         serializedVersion: 2
-        x: 0
+        x: 1
         y: 0
-        width: 60
-        height: 60
+        width: 7
+        height: 8
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: c7e1d7e0259129320800000000000000
-      internalID: 2563138978148327036
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: CandyJackCharge_1
-      rect:
-        serializedVersion: 2
-        x: 60
-        y: 0
-        width: 60
-        height: 60
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 8adfc55e32bfa3160800000000000000
-      internalID: 7006188301918731688
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: CandyJackCharge_2
-      rect:
-        serializedVersion: 2
-        x: 120
-        y: 0
-        width: 60
-        height: 60
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 286bb45c44e22adc0800000000000000
-      internalID: -3629287476804471166
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: CandyJackCharge_3
-      rect:
-        serializedVersion: 2
-        x: 180
-        y: 0
-        width: 60
-        height: 60
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 23910dd59f7ec6a80800000000000000
-      internalID: -8472141740783953614
+      spriteID: 32d0b7da695112d50800000000000000
+      internalID: 6710668656658550051
       vertices: []
       indices: 
       edges: []
@@ -213,7 +138,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: e391ec54160de48e2a952ce9b1d764e9
+    spriteID: 0cccd549a86801f47bd99ccad5d20182
     internalID: 0
     vertices: []
     indices: 
@@ -223,10 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      CandyJackCharge_0: 2563138978148327036
-      CandyJackCharge_1: 7006188301918731688
-      CandyJackCharge_2: -3629287476804471166
-      CandyJackCharge_3: -8472141740783953614
+      PandanBullet_0: 6710668656658550051
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

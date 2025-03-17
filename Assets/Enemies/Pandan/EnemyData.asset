@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5961343830b40814e8d1fdca4c078598, type: 3}
+  m_Name: EnemyData
+  m_EditorClassIdentifier: 
+  enemyName: Pandan
+  description: Although fragrant, don't stop to smell this little bear or else...
+    BANG!
+  health: 30
+  damage: 20
+  flavoring: spicy
+  xpMultiplier: 1
+  goldMultiplier: 1
+  sprite: {fileID: -7107577901510104695, guid: b3a3e82dd0d95e6429c96710a96832aa, type: 3}
+  color: {r: 1, g: 1, b: 1, a: 1}
+  isDiscovered: 0
+  detectionRadius: 10

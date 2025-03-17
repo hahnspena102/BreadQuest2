@@ -3,90 +3,78 @@ using UnityEngine;
 
 public class CandyJack : MonoBehaviour
 {
-    [SerializeField] private float detectionRadius = 5f; // Radius within which the player is detected
-    [SerializeField] private float chargeSpeed = 5f; // Speed at which CandyJack charges towards the player
-    [SerializeField] private float attackCooldown = 5f; // Cooldown period between attacks
-    [SerializeField] private float attackAnimDuration = 1f; // Duration of the attack animation
-    [SerializeField] private float chargeDuration = 1f; // Duration of the charge
+    [SerializeField] private float chargeSpeed = 5f;
+    [SerializeField] private float attackCooldown = 5f; 
+    [SerializeField] private float attackDelay = 0.5f;
 
     private Transform player;
     private Animator animator;
     private Rigidbody2D body;
     private bool isCharging = false;
-    private bool isAttacking = false;
-    private float attackTimer = 0f;
+    private Vector2 destPos;
+    private EnemyData enemyData;
 
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player").transform;
         animator = GetComponent<Animator>();
         body = GetComponent<Rigidbody2D>();
+        
+        enemyData = GetComponent<Enemy>().EnemyData;
+
+        StartCoroutine(AttackSequence());
     }
 
     void Update()
     {
-        attackTimer += Time.deltaTime;
+        animator.SetBool("isMoving", body.linearVelocity.magnitude > 0.5f);
 
-        if (isCharging)
-        {
-            // Charge towards the player
-            Vector2 direction = (player.position - transform.position).normalized;
-            body.linearVelocity = direction * chargeSpeed;
-        }
-        else
-        {
-            body.linearVelocity = Vector2.zero;
-        }
-
-        if (attackTimer >= attackCooldown && !isAttacking && !isCharging)
-        {
-            // Detect the player within the detection radius
-            if (Vector2.Distance(transform.position, player.position) <= detectionRadius)
-            {
-                StartCoroutine(AttackSequence());
-            }
-            else
-            {
-                // Play idle animation
-                animator.SetBool("isIdle", true);
-                animator.SetBool("isAttacking", false);
-                animator.SetBool("isCharging", false);
+        if (!isCharging) {
+            destPos = player.position;
+        } else {
+            if (body.linearVelocity.x > 0.5f) {
+                transform.localScale = new Vector3(1f, 1f, 1f);
+            } else if (body.linearVelocity.x < -0.5f) {
+                transform.localScale = new Vector3(-1f, 1f, 1f);
             }
         }
+        Debug.Log(isCharging);
+        
     }
 
     private IEnumerator AttackSequence()
     {
-        isAttacking = true;
-        attackTimer = 0f;
+        while (Vector2.Distance(transform.position, player.position) > enemyData.DetectionRadius) 
+            yield return null; 
+        
+        yield return new WaitForSeconds(attackDelay);
 
-        // Play attack animation
-        animator.SetBool("isIdle", false);
-        animator.SetBool("isAttacking", true);
-        animator.SetBool("isCharging", false);
-
-        // Wait for the attack animation to finish
-        yield return new WaitForSeconds(attackAnimDuration);
-
-        // Start charging towards the player
         isCharging = true;
-        animator.SetBool("isIdle", false);
-        animator.SetBool("isAttacking", false);
-        animator.SetBool("isCharging", true);
+        Vector2 direction = (destPos - (Vector2)transform.position).normalized;
+        body.linearVelocity = direction * chargeSpeed; 
 
-        // Wait for the charge duration
-        yield return new WaitForSeconds(chargeDuration);
-
-        // Stop charging and go back to idle
+        while (body.linearVelocity.magnitude > 0.2f) yield return null;
         isCharging = false;
-        isAttacking = false;
-        animator.SetBool("isIdle", true);
-        animator.SetBool("isAttacking", false);
-        animator.SetBool("isCharging", false);
 
-        // reset the attack timer
-        attackTimer = 0f;
+        yield return new WaitForSeconds(attackCooldown);
 
+        animator.SetTrigger("isReady");
 
+        StartCoroutine(AttackSequence());
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "PlayerProj" && isCharging) {
+            Vector2 direction = (destPos - (Vector2)transform.position).normalized;
+            body.linearVelocity = direction * chargeSpeed; 
+
+        } else if (collision.gameObject.tag == "Walls" || collision.gameObject.tag == "Player") {
+            if (isCharging)
+            {
+                isCharging = false;
+                body.linearVelocity = Vector2.zero;
+            }
+        }
     }
 }
