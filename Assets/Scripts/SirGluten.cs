@@ -355,14 +355,14 @@ public class SirGluten : MonoBehaviour
 
     public IEnumerator Burn(){
         while (burnTime <= 0) yield return null;
-        StartCoroutine(Hurt(burnDamage));
+        StartCoroutine(Hurt(burnDamage, false));
         yield return new WaitForSeconds(burnInterval);
         StartCoroutine(Burn());
     }
 
     public IEnumerator Spike(){
         while (spikeInterval <= 0) yield return null;
-        StartCoroutine(Hurt(spikeDamage));
+        StartCoroutine(Hurt(spikeDamage, false));
         Debug.Log("You take damage: " + spikeDamage);
         Debug.Log("spikeInterval: " + spikeInterval);
         yield return new WaitForSeconds(spikeInterval);

@@ -11,6 +11,8 @@ TagManager:
   - Walls
   - PlayerProj
   - BossAttack
+  - Traps
+  - Spikes
   layers:
   - Default
   - TransparentFX
