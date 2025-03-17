@@ -7,15 +7,49 @@ using TMPro;
 
 public class Boss : MonoBehaviour
 {
-    [SerializeField]private int bossState;
-    [SerializeField]private int bossPhase;
+    [SerializeField] private int bossState;
+    [SerializeField] private int bossPhase;
     [SerializeField] GameObject projectile;
     [SerializeField] List<GameObject> fists = new List<GameObject>();
+    private List<Vector2> originalFistOffset = new List<Vector2>();
+
+    private float maxRadius = 4f;
+    private Rigidbody2D rb;
+    private Vector2 originPosition;
+    private float elapsedTime;
 
     void Start(){
         bossState = 0;
         bossPhase = 0;
         StartCoroutine(StateLoop());
+
+        // Store the original positions of each fist
+        foreach (GameObject obj in fists) {
+            if (obj != null) {
+                originalFistOffset.Add(obj.transform.position - transform.position);
+                obj.GetComponent<Collider2D>().enabled = false;
+            }
+        }
+        
+        originPosition = (Vector2)transform.position;
+        rb = GetComponent<Rigidbody2D>();
+    }
+
+    void FixedUpdate(){
+        elapsedTime+= Time.deltaTime;
+        if (elapsedTime <= 2f) return;
+        Vector2 direction = (SirGluten.playerPosition - (Vector2)transform.position).normalized;
+        Vector2 newPosition = (Vector2)transform.position + direction * 1f * Time.fixedDeltaTime;
+
+        if (Vector2.Distance(originPosition, newPosition) <= maxRadius) {
+            rb.MovePosition(newPosition);
+
+            for (int i = 0; i < fists.Count; i++) {
+                if (fists[i] != null) {
+                    fists[i].GetComponent<Rigidbody2D>().MovePosition((Vector2)transform.position + originalFistOffset[i]);
+                }
+            }
+        }
     }
 
     IEnumerator StateLoop(){
@@ -37,8 +71,7 @@ public class Boss : MonoBehaviour
         {
         case 1:
             Debug.Log("FIST");
-            fists[Random.Range(0,fists.Count)].GetComponent<BossArm>().MoveTo(SirGluten.playerPosition);
-            bossState = 0;
+            StartCoroutine(MechaPunch());
             break;
         case 2:
             StartCoroutine(SpiralFire());
@@ -128,6 +161,62 @@ public class Boss : MonoBehaviour
         }
         bossState = 0;
     }
-    
+
+    IEnumerator MechaPunch()
+    {
+        Rigidbody2D rb = fists[Random.Range(0, fists.Count)].GetComponent<Rigidbody2D>();
+        Collider2D collider = rb.GetComponent<Collider2D>();
+
+        Vector2 ogPosition = rb.position;
+        Vector2 direction = (SirGluten.playerPosition - (Vector2)transform.position).normalized;
+
+
+        //rb.constraints = RigidbodyConstraints2D.None;
+
+        float lockTime = 0f;
+        while(lockTime <= 3f) {
+            float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+            rb.rotation = angle;
+            lockTime += Time.deltaTime;
+        }
+
+        
+        
+        if (collider != null)
+            collider.enabled = false;
+
+        rb.linearVelocity = direction * 12f;
+
+
+        yield return new WaitForSeconds(0.1f);
+        
+        if (collider != null)
+            collider.enabled = true;
+
+        yield return new WaitForSeconds(3f);
+
+        rb.linearVelocity = Vector2.zero;
+        yield return new WaitForSeconds(0.2f);
+
+        while (Vector2.Distance(rb.position, ogPosition) > 0.1f)
+        {
+            Vector2 returnDirection = (ogPosition - rb.position).normalized;
+            rb.linearVelocity = returnDirection * 10f;
+            yield return null;
+        }
+
+        rb.position = ogPosition;
+        rb.linearVelocity = Vector2.zero;
+
+        if (collider != null)
+            collider.enabled = false;
+
+        //rb.constraints = RigidbodyConstraints2D.FreezePositionX | RigidbodyConstraints2D.FreezePositionY | RigidbodyConstraints2D.FreezeRotation;
+
+        bossState = 0;
+    }
+
+
+
 
 }

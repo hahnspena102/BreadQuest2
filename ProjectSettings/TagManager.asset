@@ -10,6 +10,7 @@ TagManager:
   - EnemyAttack
   - Walls
   - PlayerProj
+  - BossAttack
   layers:
   - Default
   - TransparentFX
@@ -27,7 +28,7 @@ TagManager:
   - PassablePlayerProj
   - PlayerHitbox
   - Floor
-  - 
+  - BossAttack
   - 
   - 
   - 

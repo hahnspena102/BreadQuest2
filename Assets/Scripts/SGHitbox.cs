@@ -30,11 +30,12 @@ public class SGHitbox : MonoBehaviour
 
             sirGluten.IsLocked = true;
             body.linearVelocity = direction * 2f;
-            StartCoroutine(sirGluten.Hurt(enemy.Damage));
+            StartCoroutine(sirGluten.Hurt(enemy.Damage, false));
         } else if (collider.gameObject.tag == "EnemyAttack") {
             EnemyAttack enemyAttack = collider.gameObject.GetComponent<EnemyAttack>();
-            StartCoroutine(sirGluten.Hurt(enemyAttack.Damage));
+            StartCoroutine(sirGluten.Hurt(enemyAttack.Damage, false));
             enemyAttack.DestroyOnCollide();
         } 
+        
     }
 }

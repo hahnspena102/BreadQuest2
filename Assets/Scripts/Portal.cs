@@ -24,7 +24,7 @@ public class Portal : MonoBehaviour
     }
 
     IEnumerator NextFloor(){
-        if (destinationScene != "Tutorial") {
+        if (sirGluten.CurSaveData.Floor != "Tutorial") {
             sirGluten.SaveData();
         }
         yield return new WaitForSeconds(0.5f);

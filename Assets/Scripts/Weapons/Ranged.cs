@@ -38,7 +38,7 @@ public class Ranged : MonoBehaviour
     void Update()
     {
         if (sirGluten.MainSlot != null && sirGluten.MainSlot.gameObject == gameObject) {
-            RangedDirection();
+            if (sirGluten.IsAttacking) RangedDirection();
             if (sirGluten.IsAttacking) {
                 sirGluten.MainSlot.transform.GetChild(1).gameObject.transform.position = body.position;
             }
@@ -91,7 +91,6 @@ public class Ranged : MonoBehaviour
     }
 
     IEnumerator RangedAttack() {
-        Debug.Log("PEEW");
           if (weapon.AttackSFX.Count > 0) {
             audioSource.clip = weapon.AttackSFX[Random.Range(0, weapon.AttackSFX.Count)];
             audioSource.pitch = (Random.Range(1.00f - 0.10f, 1.00f + 0.10f));
