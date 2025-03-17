@@ -40,6 +40,15 @@ public class SirGluten : MonoBehaviour
     private int weaponAnimationFrame = 0;
     public static int staticYeast = 0, staticGold = 0;
 
+    // DEBUFFS
+    private int burnDamage = 5;
+    private float burnTime = 0;
+    private float burnInterval = 1f;
+
+    private int spikeDamage = 10;
+    private float spikeInterval = 0;
+    //[SerializeField] private GameObject burnParticles;
+
     void Start()
     {
         body = GetComponent<Rigidbody2D>();
@@ -52,6 +61,8 @@ public class SirGluten : MonoBehaviour
         StartCoroutine(OneSecondCoroutine());
         
         StartCoroutine(LoadSaveData());
+
+        StartCoroutine(Burn());
         
     }
 
@@ -152,6 +163,7 @@ public class SirGluten : MonoBehaviour
 
         health = Mathf.Clamp(health, 0 ,maxHealth);
         glucose = Mathf.Clamp(glucose, 0 ,maxGlucose);
+
     }
     
     void Update() {
@@ -193,7 +205,6 @@ public class SirGluten : MonoBehaviour
             SaveData();
             SceneManager.LoadScene("MainMenu");
         }
-        
 
 
         if (!isLocked) MovePlayer();    
@@ -206,6 +217,21 @@ public class SirGluten : MonoBehaviour
             animator.SetBool("isHurting", isHurting);
         }
         if (!isHurting) animator.SetBool("isHurting", isHurting);
+
+        //Burning
+        if (burnTime > 0) {
+            burnTime -= Time.deltaTime;
+        } else {
+            burnTime = 0;
+        }
+
+        //Spikes
+        if (spikeInterval > 0) {
+            spikeInterval -= Time.deltaTime;
+        } else {
+            spikeInterval = 0;
+        }
+
     }
 
     void MovePlayer(){
@@ -327,6 +353,22 @@ public class SirGluten : MonoBehaviour
         if (!isLocking) isLocked = false;
     }
 
+    public IEnumerator Burn(){
+        while (burnTime <= 0) yield return null;
+        StartCoroutine(Hurt(burnDamage));
+        yield return new WaitForSeconds(burnInterval);
+        StartCoroutine(Burn());
+    }
+
+    public IEnumerator Spike(){
+        while (spikeInterval <= 0) yield return null;
+        StartCoroutine(Hurt(spikeDamage));
+        Debug.Log("You take damage: " + spikeDamage);
+        Debug.Log("spikeInterval: " + spikeInterval);
+        yield return new WaitForSeconds(spikeInterval);
+        StartCoroutine(Spike());
+    }
+
     void CreatePopup(int damage){
         GameObject newPopup = Instantiate(damagePopup, transform.position, Quaternion.identity);
         DamagePopup dp = newPopup.GetComponent<DamagePopup>();
@@ -407,4 +449,6 @@ public class SirGluten : MonoBehaviour
     public global::System.Boolean IsLocked { get => isLocked; set => isLocked = value; }
     public global::System.Single BaseSpeed { get => baseSpeed; set => baseSpeed = value; }
     public global::System.Single Speed { get => speed; set => speed = value; }
+    public global::System.Single BurnTime { get => burnTime; set => burnTime = value; }
+    public global::System.Single SpikeInterval { get => spikeInterval; set => spikeInterval = value; }
 }

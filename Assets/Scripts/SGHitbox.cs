@@ -36,6 +36,10 @@ public class SGHitbox : MonoBehaviour
             StartCoroutine(sirGluten.Hurt(enemyAttack.Damage, false));
             enemyAttack.DestroyOnCollide();
         } 
+
         
     }
+
 }
+
+
