@@ -14,7 +14,7 @@ public class DoNot : MonoBehaviour
         Vector2 initialVelocity = new Vector2(randomX, randomY).normalized * moveSpeed;
 
         body.linearVelocity = new Vector2(moveSpeed, moveSpeed);
-        Debug.Log($"Initial Velocity: {body.linearVelocity}");
+        //Debug.Log($"Initial Velocity: {body.linearVelocity}");
     }
 
     void OnCollisionEnter2D(Collision2D collision)
@@ -26,10 +26,6 @@ public class DoNot : MonoBehaviour
             //Vector2 newVelocity = Vector2.Reflect(body.linearVelocity, collision.contacts[0].normal);
             //body.linearVelocity = newVelocity;
             //Debug.Log($"Contact with Wall. New Velocity: {body.linearVelocity}");
-        }
-        else
-        {
-            Debug.Log($"Contact with {collision.gameObject.name}");
         }
     }
 }

@@ -57,6 +57,10 @@ public class AStarPathfinding : MonoBehaviour
 
 
         if (path.Count > 0) {
+            if (Vector2.Distance(rb.position, path[path.Count - 1].Position) < 1f) {
+                path.RemoveAt(path.Count - 1);
+            }
+
             Vector2 movementDirection = (path[path.Count - 1].Position - rb.position);
             rb.linearVelocity = movementDirection.normalized * speed;
 
@@ -65,9 +69,7 @@ public class AStarPathfinding : MonoBehaviour
                 rb.linearVelocity = Vector2.zero;
             }
 
-            if (Vector2.Distance(rb.position, path[path.Count - 1].Position) < 1f) {
-                path.RemoveAt(path.Count - 1);
-            }
+  
         }
     }
 
