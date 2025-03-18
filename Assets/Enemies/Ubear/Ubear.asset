@@ -15,9 +15,9 @@ MonoBehaviour:
   enemyName: Ubear
   description: This ube roll is decieving. Stay alert, this little bear can tear
     through almost anything.
-  health: 20
+  health: 30
   damage: 4
-  flavoring: spicy
+  flavoring: vanilla
   xpMultiplier: 1
   goldMultiplier: 1
   sprite: {fileID: -8857117676597791695, guid: 1fd9b74163b61d34ba194890099fd936, type: 3}

@@ -10,17 +10,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5961343830b40814e8d1fdca4c078598, type: 3}
-  m_Name: EnemyData
+  m_Name: DoNot
   m_EditorClassIdentifier: 
-  enemyName: Pandan
-  description: Although fragrant, don't stop to smell this little bear or else...
-    BANG!
-  health: 20
-  damage: 20
-  flavoring: spicy
+  enemyName: DoNot
+  description: Rampant donuts rejected from your local bagel shop. DONUT underestimate
+    them.
+  health: 24
+  damage: 10
+  flavoring: fruity
   xpMultiplier: 1
   goldMultiplier: 1
-  sprite: {fileID: -7107577901510104695, guid: b3a3e82dd0d95e6429c96710a96832aa, type: 3}
+  sprite: {fileID: -5523151287713105908, guid: 55bc61c1fc503415cbff02d88bc3592e, type: 3}
   color: {r: 1, g: 1, b: 1, a: 1}
   isDiscovered: 0
   detectionRadius: 10
