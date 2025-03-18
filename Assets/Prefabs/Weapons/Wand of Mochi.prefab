@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1001 &2242217292022068086
+--- !u!1001 &2145662001845759721
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -13,29 +13,17 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -3714554652511672818, guid: 8f49e4d77b89a784497c267292f8d5fb, type: 3}
-      propertyPath: angleRange
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -3714554652511672818, guid: 8f49e4d77b89a784497c267292f8d5fb, type: 3}
       propertyPath: glucoseCost
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
-    - target: {fileID: -3714554652511672818, guid: 8f49e4d77b89a784497c267292f8d5fb, type: 3}
-      propertyPath: magicProjectile
-      value: 
-      objectReference: {fileID: 8306689941005278585}
     - target: {fileID: -3714554652511672818, guid: 8f49e4d77b89a784497c267292f8d5fb, type: 3}
       propertyPath: PlayerProjectile
       value: 
-      objectReference: {fileID: 2237068893191470828, guid: fedd85683e58352439fdb4bdee5ecdea, type: 3}
+      objectReference: {fileID: 3008986627719570525, guid: e551160d8f72c8b4eb0e3a2039b47194, type: 3}
     - target: {fileID: 2555982464447483995, guid: 8f49e4d77b89a784497c267292f8d5fb, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: -8068035455531306345, guid: fcb14752d84d04f4487fea12703c6457, type: 3}
-    - target: {fileID: 2555982464447483995, guid: 8f49e4d77b89a784497c267292f8d5fb, type: 3}
-      propertyPath: m_SortingLayer
-      value: 0
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 5125201553696344367, guid: a425914c5e4024667bb6a08a3deca6db, type: 3}
     - target: {fileID: 3610859613947776775, guid: 8f49e4d77b89a784497c267292f8d5fb, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -98,11 +86,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3610859613947776775, guid: 8f49e4d77b89a784497c267292f8d5fb, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 6.93
+      value: 9.23
       objectReference: {fileID: 0}
     - target: {fileID: 3610859613947776775, guid: 8f49e4d77b89a784497c267292f8d5fb, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 3.77
+      value: 2.56
       objectReference: {fileID: 0}
     - target: {fileID: 3610859613947776775, guid: 8f49e4d77b89a784497c267292f8d5fb, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -116,69 +104,48 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6481836035841760489, guid: 8f49e4d77b89a784497c267292f8d5fb, type: 3}
-      propertyPath: m_SpriteTilingProperty.oldSize.x
-      value: 0.90625
-      objectReference: {fileID: 0}
-    - target: {fileID: 6481836035841760489, guid: 8f49e4d77b89a784497c267292f8d5fb, type: 3}
-      propertyPath: m_SpriteTilingProperty.oldSize.y
-      value: 0.78125
-      objectReference: {fileID: 0}
     - target: {fileID: 7807762647802752527, guid: 8f49e4d77b89a784497c267292f8d5fb, type: 3}
       propertyPath: m_Name
-      value: PeppermintDart
+      value: Wand of Mochi Variant
       objectReference: {fileID: 0}
     - target: {fileID: 8227513997897164223, guid: 8f49e4d77b89a784497c267292f8d5fb, type: 3}
       propertyPath: m_Color.b
-      value: 0.43867922
-      objectReference: {fileID: 0}
-    - target: {fileID: 8227513997897164223, guid: 8f49e4d77b89a784497c267292f8d5fb, type: 3}
-      propertyPath: m_Color.g
-      value: 0.43867922
-      objectReference: {fileID: 0}
-    - target: {fileID: 8227513997897164223, guid: 8f49e4d77b89a784497c267292f8d5fb, type: 3}
-      propertyPath: m_Color.r
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8227513997897164223, guid: 8f49e4d77b89a784497c267292f8d5fb, type: 3}
-      propertyPath: m_SortingLayer
-      value: 0
+      propertyPath: m_Color.g
+      value: 0.740566
+      objectReference: {fileID: 0}
+    - target: {fileID: 8227513997897164223, guid: 8f49e4d77b89a784497c267292f8d5fb, type: 3}
+      propertyPath: m_Color.r
+      value: 0.987524
       objectReference: {fileID: 0}
     - target: {fileID: 8927998594896783488, guid: 8f49e4d77b89a784497c267292f8d5fb, type: 3}
       propertyPath: id
-      value: peppermint_dart
+      value: wand_of_mochi
       objectReference: {fileID: 0}
     - target: {fileID: 8927998594896783488, guid: 8f49e4d77b89a784497c267292f8d5fb, type: 3}
       propertyPath: flavor
-      value: spicy
+      value: grain
       objectReference: {fileID: 0}
     - target: {fileID: 8927998594896783488, guid: 8f49e4d77b89a784497c267292f8d5fb, type: 3}
       propertyPath: rarity
-      value: common
+      value: rare
       objectReference: {fileID: 0}
     - target: {fileID: 8927998594896783488, guid: 8f49e4d77b89a784497c267292f8d5fb, type: 3}
       propertyPath: weaponName
-      value: PeppermintDart
+      value: Wand of Mochi
       objectReference: {fileID: 0}
     - target: {fileID: 8927998594896783488, guid: 8f49e4d77b89a784497c267292f8d5fb, type: 3}
       propertyPath: description
-      value: Shoots candycane dart projectiles using peppermint bark sorcery.
+      value: Right click to shoot a barrage of bouncing mochi.
       objectReference: {fileID: 0}
     - target: {fileID: 8927998594896783488, guid: 8f49e4d77b89a784497c267292f8d5fb, type: 3}
       propertyPath: attackDamage
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 8927998594896783488, guid: 8f49e4d77b89a784497c267292f8d5fb, type: 3}
-      propertyPath: attackCooldown
-      value: 0.1
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8f49e4d77b89a784497c267292f8d5fb, type: 3}
---- !u!1 &8306689941005278585 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7807762647802752527, guid: 8f49e4d77b89a784497c267292f8d5fb, type: 3}
-  m_PrefabInstance: {fileID: 2242217292022068086}
-  m_PrefabAsset: {fileID: 0}

@@ -1,22 +1,25 @@
 fileFormatVersion: 2
-guid: 13187562b70f944d9b66edece9494e5f
+guid: 5a0606f141224f74ca0ba2b35e70216c
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -6491992610461852315
-    second: MochiProj_0
+      213: 1429576535965095045
+    second: GrahamWalk_0
   - first:
-      213: -6595456236752163890
-    second: MochiProj_1
+      213: -9152133144643414029
+    second: GrahamWalk_1
   - first:
-      213: -3104046807585642355
-    second: MochiProj_2
+      213: 4896826333379123471
+    second: GrahamWalk_2
   - first:
-      213: 6209585440252004069
-    second: MochiProj_3
+      213: 3227566964961446403
+    second: GrahamWalk_3
   - first:
-      213: 6110668172328884448
-    second: MochiProj_4
+      213: 3505577952208363481
+    second: GrahamWalk_4
+  - first:
+      213: 2872144894622009629
+    second: GrahamWalk_5
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -125,13 +128,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: MochiProj_0
+      name: GrahamWalk_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 32
-        height: 32
+        width: 128
+        height: 128
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -140,86 +143,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 56dd5f8ed1fc7e5a0800000000000000
-      internalID: -6491992610461852315
+      spriteID: 584de650940e6d310800000000000000
+      internalID: 1429576535965095045
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MochiProj_1
-      rect:
-        serializedVersion: 2
-        x: 32
-        y: 0
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: ecba0c43f7b3874a0800000000000000
-      internalID: -6595456236752163890
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: MochiProj_2
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 0
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: d882cabdfd53ce4d0800000000000000
-      internalID: -3104046807585642355
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: MochiProj_3
-      rect:
-        serializedVersion: 2
-        x: 96
-        y: 0
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 5e688a0ee01ec2650800000000000000
-      internalID: 6209585440252004069
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: MochiProj_4
+      name: GrahamWalk_1
       rect:
         serializedVersion: 2
         x: 128
         y: 0
-        width: 32
-        height: 32
+        width: 128
+        height: 128
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -228,8 +165,96 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 0e8d2f7b3547dc450800000000000000
-      internalID: 6110668172328884448
+      spriteID: 3f7537025671df080800000000000000
+      internalID: -9152133144643414029
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GrahamWalk_2
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f0957df0b9505f340800000000000000
+      internalID: 4896826333379123471
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GrahamWalk_3
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 30a0053ed0f9acc20800000000000000
+      internalID: 3227566964961446403
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GrahamWalk_4
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9df12ddf29056a030800000000000000
+      internalID: 3505577952208363481
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GrahamWalk_5
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d19856b7098ebd720800000000000000
+      internalID: 2872144894622009629
       vertices: []
       indices: 
       edges: []
@@ -238,7 +263,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 34183f04bb4de1643ac5e48be795ab0e
+    spriteID: 407e966aae3d6814baa9066faba30733
     internalID: 0
     vertices: []
     indices: 
@@ -248,11 +273,12 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      MochiProj_0: -6491992610461852315
-      MochiProj_1: -6595456236752163890
-      MochiProj_2: -3104046807585642355
-      MochiProj_3: 6209585440252004069
-      MochiProj_4: 6110668172328884448
+      GrahamWalk_0: 1429576535965095045
+      GrahamWalk_1: -9152133144643414029
+      GrahamWalk_2: 4896826333379123471
+      GrahamWalk_3: 3227566964961446403
+      GrahamWalk_4: 3505577952208363481
+      GrahamWalk_5: 2872144894622009629
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

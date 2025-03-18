@@ -8,7 +8,7 @@ public class AStarPathfinding : MonoBehaviour
     
     [SerializeField] private float stopDistance = 0f;
     [SerializeField] private float speed = 2f;
-    //[SerializeField] private GameObject gridVisualizer;
+   // [SerializeField] private GameObject gridVisualizer;
     private LayerMask obstacleLayer;
     private List<GameObject> visualizers = new List<GameObject>();
     private GameObject sirGluten;
@@ -21,6 +21,8 @@ public class AStarPathfinding : MonoBehaviour
     private Dictionary<Vector2, Node> grid = new Dictionary<Vector2, Node>();
     List<Node> path = new List<Node>();
 
+    public global::System.Single StopDistance { get => stopDistance; set => stopDistance = value; }
+    public global::System.Single Speed { get => speed; set => speed = value; }
 
     void Start()
     {
@@ -33,6 +35,10 @@ public class AStarPathfinding : MonoBehaviour
 
     void Update() {
         distanceToSirGluten = Vector2.Distance(rb.position, sirGluten.transform.position);
+        if (distanceToSirGluten == stopDistance) {
+            rb.linearVelocity = Vector2.zero;
+            return;
+        } 
         if (distanceToSirGluten <= stopDistance) {
             rb.linearVelocity = Vector2.zero;
             if (sirGluten.transform.position.x > rb.position.x) {
@@ -49,25 +55,29 @@ public class AStarPathfinding : MonoBehaviour
             return;
         }
 
-        if (rb.linearVelocity.x < -1f) {
+        if (rb.linearVelocity.x < -0.3f) {
             transform.localScale = new Vector3(-1f, 1f, 1f);
-        } else if (rb.linearVelocity.x > 1f) {
+        } else if (rb.linearVelocity.x > 0.3f) {
             transform.localScale = new Vector3(1f, 1f, 1f);
         }
 
 
-        if (path.Count > 0) {
-            if (Vector2.Distance(rb.position, path[path.Count - 1].Position) < 1f) {
+        if (path.Count > 1) {
+            bool reachedDistance = Vector2.Distance((Vector2)sirGluten.transform.position, rb.position) <= stopDistance;
+            if (reachedDistance) {
+                rb.linearVelocity = Vector2.zero;
+                return;
+            }
+
+            if (Vector2.Distance(rb.position, path[path.Count - 1].Position) < 4f) {
                 path.RemoveAt(path.Count - 1);
             }
 
             Vector2 movementDirection = (path[path.Count - 1].Position - rb.position);
             rb.linearVelocity = movementDirection.normalized * speed;
 
-            bool reachedDistance = Vector2.Distance((Vector2)sirGluten.transform.position, rb.position) <= stopDistance;
-            if (reachedDistance) {
-                rb.linearVelocity = Vector2.zero;
-            }
+
+
 
   
         }
@@ -194,12 +204,14 @@ public class AStarPathfinding : MonoBehaviour
             if (k > 800) break;
         }
 
+       
         Node curBacktrack = foundPath;
         path = new List<Node>();
 
 
-        while (curBacktrack != null) {
-            /*GameObject visualizer = Instantiate(gridVisualizer, curBacktrack.Position, Quaternion.identity);
+        while (curBacktrack.PrevNode != null) {
+/*
+            GameObject visualizer = Instantiate(gridVisualizer, curBacktrack.Position, Quaternion.identity);
             visualizers.Add(visualizer);
             visualizer.GetComponent<SpriteRenderer>().color = Color.green;
             visualizer.GetComponent<SpriteRenderer>().sortingOrder = 1;

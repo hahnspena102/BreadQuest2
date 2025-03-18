@@ -3,13 +3,15 @@ using System.Collections;
 
 public class PlayerProj : MonoBehaviour
 {
-    private int attackDamage;
-    private string flavor;
+    [SerializeField]private int attackDamage;
+    [SerializeField]private string flavor;
     [SerializeField] private float speed;
     [SerializeField] private float duration = 5f;
-    [SerializeField] private bool isPassable = false;
+    [SerializeField] private bool isPassable, isPiercing = false;
     [SerializeField] private float fadeDuration = 1f;
     [SerializeField] private float timeTilCollision = 1f;
+    [SerializeField]private int maxBounces = 0;
+    private int bounces;
 
     private float elapsedTime = 0f;
     private SpriteRenderer spriteRenderer;
@@ -50,6 +52,15 @@ public class PlayerProj : MonoBehaviour
     void OnCollisionEnter2D(Collision2D collision)
     {
         if (isPassable) return;
+        if (collision.gameObject.tag == "Walls") {
+            if (bounces < maxBounces) {
+            bounces += 1;
+            return;
+            }
+        } else if (collision.gameObject.tag == "Enemy") {
+            if (isPiercing) return;
+        }
+
         Destroy(gameObject);
     }
 
