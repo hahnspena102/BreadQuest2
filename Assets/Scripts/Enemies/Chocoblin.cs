@@ -10,7 +10,6 @@ public class Chocoblin : MonoBehaviour
     private List<Vector2> allTilePositions;
     [SerializeField] private LayerMask wallLayer;
     [SerializeField] private GameObject projectile;
-    private Dictionary<Vector2, Node> grid = new Dictionary<Vector2, Node>();
     private GameObject player;
     private Rigidbody2D rb;
     private Animator animator;
@@ -18,12 +17,14 @@ public class Chocoblin : MonoBehaviour
 
     void Start()
     {
-        allTilePositions = GetAllTilePositions();
+
         StartCoroutine(ChocoblinSequence());
 
         player = GameObject.Find("SirGluten");
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
+        tilemap = GameObject.Find("Floor").GetComponent<Tilemap>();
+        allTilePositions = GetAllTilePositions();
 
         
     }
@@ -40,6 +41,7 @@ public class Chocoblin : MonoBehaviour
 
     List<Vector2> GetAllTilePositions()
     {
+        if (tilemap == null) return null;
         List<Vector2> tilePositions = new List<Vector2>();
 
         BoundsInt bounds = tilemap.cellBounds;
@@ -57,7 +59,7 @@ public class Chocoblin : MonoBehaviour
 
     IEnumerator ChocoblinSequence()
     {
-        while (grid == null || player == null) yield return null;
+        while (allTilePositions == null || player == null) yield return null;
 
         Vector2 newPos = allTilePositions[Random.Range(0,allTilePositions.Count)];
 

@@ -21,6 +21,8 @@ public class Enemy : MonoBehaviour
     private Color ogColor;
     private bool isDying;
     [SerializeField]private float detectionRadius = 10f;
+    private float defense;
+    [SerializeField]private bool deathOnCollide;
     private float invincibility;
 
     public global::System.Int32 Damage { get => damage; set => damage = value; }
@@ -28,6 +30,8 @@ public class Enemy : MonoBehaviour
     public EnemyData EnemyData { get => enemyData; set => enemyData = value; }
     public global::System.Int32 Health { get => health; set => health = value; }
     public global::System.Int32 MaxHealth { get => maxHealth; set => maxHealth = value; }
+    public global::System.Boolean DeathOnCollide { get => deathOnCollide; set => deathOnCollide = value; }
+    public global::System.String Flavoring { get => flavoring; set => flavoring = value; }
 
     void Start(){
         spriteRenderer = GetComponent<SpriteRenderer>();
@@ -41,6 +45,7 @@ public class Enemy : MonoBehaviour
         xpMultiplier = enemyData.XpMultiplier;
         goldMultiplier = enemyData.GoldMultiplier;
         detectionRadius = enemyData.DetectionRadius;
+        defense = enemyData.Defense;
     }
     void Update() {
         if (health <= 0 && !isDying) {
@@ -109,26 +114,27 @@ public class Enemy : MonoBehaviour
             GameObject item = collider.gameObject.transform.parent.gameObject;
 
             Weapon weapon = item.GetComponent<Weapon>();
-
-            StartCoroutine(Hurt(weapon.AttackDamage, weapon.Flavor));
+            int totalDamage = (int)Mathf.Round(weapon.AttackDamage - (weapon.AttackDamage * defense));
+            if (totalDamage < 0) totalDamage = 0;
+            StartCoroutine(Hurt(totalDamage, weapon.Flavor));
         }
         if (collider.gameObject.tag == "PlayerProj") {
 
 
             PlayerProj mp = collider.gameObject.GetComponent<PlayerProj>();
-
-            StartCoroutine(Hurt(mp.AttackDamage, mp.Flavor));
+            int totalDamage = (int)Mathf.Round(mp.AttackDamage - (mp.AttackDamage * defense));
+            if (totalDamage < 0) totalDamage = 0;
+            StartCoroutine(Hurt(totalDamage, mp.Flavor));
         } 
     }
 
     void OnCollisionEnter2D(Collision2D collision) {
        if (collision.gameObject.tag == "PlayerProj") {
-
-
             PlayerProj mp = collision.gameObject.GetComponent<PlayerProj>();
-
-            StartCoroutine(Hurt(mp.AttackDamage, mp.Flavor));
-        } 
+            int totalDamage = (int)Mathf.Round(mp.AttackDamage - (mp.AttackDamage * defense));
+            if (totalDamage < 0) totalDamage = 0;
+            StartCoroutine(Hurt(totalDamage, mp.Flavor));
+        }
     }
     
 }
