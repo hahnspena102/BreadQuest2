@@ -28,14 +28,19 @@ public class SGHitbox : MonoBehaviour
                 direction = new Vector2(1f, 1f);
             }
 
+            
+
             sirGluten.IsLocked = true;
             body.linearVelocity = direction * 2f;
             StartCoroutine(sirGluten.Hurt(enemy.Damage, false));
+
+            if (enemy.DeathOnCollide) enemy.Health = 0;
         } else if (collider.gameObject.tag == "EnemyAttack") {
             EnemyAttack enemyAttack = collider.gameObject.GetComponent<EnemyAttack>();
             StartCoroutine(sirGluten.Hurt(enemyAttack.Damage, false));
             enemyAttack.DestroyOnCollide();
         } 
+        
         
     }
 

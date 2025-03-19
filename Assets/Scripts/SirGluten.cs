@@ -11,6 +11,7 @@ public class SirGluten : MonoBehaviour
     private SpriteRenderer spriteRenderer;
     private Animator animator;
     private float verticalInput, horizontalInput;
+    private string facing;
     private float baseSpeed = 4f, speed;
     
 
@@ -232,6 +233,18 @@ public class SirGluten : MonoBehaviour
             spikeInterval = 0;
         }
 
+        if (animator.GetFloat("horizontal") > animator.GetFloat("vertical")) {
+            if (transform.localScale.x < 0) {
+                facing = "Left";
+            } else {
+                facing = "Right";
+            }
+        } else if (animator.GetFloat("vertical") > 0) {
+            facing = "Up";
+        } else if (animator.GetFloat("vertical") < 0) {
+            facing = "Down";
+        }
+
     }
 
     void MovePlayer(){
@@ -451,4 +464,5 @@ public class SirGluten : MonoBehaviour
     public global::System.Single Speed { get => speed; set => speed = value; }
     public global::System.Single BurnTime { get => burnTime; set => burnTime = value; }
     public global::System.Single SpikeInterval { get => spikeInterval; set => spikeInterval = value; }
+    public global::System.String Facing { get => facing; set => facing = value; }
 }

@@ -66,6 +66,7 @@ public class PlayerProj : MonoBehaviour
 
     private IEnumerator FadeOutAndDestroy()
     {
+        if (spriteRenderer == null) yield break;
         yield return new WaitForSeconds(duration - fadeDuration);
 
         float fadeElapsed = 0f;

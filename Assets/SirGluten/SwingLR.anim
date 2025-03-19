@@ -124,16 +124,16 @@ AnimationClip:
     intParameter: 4
     messageOptions: 0
   - time: 0.5
-    functionName: set_WeaponAnimationFrame
-    data: 
-    objectReferenceParameter: {fileID: 0}
-    floatParameter: 0
-    intParameter: 5
-    messageOptions: 0
-  - time: 0.5
     functionName: TurnOffAnimation
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
     intParameter: 0
+    messageOptions: 0
+  - time: 0.5
+    functionName: set_WeaponAnimationFrame
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 5
     messageOptions: 0
