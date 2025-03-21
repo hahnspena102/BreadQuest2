@@ -206,7 +206,7 @@ public class Boss : MonoBehaviour
             currentAngle = (currentAngle + angleGap) % 360;
             Quaternion newRotation = Quaternion.Euler(0, 0, currentAngle);
 
-            Vector2 spawnPosition = new Vector2(transform.position.x, transform.position.y);
+            Vector2 spawnPosition = new Vector2(transform.position.x, transform.position.y - 0.5f);
 
             GameObject newProjectile = Instantiate(projectile, spawnPosition, newRotation);
             newProjectile.transform.parent = GameManager.EffectStore.transform;
@@ -301,7 +301,7 @@ public class Boss : MonoBehaviour
                     continue;
                 }
 
-                Vector2 spawnPosition = new Vector2(transform.position.x, transform.position.y);
+                Vector2 spawnPosition = new Vector2(transform.position.x, transform.position.y - 0.5f);
 
                 GameObject newProjectile = Instantiate(projectile, spawnPosition, newRotation);
                 newProjectile.transform.parent = GameManager.EffectStore.transform;
@@ -309,7 +309,7 @@ public class Boss : MonoBehaviour
                 SpriteRenderer newProjSprite = newProjectile.GetComponent<SpriteRenderer>();
 
                 Rigidbody2D rb = newProjectile.GetComponent<Rigidbody2D>();
-            rb.angularVelocity = -360f * 2;
+                rb.angularVelocity = -360f * 2;
             }
             yield return new WaitForSeconds(1.5f);
         }
