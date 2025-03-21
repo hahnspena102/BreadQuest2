@@ -26,6 +26,9 @@ public class Boss : MonoBehaviour
 
     private Vector2 arenaLowerLeft = new Vector2(15.5f,-4.5f);
     private Vector2 arenaUpperRight = new Vector2(41.5f, 10.5f);
+
+    [SerializeField]private GameObject enemySpawner;
+    [SerializeField]private GameObject firepool;
     
 
     void Start(){
@@ -79,12 +82,19 @@ public class Boss : MonoBehaviour
             bossPhase = 2;
             if (curPhase != bossPhase) {
                 Debug.Log("phase 2!");
+                foreach (GameObject obj in fists) {
+                   if (obj != null) obj.transform.localScale = obj.transform.localScale * 1.25f;
+
+                }
             }
         } 
         else {
             bossPhase = 3;
             if (curPhase != bossPhase) {
                 Debug.Log("phase 3!");
+                foreach (GameObject obj in fists) {
+                    if (obj != null) obj.transform.localScale = obj.transform.localScale * 1.25f;
+                }
             }
         }
     }
@@ -97,13 +107,13 @@ public class Boss : MonoBehaviour
         switch(bossPhase) 
         {
         case 1:
-            SwitchState(Random.Range(2, 3));
+            SwitchState(Random.Range(0, 3));
             break;
         case 2:
-            SwitchState(Random.Range(2, 3));
+            SwitchState(Random.Range(0, 5));
             break;
         case 3:
-            SwitchState(Random.Range(2, 3));
+            SwitchState(Random.Range(0, 6));
             break;
         default:
             break;
@@ -118,13 +128,19 @@ public class Boss : MonoBehaviour
             break;
         case 2:
             Debug.Log("FIRE");
-            StartCoroutine(PulseFire());
+            StartCoroutine(SpiralFire());
             break;
         case 3:
             Debug.Log("SPAWN");
+            StartCoroutine(SpawnEnemies());
             break;
         case 4:
-            Debug.Log("BEAM");
+            Debug.Log("PULSE");
+            StartCoroutine(PulseFire());
+            break;
+        case 5:
+            Debug.Log("FIREPOOL");
+            StartCoroutine(SpawnFirepool());
             break;
         default:
             break;
@@ -142,13 +158,23 @@ public class Boss : MonoBehaviour
     // PHASE 1 MECHANICS
     IEnumerator SpiralFire() {
         int projectileCount = 50;
+        float angleGap = 15f;
+        float timeBetweenProj = 0.1f;
+        if (bossPhase >= 3) {
+            projectileCount = 150;
+            timeBetweenProj = 0.05f;
+        } else if (bossPhase >= 2) {
+            projectileCount = 100;
+            timeBetweenProj = 0.075f;
+        }
+
         yield return new WaitForSeconds(1f);
 
         Vector2 directionToPlayer = (SirGluten.playerPosition - (Vector2)transform.position).normalized;
         float currentAngle = Mathf.Atan2(directionToPlayer.y, directionToPlayer.x) * Mathf.Rad2Deg - 60;
 
         for (int i = 0; i < projectileCount; i++) {
-            currentAngle = (currentAngle + 21f) % 360;
+            currentAngle = (currentAngle + angleGap) % 360;
             Quaternion newRotation = Quaternion.Euler(0, 0, currentAngle);
 
             Vector2 spawnPosition = new Vector2(transform.position.x, transform.position.y);
@@ -161,7 +187,7 @@ public class Boss : MonoBehaviour
 
             Rigidbody2D rb = newProjectile.GetComponent<Rigidbody2D>();
             rb.angularVelocity = -360f * 2;
-            yield return new WaitForSeconds(0.1f);
+            yield return new WaitForSeconds(timeBetweenProj);
         }
         bossState = 0;
     }
@@ -175,7 +201,7 @@ public class Boss : MonoBehaviour
 
         // ROTATE
         float lockTime = 0f;
-        while(lockTime <= 3f) {
+        while(lockTime <= 1.5f) {
             Vector2 curDirection = SirGluten.playerPosition - fistRB.position;
             if (fistRB.transform.localScale.x < 0) {
                 fistRB.rotation = -(Mathf.Atan2(curDirection.y, -curDirection.x) * Mathf.Rad2Deg);
@@ -207,9 +233,9 @@ public class Boss : MonoBehaviour
         // RETURN
         if (collider != null) collider.enabled = false;
         while (Vector2.Distance((fistOffset + rb.position),fistRB.position) > 0.2f) {
-            fistRB.linearVelocity = ((fistOffset + rb.position) - fistRB.position).normalized * 3f;
-            GameObject newmarker = Instantiate(marker,(fistOffset + rb.position),Quaternion.identity);
-            Destroy(newmarker,2f);
+            fistRB.linearVelocity = ((fistOffset + rb.position) - fistRB.position).normalized * 6f;
+           // GameObject newmarker = Instantiate(marker,(fistOffset + rb.position),Quaternion.identity);
+           // Destroy(newmarker,2f);
             yield return null;
         }
         fistsAttacking[randomNumber] = false;
@@ -232,6 +258,10 @@ public class Boss : MonoBehaviour
         int projectileCount = 128;
         int pulseCount = 3;
         float angleGap = 30f;
+
+        if (bossPhase >= 3) {
+            angleGap = 15f;
+        }
 
         for (int i = 0; i < pulseCount; i++) {
             float angleOffset = Random.Range(-60,60);
@@ -259,9 +289,43 @@ public class Boss : MonoBehaviour
         }
 
 
-        yield return new WaitForSeconds(3f);
+        yield return new WaitForSeconds(1f);
         bossState = 0;
         
     }
+
+    IEnumerator SpawnEnemies() {
+        int spawnCount = 1;
+
+        if (bossPhase >= 3) {
+            spawnCount = 1;
+        }
+
+        for (int i = 0; i < spawnCount; i++) {
+            Vector2 randomPosition = new Vector3(Random.Range(arenaLowerLeft.x,arenaUpperRight.x),Random.Range(arenaLowerLeft.y,arenaUpperRight.y));
+            while (Vector2.Distance(randomPosition,SirGluten.playerPosition) > 5) {
+                randomPosition = new Vector3(Random.Range(arenaLowerLeft.x,arenaUpperRight.x),Random.Range(arenaLowerLeft.y,arenaUpperRight.y));
+            }
+            GameObject newSpawner = Instantiate(enemySpawner, randomPosition, Quaternion.identity);
+            yield return new WaitForSeconds(0.5f);
+        }
+
+        yield return new WaitForSeconds(1f);
+        bossState = 0;
+    }
+
+        // PHASE 2 MECHANICS
+    IEnumerator SpawnFirepool() {
+        int poolCount = 20;
+        for (int i = 0; i < poolCount; i++) {
+            Vector2 randomPosition = new Vector3(Random.Range(arenaLowerLeft.x,arenaUpperRight.x),Random.Range(arenaLowerLeft.y,arenaUpperRight.y));
+            GameObject newFirepool = Instantiate(firepool, randomPosition, Quaternion.identity);
+
+            yield return new WaitForSeconds(0.5f);
+        }
+        yield return new WaitForSeconds(3f);
+        bossState = 0;
+    }
+
 
 }
