@@ -30,7 +30,7 @@ public class Spikes : MonoBehaviour
         isActive = true;
         yield return new WaitForSeconds(1f);
         isActive = false;
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(2f);
         StartCoroutine(SpikeSequence());
     }
 

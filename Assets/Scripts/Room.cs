@@ -1,6 +1,7 @@
 using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 
 public class Room : MonoBehaviour
 {
@@ -36,6 +37,7 @@ public class Room : MonoBehaviour
             StartCoroutine(StartWaves());
         }
     }
+
 
     private void ActiveBarrier(){
         if (barriers != null) barriers.SetActive(true);
