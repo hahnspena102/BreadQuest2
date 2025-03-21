@@ -39,23 +39,22 @@ public class SGHitbox : MonoBehaviour
             EnemyAttack enemyAttack = collider.gameObject.GetComponent<EnemyAttack>();
             StartCoroutine(sirGluten.Hurt(enemyAttack.Damage, false));
             enemyAttack.DestroyOnCollide();
+        } else if (collider.gameObject.tag == "Spikes"){
+            Spikes spikes = collider.gameObject.GetComponent<Spikes>();
         } else if (collider.gameObject.tag == "BossAttack") {
             BossAttack bossAttack = collider.gameObject.GetComponent<BossAttack>();
             sirGluten.IsLocked = true;
             Rigidbody2D attackRB = collider.gameObject.GetComponent<Rigidbody2D>();
             body.linearVelocity = attackRB.linearVelocity * 1f;
             StartCoroutine(sirGluten.Hurt(1,true));    
-        } 
-        
-        
-        
+        }         
     }
 
-    void OnTriggerEnter2D(Collider2D collision)
-    {
-        if(collision.gameObject.tag == "Spikes"){
-            StartCoroutine(sirGluten.Hurt(10, false));
+            if(spikes.IsActive){
+                StartCoroutine(sirGluten.Hurt(10, false));
+            }
         }
+        
     }
 
     void OnTriggerExit2D(Collider2D collider) {
