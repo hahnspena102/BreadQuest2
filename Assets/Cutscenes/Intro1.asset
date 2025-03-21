@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 32b1d5ecf40f8ae478f713c7d018297f, type: 3}
+  m_Name: Intro1
+  m_EditorClassIdentifier: 
+  cutsceneFrame: {fileID: 8416243949045666254, guid: d4c8f99118b52ac4ab6d1c10d7f4a850, type: 3}
+  text: Once upon a time, there was Bread Knight named Sir Gluten. He was whole and
+    made out of gluten. He lived in the sweet, peaceful Dough Village of the Flour
+    Kingdom.

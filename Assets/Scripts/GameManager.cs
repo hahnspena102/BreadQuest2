@@ -75,6 +75,7 @@ public class GameManager : MonoBehaviour
         combinedItemList.AddRange(itemsTier3);
 
         sirGluten.CurSaveData.Floor = floor;
+
        // Debug.Log(combinedItemList.Count);
         
     }

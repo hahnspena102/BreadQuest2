@@ -27,8 +27,23 @@ EditorBuildSettings:
     path: Assets/Scenes/Floor2.unity
     guid: 64ab14bb15123f64f9e74be45f26f780
   - enabled: 1
+    path: Assets/Scenes/CutsceneFloor5.unity
+    guid: e7a2afed70cd19548ad1e6a69a0db417
+  - enabled: 1
+    path: Assets/Scenes/Floor6.unity
+    guid: edd095616707f3241a015e888a03954d
+  - enabled: 1
+    path: Assets/Scenes/FloorHall.unity
+    guid: a0fabb5d6d58efc43ba0efcab9f87d92
+  - enabled: 1
+    path: Assets/Scenes/CutscenePreboss.unity
+    guid: 21a8379f36cfda642841d8a5ef45784b
+  - enabled: 1
     path: Assets/Scenes/FloorBoss.unity
     guid: d85196c6f8db1db43bde5002d71ab3a9
+  - enabled: 1
+    path: Assets/Scenes/CutscenePostboss.unity
+    guid: 3dd3372c747c9964a8b754d50cc45eee
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 3590b91b4603b465dbb4216d601bff33, type: 3}
   m_UseUCBPForAssetBundles: 0

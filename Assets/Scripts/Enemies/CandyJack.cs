@@ -33,9 +33,9 @@ public class CandyJack : MonoBehaviour
             destPos = player.position;
         } else {
             if (body.linearVelocity.x > 0.5f) {
-                transform.localScale = new Vector3(1f, 1f, 1f);
+                transform.localScale = new Vector3(Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
             } else if (body.linearVelocity.x < -0.5f) {
-                transform.localScale = new Vector3(-1f, 1f, 1f);
+                transform.localScale = new Vector3(-Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
             }
         }
         Debug.Log(isCharging);

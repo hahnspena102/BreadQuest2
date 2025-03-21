@@ -26,7 +26,11 @@ public class UIManager : MonoBehaviour
 
         floorIntroCanvasGroup = floorIntro.GetComponent<CanvasGroup>();
         if (sirGluten != null) {
-            if (sirGluten.CurSaveData.Floor.StartsWith("Floor")) {
+            if (SceneManager.GetActiveScene().name == "FloorHall") {
+                floorIntroText.text = "";
+            } else if (sirGluten.CurSaveData.Floor.StartsWith("FloorBoss")) {
+                floorIntroText.text = "Fight!";
+            } else if (sirGluten.CurSaveData.Floor.StartsWith("Floor")) {
                 floorIntroText.text = "Floor " + sirGluten.CurSaveData.Floor.Substring(5);
             } else {
                 floorIntroText.text = sirGluten.CurSaveData.Floor;

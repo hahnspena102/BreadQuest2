@@ -49,7 +49,7 @@ public class SGHitbox : MonoBehaviour
             sirGluten.IsLocked = true;
             Rigidbody2D attackRB = collider.gameObject.GetComponent<Rigidbody2D>();
             body.linearVelocity = attackRB.linearVelocity * 1f;
-            StartCoroutine(sirGluten.Hurt(1,true));    
+            StartCoroutine(sirGluten.Hurt(bossAttack.Damage,true));    
         }         
     }
 
