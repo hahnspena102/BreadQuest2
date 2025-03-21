@@ -41,6 +41,9 @@ public class SGHitbox : MonoBehaviour
             enemyAttack.DestroyOnCollide();
         } else if (collider.gameObject.tag == "Spikes"){
             Spikes spikes = collider.gameObject.GetComponent<Spikes>();
+            if(spikes.IsActive){
+                StartCoroutine(sirGluten.Hurt(10, false));
+            }
         } else if (collider.gameObject.tag == "BossAttack") {
             BossAttack bossAttack = collider.gameObject.GetComponent<BossAttack>();
             sirGluten.IsLocked = true;
@@ -48,13 +51,6 @@ public class SGHitbox : MonoBehaviour
             body.linearVelocity = attackRB.linearVelocity * 1f;
             StartCoroutine(sirGluten.Hurt(1,true));    
         }         
-    }
-
-            if(spikes.IsActive){
-                StartCoroutine(sirGluten.Hurt(10, false));
-            }
-        }
-        
     }
 
     void OnTriggerExit2D(Collider2D collider) {

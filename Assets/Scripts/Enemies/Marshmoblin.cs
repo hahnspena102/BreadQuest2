@@ -55,7 +55,7 @@ public class Marshmoblin : MonoBehaviour
             audioSource.clip = attackSFX[Random.Range(0, attackSFX.Count)];
             audioSource.Play();
         }
-        Vector2 spawnPosition = new Vector2(body.position.x + 0.6f, body.position.y + 0.3f);
+        Vector2 spawnPosition = new Vector2(body.position.x, body.position.y);
         Vector2 directionToPlayer = (new Vector2(SirGluten.playerPosition.x, SirGluten.playerPosition.y) - (Vector2)spawnPosition).normalized;
         Quaternion rotation = Quaternion.FromToRotation(Vector2.up, directionToPlayer);
         GameObject newSpear = Instantiate(spear, spawnPosition, rotation);

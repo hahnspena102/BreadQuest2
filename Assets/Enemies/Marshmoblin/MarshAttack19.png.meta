@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      MarshAttack19_0: 6843562016907921311
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

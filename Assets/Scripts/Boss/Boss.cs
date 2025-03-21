@@ -249,8 +249,6 @@ public class Boss : MonoBehaviour
 
     // PHASE 2 MECHANICS
     IEnumerator PulseFire() {
-        Debug.Log("pulse fire!");
-
         Vector2 directionToPlayer = (SirGluten.playerPosition - (Vector2)transform.position).normalized;
         float playerAngle = Mathf.Atan2(directionToPlayer.y, directionToPlayer.x) * Mathf.Rad2Deg;
         //Debug.Log(playerAngle);
@@ -271,7 +269,6 @@ public class Boss : MonoBehaviour
                 Quaternion newRotation = Quaternion.Euler(0, 0, currentAngle);
 
                 if (Mathf.Abs(Mathf.DeltaAngle(currentAngle, playerAngle - 90 + angleOffset)) < angleGap) {
-                    Debug.Log(currentAngle);
                     continue;
                 }
 
