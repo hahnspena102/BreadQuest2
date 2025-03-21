@@ -61,6 +61,8 @@ public class GameManager : MonoBehaviour
     public global::System.String Floor { get => floor; set => floor = value; }
 
     void Start() {
+        combinedItemList = new List<GameObject>();
+        
         ProjectileStore = GameObject.Find("ProjectileStore");
         ItemStore = GameObject.Find("ItemStore");
         EffectStore = GameObject.Find("EffectStore");
@@ -73,6 +75,7 @@ public class GameManager : MonoBehaviour
         combinedItemList.AddRange(itemsTier3);
 
         sirGluten.CurSaveData.Floor = floor;
+       // Debug.Log(combinedItemList.Count);
         
     }
 
