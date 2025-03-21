@@ -38,6 +38,9 @@ public class Chest : MonoBehaviour
         isOpened = true;
         yield return new WaitForSeconds(1f);
         CreateItem();
+        if (tier == 1) SirGluten.staticGold += 10;
+        if (tier == 2) SirGluten.staticGold += 25;
+        if (tier == 3) SirGluten.staticGold += 50;
         Destroy(gameObject);
     }
 

@@ -49,6 +49,7 @@ public class SirGluten : MonoBehaviour
     private int spikeDamage = 10;
     private float spikeInterval = 0;
     //[SerializeField] private GameObject burnParticles;
+    [SerializeField]private GameObject burnParticle;
 
     void Start()
     {
@@ -224,6 +225,7 @@ public class SirGluten : MonoBehaviour
         } else {
             burnTime = 0;
         }
+        burnParticle.SetActive(burnTime > 0);
 
         //Spikes
         if (spikeInterval > 0) {
