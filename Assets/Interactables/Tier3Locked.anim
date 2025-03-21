@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: ChestLocked
+  m_Name: Tier3Locked
   serializedVersion: 7
   m_Legacy: 0
   m_Compressed: 0
@@ -21,7 +21,7 @@ AnimationClip:
   - serializedVersion: 2
     curve:
     - time: 0
-      value: {fileID: -5281422124547630143, guid: 48472caa25a167349a3d87dd266f1ef4, type: 3}
+      value: {fileID: 838184541, guid: 2936dd452abd7ee489aafbbd1d40205a, type: 3}
     attribute: m_Sprite
     path: 
     classID: 212
@@ -44,7 +44,7 @@ AnimationClip:
       isIntCurve: 0
       isSerializeReferenceCurve: 0
     pptrCurveMapping:
-    - {fileID: -5281422124547630143, guid: 48472caa25a167349a3d87dd266f1ef4, type: 3}
+    - {fileID: 838184541, guid: 2936dd452abd7ee489aafbbd1d40205a, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}

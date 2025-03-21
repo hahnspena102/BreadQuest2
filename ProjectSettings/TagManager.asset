@@ -47,20 +47,17 @@ TagManager:
   - 
   - 
   m_SortingLayers:
-  - name: Default
-    uniqueID: 0
-    locked: 0
   - name: Floor
     uniqueID: 3484713735
-    locked: 0
-  - name: Items
-    uniqueID: 951058249
     locked: 0
   - name: Walls
     uniqueID: 1017676793
     locked: 0
   - name: Entities
     uniqueID: 4248362681
+    locked: 0
+  - name: Default
+    uniqueID: 0
     locked: 0
   - name: AttacksAndEffects
     uniqueID: 3589637189
