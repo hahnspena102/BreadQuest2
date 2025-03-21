@@ -1,5 +1,37 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1101969979545933939
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5617290880084927619}
+  m_Layer: 0
+  m_Name: Chests
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5617290880084927619
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1101969979545933939}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 8062961907886466901}
+  m_Father: {fileID: 1621993852276043917}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1733733312034816744
 GameObject:
   m_ObjectHideFlags: 0
@@ -31,7 +63,7 @@ Transform:
   m_Children:
   - {fileID: 8605817954047804461}
   - {fileID: 8725342720439550918}
-  - {fileID: 4843198152794801895}
+  - {fileID: 5617290880084927619}
   - {fileID: 1050578343343126310}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -279,39 +311,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   wavesParent: {fileID: 1050578343343126310}
   barriers: {fileID: 3725369464324646653}
-  chest: {fileID: 7351743251781259773}
+  chest: {fileID: 1101969979545933939}
   spawnParticles: {fileID: 1913445023663260805, guid: 5cc6832359dfb40a8aaebd40daff28c4, type: 3}
---- !u!1001 &3672545994715970783
+--- !u!1001 &2172031560615304557
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 1621993852276043917}
+    m_TransformParent: {fileID: 5617290880084927619}
     m_Modifications:
-    - target: {fileID: 6036473814294170260, guid: 70720d31584444146bd95ab473187d38, type: 3}
-      propertyPath: m_Color.b
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6036473814294170260, guid: 70720d31584444146bd95ab473187d38, type: 3}
-      propertyPath: m_Color.g
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6036473814294170260, guid: 70720d31584444146bd95ab473187d38, type: 3}
-      propertyPath: m_Color.r
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6120711398463384866, guid: 70720d31584444146bd95ab473187d38, type: 3}
-      propertyPath: m_Icon
-      value: 
-      objectReference: {fileID: 8418204508859773708, guid: 0000000000000000d000000000000000, type: 0}
     - target: {fileID: 6120711398463384866, guid: 70720d31584444146bd95ab473187d38, type: 3}
       propertyPath: m_Name
-      value: Chest
-      objectReference: {fileID: 0}
-    - target: {fileID: 6120711398463384866, guid: 70720d31584444146bd95ab473187d38, type: 3}
-      propertyPath: m_IsActive
-      value: 1
+      value: ChestTier1
       objectReference: {fileID: 0}
     - target: {fileID: 8197112143854549560, guid: 70720d31584444146bd95ab473187d38, type: 3}
       propertyPath: m_Pivot.x
@@ -355,7 +367,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8197112143854549560, guid: 70720d31584444146bd95ab473187d38, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.023525795
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8197112143854549560, guid: 70720d31584444146bd95ab473187d38, type: 3}
       propertyPath: m_LocalRotation.w
@@ -375,11 +387,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8197112143854549560, guid: 70720d31584444146bd95ab473187d38, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 11.639633
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8197112143854549560, guid: 70720d31584444146bd95ab473187d38, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0.4054656
+      value: -0.301
       objectReference: {fileID: 0}
     - target: {fileID: 8197112143854549560, guid: 70720d31584444146bd95ab473187d38, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -398,15 +410,10 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 70720d31584444146bd95ab473187d38, type: 3}
---- !u!224 &4843198152794801895 stripped
+--- !u!224 &8062961907886466901 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 8197112143854549560, guid: 70720d31584444146bd95ab473187d38, type: 3}
-  m_PrefabInstance: {fileID: 3672545994715970783}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &7351743251781259773 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6120711398463384866, guid: 70720d31584444146bd95ab473187d38, type: 3}
-  m_PrefabInstance: {fileID: 3672545994715970783}
+  m_PrefabInstance: {fileID: 2172031560615304557}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &8524437070080627953
 PrefabInstance:
