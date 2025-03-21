@@ -9,6 +9,8 @@ public class Portal : MonoBehaviour
     private bool isInteractable;
     private SirGluten sirGluten;
     [SerializeField]private string destinationScene;
+    [SerializeField]private bool saveAfterTeleport = true;
+
 
     void Start(){
         hoverText = transform.GetChild(0).gameObject;
@@ -24,7 +26,7 @@ public class Portal : MonoBehaviour
     }
 
     IEnumerator NextFloor(){
-        if (sirGluten.CurSaveData.Floor != "Tutorial") {
+        if (saveAfterTeleport) {
             sirGluten.SaveData();
         }
         yield return new WaitForSeconds(0.5f);
