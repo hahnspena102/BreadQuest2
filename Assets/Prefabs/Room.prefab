@@ -61,7 +61,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1783077714088664525}
+  - {fileID: 8605817954047804461}
   - {fileID: 8725342720439550918}
   - {fileID: 5617290880084927619}
   - {fileID: 1050578343343126310}
@@ -190,11 +190,11 @@ Transform:
   m_GameObject: {fileID: 4864209421384786344}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -7.903022, y: -1.4551116, z: 0.022646068}
+  m_LocalPosition: {x: 1.8783398, y: 0.28692198, z: -0.023525795}
   m_LocalScale: {x: 1, y: 3, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1783077714088664525}
+  m_Father: {fileID: 1621993852276043917}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &2476092754072014399
 SpriteRenderer:
@@ -313,39 +313,6 @@ MonoBehaviour:
   barriers: {fileID: 3725369464324646653}
   chest: {fileID: 1101969979545933939}
   spawnParticles: {fileID: 1913445023663260805, guid: 5cc6832359dfb40a8aaebd40daff28c4, type: 3}
-  triggersParent: {fileID: 1783077714088664525}
---- !u!1 &4912792777814676186
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1783077714088664525}
-  m_Layer: 0
-  m_Name: Triggers
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1783077714088664525
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4912792777814676186}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 9.781362, y: 1.7420336, z: -0.046171863}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 8605817954047804461}
-  m_Father: {fileID: 1621993852276043917}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &2172031560615304557
 PrefabInstance:
   m_ObjectHideFlags: 0

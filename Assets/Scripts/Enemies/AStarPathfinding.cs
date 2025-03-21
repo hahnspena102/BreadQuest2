@@ -42,9 +42,9 @@ public class AStarPathfinding : MonoBehaviour
         if (distanceToSirGluten <= stopDistance) {
             rb.linearVelocity = Vector2.zero;
             if (sirGluten.transform.position.x > rb.position.x) {
-                transform.localScale = new Vector3(1f, 1f, 1f);
+                transform.localScale = new Vector3(Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
             } else {
-                transform.localScale = new Vector3(-1f, 1f, 1f);
+                transform.localScale = new Vector3(-Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
             }
             return;
         }
