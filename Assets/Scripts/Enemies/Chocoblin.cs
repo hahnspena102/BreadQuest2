@@ -50,6 +50,8 @@ public class Chocoblin : MonoBehaviour
         {
             if (tilemap.HasTile(pos))
             {
+                if (Mathf.Abs(pos.x - transform.position.x) > boundaryWidth) continue;
+                if (Mathf.Abs(pos.y - transform.position.y) > boundaryHeight) continue;
                 tilePositions.Add(new Vector2(pos.x,pos.y));
             }
         }
