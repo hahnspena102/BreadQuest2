@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 1440904900663861242}
   - component: {fileID: 2160330026199890286}
   m_Layer: 0
-  m_Name: Burn
+  m_Name: BurnTile
   m_TagString: Traps
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

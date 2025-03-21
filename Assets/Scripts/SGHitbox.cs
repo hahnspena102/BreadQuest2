@@ -35,15 +35,14 @@ public class SGHitbox : MonoBehaviour
             EnemyAttack enemyAttack = collider.gameObject.GetComponent<EnemyAttack>();
             StartCoroutine(sirGluten.Hurt(enemyAttack.Damage, false));
             enemyAttack.DestroyOnCollide();
-        } 
-        
-    }
+        } else if (collider.gameObject.tag == "Spikes"){
+            Spikes spikes = collider.gameObject.GetComponent<Spikes>();
 
-    void OnTriggerEnter2D(Collider2D collision)
-    {
-        if(collision.gameObject.tag == "Spikes"){
-            StartCoroutine(sirGluten.Hurt(10, false));
+            if(spikes.IsActive){
+                StartCoroutine(sirGluten.Hurt(10, false));
+            }
         }
+        
     }
 
 }
