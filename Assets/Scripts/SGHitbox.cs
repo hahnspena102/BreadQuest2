@@ -39,7 +39,14 @@ public class SGHitbox : MonoBehaviour
             EnemyAttack enemyAttack = collider.gameObject.GetComponent<EnemyAttack>();
             StartCoroutine(sirGluten.Hurt(enemyAttack.Damage, false));
             enemyAttack.DestroyOnCollide();
+        } else if (collider.gameObject.tag == "BossAttack") {
+            BossAttack bossAttack = collider.gameObject.GetComponent<BossAttack>();
+            sirGluten.IsLocked = true;
+            Rigidbody2D attackRB = collider.gameObject.GetComponent<Rigidbody2D>();
+            body.linearVelocity = attackRB.linearVelocity * 1f;
+            StartCoroutine(sirGluten.Hurt(1,true));    
         } 
+        
         
         
     }
@@ -51,6 +58,11 @@ public class SGHitbox : MonoBehaviour
         }
     }
 
+    void OnTriggerExit2D(Collider2D collider) {
+        if (collider.gameObject.tag == "BossAttack") {
+            sirGluten.IsLocked = false;
+        } 
+    }
 }
 
 

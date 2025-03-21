@@ -96,10 +96,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5714072531294316638, guid: 31d5b99f3e6a15845ba3610da0c4ee80, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -0.134
+      objectReference: {fileID: 0}
+    - target: {fileID: 5714072531294316638, guid: 31d5b99f3e6a15845ba3610da0c4ee80, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -0.766
+      objectReference: {fileID: 0}
     - target: {fileID: 6224399972992430960, guid: 31d5b99f3e6a15845ba3610da0c4ee80, type: 3}
       propertyPath: enemyData
       value: 
       objectReference: {fileID: 11400000, guid: f2afe73e22ffc544b80cb50f1c87b2c0, type: 2}
+    - target: {fileID: 6545408341711595753, guid: 31d5b99f3e6a15845ba3610da0c4ee80, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 8104392357477098261, guid: d05f358363538d247854a7b3ab3a368d, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

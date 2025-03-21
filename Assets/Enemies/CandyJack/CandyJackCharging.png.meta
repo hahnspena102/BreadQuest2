@@ -152,155 +152,155 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: CandyJackAttack_0
+      name: CandyJackCharging_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 60
-        height: 60
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 73166cb8dabf79630800000000000000
-      internalID: 3933889522324365623
+      spriteID: 9361bfaf222c4d64194e48cae3fa3025
+      internalID: 2056289084
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: CandyJackAttack_1
+      name: CandyJackCharging_1
       rect:
         serializedVersion: 2
-        x: 60
+        x: 64
         y: 0
-        width: 60
-        height: 60
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 118a06a71e2a69b70800000000000000
-      internalID: 8905484402476230673
+      spriteID: 24cb2851ef006ab46b88ea5ac20a7e4a
+      internalID: -306725290
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: CandyJackAttack_2
+      name: CandyJackCharging_2
       rect:
         serializedVersion: 2
-        x: 120
+        x: 128
         y: 0
-        width: 60
-        height: 60
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 62c509ef8e97551e0800000000000000
-      internalID: -2209726000545113050
+      spriteID: 33d75301b812008408eabb00f7eb7b37
+      internalID: -679350013
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: CandyJackAttack_3
+      name: CandyJackCharging_3
       rect:
         serializedVersion: 2
-        x: 180
+        x: 192
         y: 0
-        width: 60
-        height: 60
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: b6a1071c0adb34130800000000000000
-      internalID: 3549889429435849323
+      spriteID: bf4830df87a930942abbb082599e5244
+      internalID: 1932049776
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: CandyJackAttack_4
+      name: CandyJackCharging_4
       rect:
         serializedVersion: 2
-        x: 240
+        x: 256
         y: 0
-        width: 60
-        height: 60
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 74ff43131dfebbf50800000000000000
-      internalID: 6898370936000806727
+      spriteID: d9d2e72ab816a9e4b899b17d5a9df623
+      internalID: -1503684120
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: CandyJackAttack_5
+      name: CandyJackCharging_5
       rect:
         serializedVersion: 2
-        x: 300
+        x: 320
         y: 0
-        width: 60
-        height: 60
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 5b0f8648a9eb7bfc0800000000000000
-      internalID: -3479102616264707915
+      spriteID: b371bbc12a1dcaa4895f541ef7e931ce
+      internalID: -528004782
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: CandyJackAttack_6
+      name: CandyJackCharging_6
       rect:
         serializedVersion: 2
-        x: 360
+        x: 384
         y: 0
-        width: 60
-        height: 60
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 84ca17b17d10f4ca0800000000000000
-      internalID: -6030599352635773880
+      spriteID: 35b944596ef0d2640a8fe37d1e9b445e
+      internalID: 2135881336
       vertices: []
       indices: 
       edges: []
@@ -319,13 +319,13 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      CandyJackAttack_0: 3933889522324365623
-      CandyJackAttack_1: 8905484402476230673
-      CandyJackAttack_2: -2209726000545113050
-      CandyJackAttack_3: 3549889429435849323
-      CandyJackAttack_4: 6898370936000806727
-      CandyJackAttack_5: -3479102616264707915
-      CandyJackAttack_6: -6030599352635773880
+      CandyJackCharging_0: 2056289084
+      CandyJackCharging_1: -306725290
+      CandyJackCharging_2: -679350013
+      CandyJackCharging_3: 1932049776
+      CandyJackCharging_4: -1503684120
+      CandyJackCharging_5: -528004782
+      CandyJackCharging_6: 2135881336
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

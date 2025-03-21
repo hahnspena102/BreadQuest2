@@ -130,16 +130,20 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6060517278048242370, guid: 8adb11242ebd0054292835c38ebb0d7a, type: 3}
       propertyPath: m_Size.x
-      value: 1.875
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6060517278048242370, guid: 8adb11242ebd0054292835c38ebb0d7a, type: 3}
       propertyPath: m_Size.y
-      value: 1.875
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6060517278048242370, guid: 8adb11242ebd0054292835c38ebb0d7a, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 8905484402476230673, guid: 453f6ef63764c4e8580bd23b1af75c77, type: 3}
+      objectReference: {fileID: -679350013, guid: 453f6ef63764c4e8580bd23b1af75c77, type: 3}
+    - target: {fileID: 6060517278048242370, guid: 8adb11242ebd0054292835c38ebb0d7a, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6502332883788317713, guid: 8adb11242ebd0054292835c38ebb0d7a, type: 3}
       propertyPath: m_ExcludeLayers.m_Bits
       value: 512
@@ -156,6 +160,38 @@ PrefabInstance:
       propertyPath: 'hurtSFX.Array.data[0]'
       value: 
       objectReference: {fileID: 8300000, guid: f1c9c77ac1eaa19418f2003f271a6c87, type: 3}
+    - target: {fileID: 8651938059340590894, guid: 8adb11242ebd0054292835c38ebb0d7a, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8651938059340590894, guid: 8adb11242ebd0054292835c38ebb0d7a, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8651938059340590894, guid: 8adb11242ebd0054292835c38ebb0d7a, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -0.038
+      objectReference: {fileID: 0}
+    - target: {fileID: 8651938059340590894, guid: 8adb11242ebd0054292835c38ebb0d7a, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -0.198
+      objectReference: {fileID: 0}
+    - target: {fileID: 9018331411058031919, guid: 8adb11242ebd0054292835c38ebb0d7a, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 9018331411058031919, guid: 8adb11242ebd0054292835c38ebb0d7a, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 9018331411058031919, guid: 8adb11242ebd0054292835c38ebb0d7a, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -0.116
+      objectReference: {fileID: 0}
+    - target: {fileID: 9018331411058031919, guid: 8adb11242ebd0054292835c38ebb0d7a, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -0.144
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
