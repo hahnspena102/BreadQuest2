@@ -28,7 +28,10 @@ public class EnemyAttack : MonoBehaviour
             hitbox.enabled = false;
         }
 
-        Destroy(gameObject,timeTilDeath);
+        if (timeTilDeath >= 0) {
+            Destroy(gameObject,timeTilDeath);
+        }
+
     }
 
     void Update(){
@@ -41,12 +44,12 @@ public class EnemyAttack : MonoBehaviour
     }
 
     void OnCollisionStay2D(Collision2D collision) {
-        if (collision.gameObject.tag == "Walls") {
+        if (collision.gameObject.tag == "Walls" && timeTilDeath >= 0) {
             Destroy(gameObject);
         }
     }
 
     public void DestroyOnCollide() {
-        Destroy(gameObject);
+        if (timeTilDeath >= 0) Destroy(gameObject);
     }
 }

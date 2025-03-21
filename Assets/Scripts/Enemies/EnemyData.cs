@@ -14,6 +14,7 @@ public class EnemyData : ScriptableObject
     [SerializeField]private Color color = Color.white;
     [SerializeField]private bool isDiscovered;
     [SerializeField] private float detectionRadius = 10f;
+    [SerializeField] private float defense = 0f;
 
     public global::System.Int32 Health { get => health; set => health = value; }
     public global::System.Int32 Damage { get => damage; set => damage = value; }
@@ -26,4 +27,5 @@ public class EnemyData : ScriptableObject
     public global::System.Boolean IsDiscovered { get => isDiscovered; set => isDiscovered = value; }
     public global::System.Single DetectionRadius { get => detectionRadius; set => detectionRadius = value; }
     public global::System.Single GoldMultiplier { get => goldMultiplier; set => goldMultiplier = value; }
+    public global::System.Single Defense { get => defense; set => defense = value; }
 }

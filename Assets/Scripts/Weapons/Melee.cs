@@ -68,7 +68,7 @@ public class Melee : MonoBehaviour
             }
 
             
-            if (sirGluten.WeaponAnimationFrame >= 1 && sirGluten.WeaponAnimationFrame <= 4) {
+            if (sirGluten.WeaponAnimationFrame >= 1 && sirGluten.WeaponAnimationFrame <= 2) {
                 attackRB.gameObject.SetActive(true);
             } else {
                 attackRB.gameObject.SetActive(false);

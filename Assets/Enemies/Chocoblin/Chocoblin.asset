@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5961343830b40814e8d1fdca4c078598, type: 3}
+  m_Name: Chocoblin
+  m_EditorClassIdentifier: 
+  enemyName: Chocoblin
+  description: The intelligence of the S'more Goblins. Using the power of cacao arcane,
+    they can teleport and cast fireballs in an instant.
+  health: 30
+  damage: 10
+  flavoring: cacao
+  xpMultiplier: 1
+  goldMultiplier: 1
+  sprite: {fileID: -4810178954882817608, guid: e64e305244b324247922f84f1f0fcd1b, type: 3}
+  color: {r: 1, g: 1, b: 1, a: 1}
+  isDiscovered: 0
+  detectionRadius: 10

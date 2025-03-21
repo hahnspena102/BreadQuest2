@@ -50,26 +50,23 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: Ground
-    uniqueID: 1655014365
+  - name: Floor
+    uniqueID: 3484713735
     locked: 0
-  - name: WalkinFront
-    uniqueID: 4144111287
+  - name: Items
+    uniqueID: 951058249
     locked: 0
-  - name: Collision
-    uniqueID: 3771314971
+  - name: Walls
+    uniqueID: 1017676793
     locked: 0
-  - name: Player
-    uniqueID: 1033186819
+  - name: Entities
+    uniqueID: 4248362681
     locked: 0
-  - name: WalkBehind
-    uniqueID: 2042125677
+  - name: AttacksAndEffects
+    uniqueID: 3589637189
     locked: 0
-  - name: Decor
-    uniqueID: 287260461
-    locked: 0
-  - name: Text
-    uniqueID: 2853138405
+  - name: UI
+    uniqueID: 3753996639
     locked: 0
   m_RenderingLayers:
   - Default

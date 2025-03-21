@@ -11,7 +11,6 @@ public class BossBar : MonoBehaviour
     private Enemy enemy;
 
     [SerializeField] private Slider healthSlider;
-    [SerializeField] private TextMeshProUGUI healthText;
 
     void Start(){
         boss = GameObject.Find("Boss");
@@ -27,8 +26,5 @@ public class BossBar : MonoBehaviour
             healthSlider.value = enemy.Health;
             healthSlider.maxValue = enemy.MaxHealth;
         }
-
-        if (healthText != null) healthText.text = enemy.Health + "/" + enemy.MaxHealth;
-
     }
 }

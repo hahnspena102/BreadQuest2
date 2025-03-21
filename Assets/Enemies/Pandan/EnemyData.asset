@@ -15,7 +15,7 @@ MonoBehaviour:
   enemyName: Pandan
   description: Although fragrant, don't stop to smell this little bear or else...
     BANG!
-  health: 30
+  health: 20
   damage: 20
   flavoring: spicy
   xpMultiplier: 1

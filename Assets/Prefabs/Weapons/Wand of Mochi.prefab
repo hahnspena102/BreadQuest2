@@ -1,0 +1,151 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &2145662001845759721
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: -3714554652511672818, guid: 8f49e4d77b89a784497c267292f8d5fb, type: 3}
+      propertyPath: numProj
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -3714554652511672818, guid: 8f49e4d77b89a784497c267292f8d5fb, type: 3}
+      propertyPath: glucoseCost
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: -3714554652511672818, guid: 8f49e4d77b89a784497c267292f8d5fb, type: 3}
+      propertyPath: PlayerProjectile
+      value: 
+      objectReference: {fileID: 3008986627719570525, guid: e551160d8f72c8b4eb0e3a2039b47194, type: 3}
+    - target: {fileID: 2555982464447483995, guid: 8f49e4d77b89a784497c267292f8d5fb, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 5125201553696344367, guid: a425914c5e4024667bb6a08a3deca6db, type: 3}
+    - target: {fileID: 3610859613947776775, guid: 8f49e4d77b89a784497c267292f8d5fb, type: 3}
+      propertyPath: m_Pivot.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3610859613947776775, guid: 8f49e4d77b89a784497c267292f8d5fb, type: 3}
+      propertyPath: m_Pivot.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3610859613947776775, guid: 8f49e4d77b89a784497c267292f8d5fb, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3610859613947776775, guid: 8f49e4d77b89a784497c267292f8d5fb, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3610859613947776775, guid: 8f49e4d77b89a784497c267292f8d5fb, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3610859613947776775, guid: 8f49e4d77b89a784497c267292f8d5fb, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3610859613947776775, guid: 8f49e4d77b89a784497c267292f8d5fb, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 3610859613947776775, guid: 8f49e4d77b89a784497c267292f8d5fb, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 3610859613947776775, guid: 8f49e4d77b89a784497c267292f8d5fb, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3610859613947776775, guid: 8f49e4d77b89a784497c267292f8d5fb, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3610859613947776775, guid: 8f49e4d77b89a784497c267292f8d5fb, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3610859613947776775, guid: 8f49e4d77b89a784497c267292f8d5fb, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3610859613947776775, guid: 8f49e4d77b89a784497c267292f8d5fb, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3610859613947776775, guid: 8f49e4d77b89a784497c267292f8d5fb, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3610859613947776775, guid: 8f49e4d77b89a784497c267292f8d5fb, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3610859613947776775, guid: 8f49e4d77b89a784497c267292f8d5fb, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 9.23
+      objectReference: {fileID: 0}
+    - target: {fileID: 3610859613947776775, guid: 8f49e4d77b89a784497c267292f8d5fb, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 2.56
+      objectReference: {fileID: 0}
+    - target: {fileID: 3610859613947776775, guid: 8f49e4d77b89a784497c267292f8d5fb, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3610859613947776775, guid: 8f49e4d77b89a784497c267292f8d5fb, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3610859613947776775, guid: 8f49e4d77b89a784497c267292f8d5fb, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7807762647802752527, guid: 8f49e4d77b89a784497c267292f8d5fb, type: 3}
+      propertyPath: m_Name
+      value: Wand of Mochi Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 8227513997897164223, guid: 8f49e4d77b89a784497c267292f8d5fb, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8227513997897164223, guid: 8f49e4d77b89a784497c267292f8d5fb, type: 3}
+      propertyPath: m_Color.g
+      value: 0.740566
+      objectReference: {fileID: 0}
+    - target: {fileID: 8227513997897164223, guid: 8f49e4d77b89a784497c267292f8d5fb, type: 3}
+      propertyPath: m_Color.r
+      value: 0.987524
+      objectReference: {fileID: 0}
+    - target: {fileID: 8927998594896783488, guid: 8f49e4d77b89a784497c267292f8d5fb, type: 3}
+      propertyPath: id
+      value: wand_of_mochi
+      objectReference: {fileID: 0}
+    - target: {fileID: 8927998594896783488, guid: 8f49e4d77b89a784497c267292f8d5fb, type: 3}
+      propertyPath: flavor
+      value: grain
+      objectReference: {fileID: 0}
+    - target: {fileID: 8927998594896783488, guid: 8f49e4d77b89a784497c267292f8d5fb, type: 3}
+      propertyPath: rarity
+      value: rare
+      objectReference: {fileID: 0}
+    - target: {fileID: 8927998594896783488, guid: 8f49e4d77b89a784497c267292f8d5fb, type: 3}
+      propertyPath: weaponName
+      value: Wand of Mochi
+      objectReference: {fileID: 0}
+    - target: {fileID: 8927998594896783488, guid: 8f49e4d77b89a784497c267292f8d5fb, type: 3}
+      propertyPath: description
+      value: Right click to shoot a barrage of bouncing mochi.
+      objectReference: {fileID: 0}
+    - target: {fileID: 8927998594896783488, guid: 8f49e4d77b89a784497c267292f8d5fb, type: 3}
+      propertyPath: attackDamage
+      value: 3
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 8f49e4d77b89a784497c267292f8d5fb, type: 3}

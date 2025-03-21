@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5961343830b40814e8d1fdca4c078598, type: 3}
+  m_Name: Foundue
+  m_EditorClassIdentifier: 
+  enemyName: Foundue
+  description: found you!
+  health: 20
+  damage: 50
+  flavoring: cacao
+  xpMultiplier: 1
+  goldMultiplier: 1
+  sprite: {fileID: -2090444825, guid: 096f038790da3ef43b6ad45d6678ad1c, type: 3}
+  color: {r: 1, g: 1, b: 1, a: 1}
+  isDiscovered: 0
+  detectionRadius: 10
+  defense: 0.9

@@ -43,7 +43,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -57,7 +57,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 32
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -80,7 +80,7 @@ TextureImporter:
     buildTarget: DefaultTexturePlatform
     maxTextureSize: 2048
     resizeAlgorithm: 0
-    textureFormat: -1
+    textureFormat: 4
     textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
@@ -122,10 +122,10 @@ TextureImporter:
       name: WandOfMochi_0
       rect:
         serializedVersion: 2
-        x: 2
-        y: 2
-        width: 22
-        height: 22
+        x: 0
+        y: 0
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -140,55 +140,11 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
-    - serializedVersion: 2
-      name: WandOfMochi_1
-      rect:
-        serializedVersion: 2
-        x: 15
-        y: 15
-        width: 15
-        height: 15
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 1bdb2beda8f505140800000000000000
-      internalID: 4706366660648549809
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: WandOfMochi_2
-      rect:
-        serializedVersion: 2
-        x: 34
-        y: 2
-        width: 29
-        height: 29
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 53847e90e90b04560800000000000000
-      internalID: 7296025589157677109
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     outline: []
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: ae762db2fd02dcb4e82dd2e3bc921977
     internalID: 0
     vertices: []
     indices: 
@@ -199,8 +155,6 @@ TextureImporter:
       entries: []
     nameFileIdTable:
       WandOfMochi_0: 5125201553696344367
-      WandOfMochi_1: 4706366660648549809
-      WandOfMochi_2: 7296025589157677109
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

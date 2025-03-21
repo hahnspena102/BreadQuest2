@@ -241,10 +241,6 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: -7107577901510104695, guid: b3a3e82dd0d95e6429c96710a96832aa, type: 3}
-    - target: {fileID: 6060517278048242370, guid: 8adb11242ebd0054292835c38ebb0d7a, type: 3}
-      propertyPath: m_SortingOrder
-      value: 4
-      objectReference: {fileID: 0}
     - target: {fileID: 7208707049854281217, guid: 8adb11242ebd0054292835c38ebb0d7a, type: 3}
       propertyPath: enemyData
       value: 
@@ -265,12 +261,16 @@ PrefabInstance:
       propertyPath: 'hurtSFX.Array.data[2]'
       value: 
       objectReference: {fileID: 8300000, guid: 2c5f2720a8106c046b8ff9e1eb898d66, type: 3}
+    - target: {fileID: 9018331411058031919, guid: 8adb11242ebd0054292835c38ebb0d7a, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -0.61
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 2481504245390930839, guid: 8adb11242ebd0054292835c38ebb0d7a, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 1034267043438521181, guid: 8adb11242ebd0054292835c38ebb0d7a, type: 3}
-      insertIndex: -1
+      insertIndex: 0
       addedObject: {fileID: 7255977768661899085}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 1964728200879544539, guid: 8adb11242ebd0054292835c38ebb0d7a, type: 3}
@@ -333,13 +333,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 2984398275153365348}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bb33d9daff84b92468c72b6e524470d6, type: 3}
+  m_Script: {fileID: 11500000, guid: 70c16b9b0a51b284e8e45f016a01b3ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   detectionWidth: 10
   detectionHeight: 10
-  stopDistance: 8
-  speed: 1
+  stopDistance: 7
+  speed: 2
 --- !u!114 &9145836877052513165
 MonoBehaviour:
   m_ObjectHideFlags: 0
