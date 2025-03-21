@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyName: Boss
   description: boss battle
-  health: 100
+  health: 1000
   damage: 10
   flavoring: flavorless
   xpMultiplier: 1

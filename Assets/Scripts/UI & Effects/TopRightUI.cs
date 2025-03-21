@@ -20,7 +20,7 @@ public class TopRightUI : MonoBehaviour
     void Update(){  
         yeastSlider.value = sirGluten.Yeast;
         yeastSlider.maxValue = sirGluten.MaxYeast;
-        goldText.text = sirGluten.Gold + " G";
+        goldText.text = $"{sirGluten.Gold}";
 
         if (sirGluten.YeastLevel >= sirGluten.MaxYeastLevel) {
             yeastText.text = "Level: MAX";

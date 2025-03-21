@@ -55,9 +55,9 @@ public class AStarPathfinding : MonoBehaviour
             return;
         }
 
-        if (rb.linearVelocity.x < -0.3f) {
+        if (rb.linearVelocity.x < -0.1f) {
             transform.localScale = new Vector3(-1f, 1f, 1f);
-        } else if (rb.linearVelocity.x > 0.3f) {
+        } else if (rb.linearVelocity.x > 0.1f) {
             transform.localScale = new Vector3(1f, 1f, 1f);
         }
 

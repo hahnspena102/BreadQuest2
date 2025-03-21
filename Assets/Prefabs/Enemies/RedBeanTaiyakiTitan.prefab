@@ -70,11 +70,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1034267043438521181, guid: 8adb11242ebd0054292835c38ebb0d7a, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 23.183912
+      value: -0.134
       objectReference: {fileID: 0}
     - target: {fileID: 1034267043438521181, guid: 8adb11242ebd0054292835c38ebb0d7a, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 2.2657006
+      value: -0.766
       objectReference: {fileID: 0}
     - target: {fileID: 1034267043438521181, guid: 8adb11242ebd0054292835c38ebb0d7a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -98,7 +98,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1964728200879544539, guid: 8adb11242ebd0054292835c38ebb0d7a, type: 3}
       propertyPath: m_Name
-      value: RedBeanTaiyakiTitan Variant
+      value: RedBeanTaiyakiTitan
       objectReference: {fileID: 0}
     - target: {fileID: 2481504245390930839, guid: 8adb11242ebd0054292835c38ebb0d7a, type: 3}
       propertyPath: m_Size.x
@@ -132,6 +132,18 @@ PrefabInstance:
       propertyPath: enemyData
       value: 
       objectReference: {fileID: 11400000, guid: 021972d22a8a2ee46b789466ce1021d1, type: 2}
+    - target: {fileID: 7547483388972121496, guid: 8adb11242ebd0054292835c38ebb0d7a, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 8104392357477098261, guid: d05f358363538d247854a7b3ab3a368d, type: 3}
+    - target: {fileID: 9018331411058031919, guid: 8adb11242ebd0054292835c38ebb0d7a, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -0.095
+      objectReference: {fileID: 0}
+    - target: {fileID: 9018331411058031919, guid: 8adb11242ebd0054292835c38ebb0d7a, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -0.779
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 2481504245390930839, guid: 8adb11242ebd0054292835c38ebb0d7a, type: 3}
     m_RemovedGameObjects: []
