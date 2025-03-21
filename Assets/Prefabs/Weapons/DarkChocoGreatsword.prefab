@@ -30,7 +30,7 @@ PrefabInstance:
       objectReference: {fileID: 320338463863878224, guid: df7bff9ddd28b47ab8719623ac6c93b8, type: 3}
     - target: {fileID: 3271738115149993149, guid: ddb193a141508b545a8982885ad48e35, type: 3}
       propertyPath: m_SortingLayer
-      value: 0
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 3689380121290302851, guid: ddb193a141508b545a8982885ad48e35, type: 3}
       propertyPath: m_IsActive
@@ -38,7 +38,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3720981650840172434, guid: ddb193a141508b545a8982885ad48e35, type: 3}
       propertyPath: m_SortingLayer
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4324433423343242209, guid: ddb193a141508b545a8982885ad48e35, type: 3}
       propertyPath: m_Pivot.x
@@ -290,7 +290,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8501036405661133926, guid: ddb193a141508b545a8982885ad48e35, type: 3}
       propertyPath: attackDamage
-      value: 8
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 8501036405661133926, guid: ddb193a141508b545a8982885ad48e35, type: 3}
       propertyPath: attackCooldown

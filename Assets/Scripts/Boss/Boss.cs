@@ -29,6 +29,8 @@ public class Boss : MonoBehaviour
 
     [SerializeField]private GameObject enemySpawner;
     [SerializeField]private GameObject firepool;
+    [SerializeField]private AudioClip phase3Clip;
+    [SerializeField]private GameObject ovenBody;
     
 
     void Start(){
@@ -57,8 +59,16 @@ public class Boss : MonoBehaviour
         Vector2 direction = (SirGluten.playerPosition - (Vector2)transform.position + new Vector2(0,3f)).normalized;
         Vector2 newPosition = (Vector2)transform.position + direction * 1f * Time.fixedDeltaTime;
 
+    
+        if (rb.position.x - SirGluten.playerPosition.x > 0.01f) {
+            ovenBody.transform.localScale = new Vector3(1f, 1f, 1f);
+        } else if (rb.position.x - SirGluten.playerPosition.x < 0.01f) {
+            ovenBody.transform.localScale = new Vector3(-1f, 1f, 1f);
+        }
+
         if (Vector2.Distance(originPosition, newPosition) <= maxRadius) {
             rb.MovePosition(newPosition);
+
 
             for (int i = 0; i < fists.Count; i++) {
                 if (fistsAttacking[i]) continue;
@@ -66,6 +76,8 @@ public class Boss : MonoBehaviour
                 Rigidbody2D fistRB = fists[i].GetComponent<Rigidbody2D>();
                 fistRB.position = fistOffset + rb.position;
             }
+
+            
         }
     }
 
@@ -95,7 +107,24 @@ public class Boss : MonoBehaviour
                 foreach (GameObject obj in fists) {
                     if (obj != null) obj.transform.localScale = obj.transform.localScale * 1.25f;
                 }
+                soundtrack.clip = phase3Clip;
+                soundtrack.Play();
+                foreach (Transform child in transform)
+                {
+                    SpriteRenderer spriteRenderer = child.GetComponent<SpriteRenderer>();
+
+                    if (spriteRenderer != null)
+                    {
+                        spriteRenderer.color = new Color(1,0.65f,0.54f);
+                    }
+                }
             }
+        }
+    }
+
+    void OnDestroy(){
+        if (enemy.Health <= 1) {
+            SceneManager.LoadScene("CutscenePostboss");
         }
     }
 
@@ -295,7 +324,7 @@ public class Boss : MonoBehaviour
         int spawnCount = 1;
 
         if (bossPhase >= 3) {
-            spawnCount = 1;
+            spawnCount = 3;
         }
 
         for (int i = 0; i < spawnCount; i++) {
@@ -314,6 +343,7 @@ public class Boss : MonoBehaviour
         // PHASE 2 MECHANICS
     IEnumerator SpawnFirepool() {
         int poolCount = 20;
+        bossState = 0;
         for (int i = 0; i < poolCount; i++) {
             Vector2 randomPosition = new Vector3(Random.Range(arenaLowerLeft.x,arenaUpperRight.x),Random.Range(arenaLowerLeft.y,arenaUpperRight.y));
             GameObject newFirepool = Instantiate(firepool, randomPosition, Quaternion.identity);
@@ -321,7 +351,7 @@ public class Boss : MonoBehaviour
             yield return new WaitForSeconds(0.5f);
         }
         yield return new WaitForSeconds(3f);
-        bossState = 0;
+        
     }
 
 

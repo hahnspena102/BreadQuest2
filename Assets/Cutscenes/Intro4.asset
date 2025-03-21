@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 32b1d5ecf40f8ae478f713c7d018297f, type: 3}
+  m_Name: Intro4
+  m_EditorClassIdentifier: 
+  cutsceneFrame: {fileID: -24502145189794237, guid: 58da8da5237c7774e899a9b109643668, type: 3}
+  text: Trailing behind, they eventually reach a mysterious cave. It emits a warm
+    feel. "Shall we?" Sir Gluten exclaims.

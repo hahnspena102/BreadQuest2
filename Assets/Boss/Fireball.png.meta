@@ -1,64 +1,10 @@
 fileFormatVersion: 2
-guid: bb7e574f7d3886c4e9c1d9ddc589aa9c
+guid: 6872b5bc4a5081e46bf982d6d2b280cf
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -6607481912129624618
-    second: Fireball_0
-  - first:
-      213: -7250195882505504687
-    second: Fireball_1
-  - first:
-      213: 4403933487624526528
-    second: Fireball_2
-  - first:
-      213: 8927358698389672400
-    second: Fireball_3
-  - first:
-      213: 2250600637640065238
-    second: Fireball_4
-  - first:
-      213: -4701697456131926120
-    second: Fireball_5
-  - first:
-      213: -1711208824211276139
-    second: Fireball_6
-  - first:
-      213: -3769374411695510437
-    second: Fireball_7
-  - first:
-      213: 2335414765099883281
-    second: Fireball_8
-  - first:
-      213: 5467872547263643923
-    second: Fireball_9
-  - first:
-      213: 7865523673118177332
-    second: Fireball_10
-  - first:
-      213: 5609376815085826905
-    second: Fireball_11
-  - first:
-      213: 6785216056351099214
-    second: Fireball_12
-  - first:
-      213: -3442395235638600575
-    second: Fireball_13
-  - first:
-      213: 7387481953171491385
-    second: Fireball_14
-  - first:
-      213: -2223868357131864047
-    second: Fireball_15
-  - first:
-      213: -8038693560275362801
-    second: Fireball_16
-  - first:
-      213: 9068362806395593734
-    second: Fireball_17
-  - first:
-      213: -6521568846215467730
-    second: Fireball_18
+      213: 3003421749418071314
+    second: Firebal_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -154,12 +100,12 @@ TextureImporter:
     buildTarget: WebGL
     maxTextureSize: 2048
     resizeAlgorithm: 0
-    textureFormat: -1
+    textureFormat: 4
     textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
-    overridden: 0
+    overridden: 1
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
@@ -171,19 +117,19 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 64
-        width: 64
-        height: 64
+        y: 0
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 6d5e1b775328d44a0800000000000000
-      internalID: -6607481912129624618
+      spriteID: 00c5cdc901350f5419463cdf8ab5c30f
+      internalID: 1586846821
       vertices: []
       indices: 
       edges: []
@@ -192,20 +138,20 @@ TextureImporter:
       name: Fireball_1
       rect:
         serializedVersion: 2
-        x: 64
-        y: 64
-        width: 64
-        height: 64
+        x: 16
+        y: 0
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 158724f0241226b90800000000000000
-      internalID: -7250195882505504687
+      spriteID: c0dab739983df63419a79b2ed642e5c4
+      internalID: -1813451155
       vertices: []
       indices: 
       edges: []
@@ -214,20 +160,20 @@ TextureImporter:
       name: Fireball_2
       rect:
         serializedVersion: 2
-        x: 128
-        y: 64
-        width: 64
-        height: 64
+        x: 32
+        y: 0
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 0ca9e488c2aed1d30800000000000000
-      internalID: 4403933487624526528
+      spriteID: 3fd43fb99dda4ad4cb347f7059723ee4
+      internalID: 510148119
       vertices: []
       indices: 
       edges: []
@@ -236,218 +182,20 @@ TextureImporter:
       name: Fireball_3
       rect:
         serializedVersion: 2
-        x: 192
-        y: 64
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 0d19200ef6954eb70800000000000000
-      internalID: 8927358698389672400
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Fireball_4
-      rect:
-        serializedVersion: 2
-        x: 256
-        y: 64
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 6d0cdc11b5dbb3f10800000000000000
-      internalID: 2250600637640065238
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Fireball_5
-      rect:
-        serializedVersion: 2
-        x: 320
-        y: 64
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 89716e5031730ceb0800000000000000
-      internalID: -4701697456131926120
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Fireball_6
-      rect:
-        serializedVersion: 2
-        x: 384
-        y: 64
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 59e7f5804a09048e0800000000000000
-      internalID: -1711208824211276139
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Fireball_7
-      rect:
-        serializedVersion: 2
-        x: 0
+        x: 48
         y: 0
-        width: 64
-        height: 64
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: b5c217d81fd70bbc0800000000000000
-      internalID: -3769374411695510437
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Fireball_8
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 0
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 11b1bf4fa5f096020800000000000000
-      internalID: 2335414765099883281
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Fireball_9
-      rect:
-        serializedVersion: 2
-        x: 128
-        y: 0
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 31182c89c19c1eb40800000000000000
-      internalID: 5467872547263643923
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Fireball_10
-      rect:
-        serializedVersion: 2
-        x: 192
-        y: 0
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 43872ac7b14f72d60800000000000000
-      internalID: 7865523673118177332
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Fireball_11
-      rect:
-        serializedVersion: 2
-        x: 256
-        y: 0
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 953b08a5e7288dd40800000000000000
-      internalID: 5609376815085826905
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Fireball_12
-      rect:
-        serializedVersion: 2
-        x: 320
-        y: 0
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: e49851bbd0ee92e50800000000000000
-      internalID: 6785216056351099214
+      spriteID: a3ce0aa5197424e419770bf05d19ac31
+      internalID: 1382553547
       vertices: []
       indices: 
       edges: []
@@ -456,7 +204,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: c6ef79c8fba799f49a736ad0167c4535
+    spriteID: 1f34f80934b48e44999dab3d4de62f46
     internalID: 0
     vertices: []
     indices: 
@@ -466,19 +214,10 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Fireball_0: -6607481912129624618
-      Fireball_1: -7250195882505504687
-      Fireball_10: 7865523673118177332
-      Fireball_11: 5609376815085826905
-      Fireball_12: 6785216056351099214
-      Fireball_2: 4403933487624526528
-      Fireball_3: 8927358698389672400
-      Fireball_4: 2250600637640065238
-      Fireball_5: -4701697456131926120
-      Fireball_6: -1711208824211276139
-      Fireball_7: -3769374411695510437
-      Fireball_8: 2335414765099883281
-      Fireball_9: 5467872547263643923
+      Fireball_0: 1586846821
+      Fireball_1: -1813451155
+      Fireball_2: 510148119
+      Fireball_3: 1382553547
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -175,6 +175,26 @@ PrefabInstance:
       propertyPath: nextScene
       value: Floor1
       objectReference: {fileID: 0}
+    - target: {fileID: 8302657441068883512, guid: 0db8fa8df5d271846ad9aba9d4f20221, type: 3}
+      propertyPath: entries.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8302657441068883512, guid: 0db8fa8df5d271846ad9aba9d4f20221, type: 3}
+      propertyPath: 'entries.Array.data[0]'
+      value: 
+      objectReference: {fileID: 11400000, guid: 351efae3b780fdd42a8a1d95da11d8fa, type: 2}
+    - target: {fileID: 8302657441068883512, guid: 0db8fa8df5d271846ad9aba9d4f20221, type: 3}
+      propertyPath: 'entries.Array.data[1]'
+      value: 
+      objectReference: {fileID: 11400000, guid: b29f1018108ded24586a2c2e4dcabcb6, type: 2}
+    - target: {fileID: 8302657441068883512, guid: 0db8fa8df5d271846ad9aba9d4f20221, type: 3}
+      propertyPath: 'entries.Array.data[2]'
+      value: 
+      objectReference: {fileID: 11400000, guid: 21d6722a88562744c95f8fdfede6e72d, type: 2}
+    - target: {fileID: 8302657441068883512, guid: 0db8fa8df5d271846ad9aba9d4f20221, type: 3}
+      propertyPath: 'entries.Array.data[3]'
+      value: 
+      objectReference: {fileID: 11400000, guid: 571264d17a3ec6c4aaf4f44e7c36d1dd, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
