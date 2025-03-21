@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1631146458655585137}
   - component: {fileID: 5158180030046693960}
   - component: {fileID: 5546711115041199238}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Barrier
   m_TagString: Walls
   m_Icon: {fileID: 0}
@@ -74,9 +74,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 2
+  m_SortingLayerID: 1017676793
+  m_SortingLayer: 6
+  m_SortingOrder: 0
   m_Sprite: {fileID: -7910127128901405170, guid: 791debc5f5e654377ad947b55eb31981, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0

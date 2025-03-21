@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyName: Boss
   description: boss battle
-  health: 1000
+  health: 100
   damage: 10
   flavoring: flavorless
   xpMultiplier: 1
@@ -23,3 +23,4 @@ MonoBehaviour:
   color: {r: 1, g: 1, b: 1, a: 1}
   isDiscovered: 1
   detectionRadius: 10
+  defense: 0

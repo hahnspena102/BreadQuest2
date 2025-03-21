@@ -391,21 +391,6 @@ public class SirGluten : MonoBehaviour
         dp.transform.SetParent(GameManager.EffectStore.transform);
     }
 
-    void OnCollisionEnter2D(Collision2D collision) {
-        if (collision.gameObject.tag == "BossAttack") {
-            BossAttack bossAttack = collision.gameObject.GetComponent<BossAttack>();
-            isLocked = true;
-            StartCoroutine(Hurt(bossAttack.Damage,true));
-           
-        } 
-    }
-
-    void OnCollisionExit2D(Collision2D collision) {
-        if (collision.gameObject.tag == "BossAttack") {
-            isLocked = false;
-        } 
-    }
-
     void OnTriggerStay2D(Collider2D collider) {
         if (collider.gameObject.tag == "Item") {
             if (hoveredWeaponItem != null) hoveredWeaponItem.HoverTextOff();

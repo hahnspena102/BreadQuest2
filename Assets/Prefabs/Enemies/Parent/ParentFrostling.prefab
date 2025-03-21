@@ -164,6 +164,14 @@ PrefabInstance:
       propertyPath: 'attackSFX.Array.data[0]'
       value: 
       objectReference: {fileID: 8300000, guid: b977e1f3708900848b27915fac26a62b, type: 3}
+    - target: {fileID: 9018331411058031919, guid: 8adb11242ebd0054292835c38ebb0d7a, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0.016
+      objectReference: {fileID: 0}
+    - target: {fileID: 9018331411058031919, guid: 8adb11242ebd0054292835c38ebb0d7a, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -0.434
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -210,6 +218,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 122fcb4c19a9c4443a7de006db010017, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  detectionRadius: 10
   stopRadius: 2
   moveSpeed: 0.5

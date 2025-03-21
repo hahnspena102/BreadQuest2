@@ -128,10 +128,6 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: -7059856969850612558, guid: e818a06403210e447bdd90c96ca8f186, type: 3}
-    - target: {fileID: 6060517278048242370, guid: 8adb11242ebd0054292835c38ebb0d7a, type: 3}
-      propertyPath: m_SortingOrder
-      value: 3
-      objectReference: {fileID: 0}
     - target: {fileID: 7208707049854281217, guid: 8adb11242ebd0054292835c38ebb0d7a, type: 3}
       propertyPath: enemyData
       value: 

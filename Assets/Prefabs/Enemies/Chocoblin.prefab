@@ -94,7 +94,7 @@ PrefabInstance:
       objectReference: {fileID: 9100000, guid: 579dda42599eac5418f571ee2f3de4a0, type: 2}
     - target: {fileID: 1964728200879544539, guid: 8adb11242ebd0054292835c38ebb0d7a, type: 3}
       propertyPath: m_Name
-      value: Chocoblin Variant
+      value: Chocoblin
       objectReference: {fileID: 0}
     - target: {fileID: 2481504245390930839, guid: 8adb11242ebd0054292835c38ebb0d7a, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.x
@@ -107,7 +107,7 @@ PrefabInstance:
     - target: {fileID: 6060517278048242370, guid: 8adb11242ebd0054292835c38ebb0d7a, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: -4810178954882817608, guid: e64e305244b324247922f84f1f0fcd1b, type: 3}
+      objectReference: {fileID: -4955149429689215964, guid: 50272cdeb27bcf74286d8c8219e8b396, type: 3}
     - target: {fileID: 6502332883788317713, guid: 8adb11242ebd0054292835c38ebb0d7a, type: 3}
       propertyPath: m_IncludeLayers.m_Bits
       value: 4096
@@ -116,6 +116,22 @@ PrefabInstance:
       propertyPath: enemyData
       value: 
       objectReference: {fileID: 11400000, guid: 24f16b51718211c46b592cdebf7a01d0, type: 2}
+    - target: {fileID: 9018331411058031919, guid: 8adb11242ebd0054292835c38ebb0d7a, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 9018331411058031919, guid: 8adb11242ebd0054292835c38ebb0d7a, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 9018331411058031919, guid: 8adb11242ebd0054292835c38ebb0d7a, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -0.018
+      objectReference: {fileID: 0}
+    - target: {fileID: 9018331411058031919, guid: 8adb11242ebd0054292835c38ebb0d7a, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -0.558
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
