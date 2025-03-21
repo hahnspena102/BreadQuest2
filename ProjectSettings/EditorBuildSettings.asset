@@ -27,6 +27,15 @@ EditorBuildSettings:
     path: Assets/Scenes/Floor2.unity
     guid: 64ab14bb15123f64f9e74be45f26f780
   - enabled: 1
+    path: Assets/Scenes/Floor3.unity
+    guid: 00668ca84dbf7496897aeb59f25aec93
+  - enabled: 1
+    path: Assets/Scenes/Floor4.unity
+    guid: 3f6020c8ce1884f06b87830337592d47
+  - enabled: 1
+    path: Assets/Scenes/Floor5.unity
+    guid: 792a985043e8e4a66a3d12944f7bb1a0
+  - enabled: 1
     path: Assets/Scenes/CutsceneFloor5.unity
     guid: e7a2afed70cd19548ad1e6a69a0db417
   - enabled: 1
