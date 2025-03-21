@@ -68,7 +68,7 @@ public class SirGluten : MonoBehaviour
     }
 
     IEnumerator LoadSaveData(){
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(1f);
         yeast = curSaveData.Yeast;
         yeastLevel = curSaveData.YeastLevel;
         gold = curSaveData.Gold;
@@ -203,7 +203,6 @@ public class SirGluten : MonoBehaviour
         }
 
         if (Input.GetKeyDown(KeyCode.Escape)) {
-            SaveData();
             SceneManager.LoadScene("MainMenu");
         }
 
