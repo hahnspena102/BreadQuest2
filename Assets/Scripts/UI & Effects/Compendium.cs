@@ -41,8 +41,8 @@ public class Compendium : MonoBehaviour
         pageText.text = $"Page {pageNumber + 1} of {maxPageNumber + 1}";
         pageNumber = (int)Mathf.Round(pageNavigator.value);
 
-        if (Input.GetKeyDown(KeyCode.M)) ResetCompendium();
-        if (Input.GetKeyDown(KeyCode.N)) FinishCompendium();
+        //if (Input.GetKeyDown(KeyCode.M)) ResetCompendium();
+       // if (Input.GetKeyDown(KeyCode.N)) FinishCompendium();
 
     }
 

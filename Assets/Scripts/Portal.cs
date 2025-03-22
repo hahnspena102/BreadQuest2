@@ -29,7 +29,7 @@ public class Portal : MonoBehaviour
         if (saveAfterTeleport) {
             sirGluten.SaveData();
         }
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(2f);
         SceneManager.LoadScene(destinationScene);
     }
 

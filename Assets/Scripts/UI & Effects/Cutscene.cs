@@ -44,6 +44,7 @@ public class Cutscene : MonoBehaviour
         }
     }
 
+    
     IEnumerator DisplayFrame() {
         isDisplaying = true;
         if (index >= entries.Count) {

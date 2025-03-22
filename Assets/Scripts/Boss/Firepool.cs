@@ -17,7 +17,7 @@ public class Firepool : MonoBehaviour
     }
 
     IEnumerator SpawnCoroutine(){
-        yield return new WaitForSeconds(4f);
+        yield return new WaitForSeconds(5f);
         fpCollider.enabled = true;
 
         yield return new WaitForSeconds(10f);

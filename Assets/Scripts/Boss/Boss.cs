@@ -324,7 +324,7 @@ public class Boss : MonoBehaviour
         int spawnCount = 1;
 
         if (bossPhase >= 3) {
-            spawnCount = 3;
+            spawnCount = 2;
         }
 
         for (int i = 0; i < spawnCount; i++) {
@@ -342,7 +342,7 @@ public class Boss : MonoBehaviour
 
         // PHASE 2 MECHANICS
     IEnumerator SpawnFirepool() {
-        int poolCount = 20;
+        int poolCount = 10;
         bossState = 0;
         for (int i = 0; i < poolCount; i++) {
             Vector2 randomPosition = new Vector3(Random.Range(arenaLowerLeft.x,arenaUpperRight.x),Random.Range(arenaLowerLeft.y,arenaUpperRight.y));

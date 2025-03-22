@@ -21,6 +21,6 @@ MonoBehaviour:
   goldMultiplier: 0
   sprite: {fileID: -6091231491983230200, guid: 722808563c217a2468f16964c1941cbd, type: 3}
   color: {r: 1, g: 1, b: 1, a: 1}
-  isDiscovered: 1
+  isDiscovered: 0
   detectionRadius: 10
   defense: 0
