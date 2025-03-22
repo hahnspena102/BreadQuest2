@@ -33,9 +33,9 @@ public class Chocoblin : MonoBehaviour
         if (rb != null) rb.linearVelocity = Vector2.zero;
 
         if (player.transform.position.x > transform.position.x) {
-            transform.localScale = new Vector3(-1f, 1f, 1f);
+            transform.localScale = new Vector3(-Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
         } else {
-            transform.localScale = new Vector3(1f, 1f, 1f);
+            transform.localScale = new Vector3(Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
         }
     }
 
