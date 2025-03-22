@@ -10,13 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 003b6f52fe5342941a19687e979392b8, type: 3}
-  m_Name: HearthyAndWhole2
+  m_Name: SugarRush2
   m_EditorClassIdentifier: 
-  passiveName: Hearthy and Whole II
-  description: Grants health regeneration. (2 hp/sec)
-  sprite: {fileID: -6895478963442255822, guid: 92195b6dc02562342b3607820388488f, type: 3}
+  passiveName: Sugar Rush I
+  description: Increases movement speed.
+  sprite: {fileID: -3111928384192351, guid: 62d5e76eef8c44d93a3360773b6fa6ae, type: 3}
   goldCost: 200
-  healthRegeneration: 2
+  healthRegeneration: 0
   glucoseRegeneration: 0
-  movementBonus: 0
+  movementBonus: 1
   defensiveBonus: 0

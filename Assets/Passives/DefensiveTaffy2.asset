@@ -10,13 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 003b6f52fe5342941a19687e979392b8, type: 3}
-  m_Name: HearthyAndWhole2
+  m_Name: DefensiveTaffy2
   m_EditorClassIdentifier: 
-  passiveName: Hearthy and Whole II
-  description: Grants health regeneration. (2 hp/sec)
-  sprite: {fileID: -6895478963442255822, guid: 92195b6dc02562342b3607820388488f, type: 3}
-  goldCost: 200
-  healthRegeneration: 2
+  passiveName: Defensive Taffy I
+  description: Reduces the amount of damage taken. (4 dmg)
+  sprite: {fileID: 8012602747710438857, guid: 04f318ca5117d4a93bc3853edbc16b31, type: 3}
+  goldCost: 400
+  healthRegeneration: 0
   glucoseRegeneration: 0
   movementBonus: 0
-  defensiveBonus: 0
+  defensiveBonus: 4

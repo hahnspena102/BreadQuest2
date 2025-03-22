@@ -10,11 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 003b6f52fe5342941a19687e979392b8, type: 3}
-  m_Name: Extra Sugar I
+  m_Name: SugarRush3
   m_EditorClassIdentifier: 
-  passiveName: Extra Sugar I
-  description: Slightly increases mana regeneration.
-  sprite: {fileID: -8364637527342790252, guid: c3854a35355598c4db1cb2c7f95478e9, type: 3}
-  goldCost: 90
+  passiveName: Sugar Rush I
+  description: Greatly increases movement speed.
+  sprite: {fileID: 1944891044476026497, guid: 62d5e76eef8c44d93a3360773b6fa6ae, type: 3}
+  goldCost: 500
   healthRegeneration: 0
-  glucoseRegeneration: 1
+  glucoseRegeneration: 0
+  movementBonus: 2
+  defensiveBonus: 0

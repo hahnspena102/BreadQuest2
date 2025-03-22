@@ -11,6 +11,7 @@ public class Passive : ScriptableObject
     [SerializeField]private int healthRegeneration, glucoseRegeneration;
     [SerializeField]private float movementBonus;
     [SerializeField]private int defensiveBonus;
+    [SerializeField]private float criticalBonus;
 
     public global::System.String PassiveName { get => passiveName; set => passiveName = value; }
     public global::System.String Description { get => description; set => description = value; }
@@ -20,4 +21,5 @@ public class Passive : ScriptableObject
     public global::System.Int32 GlucoseRegeneration { get => glucoseRegeneration; set => glucoseRegeneration = value; }
     public global::System.Single MovementBonus { get => movementBonus; set => movementBonus = value; }
     public global::System.Int32 DefensiveBonus { get => defensiveBonus; set => defensiveBonus = value; }
+    public global::System.Single CriticalBonus { get => criticalBonus; set => criticalBonus = value; }
 }

@@ -18,4 +18,5 @@ MonoBehaviour:
   goldCost: 60
   healthRegeneration: 0
   glucoseRegeneration: 0
-  movementBonus: 1
+  movementBonus: 0.5
+  defensiveBonus: 0

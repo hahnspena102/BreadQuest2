@@ -24,6 +24,7 @@ public class Enemy : MonoBehaviour
     private float defense;
     [SerializeField]private bool deathOnCollide;
     private float invincibility;
+    private SirGluten sirGluten;
 
     public global::System.Int32 Damage { get => damage; set => damage = value; }
     public global::System.Single DetectionRadius { get => detectionRadius; set => detectionRadius = value; }
@@ -46,6 +47,9 @@ public class Enemy : MonoBehaviour
         goldMultiplier = enemyData.GoldMultiplier;
         detectionRadius = enemyData.DetectionRadius;
         defense = enemyData.Defense;
+
+        GameObject glut = GameObject.Find("SirGluten");
+        sirGluten = glut.GetComponent<SirGluten>();
     }
     void Update() {
         if (health <= 0 && !isDying) {
@@ -72,7 +76,12 @@ public class Enemy : MonoBehaviour
         int newDamage = damage;
         bool attackEffective = GameManager.IsEffective(flavor, flavoring);
         if (attackEffective) {
-            newDamage = (int)Mathf.Ceil(newDamage * 1.5f);
+            if (sirGluten.PassiveSlot != null) {
+                newDamage = (int)Mathf.Ceil(newDamage * (1.5f + sirGluten.PassiveSlot.CriticalBonus));
+            } else {
+                newDamage = (int)Mathf.Ceil(newDamage * 1.5f);
+            }
+
         }
         
         health -= newDamage;
