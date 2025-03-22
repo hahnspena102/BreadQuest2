@@ -12,8 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5961343830b40814e8d1fdca4c078598, type: 3}
   m_Name: RedBeanTaiyakiTitan
   m_EditorClassIdentifier: 
-  enemyName: Taiyaki Titan
-  description: 
+  enemyName: Red Bean Taiyaki Titan
+  description: A titan of pastry, the Red Bean Taiyaki Titan sits high on the hierarchy.
+    They're sturdy, agile, and shoot homing red beanbubbles. They possess lots of
+    knowledge. They've bean there, done that.
   health: 50
   damage: 5
   flavoring: grain

@@ -244,7 +244,7 @@ PrefabInstance:
     - target: {fileID: 7208707049854281217, guid: 8adb11242ebd0054292835c38ebb0d7a, type: 3}
       propertyPath: enemyData
       value: 
-      objectReference: {fileID: 11400000, guid: 989c8694ae9819a4b816a4c444b8b0f8, type: 2}
+      objectReference: {fileID: 11400000, guid: 4961b14f413b7a34cad3c08eace63838, type: 2}
     - target: {fileID: 7208707049854281217, guid: 8adb11242ebd0054292835c38ebb0d7a, type: 3}
       propertyPath: hurtSFX.Array.size
       value: 3

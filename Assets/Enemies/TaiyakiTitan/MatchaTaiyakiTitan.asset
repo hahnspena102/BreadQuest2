@@ -13,7 +13,9 @@ MonoBehaviour:
   m_Name: MatchaTaiyakiTitan
   m_EditorClassIdentifier: 
   enemyName: Matcha Taiyaki Titan
-  description: 
+  description: A titan of pastry, the Matcha Taiyaki Titan sits high on the hierarchy.
+    They're sturdy, agile, and shoot homing matcha bubbles. Can you matcha their
+    level?
   health: 50
   damage: 5
   flavoring: spicy

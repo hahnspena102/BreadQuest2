@@ -12,14 +12,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5961343830b40814e8d1fdca4c078598, type: 3}
   m_Name: Boss
   m_EditorClassIdentifier: 
-  enemyName: Boss
-  description: boss battle
-  health: 800
+  enemyName: OVN-9000
+  description: The OVN-9000 is Professor Rye's greatest creation. All it neads is
+    a heart, maybe from someone made out of gluten...
+  health: 1000
   damage: 10
   flavoring: flavorless
   xpMultiplier: 1
   goldMultiplier: 1
-  sprite: {fileID: 8606998063545863957, guid: 70e4442aa3c191c4a91449be34a39df5, type: 3}
+  sprite: {fileID: -95758547, guid: 0f8e756935eaf1644807a2c9bca3cb19, type: 3}
   color: {r: 1, g: 1, b: 1, a: 1}
   isDiscovered: 1
   detectionRadius: 10

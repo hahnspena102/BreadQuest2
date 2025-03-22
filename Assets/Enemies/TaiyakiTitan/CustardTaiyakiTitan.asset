@@ -13,7 +13,9 @@ MonoBehaviour:
   m_Name: CustardTaiyakiTitan
   m_EditorClassIdentifier: 
   enemyName: Custard Taiyaki Titan
-  description: 
+  description: A titan of pastry, the Custard Taiyaki Titan sits high on the hierarchy.
+    They're sturdy, agile, and shoot homing vanilla custard bubbles. Be nice, don't
+    cuss(tard) this one out.
   health: 50
   damage: 5
   flavoring: vanilla

@@ -46,6 +46,7 @@ public class UIManager : MonoBehaviour
             if (compendium.activeSelf) {
                 compendium.SetActive(false);
             } else {
+                CloseMenu();
                 compendium.SetActive(true);
             }
         }
@@ -61,6 +62,7 @@ public class UIManager : MonoBehaviour
     }
 
     public void ActivateShop(Statue statue, List<Passive> passivesSold) {
+        CloseMenu();
         shopUI.SetActive(true);
         shopUI.GetComponent<ShopUI>().CurStatue = statue;
 
@@ -90,6 +92,11 @@ public class UIManager : MonoBehaviour
         
         floorIntroCanvasGroup.alpha = 0f;
         floorIntro.SetActive(false);
+    }
+
+    void CloseMenu() {
+        shopUI.SetActive(false);
+        compendium.SetActive(false);
     }
 
 }

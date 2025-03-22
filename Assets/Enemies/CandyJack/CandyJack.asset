@@ -13,14 +13,15 @@ MonoBehaviour:
   m_Name: CandyJack
   m_EditorClassIdentifier: 
   enemyName: Candy Jack
-  description: CandyJacks are candied pumpkins, seeking fiery revenge on unfortunate
+  description: Candy Jacks are candied pumpkins, seeking fiery revenge on unfortunate
     trick-or-treaters!
   health: 30
   damage: 10
   flavoring: spicy
-  xpMultiplier: 1.2
-  goldMultiplier: 1.2
-  sprite: {fileID: 8905484402476230673, guid: 453f6ef63764c4e8580bd23b1af75c77, type: 3}
+  xpMultiplier: 1
+  goldMultiplier: 1
+  sprite: {fileID: -3882466737573557215, guid: e2d62756c5ac89f45bf5bd2bcb608949, type: 3}
   color: {r: 1, g: 1, b: 1, a: 1}
   isDiscovered: 0
   detectionRadius: 10
+  defense: 0

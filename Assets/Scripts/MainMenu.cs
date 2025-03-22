@@ -15,7 +15,7 @@ public class MainMenu : MonoBehaviour
     public void NewGame() {
         saveData.ResetData();
         //SceneManager.LoadScene("CutsceneIntro");
-        SceneManager.LoadScene("Demo");
+        SceneManager.LoadScene("Floor1");
     }
 
     public void ContinueGame() {

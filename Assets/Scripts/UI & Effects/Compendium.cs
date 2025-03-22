@@ -35,12 +35,14 @@ public class Compendium : MonoBehaviour
             enemyDescription.text = $"To be discovered...";
             enemyImage.sprite = curEnemyData.Sprite;
             enemyImage.color = Color.black;
+            if (pageNumber == maxPageNumber) enemyImage.color = new Color(1f,1f,1f,0f);
         }
         
         pageText.text = $"Page {pageNumber + 1} of {maxPageNumber + 1}";
         pageNumber = (int)Mathf.Round(pageNavigator.value);
 
         if (Input.GetKeyDown(KeyCode.M)) ResetCompendium();
+        if (Input.GetKeyDown(KeyCode.N)) FinishCompendium();
 
     }
 
@@ -58,6 +60,10 @@ public class Compendium : MonoBehaviour
 
     public void ResetCompendium(){
         foreach (EnemyData enemy in enemyData) enemy.IsDiscovered = false;
+    }
+
+    public void FinishCompendium(){
+        foreach (EnemyData enemy in enemyData) enemy.IsDiscovered = true;
     }
 
 

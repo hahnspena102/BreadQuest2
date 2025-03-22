@@ -13,13 +13,15 @@ MonoBehaviour:
   m_Name: DangOh
   m_EditorClassIdentifier: 
   enemyName: DangOh
-  description: oh danggg!
+  description: An inseparable trio, DangOhs are tanky shooters. If left unchecked,
+    they will leave you saying "oh dang!"
   health: 25
   damage: 10
   flavoring: grain
-  xpMultiplier: 1.5
+  xpMultiplier: 1
   goldMultiplier: 1
   sprite: {fileID: -6050473969829582647, guid: bb206b2f72949437dbc021dadfe3468f, type: 3}
   color: {r: 1, g: 1, b: 1, a: 1}
   isDiscovered: 0
   detectionRadius: 10
+  defense: 0
