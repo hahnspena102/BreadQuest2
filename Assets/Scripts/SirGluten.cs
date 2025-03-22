@@ -203,10 +203,6 @@ public class SirGluten : MonoBehaviour
             UseGlucosePotion();
         }
 
-        if (Input.GetKeyDown(KeyCode.Escape)) {
-            SceneManager.LoadScene("MainMenu");
-        }
-
 
         if (!isLocked) MovePlayer();    
 
