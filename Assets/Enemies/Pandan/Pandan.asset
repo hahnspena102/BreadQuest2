@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5961343830b40814e8d1fdca4c078598, type: 3}
-  m_Name: EnemyData
+  m_Name: Pandan
   m_EditorClassIdentifier: 
   enemyName: Pandan
-  description: Although fragrant, don't stop to smell this little bear or else...
+  description: Although fragrant, don't stop to smell this little panda or else...
     BANG!
   health: 20
   damage: 20
@@ -24,3 +24,4 @@ MonoBehaviour:
   color: {r: 1, g: 1, b: 1, a: 1}
   isDiscovered: 0
   detectionRadius: 10
+  defense: 0

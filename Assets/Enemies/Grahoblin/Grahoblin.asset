@@ -13,13 +13,14 @@ MonoBehaviour:
   m_Name: Grahoblin
   m_EditorClassIdentifier: 
   enemyName: Grahoblin
-  description: 
+  description: The brute of the S'more Goblins, Grahoblins aggresively brawl anyone
+    who nears it.
   health: 100
-  damage: 20
+  damage: 30
   flavoring: grain
   xpMultiplier: 3
-  goldMultiplier: 1
-  sprite: {fileID: 2820248408748333917, guid: 42dc30298bb8add4f8f6085d2b99b748, type: 3}
+  goldMultiplier: 3
+  sprite: {fileID: 3691718313985784316, guid: 2597fbf9ee3ccc745bc1cb80a6df3b5e, type: 3}
   color: {r: 1, g: 1, b: 1, a: 1}
   isDiscovered: 1
   detectionRadius: 10

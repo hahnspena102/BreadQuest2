@@ -251,7 +251,7 @@ public class SirGluten : MonoBehaviour
     void MovePlayer(){
         float newSpeed = speed;
         if (passiveSlot != null) newSpeed += passiveSlot.MovementBonus;
-        body.linearVelocity = new Vector2(horizontalInput,verticalInput).normalized * newSpeed;
+        if (!isNavigatingUI) body.linearVelocity = new Vector2(horizontalInput,verticalInput).normalized * newSpeed;
         
         if (!isAttacking) {
             if (horizontalInput < 0) {

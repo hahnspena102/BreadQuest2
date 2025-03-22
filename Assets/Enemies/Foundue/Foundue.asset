@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: Foundue
   m_EditorClassIdentifier: 
   enemyName: Foundue
-  description: found you!
+  description: A mysterious phantom chocolate that chases any unsuspecting victims.
+    The fondue is rich and velvety but hardens the second you look at them.
   health: 20
   damage: 50
   flavoring: cacao
