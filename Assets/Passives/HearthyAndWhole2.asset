@@ -13,8 +13,10 @@ MonoBehaviour:
   m_Name: HearthyAndWhole2
   m_EditorClassIdentifier: 
   passiveName: Hearthy and Whole II
-  description: Grants slight health regeneration. (2 hp/sec)
+  description: Grants health regeneration. (2 hp/sec)
   sprite: {fileID: -6895478963442255822, guid: 92195b6dc02562342b3607820388488f, type: 3}
   goldCost: 200
   healthRegeneration: 2
   glucoseRegeneration: 0
+  movementBonus: 0
+  defensiveBonus: 0

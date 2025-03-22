@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 003b6f52fe5342941a19687e979392b8, type: 3}
+  m_Name: EnhancedFlavor1
+  m_EditorClassIdentifier: 
+  passiveName: Enhanced Flavor I
+  description: Slightly increases critical hit damage.
+  sprite: {fileID: 360391160261096351, guid: 3b694e46672af414bb434a6ce7f24a2c, type: 3}
+  goldCost: 115
+  healthRegeneration: 0
+  glucoseRegeneration: 0
+  movementBonus: 0
+  defensiveBonus: 2
+  criticalBonus: 0.25
