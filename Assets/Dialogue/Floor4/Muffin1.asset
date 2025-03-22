@@ -10,9 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ec69893db6eb3034abf6945a66f004e5, type: 3}
-  m_Name: Test1
+  m_Name: Muffin1
   m_EditorClassIdentifier: 
   iconSprites:
   - {fileID: 8611398583933348988, guid: 67a54edb1ed90704fb725976aef71b3e, type: 3}
-  text: Six hundred men Six hundred men under my command  hundred miles of open sea
-    But the problem's not the distance It's what lies in between
+  text: Okay wait I got one. Knock-knock.
