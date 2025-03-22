@@ -54,12 +54,13 @@ public class Enemy : MonoBehaviour
     void Update() {
         if (health <= 0 && !isDying) {
             GameManager.PlayParticle(deathParticle,transform.position);
-            Death();
+            isDying = true;
+            Destroy(gameObject, 0f);
         }
         invincibility -= Time.deltaTime;
         invincibility = Mathf.Clamp(invincibility, 0f ,1f);
     }
-
+/*
     void Death(){
         isDying = true;
         SirGluten.staticYeast += (int)Mathf.Round(Random.Range(1,25) * xpMultiplier);
@@ -68,6 +69,17 @@ public class Enemy : MonoBehaviour
         enemyData.IsDiscovered = true;
         Destroy(gameObject, 0.4f);
         health--;
+    }
+    */
+
+    void OnDestroy(){
+        isDying = true;
+        GameManager.PlayParticle(deathParticle,transform.position);
+        SirGluten.staticYeast += (int)Mathf.Round(Random.Range(1,25) * xpMultiplier);
+        SirGluten.staticGold += (int)Mathf.Round(Random.Range(1,10) * goldMultiplier);
+
+        enemyData.IsDiscovered = true;
+        health--;  
     }
 
     IEnumerator Hurt(int damage, string flavor) {

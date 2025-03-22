@@ -12,3 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36b758ae0541eb9418d00b56728a6422, type: 3}
   m_Name: SaveData
   m_EditorClassIdentifier: 
+  yeast: 0
+  yeastLevel: 0
+  gold: 0
+  healthPotions: 0
+  glucosePotions: 0
+  mainSlotId: wintermint_floss
+  subSlotId: 
+  passive: {fileID: 0}
+  floor: Floor1

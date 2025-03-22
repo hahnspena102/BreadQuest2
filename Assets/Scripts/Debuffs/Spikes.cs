@@ -22,7 +22,7 @@ public class Spikes : MonoBehaviour
     void Update()
     {
         animator.SetBool("isActive", isActive);   
-        Debug.Log($"isActive:" + isActive);
+       //Debug.Log($"isActive:" + isActive);
     }
 
     IEnumerator SpikeSequence(){

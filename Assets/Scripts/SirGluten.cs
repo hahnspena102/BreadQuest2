@@ -4,6 +4,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.SceneManagement;
 using TMPro;
+using System;
 
 public class SirGluten : MonoBehaviour
 {
@@ -17,8 +18,8 @@ public class SirGluten : MonoBehaviour
 
     // STATS
     [SerializeField]private SaveData curSaveData;
-    private int health, glucose, yeast, yeastLevel = 1;
-    private int maxHealth=100, maxGlucose=30, maxYeast, maxYeastLevel = 10;
+    private int health = 1, glucose, yeast, yeastLevel = 1;
+    private int maxHealth=100, maxGlucose=30, maxYeast, maxYeastLevel = 5;
 
     [SerializeField] private GameObject damagePopup;
     
@@ -57,12 +58,13 @@ public class SirGluten : MonoBehaviour
         spriteRenderer = GetComponent<SpriteRenderer>();
         animator = GetComponent<Animator>();
     
-        
-        InitStats();
+    
         UpdateStats();
+        StartCoroutine(LoadSaveData());
+
         StartCoroutine(OneSecondCoroutine());
         
-        StartCoroutine(LoadSaveData());
+
 
         StartCoroutine(Burn());
         
@@ -94,36 +96,48 @@ public class SirGluten : MonoBehaviour
             yield return new WaitForSeconds(0.1f);
             newSubSlot.transform.GetChild(0).gameObject.SetActive(false);
         }
+        InitStats();
     }
 
-    public void SaveData() {
-        curSaveData.Yeast = yeast;
-        curSaveData.YeastLevel = yeastLevel;
-        curSaveData.Gold = gold;
-        if (mainSlot != null) {
-            curSaveData.MainSlotId = mainSlot.GetComponent<Weapon>().Id;
-        } else {
-            curSaveData.MainSlotId = "";
+    public bool SaveData() {
+        try {
+            curSaveData.Yeast = yeast;
+            curSaveData.YeastLevel = yeastLevel;
+            curSaveData.Gold = gold;
+            if (mainSlot != null) {
+                curSaveData.MainSlotId = mainSlot.GetComponent<Weapon>().Id;
+            } else {
+                curSaveData.MainSlotId = "";
+            }
+            if (subSlot != null) {
+                curSaveData.SubSlotId = subSlot.GetComponent<Weapon>().Id;
+            } else {
+                curSaveData.SubSlotId = "";
+            }
+            
+            curSaveData.Passive = passiveSlot;
+            curSaveData.HealthPotions = healthPotions;
+            curSaveData.GlucosePotions = glucosePotions;
+            return true;
         }
-        if (subSlot != null) {
-            curSaveData.SubSlotId = subSlot.GetComponent<Weapon>().Id;
-        } else {
-            curSaveData.SubSlotId = "";
-        }
-        
-        curSaveData.Passive = passiveSlot;
-        curSaveData.HealthPotions = healthPotions;
-        curSaveData.GlucosePotions = glucosePotions;
+        catch (Exception e) {
+            Debug.Log(e);
+            return false;
+        }  
     }
 
     // Initializes the Stat Values and Slider/Text variables.
     void InitStats(){
+        maxYeast = (int)Mathf.Round((Mathf.Pow(1.4f,yeastLevel)) * 200);
+        maxHealth = 100 + ((yeastLevel - 1) * 40);
+        maxGlucose = 30 + ((yeastLevel - 1) * 4);
         health = maxHealth;
         glucose = maxGlucose;
 
         speed = baseSpeed;
         //yeast = 0;
        // yeastLevel = 1;
+       
     }
 
     private IEnumerator OneSecondCoroutine()
@@ -142,15 +156,15 @@ public class SirGluten : MonoBehaviour
     }
     
     void UpdateStats(){
-        maxYeast = (int)Mathf.Round((Mathf.Pow(1.6f,yeastLevel)) * 100);
+        maxYeast = (int)Mathf.Round((Mathf.Pow(1.4f,yeastLevel)) * 200);
         //Debug.Log(maxYeast);
         yeast = Mathf.Max(yeast, staticYeast);
         if (yeast >= maxYeast && yeastLevel < maxYeastLevel) {
             yeast = 0;
             staticYeast = 0;
             yeastLevel += 1;
-            maxHealth = 100 + (yeastLevel * 20);
-            maxGlucose = 30 + (yeastLevel * 2);
+            maxHealth = 100 + (yeastLevel * 40);
+            maxGlucose = 30 + (yeastLevel * 4);
             health = maxHealth;
             glucose = maxGlucose;
         }        
@@ -183,8 +197,7 @@ public class SirGluten : MonoBehaviour
         verticalInput = Input.GetAxisRaw("Vertical");
         horizontalInput = Input.GetAxisRaw("Horizontal");
 
-        //if (Input.GetKeyDown(KeyCode.P)) yeast += 50;
-
+        if (Input.GetKeyDown(KeyCode.P)) SirGluten.staticYeast += 40;
         
 
         if (Input.GetKeyDown(KeyCode.E) && hoveredWeaponItem != null && !isAttacking) {

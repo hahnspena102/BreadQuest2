@@ -150,7 +150,7 @@ MonoBehaviour:
   isPiercing: 1
   fadeDuration: 1
   timeTilCollision: 0.1
-  maxBounces: 0
+  maxBounces: 100
 --- !u!1001 &5811127711640009213
 PrefabInstance:
   m_ObjectHideFlags: 0

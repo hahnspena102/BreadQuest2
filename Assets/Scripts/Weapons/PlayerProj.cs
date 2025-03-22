@@ -64,6 +64,17 @@ public class PlayerProj : MonoBehaviour
         Destroy(gameObject);
     }
 
+    void OnTriggerEnter2D(Collider2D collider)
+    {
+        if (isPassable) return;
+        if (collider.gameObject.tag == "Walls") {
+            if (bounces < maxBounces) {
+            return;
+            }
+        Destroy(gameObject);
+        }
+    }
+
     private IEnumerator FadeOutAndDestroy()
     {
         if (spriteRenderer == null) yield break;

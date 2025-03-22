@@ -17,6 +17,7 @@ public class Cutscene : MonoBehaviour
     [SerializeField]private CanvasGroup nextFrame;
 
     [SerializeField]private TextMeshProUGUI textBox;
+    [SerializeField]private SaveData saveData;
     private Coroutine currentCoroutine;
 
 
