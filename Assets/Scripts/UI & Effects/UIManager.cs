@@ -10,6 +10,7 @@ public class UIManager : MonoBehaviour
     [SerializeField] private GameObject infoUI;
     [SerializeField] private GameObject shopUI;
     [SerializeField] private GameObject compendium;
+    [SerializeField] private GameObject navUI;
     [SerializeField] private GameObject floorIntro;
     [SerializeField] private List<Font> fonts = new List<Font>();
     private SirGluten sirGluten;
@@ -51,7 +52,16 @@ public class UIManager : MonoBehaviour
             }
         }
 
-        if (Input.GetKey(KeyCode.Tab)) {
+        if (Input.GetKeyDown(KeyCode.Escape)) {
+            if (navUI.activeSelf) {
+                navUI.SetActive(false);
+            } else {
+                CloseMenu();
+                navUI.SetActive(true);
+            }
+        }
+
+        if (Input.GetKey(KeyCode.Tab) && !navUI.activeSelf) {
             infoUI.SetActive(true);
         } else {
             infoUI.SetActive(false);
@@ -97,6 +107,11 @@ public class UIManager : MonoBehaviour
     void CloseMenu() {
         shopUI.SetActive(false);
         compendium.SetActive(false);
+        navUI.SetActive(false);
+    }
+
+    public void ToMainMenu(){
+        SceneManager.LoadScene("MainMenu");
     }
 
 }
