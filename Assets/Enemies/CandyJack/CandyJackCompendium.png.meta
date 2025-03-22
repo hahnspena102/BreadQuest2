@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      CandyJackCompendium_0: -3882466737573557215
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
