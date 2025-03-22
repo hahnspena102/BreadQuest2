@@ -111,7 +111,7 @@ PrefabInstance:
     - target: {fileID: 2185585111767699139, guid: 829a10fbf2f9aa74b91d8daddff4b89c, type: 3}
       propertyPath: PlayerProjectile
       value: 
-      objectReference: {fileID: 100240130476147687, guid: 88a2f002821ce3846a8765b9ed8f2fc8, type: 3}
+      objectReference: {fileID: 100240130476147687, guid: 903017c88fdbe3447a74bdd6ee1dc7fe, type: 3}
     - target: {fileID: 5724662364475630137, guid: 829a10fbf2f9aa74b91d8daddff4b89c, type: 3}
       propertyPath: m_Name
       value: WintermintFloss
@@ -175,7 +175,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6399113412563231926, guid: 829a10fbf2f9aa74b91d8daddff4b89c, type: 3}
       propertyPath: attackDamage
-      value: 12
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6399113412563231926, guid: 829a10fbf2f9aa74b91d8daddff4b89c, type: 3}
+      propertyPath: attackCooldown
+      value: 0.4
       objectReference: {fileID: 0}
     - target: {fileID: 8853148181763592415, guid: 829a10fbf2f9aa74b91d8daddff4b89c, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.x

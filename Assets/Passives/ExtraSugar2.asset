@@ -15,8 +15,9 @@ MonoBehaviour:
   passiveName: Extra Sugar II
   description: Increases mana regeneration. (3 gp/sec)
   sprite: {fileID: 455131181652577580, guid: c3854a35355598c4db1cb2c7f95478e9, type: 3}
-  goldCost: 175
+  goldCost: 300
   healthRegeneration: 0
   glucoseRegeneration: 3
   movementBonus: 0
   defensiveBonus: 0
+  criticalBonus: 0

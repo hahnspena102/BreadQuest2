@@ -113,6 +113,7 @@ public class Ranged : MonoBehaviour
         drawingPhase = 1;
         for (int i = 0; i < 3; i++) {
             sirGluten.WeaponAnimationFrame = i + 1;
+            if (i == 2) continue;
             yield return new WaitForSeconds(0.3f);
         }
 

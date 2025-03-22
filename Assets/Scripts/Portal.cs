@@ -26,10 +26,20 @@ public class Portal : MonoBehaviour
     }
 
     IEnumerator NextFloor(){
+        bool isSuccess = true;
         if (saveAfterTeleport) {
-            sirGluten.SaveData();
+            isSuccess = sirGluten.SaveData();
+            while (!isSuccess) {
+                isSuccess = sirGluten.SaveData();
+            }
+            Rigidbody2D rb = sirGluten.GetComponent<Rigidbody2D>();          
+            if (rb != null) rb.constraints = RigidbodyConstraints2D.FreezeAll; 
+            SpriteRenderer sp = sirGluten.GetComponent<SpriteRenderer>();
+            if (sp != null) sp.color = new Color(1f,1f,1f,0f);
+            yield return new WaitForSeconds(2f);
+
         }
-        yield return new WaitForSeconds(0.5f);
+        
         SceneManager.LoadScene(destinationScene);
     }
 

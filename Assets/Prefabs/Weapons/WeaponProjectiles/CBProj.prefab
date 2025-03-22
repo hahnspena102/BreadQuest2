@@ -73,6 +73,10 @@ PrefabInstance:
       value: 0.015674025
       objectReference: {fileID: 0}
     - target: {fileID: 6257214900476092273, guid: 3665731059b1445439d0db8d88b12423, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6257214900476092273, guid: 3665731059b1445439d0db8d88b12423, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.x
       value: 1
       objectReference: {fileID: 0}
@@ -83,6 +87,14 @@ PrefabInstance:
     - target: {fileID: 6795698115756416366, guid: 3665731059b1445439d0db8d88b12423, type: 3}
       propertyPath: speed
       value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6795698115756416366, guid: 3665731059b1445439d0db8d88b12423, type: 3}
+      propertyPath: isPassable
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6795698115756416366, guid: 3665731059b1445439d0db8d88b12423, type: 3}
+      propertyPath: isPiercing
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8748053951306997152, guid: 3665731059b1445439d0db8d88b12423, type: 3}
       propertyPath: m_Name

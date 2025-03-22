@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   iconSprites:
   - {fileID: 8611398583933348988, guid: 67a54edb1ed90704fb725976aef71b3e, type: 3}
-  text: She has to be here somehwere.
+  text: I'm starting to get disoriented from this dungeon. Hope we don't get lost.

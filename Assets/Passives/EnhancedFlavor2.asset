@@ -20,4 +20,4 @@ MonoBehaviour:
   glucoseRegeneration: 0
   movementBonus: 0
   defensiveBonus: 2
-  criticalBonus: 0.5
+  criticalBonus: 1

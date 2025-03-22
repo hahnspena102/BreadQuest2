@@ -15,9 +15,9 @@ MonoBehaviour:
   passiveName: Enhanced Flavor III
   description: Greatly increases critical hit damage.
   sprite: {fileID: -5931512774170675780, guid: 3b694e46672af414bb434a6ce7f24a2c, type: 3}
-  goldCost: 600
+  goldCost: 550
   healthRegeneration: 0
   glucoseRegeneration: 0
   movementBonus: 0
   defensiveBonus: 2
-  criticalBonus: 1
+  criticalBonus: 2

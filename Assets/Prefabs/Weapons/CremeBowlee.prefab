@@ -14,7 +14,7 @@ PrefabInstance:
       objectReference: {fileID: -3035390412557001596, guid: f096d3016285b764ea31d4c29122b79d, type: 3}
     - target: {fileID: 22522772274257005, guid: 829a10fbf2f9aa74b91d8daddff4b89c, type: 3}
       propertyPath: m_SortingLayer
-      value: 0
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 1239881216789824305, guid: 829a10fbf2f9aa74b91d8daddff4b89c, type: 3}
       propertyPath: m_Pivot.x
@@ -131,7 +131,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6399113412563231926, guid: 829a10fbf2f9aa74b91d8daddff4b89c, type: 3}
       propertyPath: attackDamage
-      value: 7
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 8853148181763592415, guid: 829a10fbf2f9aa74b91d8daddff4b89c, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.x
@@ -143,7 +143,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8943666101315252761, guid: 829a10fbf2f9aa74b91d8daddff4b89c, type: 3}
       propertyPath: m_SortingLayer
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8943666101315252761, guid: 829a10fbf2f9aa74b91d8daddff4b89c, type: 3}
       propertyPath: m_SortingOrder

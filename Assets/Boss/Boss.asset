@@ -15,13 +15,13 @@ MonoBehaviour:
   enemyName: OVN-9000
   description: The OVN-9000 is Professor Rye's greatest creation. All it neads is
     a heart, maybe from someone made out of gluten...
-  health: 1000
+  health: 1500
   damage: 10
   flavoring: flavorless
   xpMultiplier: 1
   goldMultiplier: 1
   sprite: {fileID: -95758547, guid: 0f8e756935eaf1644807a2c9bca3cb19, type: 3}
   color: {r: 1, g: 1, b: 1, a: 1}
-  isDiscovered: 1
+  isDiscovered: 0
   detectionRadius: 10
   defense: 0

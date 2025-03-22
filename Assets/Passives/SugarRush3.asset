@@ -12,11 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 003b6f52fe5342941a19687e979392b8, type: 3}
   m_Name: SugarRush3
   m_EditorClassIdentifier: 
-  passiveName: Sugar Rush I
+  passiveName: Sugar Rush III
   description: Greatly increases movement speed.
   sprite: {fileID: 1944891044476026497, guid: 62d5e76eef8c44d93a3360773b6fa6ae, type: 3}
-  goldCost: 500
+  goldCost: 350
   healthRegeneration: 0
   glucoseRegeneration: 0
   movementBonus: 2
   defensiveBonus: 0
+  criticalBonus: 0

@@ -83,6 +83,7 @@ MonoBehaviour:
   currentFrame: {fileID: 8870936621761748492}
   nextFrame: {fileID: 6754154355349299182}
   textBox: {fileID: 7954992572571439852}
+  saveData: {fileID: 11400000, guid: bab5df10eeacfaf42b1e069961483546, type: 2}
 --- !u!82 &4838754812024025338
 AudioSource:
   m_ObjectHideFlags: 0
@@ -98,7 +99,7 @@ AudioSource:
   m_PlayOnAwake: 1
   m_Volume: 0.3
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
